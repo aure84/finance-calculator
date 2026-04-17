@@ -21,7 +21,7 @@ export default function SalaryCalc() {
             value={salary}
             onChange={e => setSalary(e.target.value)}
             placeholder="e.g. 75000"
-            style={{ padding: '10px 12px', border: '1px solid #d1d5db', borderRadius: 6, fontSize: 16, width: 200 }}
+            style={{ padding: '10px 12px', border: '1px solid #d1d5db', borderRadius: 6, fontSize: 16, width: 200, height: 42 }}
           />
         </div>
         <div>
@@ -29,7 +29,7 @@ export default function SalaryCalc() {
           <select
             value={filing}
             onChange={e => setFiling(e.target.value as 'single' | 'married')}
-            style={{ padding: '10px 12px', border: '1px solid #d1d5db', borderRadius: 6, fontSize: 16 }}
+            style={{ padding: '10px 12px', border: '1px solid #d1d5db', borderRadius: 6, fontSize: 16, height: 42 }}
           >
             <option value="single">Single</option>
             <option value="married">Married Filing Jointly</option>
