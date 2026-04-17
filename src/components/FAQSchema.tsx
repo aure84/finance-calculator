@@ -8,6 +8,8 @@ interface FAQSchemaProps {
 }
 
 export default function FAQSchema({ items }: FAQSchemaProps) {
+  if (!items.length) return null
+
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
