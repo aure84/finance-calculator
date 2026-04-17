@@ -1,9 +1,14 @@
 import AdSlot from '../components/AdSlot'
+import SEOMeta from '../components/SEOMeta'
 import CompoundCalc from '../calculators/compound/CompoundCalc'
 
 export default function CompoundPage() {
   return (
     <main style={{ maxWidth: 900, margin: '0 auto', padding: '32px 24px' }}>
+      <SEOMeta
+        title="Compound Interest Calculator — See Your Investment Grow | finance-fast.com"
+        description="Calculate compound interest with annual, quarterly, monthly, or daily compounding. Free compound interest calculator with year-by-year breakdown."
+      />
       <AdSlot slot="header" />
       <h1 style={{ marginBottom: 8 }}>Compound Interest Calculator</h1>
       <p style={{ marginBottom: 24, color: '#6b7280' }}>

@@ -1,9 +1,14 @@
 import AdSlot from '../components/AdSlot'
+import SEOMeta from '../components/SEOMeta'
 import DebtPayoffCalc from '../calculators/debt-payoff/DebtPayoffCalc'
 
 export default function DebtPayoffPage() {
   return (
     <main style={{ maxWidth: 900, margin: '0 auto', padding: '32px 24px' }}>
+      <SEOMeta
+        title="Debt Payoff Calculator — Snowball vs Avalanche | finance-fast.com"
+        description="Compare snowball vs avalanche debt payoff strategies. See which method saves you more interest and pays off debt faster. Free debt payoff calculator."
+      />
       <AdSlot slot="header" />
       <h1 style={{ marginBottom: 8 }}>Debt Payoff Calculator — Snowball vs Avalanche</h1>
       <p style={{ marginBottom: 24, color: '#6b7280' }}>

@@ -1,9 +1,14 @@
 import AdSlot from '../components/AdSlot'
+import SEOMeta from '../components/SEOMeta'
 import LoanCalc from '../calculators/loan/LoanCalc'
 
 export default function LoanPage() {
   return (
     <main style={{ maxWidth: 900, margin: '0 auto', padding: '32px 24px' }}>
+      <SEOMeta
+        title="Loan Calculator — Monthly Payment & Total Cost | finance-fast.com"
+        description="Calculate monthly loan payments and total interest for any personal, auto, or student loan. Free loan calculator with instant results."
+      />
       <AdSlot slot="header" />
       <h1 style={{ marginBottom: 8 }}>Loan Calculator</h1>
       <p style={{ marginBottom: 24, color: '#6b7280' }}>

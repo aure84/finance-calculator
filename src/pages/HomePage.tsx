@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import SEOMeta from '../components/SEOMeta'
 
 const calculators = [
   { to: '/salary-calculator', emoji: '💰', title: 'Salary Calculator', desc: 'Calculate take-home pay after federal taxes' },
@@ -11,6 +12,10 @@ const calculators = [
 export default function HomePage() {
   return (
     <main style={{ maxWidth: 900, margin: '0 auto', padding: '48px 24px' }}>
+      <SEOMeta
+        title="Free Financial Calculators — Salary, Mortgage, Loan & More | finance-fast.com"
+        description="Free financial calculators for salary take-home pay, mortgage payments, compound interest, loans, and debt payoff. Fast, accurate, no sign-up required."
+      />
       <h1 style={{ fontSize: 36, marginBottom: 12 }}>Free Financial Calculators</h1>
       <p style={{ color: '#6b7280', marginBottom: 40, fontSize: 18 }}>
         Fast, accurate calculators for your most important financial decisions.

@@ -1,9 +1,14 @@
 import AdSlot from '../components/AdSlot'
+import SEOMeta from '../components/SEOMeta'
 import MortgageCalc from '../calculators/mortgage/MortgageCalc'
 
 export default function MortgagePage() {
   return (
     <main style={{ maxWidth: 900, margin: '0 auto', padding: '32px 24px' }}>
+      <SEOMeta
+        title="Mortgage Calculator — Monthly Payment & Amortization | finance-fast.com"
+        description="Calculate your monthly mortgage payment, total interest, and full amortization schedule. Free mortgage calculator for any home price and interest rate."
+      />
       <AdSlot slot="header" />
       <h1 style={{ marginBottom: 8 }}>Mortgage Calculator</h1>
       <p style={{ marginBottom: 24, color: '#6b7280' }}>
