@@ -24,7 +24,7 @@ export default function PrivacyPage() {
         If you are located in the EU/EEA, you have the right to access, correct, or delete your personal data. To exercise these rights or for privacy questions, contact us at: privacy@finance-fast.com. Google LLC is a data processor under our use of Google Analytics and AdSense.
       </p>
 
-      <h2 style={{ marginBottom: 12 }}>CCPA (California Users)</h2>
+      <h2 id="ccpa" style={{ marginBottom: 12 }}>CCPA (California Users)</h2>
       <p style={{ color: '#374151', lineHeight: 1.7 }}>
         California residents have the right to know what personal information is collected and to opt out of the sale of personal information. We do not sell personal information. To submit a request: privacy@finance-fast.com.
       </p>
