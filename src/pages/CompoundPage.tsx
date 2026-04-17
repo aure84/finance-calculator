@@ -3,7 +3,12 @@ import AdSlot from '../components/AdSlot'
 import SEOMeta from '../components/SEOMeta'
 import FAQSchema from '../components/FAQSchema'
 import CompoundCalc from '../calculators/compound/CompoundCalc'
+import RelatedCalculators from '../components/RelatedCalculators'
 import styles from './calculator.module.css'
+
+const COMPOUND_RELATED = [
+  { label: 'Salary Calculator', to: '/salary', description: 'Calculate your net take-home pay after federal income tax and FICA.' },
+]
 
 const COMPOUND_FAQ = [
   {
@@ -47,6 +52,7 @@ export default function CompoundPage() {
       <div className={styles.disclaimer}>
         <strong>Disclaimer:</strong> Hypothetical results only. Does not account for taxes on gains, inflation, or fund fees. Not a guarantee of future investment returns.
       </div>
+      <RelatedCalculators links={COMPOUND_RELATED} />
     </main>
   )
 }

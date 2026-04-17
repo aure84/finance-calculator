@@ -3,7 +3,13 @@ import AdSlot from '../components/AdSlot'
 import SEOMeta from '../components/SEOMeta'
 import FAQSchema from '../components/FAQSchema'
 import MortgageCalc from '../calculators/mortgage/MortgageCalc'
+import RelatedCalculators from '../components/RelatedCalculators'
 import styles from './calculator.module.css'
+
+const MORTGAGE_RELATED = [
+  { label: 'Loan Calculator', to: '/loan', description: 'Calculate monthly payments for any personal, auto, or student loan.' },
+  { label: 'Debt Payoff Calculator', to: '/debt-payoff', description: 'Compare snowball vs avalanche debt payoff strategies.' },
+]
 
 const MORTGAGE_FAQ = [
   {
@@ -47,6 +53,7 @@ export default function MortgagePage() {
       <div className={styles.disclaimer}>
         <strong>Disclaimer:</strong> Estimates only. Does not include PMI, HOA fees, property taxes, or insurance. Not a loan offer or pre-approval. Consult a licensed mortgage professional before making decisions.
       </div>
+      <RelatedCalculators links={MORTGAGE_RELATED} />
     </main>
   )
 }

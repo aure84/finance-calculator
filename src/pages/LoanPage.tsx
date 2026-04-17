@@ -3,7 +3,13 @@ import AdSlot from '../components/AdSlot'
 import SEOMeta from '../components/SEOMeta'
 import FAQSchema from '../components/FAQSchema'
 import LoanCalc from '../calculators/loan/LoanCalc'
+import RelatedCalculators from '../components/RelatedCalculators'
 import styles from './calculator.module.css'
+
+const LOAN_RELATED = [
+  { label: 'Mortgage Calculator', to: '/mortgage', description: 'Calculate your monthly mortgage payment and amortization schedule.' },
+  { label: 'Debt Payoff Calculator', to: '/debt-payoff', description: 'Compare snowball vs avalanche debt payoff strategies.' },
+]
 
 const LOAN_FAQ = [
   {
@@ -47,6 +53,7 @@ export default function LoanPage() {
       <div className={styles.disclaimer}>
         <strong>Disclaimer:</strong> Estimates only. Does not include origination fees or prepayment penalties. Rates you qualify for may differ from illustrative rates shown. Not a loan offer.
       </div>
+      <RelatedCalculators links={LOAN_RELATED} />
     </main>
   )
 }

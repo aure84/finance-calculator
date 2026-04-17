@@ -3,7 +3,12 @@ import AdSlot from '../components/AdSlot'
 import SEOMeta from '../components/SEOMeta'
 import FAQSchema from '../components/FAQSchema'
 import SalaryCalc from '../calculators/salary/SalaryCalc'
+import RelatedCalculators from '../components/RelatedCalculators'
 import styles from './calculator.module.css'
+
+const SALARY_RELATED = [
+  { label: 'Compound Interest Calculator', to: '/compound', description: 'See how your savings grow over time with compound interest.' },
+]
 
 const SALARY_FAQ = [
   {
@@ -47,6 +52,7 @@ export default function SalaryPage() {
       <div className={styles.disclaimer}>
         <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Results are not tax or financial advice. Figures are based on 2026 federal tax brackets and do not include state or local taxes. Consult a CPA for personalized advice.
       </div>
+      <RelatedCalculators links={SALARY_RELATED} />
     </main>
   )
 }

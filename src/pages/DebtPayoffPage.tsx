@@ -3,7 +3,13 @@ import AdSlot from '../components/AdSlot'
 import SEOMeta from '../components/SEOMeta'
 import FAQSchema from '../components/FAQSchema'
 import DebtPayoffCalc from '../calculators/debt-payoff/DebtPayoffCalc'
+import RelatedCalculators from '../components/RelatedCalculators'
 import styles from './calculator.module.css'
+
+const DEBT_RELATED = [
+  { label: 'Loan Calculator', to: '/loan', description: 'Calculate monthly payments for any personal, auto, or student loan.' },
+  { label: 'Mortgage Calculator', to: '/mortgage', description: 'Calculate your monthly mortgage payment and amortization schedule.' },
+]
 
 const DEBT_FAQ = [
   {
@@ -47,6 +53,7 @@ export default function DebtPayoffPage() {
       <div className={styles.disclaimer}>
         <strong>Disclaimer:</strong> Assumes no new charges are added. Minimum payment assumptions may differ from your lender's actual terms. Consult a financial advisor for personalized debt management advice.
       </div>
+      <RelatedCalculators links={DEBT_RELATED} />
     </main>
   )
 }
