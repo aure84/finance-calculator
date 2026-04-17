@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom'
+import styles from './Nav.module.css'
 
 const links = [
   { to: '/salary-calculator', label: 'Salary' },
@@ -10,21 +11,18 @@ const links = [
 
 export default function Nav() {
   return (
-    <header style={{ borderBottom: '1px solid #e5e7eb', padding: '12px 24px', display: 'flex', alignItems: 'center', gap: 32 }}>
-      <NavLink to="/" style={{ fontWeight: 700, fontSize: 18, textDecoration: 'none', color: '#1a1a1a' }}>
+    <header className={styles.header}>
+      <NavLink to="/" className={styles.logo}>
         finance-fast.com
       </NavLink>
-      <nav style={{ display: 'flex', gap: 20, flexWrap: 'wrap' }}>
+      <nav className={styles.nav}>
         {links.map(l => (
           <NavLink
             key={l.to}
             to={l.to}
-            style={({ isActive }) => ({
-              textDecoration: 'none',
-              color: isActive ? '#2563eb' : '#4b5563',
-              fontWeight: isActive ? 600 : 400,
-              fontSize: 14,
-            })}
+            className={({ isActive }) =>
+              isActive ? `${styles.link} ${styles.active}` : styles.link
+            }
           >
             {l.label}
           </NavLink>
