@@ -22,22 +22,22 @@ export default function CompoundCalc() {
         <div>
           <label style={{ display: 'block', fontSize: 14, marginBottom: 6 }}>Initial Investment ($)</label>
           <input type="number" value={principal} onChange={e => setPrincipal(e.target.value)} placeholder="10000"
-            style={{ padding: '10px 12px', border: '1px solid #d1d5db', borderRadius: 6, fontSize: 16, width: 180 }} />
+            style={{ padding: '10px 12px', border: '1px solid #d1d5db', borderRadius: 6, fontSize: 16, width: 180, height: 43, boxSizing: 'border-box' }} />
         </div>
         <div>
           <label style={{ display: 'block', fontSize: 14, marginBottom: 6 }}>Annual Interest Rate (%)</label>
           <input type="number" value={rate} onChange={e => setRate(e.target.value)} placeholder="5"
-            style={{ padding: '10px 12px', border: '1px solid #d1d5db', borderRadius: 6, fontSize: 16, width: 180 }} />
+            style={{ padding: '10px 12px', border: '1px solid #d1d5db', borderRadius: 6, fontSize: 16, width: 180, height: 43, boxSizing: 'border-box' }} />
         </div>
         <div>
           <label style={{ display: 'block', fontSize: 14, marginBottom: 6 }}>Time (Years)</label>
           <input type="number" value={years} onChange={e => setYears(e.target.value)} placeholder="10"
-            style={{ padding: '10px 12px', border: '1px solid #d1d5db', borderRadius: 6, fontSize: 16, width: 120 }} />
+            style={{ padding: '10px 12px', border: '1px solid #d1d5db', borderRadius: 6, fontSize: 16, width: 120, height: 43, boxSizing: 'border-box' }} />
         </div>
         <div>
           <label style={{ display: 'block', fontSize: 14, marginBottom: 6 }}>Compounding</label>
           <select value={frequency} onChange={e => setFrequency(e.target.value)}
-            style={{ padding: '10px 12px', border: '1px solid #d1d5db', borderRadius: 6, fontSize: 16, width: 140 }}>
+            style={{ padding: '10px 12px', border: '1px solid #d1d5db', borderRadius: 6, fontSize: 16, width: 140, height: 43, boxSizing: 'border-box' }}>
             <option value="1">Annually</option>
             <option value="4">Quarterly</option>
             <option value="12">Monthly</option>
