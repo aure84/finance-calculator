@@ -10,6 +10,7 @@ export default function Footer() {
           <Link to="/privacy-policy" style={{ color: '#6b7280' }}>Privacy Policy</Link>
           <Link to="/terms-of-use" style={{ color: '#6b7280' }}>Terms of Use</Link>
           <Link to="/cookies" style={{ color: '#6b7280' }}>Cookies</Link>
+          <Link to="/privacy-policy#ccpa" style={{ color: '#6b7280' }}>Do Not Sell My Personal Information</Link>
         </nav>
       </div>
     </footer>
