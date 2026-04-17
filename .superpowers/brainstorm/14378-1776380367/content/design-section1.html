@@ -1,0 +1,75 @@
+<h2>Design — 1. szekció: Struktúra & Kalkulátorok</h2>
+<p class="subtitle">finance-fast.com · React 19 + Vite · Cloudflare Pages</p>
+
+<div class="section">
+  <h3>5 MVP Kalkulátor</h3>
+  <table style="width:100%;border-collapse:collapse;font-size:14px">
+    <tr style="background:#1e293b;color:#94a3b8">
+      <th style="padding:8px;text-align:left">Kalkulátor</th>
+      <th style="padding:8px;text-align:left">URL</th>
+      <th style="padding:8px;text-align:left">State pages</th>
+      <th style="padding:8px;text-align:left">Keresési vol.</th>
+    </tr>
+    <tr style="border-bottom:1px solid #334155">
+      <td style="padding:8px">💰 Salary Calculator</td>
+      <td style="padding:8px;font-family:monospace">/salary-calculator</td>
+      <td style="padding:8px">50 (Sprint 2)</td>
+      <td style="padding:8px">500K+/hó</td>
+    </tr>
+    <tr style="border-bottom:1px solid #334155">
+      <td style="padding:8px">🏠 Mortgage Calculator</td>
+      <td style="padding:8px;font-family:monospace">/mortgage-calculator</td>
+      <td style="padding:8px">—</td>
+      <td style="padding:8px">2M+/hó</td>
+    </tr>
+    <tr style="border-bottom:1px solid #334155">
+      <td style="padding:8px">📈 Compound Interest</td>
+      <td style="padding:8px;font-family:monospace">/compound-interest-calculator</td>
+      <td style="padding:8px">—</td>
+      <td style="padding:8px">500K+/hó</td>
+    </tr>
+    <tr style="border-bottom:1px solid #334155">
+      <td style="padding:8px">🚗 Loan Calculator</td>
+      <td style="padding:8px;font-family:monospace">/loan-calculator</td>
+      <td style="padding:8px">—</td>
+      <td style="padding:8px">1M+/hó</td>
+    </tr>
+    <tr>
+      <td style="padding:8px">💳 Debt Payoff</td>
+      <td style="padding:8px;font-family:monospace">/debt-payoff-calculator</td>
+      <td style="padding:8px">—</td>
+      <td style="padding:8px">200K+/hó</td>
+    </tr>
+  </table>
+</div>
+
+<div class="section">
+  <h3>Repo struktúra</h3>
+  <pre style="background:#0f172a;padding:16px;border-radius:8px;font-size:13px;color:#94a3b8">finance-calculator/
+├── src/
+│   ├── calculators/
+│   │   ├── salary/        # logika + komponens
+│   │   ├── mortgage/
+│   │   ├── compound/
+│   │   ├── loan/
+│   │   └── debt-payoff/
+│   ├── components/        # shared: Nav, Footer, AdSlot
+│   ├── pages/             # route komponensek
+│   └── utils/             # formázás, validáció
+├── public/
+│   ├── sitemap.xml
+│   └── robots.txt
+└── project-docs/</pre>
+</div>
+
+<div class="section">
+  <h3>Minden kalkulátor tartalmaz</h3>
+  <ul style="line-height:2">
+    <li>Input mezők validációval (nem-numerikus input nem jelenik meg)</li>
+    <li>Azonnali eredmény (nincs submit gomb)</li>
+    <li>Eredmény táblázat / amortizációs táblázat ahol releváns</li>
+    <li>Shareable URL (?value= query param)</li>
+    <li>AdSense slot (header + result alatt)</li>
+    <li>Egyedi H1, title, meta description, JSON-LD</li>
+  </ul>
+</div>

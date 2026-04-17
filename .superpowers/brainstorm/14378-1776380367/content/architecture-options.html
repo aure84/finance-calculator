@@ -1,0 +1,36 @@
+<h2>Melyik architektúra illik legjobban?</h2>
+<p class="subtitle">finance-fast.com — 3 megközelítés, mindegyik React 19 + Vite + Cloudflare Pages</p>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>convert-fast.com klón</h3>
+      <p>Ugyanaz a repo struktúra, routing, build pipeline. Csak a kalkulátor logika változik.<br><br>
+      <strong>Pro:</strong> Leggyorsabb build, bevált SEO setup, AdSense config készen van.<br>
+      <strong>Con:</strong> A konverter UI egyszerűbb mint egy finance form — némi adaptáció kell.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Önálló projekt, convert-fast.com mintájára</h3>
+      <p>Új repo, de ugyanaz a stack és SEO playbook. Finance-specifikus form komponensek.<br><br>
+      <strong>Pro:</strong> Optimalizált finance UX (több input mező, eredmény táblázat, amortizáció).<br>
+      <strong>Con:</strong> Kicsit több idő a scaffolding — de ez az ajánlott út.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>Monorepo — megosztott komponensek</h3>
+      <p>convert-fast.com és finance-fast.com egy repo-ban, shared UI library.<br><br>
+      <strong>Pro:</strong> Közös AdSense setup, shared Nav/Footer/Legal oldalak.<br>
+      <strong>Con:</strong> Felesleges komplexitás két kis projektnél — YAGNI.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <p class="subtitle">🟢 CEO ajánlás: <strong>B</strong> — önálló projekt, finance-optimalizált komponensekkel, convert-fast.com SEO playbookjával.</p>
+</div>
