@@ -37,7 +37,7 @@ export default function CompoundCalc() {
         <div>
           <label style={{ display: 'block', fontSize: 14, marginBottom: 6 }}>Compounding</label>
           <select value={frequency} onChange={e => setFrequency(e.target.value)}
-            style={{ padding: '10px 12px', border: '1px solid #d1d5db', borderRadius: 6, fontSize: 16 }}>
+            style={{ padding: '10px 12px', border: '1px solid #d1d5db', borderRadius: 6, fontSize: 16, width: 140 }}>
             <option value="1">Annually</option>
             <option value="4">Quarterly</option>
             <option value="12">Monthly</option>
