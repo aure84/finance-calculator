@@ -1,0 +1,43 @@
+.footer {
+  background: var(--navy);
+  padding: 24px 32px;
+  margin-top: 48px;
+}
+
+.inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copy {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.nav {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.link {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.link:hover {
+  color: #ffffff;
+}
+
+.link:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.8);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
