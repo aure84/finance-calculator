@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 
 interface SEOMetaProps {
   title: string
@@ -6,6 +7,8 @@ interface SEOMetaProps {
 }
 
 export default function SEOMeta({ title, description }: SEOMetaProps) {
+  const { pathname } = useLocation()
+
   useEffect(() => {
     document.title = title
 
@@ -16,7 +19,15 @@ export default function SEOMeta({ title, description }: SEOMetaProps) {
       document.head.appendChild(meta)
     }
     meta.content = description
-  }, [title, description])
+
+    let canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]')
+    if (!canonical) {
+      canonical = document.createElement('link')
+      canonical.rel = 'canonical'
+      document.head.appendChild(canonical)
+    }
+    canonical.href = `https://finance-fast.com${pathname}`
+  }, [title, description, pathname])
 
   return null
 }
