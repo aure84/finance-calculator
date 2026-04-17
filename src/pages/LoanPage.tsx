@@ -1,8 +1,28 @@
 import { Link } from 'react-router-dom'
 import AdSlot from '../components/AdSlot'
 import SEOMeta from '../components/SEOMeta'
+import FAQSchema from '../components/FAQSchema'
 import LoanCalc from '../calculators/loan/LoanCalc'
 import styles from './calculator.module.css'
+
+const LOAN_FAQ = [
+  {
+    q: 'How is a monthly loan payment calculated?',
+    a: 'Using the amortization formula: M = P[r(1+r)^n]/[(1+r)^n−1], where P is the principal, r is the monthly interest rate (annual rate ÷ 12), and n is the total number of monthly payments.',
+  },
+  {
+    q: 'What types of loans can I calculate?',
+    a: 'This calculator works for any fixed-rate installment loan: personal loans, auto loans, student loans, home equity loans, and more. Enter the loan amount, interest rate, and term.',
+  },
+  {
+    q: 'What is APR?',
+    a: 'APR (Annual Percentage Rate) is the yearly cost of borrowing. This calculator uses the interest rate directly. Your actual APR may be higher if the lender charges origination fees or other costs.',
+  },
+  {
+    q: 'How can I pay off my loan faster?',
+    a: 'Making extra payments toward the principal reduces your balance faster and saves interest. Even an extra $50–$100 per month can shorten a 5-year loan by several months and save hundreds in interest.',
+  },
+]
 
 export default function LoanPage() {
   return (
@@ -11,6 +31,7 @@ export default function LoanPage() {
         title="Loan Calculator — Monthly Payment & Total Cost | finance-fast.com"
         description="Calculate monthly loan payments and total interest for any personal, auto, or student loan. Free loan calculator with instant results."
       />
+      <FAQSchema items={LOAN_FAQ} />
       <div className={styles.breadcrumb}>
         <Link to="/">Home</Link> › Loan Calculator
       </div>
