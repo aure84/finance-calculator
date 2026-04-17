@@ -7,8 +7,8 @@ import RelatedCalculators from '../components/RelatedCalculators'
 import styles from './calculator.module.css'
 
 const DEBT_RELATED = [
-  { label: 'Loan Calculator', to: '/loan', description: 'Calculate monthly payments for any personal, auto, or student loan.' },
-  { label: 'Mortgage Calculator', to: '/mortgage', description: 'Calculate your monthly mortgage payment and amortization schedule.' },
+  { label: 'Loan Calculator', to: '/loan-calculator', description: 'Calculate monthly payments for any personal, auto, or student loan.' },
+  { label: 'Mortgage Calculator', to: '/mortgage-calculator', description: 'Calculate your monthly mortgage payment and amortization schedule.' },
 ]
 
 const DEBT_FAQ = [

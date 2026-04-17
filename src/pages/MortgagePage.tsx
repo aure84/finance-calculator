@@ -7,8 +7,8 @@ import RelatedCalculators from '../components/RelatedCalculators'
 import styles from './calculator.module.css'
 
 const MORTGAGE_RELATED = [
-  { label: 'Loan Calculator', to: '/loan', description: 'Calculate monthly payments for any personal, auto, or student loan.' },
-  { label: 'Debt Payoff Calculator', to: '/debt-payoff', description: 'Compare snowball vs avalanche debt payoff strategies.' },
+  { label: 'Loan Calculator', to: '/loan-calculator', description: 'Calculate monthly payments for any personal, auto, or student loan.' },
+  { label: 'Debt Payoff Calculator', to: '/debt-payoff-calculator', description: 'Compare snowball vs avalanche debt payoff strategies.' },
 ]
 
 const MORTGAGE_FAQ = [

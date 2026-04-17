@@ -7,7 +7,7 @@ import RelatedCalculators from '../components/RelatedCalculators'
 import styles from './calculator.module.css'
 
 const SALARY_RELATED = [
-  { label: 'Compound Interest Calculator', to: '/compound', description: 'See how your savings grow over time with compound interest.' },
+  { label: 'Compound Interest Calculator', to: '/compound-interest-calculator', description: 'See how your savings grow over time with compound interest.' },
 ]
 
 const SALARY_FAQ = [

@@ -7,8 +7,8 @@ import RelatedCalculators from '../components/RelatedCalculators'
 import styles from './calculator.module.css'
 
 const LOAN_RELATED = [
-  { label: 'Mortgage Calculator', to: '/mortgage', description: 'Calculate your monthly mortgage payment and amortization schedule.' },
-  { label: 'Debt Payoff Calculator', to: '/debt-payoff', description: 'Compare snowball vs avalanche debt payoff strategies.' },
+  { label: 'Mortgage Calculator', to: '/mortgage-calculator', description: 'Calculate your monthly mortgage payment and amortization schedule.' },
+  { label: 'Debt Payoff Calculator', to: '/debt-payoff-calculator', description: 'Compare snowball vs avalanche debt payoff strategies.' },
 ]
 
 const LOAN_FAQ = [

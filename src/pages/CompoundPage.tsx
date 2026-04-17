@@ -7,7 +7,7 @@ import RelatedCalculators from '../components/RelatedCalculators'
 import styles from './calculator.module.css'
 
 const COMPOUND_RELATED = [
-  { label: 'Salary Calculator', to: '/salary', description: 'Calculate your net take-home pay after federal income tax and FICA.' },
+  { label: 'Salary Calculator', to: '/salary-calculator', description: 'Calculate your net take-home pay after federal income tax and FICA.' },
 ]
 
 const COMPOUND_FAQ = [
