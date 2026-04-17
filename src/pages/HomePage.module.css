@@ -31,7 +31,8 @@
 }
 
 .card {
-  display: block;
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
   background: var(--surface);
   border: 1px solid var(--border);
