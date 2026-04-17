@@ -1,22 +1,29 @@
+import { Link } from 'react-router-dom'
 import AdSlot from '../components/AdSlot'
 import SEOMeta from '../components/SEOMeta'
 import CompoundCalc from '../calculators/compound/CompoundCalc'
+import styles from './calculator.module.css'
 
 export default function CompoundPage() {
   return (
-    <main style={{ maxWidth: 900, margin: '0 auto', padding: '32px 24px' }}>
+    <main className={styles.page}>
       <SEOMeta
         title="Compound Interest Calculator — See Your Investment Grow | finance-fast.com"
         description="Calculate compound interest with annual, quarterly, monthly, or daily compounding. Free compound interest calculator with year-by-year breakdown."
       />
-      <AdSlot slot="header" />
-      <h1 style={{ marginBottom: 8 }}>Compound Interest Calculator</h1>
-      <p style={{ marginBottom: 24, color: '#6b7280' }}>
+      <div className={styles.breadcrumb}>
+        <Link to="/">Home</Link> › Compound Interest Calculator
+      </div>
+      <h1 className={styles.title}>Compound Interest Calculator</h1>
+      <p className={styles.subtitle}>
         See how your investment grows over time with compound interest. Compare annual, quarterly, monthly, and daily compounding.
       </p>
-      <CompoundCalc />
+      <AdSlot slot="header" />
+      <div className={styles.panel}>
+        <CompoundCalc />
+      </div>
       <AdSlot slot="content" />
-      <div style={{ marginTop: 32, padding: 16, background: '#fef9c3', borderRadius: 8, fontSize: 13, color: '#713f12' }}>
+      <div className={styles.disclaimer}>
         <strong>Disclaimer:</strong> Hypothetical results only. Does not account for taxes on gains, inflation, or fund fees. Not a guarantee of future investment returns.
       </div>
     </main>
