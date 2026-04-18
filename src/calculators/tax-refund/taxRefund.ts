@@ -70,11 +70,11 @@ export interface TaxRefundInput {
 export interface TaxRefundResult {
   taxableIncome: number
   federalTax: number
-  stateTax: number | null
-  totalTax: number
-  refundOrOwed: number
+  stateTax: number | null     // null when no stateId provided
+  totalTax: number            // federalTax + stateTax; equals federalTax when no state selected
+  refundOrOwed: number        // federal only: |federalWithheld - federalTax|
   isRefund: boolean
-  stateRefundOrOwed: number | null
+  stateRefundOrOwed: number | null  // null unless both stateId and stateWithheld are provided
   stateIsRefund: boolean | null
 }
 
