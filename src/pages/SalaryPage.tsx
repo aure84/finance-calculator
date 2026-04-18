@@ -21,7 +21,7 @@ const SALARY_FAQ = [
   },
   {
     q: 'Does this calculator include state taxes?',
-    a: 'No. This calculator covers federal income tax and FICA only. State income tax rates vary widely by state and are not included in these estimates.',
+    a: 'Yes — select your state from the optional dropdown to include state income tax. State tax is applied to the same taxable income as federal tax (an approximation, as states have their own deductions). Eight states have no income tax: Alaska, Florida, Nevada, South Dakota, Tennessee, Texas, Washington, and Wyoming.',
   },
   {
     q: 'What are the 2026 federal tax brackets for single filers?',
@@ -50,7 +50,7 @@ export default function SalaryPage() {
       </div>
       <AdSlot slot="content" />
       <div className={styles.disclaimer}>
-        <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Results are not tax or financial advice. Figures are based on 2026 federal tax brackets and do not include state or local taxes. Consult a CPA for personalized advice.
+        <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Results are not tax or financial advice. Federal figures are based on 2026 tax brackets. State tax uses the same taxable income as federal (an approximation — states have their own deductions). Does not include local taxes. Consult a CPA for personalized advice.
       </div>
       <RelatedCalculators links={SALARY_RELATED} />
     </main>
