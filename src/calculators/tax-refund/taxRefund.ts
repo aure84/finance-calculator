@@ -1,3 +1,5 @@
+import { calcStateTax } from '../../data/stateTax'
+
 export enum FilingStatus {
   Single = 'single',
   MarriedFilingJointly = 'mfj',
@@ -61,17 +63,23 @@ export interface TaxRefundInput {
   filingStatus: FilingStatus
   grossIncome: number
   federalWithheld: number
+  stateId?: string
+  stateWithheld?: number
 }
 
 export interface TaxRefundResult {
   taxableIncome: number
   federalTax: number
+  stateTax: number | null
+  totalTax: number
   refundOrOwed: number
   isRefund: boolean
+  stateRefundOrOwed: number | null
+  stateIsRefund: boolean | null
 }
 
 export function calcTaxRefund(input: TaxRefundInput): TaxRefundResult {
-  const { filingStatus, grossIncome, federalWithheld } = input
+  const { filingStatus, grossIncome, federalWithheld, stateId, stateWithheld } = input
   const standardDeduction = STANDARD_DEDUCTIONS[filingStatus]
   const taxableIncome = Math.max(0, grossIncome - standardDeduction)
 
@@ -82,11 +90,27 @@ export function calcTaxRefund(input: TaxRefundInput): TaxRefundResult {
     federalTax += taxable * bracket.rate
   }
 
-  const diff = federalWithheld - federalTax
+  const stateTax = stateId != null ? calcStateTax(taxableIncome, stateId) : null
+  const totalTax = federalTax + (stateTax ?? 0)
+
+  const fedDiff = federalWithheld - federalTax
+
+  let stateRefundOrOwed: number | null = null
+  let stateIsRefund: boolean | null = null
+  if (stateTax != null && stateWithheld != null) {
+    const stateDiff = stateWithheld - stateTax
+    stateRefundOrOwed = Math.abs(stateDiff)
+    stateIsRefund = stateDiff >= 0
+  }
+
   return {
     taxableIncome,
     federalTax,
-    refundOrOwed: Math.abs(diff),
-    isRefund: diff >= 0,
+    stateTax,
+    totalTax,
+    refundOrOwed: Math.abs(fedDiff),
+    isRefund: fedDiff >= 0,
+    stateRefundOrOwed,
+    stateIsRefund,
   }
 }

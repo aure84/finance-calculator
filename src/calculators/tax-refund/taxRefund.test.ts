@@ -30,4 +30,29 @@ describe('calcTaxRefund', () => {
     // 10% on $23,850 = $2,385, 12% on $26,150 = $3,138 → $5,523
     expect(result.federalTax).toBeCloseTo(5523, 0)
   })
+
+  it('includes state tax when stateId is provided', () => {
+    // PA flat 3.07%, $35,000 taxable income → $1,074.50 state tax
+    const result = calcTaxRefund({ filingStatus: FilingStatus.Single, grossIncome: 50000, federalWithheld: 5000, stateId: 'PA' })
+    expect(result.stateTax).toBeCloseTo(1074.5, 0)
+    expect(result.totalTax).toBeCloseTo(result.federalTax + 1074.5, 0)
+  })
+
+  it('returns zero state tax for no-income-tax state', () => {
+    const result = calcTaxRefund({ filingStatus: FilingStatus.Single, grossIncome: 50000, federalWithheld: 5000, stateId: 'TX' })
+    expect(result.stateTax).toBe(0)
+  })
+
+  it('calculates state refund when stateWithheld is provided', () => {
+    const result = calcTaxRefund({ filingStatus: FilingStatus.Single, grossIncome: 50000, federalWithheld: 5000, stateId: 'PA', stateWithheld: 2000 })
+    expect(result.stateRefundOrOwed).toBeCloseTo(2000 - 1074.5, 0)
+    expect(result.stateIsRefund).toBe(true)
+  })
+
+  it('returns null state fields when no stateId provided', () => {
+    const result = calcTaxRefund({ filingStatus: FilingStatus.Single, grossIncome: 50000, federalWithheld: 5000 })
+    expect(result.stateTax).toBeNull()
+    expect(result.stateRefundOrOwed).toBeNull()
+    expect(result.stateIsRefund).toBeNull()
+  })
 })
