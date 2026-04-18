@@ -37,12 +37,12 @@ export default function TaxRefundCalc() {
         </div>
         <div>
           <label style={{ display: 'block', fontSize: 14, marginBottom: 6 }}>Gross Income ($)</label>
-          <input type="number" value={grossIncome} onChange={e => setGrossIncome(e.target.value)} placeholder="60000"
+          <input type="number" min="0" value={grossIncome} onChange={e => setGrossIncome(e.target.value)} placeholder="60000"
             style={{ ...inputStyle, width: 160 }} />
         </div>
         <div>
           <label style={{ display: 'block', fontSize: 14, marginBottom: 6 }}>Federal Tax Withheld ($)</label>
-          <input type="number" value={federalWithheld} onChange={e => setFederalWithheld(e.target.value)} placeholder="7000"
+          <input type="number" min="0" value={federalWithheld} onChange={e => setFederalWithheld(e.target.value)} placeholder="7000"
             style={{ ...inputStyle, width: 180 }} />
         </div>
       </div>
@@ -61,7 +61,7 @@ export default function TaxRefundCalc() {
         {stateId && !stateHasNoTax && (
           <div>
             <label style={{ display: 'block', fontSize: 14, marginBottom: 6 }}>State Tax Withheld ($, optional)</label>
-            <input type="number" value={stateWithheld} onChange={e => setStateWithheld(e.target.value)} placeholder="2000"
+            <input type="number" min="0" value={stateWithheld} onChange={e => setStateWithheld(e.target.value)} placeholder="2000"
               style={{ ...inputStyle, width: 180 }} />
           </div>
         )}
@@ -111,8 +111,10 @@ export default function TaxRefundCalc() {
             {[
               ['Taxable Income', formatCurrency(result.taxableIncome)],
               ['Federal Tax', formatCurrency(result.federalTax)],
-              ...(result.stateTax != null ? [['State Tax', formatCurrency(result.stateTax)]] : []),
-              ...(result.stateTax != null ? [['Total Tax', formatCurrency(result.totalTax)]] : []),
+              ...(result.stateTax != null && result.stateTax > 0 ? [
+                ['State Tax', formatCurrency(result.stateTax)],
+                ['Total Tax', formatCurrency(result.totalTax)],
+              ] : []),
             ].map(([label, val]) => (
               <div key={label} style={{ background: '#f9fafb', padding: 16, borderRadius: 8, minWidth: 150 }}>
                 <div style={{ fontSize: 12, color: '#6b7280' }}>{label}</div>
