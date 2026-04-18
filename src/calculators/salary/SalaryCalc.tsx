@@ -1,15 +1,22 @@
 import { useState } from 'react'
 import { calcSalary } from './salary'
+import { STATES } from '../../data/stateTax'
 import { formatCurrency, formatPercent } from '../../utils/format'
 
 export default function SalaryCalc() {
   const [salary, setSalary] = useState('')
   const [filing, setFiling] = useState<'single' | 'married'>('single')
+  const [stateId, setStateId] = useState('')
 
   const value = parseFloat(salary)
   const result = !isNaN(value) && value > 0
-    ? calcSalary({ annualSalary: value, filingStatus: filing })
+    ? calcSalary({ annualSalary: value, filingStatus: filing, stateId: stateId || undefined })
     : null
+
+  const selectedState = stateId ? STATES.find(s => s.id === stateId) : null
+  const stateHasNoTax = selectedState && selectedState.brackets.length === 0
+
+  const inputStyle = { padding: '10px 12px', border: '1px solid #d1d5db', borderRadius: 6, fontSize: 16, height: 42 }
 
   return (
     <div>
@@ -18,10 +25,11 @@ export default function SalaryCalc() {
           <label style={{ display: 'block', fontSize: 14, marginBottom: 6 }}>Annual Salary</label>
           <input
             type="number"
+            min="0"
             value={salary}
             onChange={e => setSalary(e.target.value)}
             placeholder="e.g. 75000"
-            style={{ padding: '10px 12px', border: '1px solid #d1d5db', borderRadius: 6, fontSize: 16, width: 200, height: 42 }}
+            style={{ ...inputStyle, width: 200 }}
           />
         </div>
         <div>
@@ -29,13 +37,32 @@ export default function SalaryCalc() {
           <select
             value={filing}
             onChange={e => setFiling(e.target.value as 'single' | 'married')}
-            style={{ padding: '10px 12px', border: '1px solid #d1d5db', borderRadius: 6, fontSize: 16, height: 42 }}
+            style={inputStyle}
           >
             <option value="single">Single</option>
             <option value="married">Married Filing Jointly</option>
           </select>
         </div>
+        <div>
+          <label style={{ display: 'block', fontSize: 14, marginBottom: 6 }}>State (optional)</label>
+          <select
+            value={stateId}
+            onChange={e => setStateId(e.target.value)}
+            style={{ ...inputStyle, width: 200 }}
+          >
+            <option value="">— No state —</option>
+            {STATES.map(s => (
+              <option key={s.id} value={s.id}>{s.name}</option>
+            ))}
+          </select>
+        </div>
       </div>
+
+      {stateHasNoTax && (
+        <div style={{ background: '#f0fdf4', border: '1px solid #86efac', borderRadius: 8, padding: 12, marginBottom: 16, fontSize: 14, color: '#166534' }}>
+          {selectedState!.name} has no state income tax.
+        </div>
+      )}
 
       {result && (
         <div>
@@ -44,6 +71,9 @@ export default function SalaryCalc() {
               {[
                 ['Gross Annual', formatCurrency(result.grossAnnual)],
                 ['Federal Income Tax', formatCurrency(result.federalTax)],
+                ...(result.stateTax != null && result.stateTax > 0
+                  ? [['State Income Tax', formatCurrency(result.stateTax)]]
+                  : []),
                 ['Social Security (6.2%)', formatCurrency(result.socialSecurity)],
                 ['Medicare (1.45%)', formatCurrency(result.medicare)],
                 ['Total FICA', formatCurrency(result.fica)],
@@ -73,7 +103,8 @@ export default function SalaryCalc() {
             ))}
           </div>
           <p style={{ marginTop: 16, fontSize: 12, color: '#9ca3af' }}>
-            Effective tax rate: {formatPercent(result.effectiveRate)} · Based on 2026 federal brackets · State tax not included
+            Effective tax rate: {formatPercent(result.effectiveRate)} · Based on 2026 federal brackets
+            {result.stateTax == null ? ' · Select a state to include state income tax' : ''}
           </p>
         </div>
       )}
