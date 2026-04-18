@@ -7,6 +7,9 @@ import MortgagePage from './pages/MortgagePage'
 import CompoundPage from './pages/CompoundPage'
 import LoanPage from './pages/LoanPage'
 import DebtPayoffPage from './pages/DebtPayoffPage'
+import RetirementPage from './pages/RetirementPage'
+import TaxRefundPage from './pages/TaxRefundPage'
+import SavingsGoalPage from './pages/SavingsGoalPage'
 import DisclaimerPage from './pages/legal/DisclaimerPage'
 import PrivacyPage from './pages/legal/PrivacyPage'
 import TermsPage from './pages/legal/TermsPage'
@@ -23,6 +26,9 @@ export default function App() {
         <Route path="/compound-interest-calculator" element={<CompoundPage />} />
         <Route path="/loan-calculator" element={<LoanPage />} />
         <Route path="/debt-payoff-calculator" element={<DebtPayoffPage />} />
+        <Route path="/retirement-calculator" element={<RetirementPage />} />
+        <Route path="/tax-refund-calculator" element={<TaxRefundPage />} />
+        <Route path="/savings-goal-calculator" element={<SavingsGoalPage />} />
         <Route path="/disclaimer" element={<DisclaimerPage />} />
         <Route path="/privacy-policy" element={<PrivacyPage />} />
         <Route path="/terms-of-use" element={<TermsPage />} />
