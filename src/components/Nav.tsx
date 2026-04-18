@@ -7,6 +7,9 @@ const links = [
   { to: '/compound-interest-calculator', label: 'Compound Interest' },
   { to: '/loan-calculator', label: 'Loan' },
   { to: '/debt-payoff-calculator', label: 'Debt Payoff' },
+  { to: '/retirement-calculator', label: 'Retirement' },
+  { to: '/tax-refund-calculator', label: 'Tax Refund' },
+  { to: '/savings-goal-calculator', label: 'Savings Goal' },
 ]
 
 export default function Nav() {
