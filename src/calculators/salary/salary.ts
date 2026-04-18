@@ -1,20 +1,24 @@
+import { calcStateTax } from '../../data/stateTax'
+
 export interface SalaryInput {
   annualSalary: number
   filingStatus: 'single' | 'married'
+  stateId?: string
 }
 
 export interface SalaryResult {
   grossAnnual: number
   federalTax: number
+  stateTax: number | null   // null when no stateId provided
   socialSecurity: number
   medicare: number
   fica: number
-  netAnnual: number
+  netAnnual: number         // after federal + FICA + state (if selected)
   netMonthly: number
   netBiweekly: number
   netWeekly: number
   netHourly: number
-  effectiveRate: number
+  effectiveRate: number     // includes state tax in numerator when selected
 }
 
 // 2026 federal tax brackets
@@ -56,18 +60,20 @@ function calcFederalTax(taxableIncome: number, filingStatus: 'single' | 'married
 }
 
 export function calcSalary(input: SalaryInput): SalaryResult {
-  const { annualSalary, filingStatus } = input
+  const { annualSalary, filingStatus, stateId } = input
   const deduction = filingStatus === 'single' ? STANDARD_DEDUCTION_SINGLE : STANDARD_DEDUCTION_MARRIED
   const taxableIncome = Math.max(0, annualSalary - deduction)
   const federalTax = calcFederalTax(taxableIncome, filingStatus)
   const socialSecurity = Math.min(annualSalary, SS_WAGE_BASE) * SS_RATE
   const medicare = annualSalary * MEDICARE_RATE
   const fica = socialSecurity + medicare
-  const netAnnual = annualSalary - federalTax - fica
+  const stateTax = stateId != null ? calcStateTax(taxableIncome, stateId) : null
+  const netAnnual = annualSalary - federalTax - fica - (stateTax ?? 0)
 
   return {
     grossAnnual: annualSalary,
     federalTax,
+    stateTax,
     socialSecurity,
     medicare,
     fica,
@@ -76,6 +82,6 @@ export function calcSalary(input: SalaryInput): SalaryResult {
     netBiweekly: netAnnual / 26,
     netWeekly: netAnnual / 52,
     netHourly: netAnnual / 2080,
-    effectiveRate: annualSalary > 0 ? (federalTax + fica) / annualSalary : 0,
+    effectiveRate: annualSalary > 0 ? (federalTax + fica + (stateTax ?? 0)) / annualSalary : 0,
   }
 }

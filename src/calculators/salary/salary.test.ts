@@ -27,4 +27,25 @@ describe('calcSalary', () => {
     expect(result.netWeekly).toBeCloseTo(result.netAnnual / 52, 1)
     expect(result.netHourly).toBeCloseTo(result.netAnnual / 2080, 2)
   })
+
+  it('deducts state tax from netAnnual when stateId provided', () => {
+    // PA flat 3.07%. Single, $50k gross, deduction $15k → taxable $35k
+    // stateTax = 35000 * 0.0307 = 1074.50
+    const withState = calcSalary({ annualSalary: 50000, filingStatus: 'single', stateId: 'PA' })
+    const noState   = calcSalary({ annualSalary: 50000, filingStatus: 'single' })
+    expect(withState.stateTax).toBeCloseTo(1074.5, 0)
+    expect(withState.netAnnual).toBeCloseTo(noState.netAnnual - 1074.5, 0)
+  })
+
+  it('returns stateTax 0 for no-income-tax state and does not change netAnnual', () => {
+    const withTX  = calcSalary({ annualSalary: 50000, filingStatus: 'single', stateId: 'TX' })
+    const noState = calcSalary({ annualSalary: 50000, filingStatus: 'single' })
+    expect(withTX.stateTax).toBe(0)
+    expect(withTX.netAnnual).toBeCloseTo(noState.netAnnual, 1)
+  })
+
+  it('returns stateTax null when no stateId and netAnnual is unchanged', () => {
+    const result = calcSalary({ annualSalary: 50000, filingStatus: 'single' })
+    expect(result.stateTax).toBeNull()
+  })
 })
