@@ -84,7 +84,7 @@ export default function RetirementCalc() {
             ))}
           </div>
           <p style={{ fontSize: 12, color: '#9ca3af' }}>
-            For illustrative purposes only. Does not account for inflation, Social Security, or investment fees.
+            For illustrative purposes only. Does not account for inflation, federal income tax, Social Security, or investment fees.
             {result.estimatedStateTax == null
               ? ' Select a state to estimate state tax on withdrawal.'
               : ' State tax estimate assumes full lump-sum withdrawal (an approximation — actual tax depends on withdrawal strategy).'}
