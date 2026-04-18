@@ -21,6 +21,14 @@ const TAX_FAQ = [
     a: 'For 2025: $15,000 (Single or Married Filing Separately), $30,000 (Married Filing Jointly), and $22,500 (Head of Household). This amount is subtracted from your gross income before tax is calculated.',
   },
   {
+    q: 'Which states have no income tax?',
+    a: 'Eight states have no individual income tax: Alaska, Florida, Nevada, South Dakota, Tennessee, Texas, Washington, and Wyoming. New Hampshire taxes only dividend and interest income, not wages.',
+  },
+  {
+    q: 'How accurate is the state tax estimate?',
+    a: 'The state estimate applies state brackets to your federal taxable income (gross income minus federal standard deduction). Most states have their own deductions and credits, so the actual liability may differ — treat this as a planning estimate, not a filing number.',
+  },
+  {
     q: "When will I get my refund?",
     a: "The IRS issues most refunds within 21 days of e-filing. Paper returns take 4–8 weeks. You can check your status at IRS.gov using the \"Where's My Refund?\" tool.",
   },
@@ -30,8 +38,8 @@ export default function TaxRefundPage() {
   return (
     <main className={styles.page}>
       <SEOMeta
-        title="Tax Refund Calculator 2025 — Federal Refund Estimator | finance-fast.com"
-        description="Estimate your 2025 federal tax refund or amount owed. Enter your income, filing status, and withholding for an instant estimate."
+        title="Tax Refund Calculator 2025 — Federal + State Estimator | finance-fast.com"
+        description="Estimate your 2025 federal and state tax refund or amount owed. Select your state for a combined estimate. Free, no sign-up required."
       />
       <FAQSchema items={TAX_FAQ} />
       <div className={styles.breadcrumb}>
@@ -39,7 +47,7 @@ export default function TaxRefundPage() {
       </div>
       <h1 className={styles.title}>Tax Refund Calculator 2025</h1>
       <p className={styles.subtitle}>
-        Estimate your federal tax refund or amount owed based on your income, filing status, and withholding.
+        Estimate your federal and state tax refund or amount owed based on your income, filing status, and withholding.
       </p>
       <AdSlot slot="header" />
       <div className={styles.panel}>
@@ -47,7 +55,7 @@ export default function TaxRefundPage() {
       </div>
       <AdSlot slot="content" />
       <div className={styles.disclaimer}>
-        <strong>Disclaimer:</strong> Estimates based on 2025 federal standard deductions and tax brackets only. Does not include state taxes, AMT, credits, or itemized deductions. Consult a tax professional for accurate filing.
+        <strong>Disclaimer:</strong> Estimates based on 2025 federal standard deductions and tax brackets. State tax applies state rates to federal taxable income — an approximation, as states have their own deductions and credits. Does not include local taxes, AMT, or itemized deductions. Consult a tax professional for accurate filing.
       </div>
       <RelatedCalculators links={TAX_RELATED} />
     </main>
