@@ -18,4 +18,25 @@ describe('calcRetirement', () => {
     expect(result.totalContributions).toBe(12000)
     expect(result.totalInterest).toBe(0)
   })
+
+  it('returns estimatedStateTax and netProjectedBalance when stateId provided', () => {
+    // PA flat 3.07% on projectedBalance
+    // projectedBalance ≈ 264122 (from existing test params)
+    // estimatedStateTax ≈ 264122 * 0.0307 ≈ 8109
+    const result = calcRetirement({ currentSavings: 10000, monthlyContribution: 500, annualReturn: 6, years: 20, stateId: 'PA' })
+    expect(result.estimatedStateTax).toBeCloseTo(8109, 0)
+    expect(result.netProjectedBalance).toBeCloseTo(result.projectedBalance - result.estimatedStateTax!, 0)
+  })
+
+  it('returns estimatedStateTax 0 for no-income-tax state and netProjectedBalance equals projectedBalance', () => {
+    const withTX = calcRetirement({ currentSavings: 10000, monthlyContribution: 500, annualReturn: 6, years: 20, stateId: 'TX' })
+    expect(withTX.estimatedStateTax).toBe(0)
+    expect(withTX.netProjectedBalance).toBeCloseTo(withTX.projectedBalance, 1)
+  })
+
+  it('returns estimatedStateTax null and netProjectedBalance equals projectedBalance when no stateId', () => {
+    const result = calcRetirement({ currentSavings: 10000, monthlyContribution: 500, annualReturn: 6, years: 20 })
+    expect(result.estimatedStateTax).toBeNull()
+    expect(result.netProjectedBalance).toBeCloseTo(result.projectedBalance, 1)
+  })
 })
