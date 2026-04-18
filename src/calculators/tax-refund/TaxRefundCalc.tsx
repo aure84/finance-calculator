@@ -1,19 +1,26 @@
 import { useState } from 'react'
 import { calcTaxRefund, FilingStatus } from './taxRefund'
+import { STATES } from '../../data/stateTax'
 import { formatCurrency } from '../../utils/format'
 
 export default function TaxRefundCalc() {
   const [filingStatus, setFilingStatus] = useState<FilingStatus>(FilingStatus.Single)
   const [grossIncome, setGrossIncome] = useState('')
   const [federalWithheld, setFederalWithheld] = useState('')
+  const [stateId, setStateId] = useState('')
+  const [stateWithheld, setStateWithheld] = useState('')
 
   const gi = parseFloat(grossIncome)
   const fw = parseFloat(federalWithheld)
+  const sw = stateWithheld !== '' ? parseFloat(stateWithheld) : undefined
   const result = !isNaN(gi) && gi >= 0 && !isNaN(fw) && fw >= 0
-    ? calcTaxRefund({ filingStatus, grossIncome: gi, federalWithheld: fw })
+    ? calcTaxRefund({ filingStatus, grossIncome: gi, federalWithheld: fw, stateId: stateId || undefined, stateWithheld: sw })
     : null
 
   const inputStyle = { padding: '10px 12px', border: '1px solid #d1d5db', borderRadius: 6, fontSize: 16, height: 43, boxSizing: 'border-box' as const }
+
+  const selectedState = stateId ? STATES.find(s => s.id === stateId) : null
+  const stateHasNoTax = selectedState && selectedState.brackets.length === 0
 
   return (
     <div>
@@ -40,6 +47,32 @@ export default function TaxRefundCalc() {
         </div>
       </div>
 
+      <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap', marginBottom: 24 }}>
+        <div>
+          <label style={{ display: 'block', fontSize: 14, marginBottom: 6 }}>State (optional)</label>
+          <select value={stateId} onChange={e => { setStateId(e.target.value); setStateWithheld('') }}
+            style={{ ...inputStyle, width: 220 }}>
+            <option value="">— No state —</option>
+            {STATES.map(s => (
+              <option key={s.id} value={s.id}>{s.name}</option>
+            ))}
+          </select>
+        </div>
+        {stateId && !stateHasNoTax && (
+          <div>
+            <label style={{ display: 'block', fontSize: 14, marginBottom: 6 }}>State Tax Withheld ($, optional)</label>
+            <input type="number" value={stateWithheld} onChange={e => setStateWithheld(e.target.value)} placeholder="2000"
+              style={{ ...inputStyle, width: 180 }} />
+          </div>
+        )}
+      </div>
+
+      {stateHasNoTax && (
+        <div style={{ background: '#f0fdf4', border: '1px solid #86efac', borderRadius: 8, padding: 12, marginBottom: 16, fontSize: 14, color: '#166534' }}>
+          {selectedState!.name} has no state income tax.
+        </div>
+      )}
+
       {result && (
         <div>
           <div style={{
@@ -50,25 +83,45 @@ export default function TaxRefundCalc() {
             marginBottom: 16,
           }}>
             <div style={{ fontSize: 13, color: result.isRefund ? '#166534' : '#991b1b', marginBottom: 4 }}>
-              {result.isRefund ? 'Estimated Refund' : 'Estimated Amount Owed'}
+              {result.isRefund ? 'Estimated Federal Refund' : 'Estimated Federal Amount Owed'}
             </div>
             <div style={{ fontSize: 28, fontWeight: 700, color: result.isRefund ? '#16a34a' : '#dc2626' }}>
               {formatCurrency(result.refundOrOwed)}
             </div>
           </div>
-          <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap', marginBottom: 16 }}>
+
+          {result.stateRefundOrOwed != null && result.stateIsRefund != null && (
+            <div style={{
+              background: result.stateIsRefund ? '#f0fdf4' : '#fef2f2',
+              border: `1px solid ${result.stateIsRefund ? '#86efac' : '#fca5a5'}`,
+              borderRadius: 8,
+              padding: 20,
+              marginBottom: 16,
+            }}>
+              <div style={{ fontSize: 13, color: result.stateIsRefund ? '#166534' : '#991b1b', marginBottom: 4 }}>
+                {result.stateIsRefund ? 'Estimated State Refund' : 'Estimated State Amount Owed'}
+              </div>
+              <div style={{ fontSize: 28, fontWeight: 700, color: result.stateIsRefund ? '#16a34a' : '#dc2626' }}>
+                {formatCurrency(result.stateRefundOrOwed)}
+              </div>
+            </div>
+          )}
+
+          <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap', marginBottom: 16 }}>
             {[
               ['Taxable Income', formatCurrency(result.taxableIncome)],
-              ['Estimated Federal Tax', formatCurrency(result.federalTax)],
+              ['Federal Tax', formatCurrency(result.federalTax)],
+              ...(result.stateTax != null ? [['State Tax', formatCurrency(result.stateTax)]] : []),
+              ...(result.stateTax != null ? [['Total Tax', formatCurrency(result.totalTax)]] : []),
             ].map(([label, val]) => (
-              <div key={label} style={{ background: '#f9fafb', padding: 16, borderRadius: 8, minWidth: 160 }}>
+              <div key={label} style={{ background: '#f9fafb', padding: 16, borderRadius: 8, minWidth: 150 }}>
                 <div style={{ fontSize: 12, color: '#6b7280' }}>{label}</div>
                 <div style={{ fontSize: 18, fontWeight: 700 }}>{val}</div>
               </div>
             ))}
           </div>
           <p style={{ fontSize: 12, color: '#9ca3af' }}>
-            Based on 2025 federal tax brackets and standard deduction. Does not include state taxes, AMT, tax credits, or deductions beyond the standard deduction.
+            Based on 2025 federal brackets and standard deduction. State tax uses the same taxable income as federal (an approximation — states have their own deductions). Does not include AMT, tax credits, or local taxes.
           </p>
         </div>
       )}
