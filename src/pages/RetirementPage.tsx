@@ -24,6 +24,10 @@ const RETIREMENT_FAQ = [
     q: 'What is compound growth?',
     a: 'Compound growth means your returns earn returns. The longer your money is invested, the more powerful this effect becomes — even small monthly contributions add up significantly over decades.',
   },
+  {
+    q: 'Does this calculator include state income tax?',
+    a: 'Yes — select your state from the optional dropdown to estimate state income tax on your projected balance at withdrawal. The estimate assumes a full lump-sum withdrawal, which is an approximation; your actual tax will depend on how and when you withdraw. Eight states have no income tax: Alaska, Florida, Nevada, South Dakota, Tennessee, Texas, Washington, and Wyoming.',
+  },
 ]
 
 export default function RetirementPage() {
@@ -47,7 +51,7 @@ export default function RetirementPage() {
       </div>
       <AdSlot slot="content" />
       <div className={styles.disclaimer}>
-        <strong>Disclaimer:</strong> For illustrative purposes only. Does not account for inflation, taxes, Social Security, or investment fees. Past market returns do not guarantee future results.
+        <strong>Disclaimer:</strong> For illustrative purposes only. Does not account for inflation, Social Security, or investment fees. State tax estimate assumes full lump-sum withdrawal (approximation — actual tax depends on withdrawal strategy and state rules). Past market returns do not guarantee future results.
       </div>
       <RelatedCalculators links={RETIREMENT_RELATED} />
     </main>
