@@ -14,6 +14,7 @@ const links = [
   { to: '/vat-calculator', label: 'VAT' },
   { to: '/inflation-calculator', label: 'Inflation' },
   { to: '/percentage-calculator', label: 'Percentage' },
+  { to: '/apr-calculator', label: 'APR' },
   { to: '/blog', label: 'Blog' },
 ]
 

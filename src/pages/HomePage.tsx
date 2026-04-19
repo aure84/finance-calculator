@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Wallet, Home, TrendingUp, Car, CreditCard, PiggyBank, Receipt, Target, Percent, BarChart2, Calculator } from 'lucide-react'
+import { Wallet, Home, TrendingUp, Car, CreditCard, PiggyBank, Receipt, Target, Percent, BarChart2, Calculator, BadgePercent } from 'lucide-react'
 import SEOMeta from '../components/SEOMeta'
 import styles from './HomePage.module.css'
 
@@ -15,6 +15,7 @@ const calculators = [
   { to: '/vat-calculator', icon: Percent, title: 'VAT Calculator', desc: 'Add or remove VAT from any price instantly' },
   { to: '/inflation-calculator', icon: BarChart2, title: 'Inflation Calculator', desc: 'See how inflation erodes purchasing power over time' },
   { to: '/percentage-calculator', icon: Calculator, title: 'Percentage Calculator', desc: 'Calculate percentages, ratios, and percentage change' },
+  { to: '/apr-calculator', icon: BadgePercent, title: 'APR Calculator', desc: 'Find the true annual cost of any loan including fees' },
 ]
 
 export default function HomePage() {

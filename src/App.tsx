@@ -13,6 +13,7 @@ import SavingsGoalPage from './pages/SavingsGoalPage'
 import VatPage from './pages/VatPage'
 import InflationPage from './pages/InflationPage'
 import PercentagePage from './pages/PercentagePage'
+import AprPage from './pages/AprPage'
 import BlogIndexPage from './pages/BlogIndexPage'
 import BlogPostPage from './pages/BlogPostPage'
 import DisclaimerPage from './pages/legal/DisclaimerPage'
@@ -37,6 +38,7 @@ export default function App() {
         <Route path="/vat-calculator" element={<VatPage />} />
         <Route path="/inflation-calculator" element={<InflationPage />} />
         <Route path="/percentage-calculator" element={<PercentagePage />} />
+        <Route path="/apr-calculator" element={<AprPage />} />
         <Route path="/blog" element={<BlogIndexPage />} />
         <Route path="/blog/:slug" element={<BlogPostPage />} />
         <Route path="/disclaimer" element={<DisclaimerPage />} />
