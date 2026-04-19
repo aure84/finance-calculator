@@ -17,8 +17,8 @@ const TAX_FAQ = [
     a: 'The US uses a progressive bracket system — each portion of your income is taxed at the corresponding marginal rate, not your entire income at the top rate.',
   },
   {
-    q: 'What is the standard deduction for 2025?',
-    a: 'For 2025: $15,000 (Single or Married Filing Separately), $30,000 (Married Filing Jointly), and $22,500 (Head of Household). This amount is subtracted from your gross income before tax is calculated.',
+    q: 'What is the standard deduction for 2026?',
+    a: 'For 2026: $15,000 (Single or Married Filing Separately), $30,000 (Married Filing Jointly), and $22,500 (Head of Household). This amount is subtracted from your gross income before tax is calculated.',
   },
   {
     q: 'Which states have no income tax?',
@@ -38,8 +38,8 @@ export default function TaxRefundPage() {
   return (
     <main className={styles.page}>
       <SEOMeta
-        title="Tax Refund Calculator 2025 — How Much Will I Get Back?"
-        description="Estimate your 2025 federal and state tax refund or amount owed. Enter your income, filing status, and withholding. Free, no sign-up required."
+        title="Tax Refund Calculator 2026 — How Much Will I Get Back?"
+        description="Estimate your 2026 federal and state tax refund or amount owed. Enter your income, filing status, and withholding. Free, no sign-up required."
       />
       <FAQSchema items={TAX_FAQ} />
       <div className={styles.breadcrumb}>
@@ -47,7 +47,7 @@ export default function TaxRefundPage() {
       </div>
       <h1 className={styles.title}>How Much of a Tax Refund Will I Get?</h1>
       <p className={styles.subtitle}>
-        Enter your income, filing status, and how much tax was withheld from your paychecks — see your estimated federal refund or amount owed. Add your state for a combined estimate.
+        Enter your income, filing status, and how much tax was withheld from your paychecks — see your estimated 2026 federal refund or amount owed. Add your state for a combined estimate.
       </p>
       <AdSlot slot="header" />
       <div className={styles.panel}>
@@ -103,7 +103,7 @@ export default function TaxRefundPage() {
       </section>
 
       <div className={styles.disclaimer}>
-        <strong>Disclaimer:</strong> Estimates based on 2025 federal standard deductions and tax brackets. State tax applies state rates to federal taxable income — an approximation, as states have their own deductions and credits. Does not include local taxes, AMT, or itemized deductions. Consult a tax professional for accurate filing.
+        <strong>Disclaimer:</strong> Estimates based on 2026 federal standard deductions and tax brackets. State tax applies state rates to federal taxable income — an approximation, as states have their own deductions and credits. Does not include local taxes, AMT, or itemized deductions. Consult a tax professional for accurate filing.
       </div>
       <RelatedCalculators links={TAX_RELATED} />
     </main>

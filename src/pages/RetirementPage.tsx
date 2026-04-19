@@ -14,7 +14,7 @@ const RETIREMENT_RELATED = [
 const RETIREMENT_FAQ = [
   {
     q: 'What is a realistic annual return rate?',
-    a: 'The S&P 500 has historically returned around 10% annually before inflation. A conservative estimate of 6–7% accounts for inflation and diversification.',
+    a: 'The S&P 500 has historically returned around 10% annually before inflation. Some planners use 6–7% as a conservative long-term estimate — your actual returns will vary based on your investments and market conditions.',
   },
   {
     q: 'How much should I save per month?',
@@ -34,22 +34,70 @@ export default function RetirementPage() {
   return (
     <main className={styles.page}>
       <SEOMeta
-        title="Retirement Calculator — Project Your Savings | finance-fast.com"
-        description="Calculate your projected retirement balance based on current savings, monthly contributions, and expected return. Free retirement savings calculator."
+        title="Retirement Calculator — How Much Will I Have Saved?"
+        description="Project your retirement balance based on current savings, monthly contributions, and expected return rate. Free retirement savings calculator with state tax estimate."
       />
       <FAQSchema items={RETIREMENT_FAQ} />
       <div className={styles.breadcrumb}>
         <Link to="/">Home</Link> › Retirement Calculator
       </div>
-      <h1 className={styles.title}>Retirement Calculator</h1>
+      <h1 className={styles.title}>How Much Will I Have Saved by Retirement?</h1>
       <p className={styles.subtitle}>
-        Project your retirement savings based on current balance, monthly contributions, and expected annual return.
+        Enter your current savings, monthly contribution, expected return, and years to retirement — see your projected balance and the power of starting early.
       </p>
       <AdSlot slot="header" />
       <div className={styles.panel}>
         <RetirementCalc />
       </div>
       <AdSlot slot="content" />
+
+      <section className={styles.contentSection}>
+        <h2 className={styles.sectionHeading}>Why starting early makes such a big difference</h2>
+        <p className={styles.sectionText}>
+          Retirement savings grow through compound interest — your returns earn returns. The earlier you start, the more time each dollar has to compound. Ten extra years of growth can double your final balance even if you never increase your contributions.
+        </p>
+        <p className={styles.sectionText}>
+          Employer match is essentially a 100% return on the matched amount from day one. Always contribute at least enough to capture the full match before investing elsewhere.
+        </p>
+      </section>
+
+      <section className={styles.contentSection}>
+        <h2 className={styles.sectionHeading}>Example retirement projections at 7% annual return</h2>
+        <p className={styles.sectionText}>Monthly compounding. No starting balance.</p>
+        <div className={styles.exampleGrid}>
+          <div className={styles.exampleCard}>
+            <div className={styles.exampleLabel}>Start at 25</div>
+            <div className={styles.exampleScenario}>$300/mo · 7% · 40 years</div>
+            <div className={styles.exampleValue}>$787,000</div>
+            <div className={styles.exampleSub}>Total contributed: $144,000</div>
+          </div>
+          <div className={styles.exampleCard}>
+            <div className={styles.exampleLabel}>Start at 30</div>
+            <div className={styles.exampleScenario}>$500/mo · 7% · 35 years</div>
+            <div className={styles.exampleValue}>$900,000</div>
+            <div className={styles.exampleSub}>Total contributed: $210,000</div>
+          </div>
+          <div className={styles.exampleCard}>
+            <div className={styles.exampleLabel}>Start at 35</div>
+            <div className={styles.exampleScenario}>$1,000/mo · 7% · 30 years</div>
+            <div className={styles.exampleValue}>$1,220,000</div>
+            <div className={styles.exampleSub}>Total contributed: $360,000</div>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.contentSection}>
+        <h2 className={styles.sectionHeading}>Frequently asked questions</h2>
+        <div className={styles.faqList}>
+          {RETIREMENT_FAQ.map(({ q, a }) => (
+            <div key={q} className={styles.faqItem}>
+              <div className={styles.faqQ}>{q}</div>
+              <div className={styles.faqA}>{a}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <div className={styles.disclaimer}>
         <strong>Disclaimer:</strong> For illustrative purposes only. Does not account for inflation, Social Security, or investment fees. State tax estimate assumes full lump-sum withdrawal (approximation — actual tax depends on withdrawal strategy and state rules). Past market returns do not guarantee future results.
       </div>

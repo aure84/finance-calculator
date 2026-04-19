@@ -34,22 +34,69 @@ export default function LoanPage() {
   return (
     <main className={styles.page}>
       <SEOMeta
-        title="Loan Calculator — Monthly Payment & Total Cost | finance-fast.com"
+        title="Loan Calculator — How Much Will My Monthly Payment Be?"
         description="Calculate monthly loan payments and total interest for any personal, auto, or student loan. Free loan calculator with instant results."
       />
       <FAQSchema items={LOAN_FAQ} />
       <div className={styles.breadcrumb}>
         <Link to="/">Home</Link> › Loan Calculator
       </div>
-      <h1 className={styles.title}>Loan Calculator</h1>
+      <h1 className={styles.title}>How Much Will My Monthly Loan Payment Be?</h1>
       <p className={styles.subtitle}>
-        Calculate monthly payments, total interest, and total cost for any personal, auto, or student loan.
+        Enter your loan amount, interest rate, and term to see your monthly payment and total interest. Works for personal loans, auto loans, student loans, and more.
       </p>
       <AdSlot slot="header" />
       <div className={styles.panel}>
         <LoanCalc />
       </div>
       <AdSlot slot="content" />
+
+      <section className={styles.contentSection}>
+        <h2 className={styles.sectionHeading}>How loan payments are calculated</h2>
+        <p className={styles.sectionText}>
+          Fixed-rate loans use an amortization formula that spreads your total repayment across equal monthly payments. Each payment covers the month's interest first, then reduces the remaining principal. Early payments are interest-heavy; later payments go mostly to principal.
+        </p>
+        <p className={styles.sectionText}>
+          A shorter loan term means higher monthly payments but significantly less total interest. A longer term lowers your payment but increases the total cost of the loan.
+        </p>
+      </section>
+
+      <section className={styles.contentSection}>
+        <h2 className={styles.sectionHeading}>Example monthly payments</h2>
+        <div className={styles.exampleGrid}>
+          <div className={styles.exampleCard}>
+            <div className={styles.exampleLabel}>Auto loan</div>
+            <div className={styles.exampleScenario}>$15,000 · 6% · 5 years</div>
+            <div className={styles.exampleValue}>$290<span style={{ fontSize: 14, fontWeight: 400 }}>/mo</span></div>
+            <div className={styles.exampleSub}>Total interest: ~$2,396</div>
+          </div>
+          <div className={styles.exampleCard}>
+            <div className={styles.exampleLabel}>Personal loan</div>
+            <div className={styles.exampleScenario}>$25,000 · 12% · 3 years</div>
+            <div className={styles.exampleValue}>$830<span style={{ fontSize: 14, fontWeight: 400 }}>/mo</span></div>
+            <div className={styles.exampleSub}>Total interest: ~$4,894</div>
+          </div>
+          <div className={styles.exampleCard}>
+            <div className={styles.exampleLabel}>Student loan</div>
+            <div className={styles.exampleScenario}>$35,000 · 5.5% · 10 years</div>
+            <div className={styles.exampleValue}>$380<span style={{ fontSize: 14, fontWeight: 400 }}>/mo</span></div>
+            <div className={styles.exampleSub}>Total interest: ~$10,571</div>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.contentSection}>
+        <h2 className={styles.sectionHeading}>Frequently asked questions</h2>
+        <div className={styles.faqList}>
+          {LOAN_FAQ.map(({ q, a }) => (
+            <div key={q} className={styles.faqItem}>
+              <div className={styles.faqQ}>{q}</div>
+              <div className={styles.faqA}>{a}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <div className={styles.disclaimer}>
         <strong>Disclaimer:</strong> Estimates only. Does not include origination fees or prepayment penalties. Rates you qualify for may differ from illustrative rates shown. Not a loan offer.
       </div>
