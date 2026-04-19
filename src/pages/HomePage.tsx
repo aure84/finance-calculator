@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Wallet, Home, TrendingUp, Car, CreditCard, PiggyBank, Receipt, Target, Percent } from 'lucide-react'
+import { Wallet, Home, TrendingUp, Car, CreditCard, PiggyBank, Receipt, Target, Percent, BarChart2 } from 'lucide-react'
 import SEOMeta from '../components/SEOMeta'
 import styles from './HomePage.module.css'
 
@@ -13,6 +13,7 @@ const calculators = [
   { to: '/tax-refund-calculator', icon: Receipt, title: 'Tax Refund Calculator', desc: 'Estimate your federal tax refund or amount owed' },
   { to: '/savings-goal-calculator', icon: Target, title: 'Savings Goal Calculator', desc: 'Find out how long to reach your savings target' },
   { to: '/vat-calculator', icon: Percent, title: 'VAT Calculator', desc: 'Add or remove VAT from any price instantly' },
+  { to: '/inflation-calculator', icon: BarChart2, title: 'Inflation Calculator', desc: 'See how inflation erodes purchasing power over time' },
 ]
 
 export default function HomePage() {

@@ -11,6 +11,7 @@ import RetirementPage from './pages/RetirementPage'
 import TaxRefundPage from './pages/TaxRefundPage'
 import SavingsGoalPage from './pages/SavingsGoalPage'
 import VatPage from './pages/VatPage'
+import InflationPage from './pages/InflationPage'
 import BlogIndexPage from './pages/BlogIndexPage'
 import BlogPostPage from './pages/BlogPostPage'
 import DisclaimerPage from './pages/legal/DisclaimerPage'
@@ -33,6 +34,7 @@ export default function App() {
         <Route path="/tax-refund-calculator" element={<TaxRefundPage />} />
         <Route path="/savings-goal-calculator" element={<SavingsGoalPage />} />
         <Route path="/vat-calculator" element={<VatPage />} />
+        <Route path="/inflation-calculator" element={<InflationPage />} />
         <Route path="/blog" element={<BlogIndexPage />} />
         <Route path="/blog/:slug" element={<BlogPostPage />} />
         <Route path="/disclaimer" element={<DisclaimerPage />} />
