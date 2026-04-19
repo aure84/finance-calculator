@@ -106,6 +106,7 @@ export default function CompoundPage() {
         { label: 'What Is Compound Interest?', to: '/blog/what-is-compound-interest', description: 'How compound interest grows your money exponentially over time.' },
         { label: 'Compound vs Simple Interest', to: '/blog/compound-vs-simple-interest', description: 'Learn the key difference and when each type applies.' },
         { label: 'How Much Should You Save for Retirement?', to: '/blog/how-much-to-save-for-retirement', description: 'The 4% rule, age-based milestones, and how to close the gap.' },
+        { label: 'How Does Inflation Erode Your Savings?', to: '/blog/how-inflation-erodes-savings', description: 'Why cash loses value over time and what you can do about it.' },
       ]} />
     </main>
   )

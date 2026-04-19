@@ -286,8 +286,67 @@ export const blogPosts: BlogPost[] = [
     ],
     conclusion: 'Inflation is a silent tax on savings and a tailwind for fixed-rate borrowers. Plan your financial decisions with inflation in mind: invest rather than hoard cash, and lock in fixed rates when they are favorable.',
     relatedLinks: [
+      { label: 'Inflation Calculator', to: '/inflation-calculator' },
       { label: 'Compound Interest Calculator', to: '/compound-interest-calculator' },
       { label: 'Retirement Calculator', to: '/retirement-calculator' },
+    ],
+  },
+
+  {
+    slug: 'how-inflation-erodes-savings',
+    title: 'How Does Inflation Erode Your Savings?',
+    date: '2026-04-19',
+    description: 'Learn how inflation quietly reduces your purchasing power over time — and what you can do to protect your savings.',
+    intro: "Inflation is often described as a hidden tax. You don't see it on a bill, but every year it quietly chips away at the value of your money. Even a modest 3% annual inflation rate cuts your purchasing power nearly in half over 25 years. Understanding how inflation erodes savings is the first step toward protecting them.",
+    sections: [
+      {
+        heading: 'What Does "Eroding Savings" Mean?',
+        paragraphs: [
+          'When inflation rises faster than your savings account interest rate, your money loses real value. A $10,000 balance that earns 1% interest while inflation runs at 3% loses purchasing power every year — even though the number on your statement grows.',
+          'The math is straightforward: at 3% annual inflation, $10,000 today buys only about $7,440 worth of goods in 10 years.',
+        ],
+      },
+      {
+        heading: 'How Quickly Does It Add Up?',
+        paragraphs: [
+          'The effect compounds over time. Small rate differences matter enormously over long periods.',
+        ],
+        list: [
+          '3% inflation, 10 years: $10,000 → ~$7,440 in real value',
+          '3% inflation, 20 years: $10,000 → ~$5,537',
+          '7% inflation, 10 years: $10,000 → ~$5,083',
+        ],
+      },
+      {
+        heading: 'Which Savings Are Most at Risk?',
+        paragraphs: [
+          'Not all savings carry the same inflation risk. Cash and low-yield accounts offer no protection. Fixed instruments lock you into below-inflation returns for years.',
+        ],
+        list: [
+          'Cash: 100% exposed to inflation',
+          'Low-yield savings accounts: exposed if yield is below the inflation rate',
+          'Fixed-rate bonds with long maturities: locked into below-inflation returns',
+          'Pensions without cost-of-living adjustments: real value falls each year',
+        ],
+      },
+      {
+        heading: 'How to Protect Your Savings',
+        paragraphs: [
+          'No strategy eliminates inflation risk entirely, but these approaches reduce it significantly.',
+        ],
+        list: [
+          'Invest in assets that historically outpace inflation — equities, real estate, inflation-linked bonds such as TIPS',
+          'Use a high-yield savings account — rates above 4–5% can offset moderate inflation',
+          'Diversify across currencies — if your home currency inflates rapidly, foreign assets preserve value',
+          'Review fixed expenses regularly — renegotiate contracts and subscriptions',
+        ],
+      },
+    ],
+    conclusion: "Inflation won't stop, but ignoring it is the costliest mistake. Use our Inflation Calculator to see exactly how inflation affects your money over time — then act on what you find.",
+    relatedLinks: [
+      { label: 'Inflation Calculator', to: '/inflation-calculator' },
+      { label: 'Compound Interest Calculator', to: '/compound-interest-calculator' },
+      { label: 'Savings Goal Calculator', to: '/savings-goal-calculator' },
     ],
   },
 

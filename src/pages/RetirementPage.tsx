@@ -106,6 +106,7 @@ export default function RetirementPage() {
         { label: 'How Much Should You Save for Retirement?', to: '/blog/how-much-to-save-for-retirement', description: 'The 4% rule, savings rate benchmarks, and age-based milestones.' },
         { label: 'What Is a 401(k)?', to: '/blog/what-is-401k', description: 'How 401(k) contributions, employer matching, and Roth vs traditional work.' },
         { label: 'What Is Compound Interest?', to: '/blog/what-is-compound-interest', description: 'Why starting early makes such a dramatic difference to retirement savings.' },
+        { label: 'How Does Inflation Erode Your Savings?', to: '/blog/how-inflation-erodes-savings', description: 'Why cash loses value over time and what you can do about it.' },
       ]} />
     </main>
   )
