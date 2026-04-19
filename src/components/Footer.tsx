@@ -9,6 +9,8 @@ export default function Footer() {
           © {new Date().getFullYear()} finance-fast.com — For informational purposes only. Not financial advice.
         </p>
         <nav className={styles.nav}>
+          <Link to="/about" className={styles.link}>About</Link>
+          <Link to="/contact" className={styles.link}>Contact</Link>
           <Link to="/disclaimer" className={styles.link}>Disclaimer</Link>
           <Link to="/privacy-policy" className={styles.link}>Privacy Policy</Link>
           <Link to="/terms-of-use" className={styles.link}>Terms of Use</Link>

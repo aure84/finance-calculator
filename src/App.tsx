@@ -21,6 +21,8 @@ import DisclaimerPage from './pages/legal/DisclaimerPage'
 import PrivacyPage from './pages/legal/PrivacyPage'
 import TermsPage from './pages/legal/TermsPage'
 import CookiesPage from './pages/legal/CookiesPage'
+import AboutPage from './pages/AboutPage'
+import ContactPage from './pages/ContactPage'
 
 export default function App() {
   return (
@@ -43,6 +45,8 @@ export default function App() {
         <Route path="/tip-calculator" element={<TipPage />} />
         <Route path="/blog" element={<BlogIndexPage />} />
         <Route path="/blog/:slug" element={<BlogPostPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
         <Route path="/disclaimer" element={<DisclaimerPage />} />
         <Route path="/privacy-policy" element={<PrivacyPage />} />
         <Route path="/terms-of-use" element={<TermsPage />} />
