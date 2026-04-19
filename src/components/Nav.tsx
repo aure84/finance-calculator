@@ -10,6 +10,7 @@ const links = [
   { to: '/retirement-calculator', label: 'Retirement' },
   { to: '/tax-refund-calculator', label: 'Tax Refund' },
   { to: '/savings-goal-calculator', label: 'Savings Goal' },
+  { to: '/blog', label: 'Blog' },
 ]
 
 export default function Nav() {

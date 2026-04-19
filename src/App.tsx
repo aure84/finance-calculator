@@ -10,6 +10,8 @@ import DebtPayoffPage from './pages/DebtPayoffPage'
 import RetirementPage from './pages/RetirementPage'
 import TaxRefundPage from './pages/TaxRefundPage'
 import SavingsGoalPage from './pages/SavingsGoalPage'
+import BlogIndexPage from './pages/BlogIndexPage'
+import BlogPostPage from './pages/BlogPostPage'
 import DisclaimerPage from './pages/legal/DisclaimerPage'
 import PrivacyPage from './pages/legal/PrivacyPage'
 import TermsPage from './pages/legal/TermsPage'
@@ -29,6 +31,8 @@ export default function App() {
         <Route path="/retirement-calculator" element={<RetirementPage />} />
         <Route path="/tax-refund-calculator" element={<TaxRefundPage />} />
         <Route path="/savings-goal-calculator" element={<SavingsGoalPage />} />
+        <Route path="/blog" element={<BlogIndexPage />} />
+        <Route path="/blog/:slug" element={<BlogPostPage />} />
         <Route path="/disclaimer" element={<DisclaimerPage />} />
         <Route path="/privacy-policy" element={<PrivacyPage />} />
         <Route path="/terms-of-use" element={<TermsPage />} />

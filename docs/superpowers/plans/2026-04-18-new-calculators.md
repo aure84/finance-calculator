@@ -50,7 +50,7 @@ import { calcRetirement } from './retirement'
 describe('calcRetirement', () => {
   it('calculates projected balance with compound growth', () => {
     const result = calcRetirement({ currentSavings: 10000, monthlyContribution: 500, annualReturn: 6, years: 20 })
-    expect(result.projectedBalance).toBeCloseTo(232175, 0)
+    expect(result.projectedBalance).toBeCloseTo(264122, 0)
   })
 
   it('handles zero return rate without division by zero', () => {
