@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Wallet, Home, TrendingUp, Car, CreditCard, PiggyBank, Receipt, Target } from 'lucide-react'
+import { Wallet, Home, TrendingUp, Car, CreditCard, PiggyBank, Receipt, Target, Percent } from 'lucide-react'
 import SEOMeta from '../components/SEOMeta'
 import styles from './HomePage.module.css'
 
@@ -12,6 +12,7 @@ const calculators = [
   { to: '/retirement-calculator', icon: PiggyBank, title: 'Retirement Calculator', desc: 'Project your savings at retirement' },
   { to: '/tax-refund-calculator', icon: Receipt, title: 'Tax Refund Calculator', desc: 'Estimate your federal tax refund or amount owed' },
   { to: '/savings-goal-calculator', icon: Target, title: 'Savings Goal Calculator', desc: 'Find out how long to reach your savings target' },
+  { to: '/vat-calculator', icon: Percent, title: 'VAT Calculator', desc: 'Add or remove VAT from any price instantly' },
 ]
 
 export default function HomePage() {
