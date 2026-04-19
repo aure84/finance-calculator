@@ -12,34 +12,6 @@
   height: 56px;
 }
 
-@media (max-width: 640px) {
-  .header {
-    height: auto;
-    min-height: 56px;
-    flex-wrap: wrap;
-    gap: 0;
-    padding: 8px 16px;
-    align-items: flex-start;
-  }
-
-  .logo {
-    padding: 4px 0;
-  }
-
-  .nav {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    width: 100%;
-    padding: 2px 0 6px;
-  }
-
-  .nav::-webkit-scrollbar {
-    display: none;
-  }
-}
-
 .logo {
   font-weight: 700;
   font-size: 18px;
@@ -62,6 +34,7 @@
   padding: 6px 10px;
   border-radius: 6px;
   transition: color 0.15s;
+  white-space: nowrap;
 }
 
 .link:hover {
@@ -80,4 +53,96 @@
   border-bottom: 2px solid var(--green);
   border-radius: 0;
   padding-bottom: 4px;
+}
+
+/* ── Hamburger button — hidden on desktop ─────────────────────────────── */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  padding: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.barTop,
+.barMid,
+.barBot {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--navy);
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.barTopOpen {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.barMidOpen {
+  opacity: 0;
+}
+
+.barBotOpen {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ── Mobile ───────────────────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .header {
+    flex-wrap: wrap;
+    height: auto;
+    min-height: 56px;
+    padding: 0 16px;
+    gap: 0;
+    align-items: center;
+  }
+
+  .logo {
+    padding: 16px 0;
+    flex: 1;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 8px 0 12px;
+    gap: 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .navOpen {
+    display: flex;
+  }
+
+  .link {
+    font-size: 15px;
+    padding: 10px 4px;
+    border-radius: 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .link:last-child {
+    border-bottom: none;
+  }
+
+  .active {
+    border-bottom: 1px solid var(--border);
+    color: var(--navy);
+    font-weight: 600;
+  }
 }

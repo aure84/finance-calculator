@@ -1,3 +1,4 @@
+import { useState, useEffect, useRef } from 'react'
 import { NavLink } from 'react-router-dom'
 import styles from './Nav.module.css'
 
@@ -16,16 +17,42 @@ const links = [
 ]
 
 export default function Nav() {
+  const [open, setOpen] = useState(false)
+  const menuRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    function handleClick(e: MouseEvent) {
+      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
+        setOpen(false)
+      }
+    }
+    if (open) document.addEventListener('mousedown', handleClick)
+    return () => document.removeEventListener('mousedown', handleClick)
+  }, [open])
+
   return (
-    <header className={styles.header}>
+    <header className={styles.header} ref={menuRef}>
       <NavLink to="/" className={styles.logo}>
         finance-fast.com
       </NavLink>
-      <nav className={styles.nav}>
+
+      <button
+        className={styles.hamburger}
+        onClick={() => setOpen(o => !o)}
+        aria-label={open ? 'Close menu' : 'Open menu'}
+        aria-expanded={open}
+      >
+        <span className={open ? styles.barTop + ' ' + styles.barTopOpen : styles.barTop} />
+        <span className={open ? styles.barMid + ' ' + styles.barMidOpen : styles.barMid} />
+        <span className={open ? styles.barBot + ' ' + styles.barBotOpen : styles.barBot} />
+      </button>
+
+      <nav className={`${styles.nav} ${open ? styles.navOpen : ''}`}>
         {links.map(l => (
           <NavLink
             key={l.to}
             to={l.to}
+            onClick={() => setOpen(false)}
             className={({ isActive }) =>
               isActive ? `${styles.link} ${styles.active}` : styles.link
             }
