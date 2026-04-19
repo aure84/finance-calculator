@@ -102,6 +102,12 @@ export default function MortgagePage() {
         <strong>Disclaimer:</strong> Estimates only. Does not include PMI, HOA fees, property taxes, or insurance. Not a loan offer or pre-approval. Consult a licensed mortgage professional before making decisions.
       </div>
       <RelatedCalculators links={MORTGAGE_RELATED} />
+      <RelatedCalculators title="Related Guides" links={[
+        { label: 'How Does a Mortgage Work?', to: '/blog/how-mortgage-works', description: 'A plain-English explanation of mortgage structure, amortization, and fixed vs variable rates.' },
+        { label: 'What Is Amortization?', to: '/blog/what-is-amortization', description: 'Learn how each payment splits between interest and principal over the loan term.' },
+        { label: 'How Much House Can I Afford?', to: '/blog/how-much-house-can-i-afford', description: 'Use the 28/36 rule to find your realistic home price range.' },
+        { label: 'What Is APR?', to: '/blog/what-is-apr', description: 'APR is the true cost of borrowing — learn how it differs from the interest rate.' },
+      ]} />
     </main>
   )
 }

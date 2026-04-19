@@ -9,13 +9,22 @@ const LINKS = [
 ]
 
 describe('RelatedCalculators', () => {
-  it('renders the section heading', () => {
+  it('renders the default heading', () => {
     render(
       <MemoryRouter>
         <RelatedCalculators links={LINKS} />
       </MemoryRouter>
     )
     expect(screen.getByText('Related Calculators')).toBeTruthy()
+  })
+
+  it('renders a custom title when provided', () => {
+    render(
+      <MemoryRouter>
+        <RelatedCalculators links={LINKS} title="Related Guides" />
+      </MemoryRouter>
+    )
+    expect(screen.getByText('Related Guides')).toBeTruthy()
   })
 
   it('renders the correct number of links', () => {

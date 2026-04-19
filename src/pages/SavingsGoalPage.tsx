@@ -97,6 +97,11 @@ export default function SavingsGoalPage() {
         <strong>Disclaimer:</strong> For illustrative purposes only. Assumes a fixed monthly contribution and constant annual return. Does not account for taxes on investment gains or changes in contribution amount.
       </div>
       <RelatedCalculators links={SAVINGS_RELATED} />
+      <RelatedCalculators title="Related Guides" links={[
+        { label: 'How Long to Reach Your Savings Goal?', to: '/blog/how-long-to-reach-savings-goal', description: 'The formula behind savings timelines and how to shorten them.' },
+        { label: 'How Big Should Your Emergency Fund Be?', to: '/blog/emergency-fund-guide', description: 'How much to save, where to keep it, and how to build it from scratch.' },
+        { label: 'Compound vs Simple Interest', to: '/blog/compound-vs-simple-interest', description: 'Why the interest type on your savings account matters.' },
+      ]} />
     </main>
   )
 }

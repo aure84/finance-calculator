@@ -9,12 +9,13 @@ interface RelatedLink {
 
 interface Props {
   links: RelatedLink[]
+  title?: string
 }
 
-export default function RelatedCalculators({ links }: Props) {
+export default function RelatedCalculators({ links, title = 'Related Calculators' }: Props) {
   return (
     <section className={styles.section}>
-      <h2 className={styles.heading}>Related Calculators</h2>
+      <h2 className={styles.heading}>{title}</h2>
       <div className={styles.grid}>
         {links.map((link) => (
           <Link key={link.to} to={link.to} className={styles.card}>

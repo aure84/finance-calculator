@@ -102,6 +102,11 @@ export default function CompoundPage() {
         <strong>Disclaimer:</strong> Hypothetical results only. Does not account for taxes on gains, inflation, or fund fees. Not a guarantee of future investment returns.
       </div>
       <RelatedCalculators links={COMPOUND_RELATED} />
+      <RelatedCalculators title="Related Guides" links={[
+        { label: 'What Is Compound Interest?', to: '/blog/what-is-compound-interest', description: 'How compound interest grows your money exponentially over time.' },
+        { label: 'Compound vs Simple Interest', to: '/blog/compound-vs-simple-interest', description: 'Learn the key difference and when each type applies.' },
+        { label: 'How Much Should You Save for Retirement?', to: '/blog/how-much-to-save-for-retirement', description: 'The 4% rule, age-based milestones, and how to close the gap.' },
+      ]} />
     </main>
   )
 }

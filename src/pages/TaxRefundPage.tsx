@@ -106,6 +106,11 @@ export default function TaxRefundPage() {
         <strong>Disclaimer:</strong> Estimates based on 2026 federal standard deductions and tax brackets. State tax applies state rates to federal taxable income — an approximation, as states have their own deductions and credits. Does not include local taxes, AMT, or itemized deductions. Consult a tax professional for accurate filing.
       </div>
       <RelatedCalculators links={TAX_RELATED} />
+      <RelatedCalculators title="Related Guides" links={[
+        { label: 'How Is a Tax Refund Calculated?', to: '/blog/how-tax-refund-is-calculated', description: 'How withholding works and why a big refund is not necessarily good news.' },
+        { label: 'How Is Net Salary Calculated?', to: '/blog/how-net-salary-is-calculated', description: 'Which deductions reduce your gross pay and by how much.' },
+        { label: 'What Is VAT?', to: '/blog/what-is-vat', description: 'How Value Added Tax works and how to calculate prices with and without it.' },
+      ]} />
     </main>
   )
 }

@@ -101,6 +101,11 @@ export default function SalaryPage() {
         <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Results are not tax or financial advice. Federal figures are based on 2026 tax brackets. State tax uses the same taxable income as federal (an approximation — states have their own deductions). Does not include local taxes. Consult a CPA for personalized advice.
       </div>
       <RelatedCalculators links={SALARY_RELATED} />
+      <RelatedCalculators title="Related Guides" links={[
+        { label: 'How Is Net Salary Calculated?', to: '/blog/how-net-salary-is-calculated', description: 'Which taxes and deductions reduce your gross pay and by how much.' },
+        { label: 'How to Create a Monthly Budget', to: '/blog/how-to-budget', description: 'The 50/30/20 rule and step-by-step budgeting methods that actually work.' },
+        { label: 'What Is Inflation?', to: '/blog/what-is-inflation', description: 'How inflation erodes purchasing power and what to do about it.' },
+      ]} />
     </main>
   )
 }

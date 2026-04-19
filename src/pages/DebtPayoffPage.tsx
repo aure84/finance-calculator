@@ -104,6 +104,11 @@ export default function DebtPayoffPage() {
         <strong>Disclaimer:</strong> Assumes no new charges are added. Minimum payment assumptions may differ from your lender's actual terms. Consult a financial advisor for personalized debt management advice.
       </div>
       <RelatedCalculators links={DEBT_RELATED} />
+      <RelatedCalculators title="Related Guides" links={[
+        { label: 'Snowball vs Avalanche Method', to: '/blog/snowball-vs-avalanche', description: 'Which debt payoff strategy saves more — and which one you will actually stick with.' },
+        { label: 'What Is Debt-to-Income Ratio?', to: '/blog/debt-to-income-ratio', description: 'How lenders evaluate your ability to repay debt.' },
+        { label: 'What Is APR?', to: '/blog/what-is-apr', description: 'Understand the true annual cost of your debt.' },
+      ]} />
     </main>
   )
 }

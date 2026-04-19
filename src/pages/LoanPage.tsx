@@ -101,6 +101,11 @@ export default function LoanPage() {
         <strong>Disclaimer:</strong> Estimates only. Does not include origination fees or prepayment penalties. Rates you qualify for may differ from illustrative rates shown. Not a loan offer.
       </div>
       <RelatedCalculators links={LOAN_RELATED} />
+      <RelatedCalculators title="Related Guides" links={[
+        { label: 'How Is a Monthly Loan Payment Calculated?', to: '/blog/how-loan-payment-is-calculated', description: 'Step-by-step walkthrough of the amortization formula with examples.' },
+        { label: 'What Is APR?', to: '/blog/what-is-apr', description: 'APR is the true cost of borrowing — learn how it differs from the interest rate.' },
+        { label: 'What Is Debt-to-Income Ratio?', to: '/blog/debt-to-income-ratio', description: 'How lenders evaluate your ability to repay a loan.' },
+      ]} />
     </main>
   )
 }

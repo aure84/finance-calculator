@@ -102,6 +102,11 @@ export default function RetirementPage() {
         <strong>Disclaimer:</strong> For illustrative purposes only. Does not account for inflation, Social Security, or investment fees. State tax estimate assumes full lump-sum withdrawal (approximation — actual tax depends on withdrawal strategy and state rules). Past market returns do not guarantee future results.
       </div>
       <RelatedCalculators links={RETIREMENT_RELATED} />
+      <RelatedCalculators title="Related Guides" links={[
+        { label: 'How Much Should You Save for Retirement?', to: '/blog/how-much-to-save-for-retirement', description: 'The 4% rule, savings rate benchmarks, and age-based milestones.' },
+        { label: 'What Is a 401(k)?', to: '/blog/what-is-401k', description: 'How 401(k) contributions, employer matching, and Roth vs traditional work.' },
+        { label: 'What Is Compound Interest?', to: '/blog/what-is-compound-interest', description: 'Why starting early makes such a dramatic difference to retirement savings.' },
+      ]} />
     </main>
   )
 }
