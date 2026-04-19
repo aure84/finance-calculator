@@ -13,6 +13,7 @@ const links = [
   { to: '/savings-goal-calculator', label: 'Savings Goal' },
   { to: '/vat-calculator', label: 'VAT' },
   { to: '/inflation-calculator', label: 'Inflation' },
+  { to: '/percentage-calculator', label: 'Percentage' },
   { to: '/blog', label: 'Blog' },
 ]
 
