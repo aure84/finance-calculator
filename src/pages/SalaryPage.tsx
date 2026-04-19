@@ -33,22 +33,70 @@ export default function SalaryPage() {
   return (
     <main className={styles.page}>
       <SEOMeta
-        title="Salary Calculator — Take-Home Pay After Tax | finance-fast.com"
-        description="Calculate your net take-home pay after federal income tax and FICA deductions. Free salary calculator based on 2026 US tax brackets."
+        title="Salary Calculator — How Much Is My Take-Home Pay After Tax?"
+        description="Calculate your net take-home pay after federal income tax, FICA, and optional state tax. Based on 2026 US tax brackets. Free, no sign-up required."
       />
       <FAQSchema items={SALARY_FAQ} />
       <div className={styles.breadcrumb}>
         <Link to="/">Home</Link> › Salary Calculator
       </div>
-      <h1 className={styles.title}>Salary Calculator — Take-Home Pay After Tax</h1>
+      <h1 className={styles.title}>How Much Is My Take-Home Pay After Tax?</h1>
       <p className={styles.subtitle}>
-        Calculate your net take-home pay after federal income tax and FICA deductions. Based on 2026 tax brackets.
+        Enter your annual salary to see your exact net pay after federal income tax, Social Security, and Medicare. Add your state for a combined estimate.
       </p>
       <AdSlot slot="header" />
       <div className={styles.panel}>
         <SalaryCalc />
       </div>
       <AdSlot slot="content" />
+
+      <section className={styles.contentSection}>
+        <h2 className={styles.sectionHeading}>How take-home pay is calculated</h2>
+        <p className={styles.sectionText}>
+          Your net pay is your gross salary minus three deductions: federal income tax, Social Security (6.2%), and Medicare (1.45%). Federal tax uses a progressive bracket system — only the income within each bracket is taxed at that rate, not your entire salary.
+        </p>
+        <p className={styles.sectionText}>
+          Before tax is applied, the standard deduction ($15,000 for single filers in 2026) is subtracted from your gross income. This reduces your taxable income and lowers your effective tax rate.
+        </p>
+      </section>
+
+      <section className={styles.contentSection}>
+        <h2 className={styles.sectionHeading}>Example take-home pay (single filer, federal only)</h2>
+        <p className={styles.sectionText}>Based on 2026 federal brackets and standard deduction. No state tax included.</p>
+        <div className={styles.exampleGrid}>
+          <div className={styles.exampleCard}>
+            <div className={styles.exampleLabel}>$50,000 salary</div>
+            <div className={styles.exampleScenario}>Federal tax: $3,962 · FICA: $3,825</div>
+            <div className={styles.exampleValue}>$42,213<span style={{ fontSize: 14, fontWeight: 400 }}>/yr</span></div>
+            <div className={styles.exampleSub}>Effective rate: 15.6%</div>
+          </div>
+          <div className={styles.exampleCard}>
+            <div className={styles.exampleLabel}>$75,000 salary</div>
+            <div className={styles.exampleScenario}>Federal tax: $8,114 · FICA: $5,738</div>
+            <div className={styles.exampleValue}>$61,148<span style={{ fontSize: 14, fontWeight: 400 }}>/yr</span></div>
+            <div className={styles.exampleSub}>Effective rate: 18.5%</div>
+          </div>
+          <div className={styles.exampleCard}>
+            <div className={styles.exampleLabel}>$100,000 salary</div>
+            <div className={styles.exampleScenario}>Federal tax: $13,614 · FICA: $7,650</div>
+            <div className={styles.exampleValue}>$78,736<span style={{ fontSize: 14, fontWeight: 400 }}>/yr</span></div>
+            <div className={styles.exampleSub}>Effective rate: 21.3%</div>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.contentSection}>
+        <h2 className={styles.sectionHeading}>Frequently asked questions</h2>
+        <div className={styles.faqList}>
+          {SALARY_FAQ.map(({ q, a }) => (
+            <div key={q} className={styles.faqItem}>
+              <div className={styles.faqQ}>{q}</div>
+              <div className={styles.faqA}>{a}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <div className={styles.disclaimer}>
         <strong>Disclaimer:</strong> This calculator provides estimates for informational purposes only. Results are not tax or financial advice. Federal figures are based on 2026 tax brackets. State tax uses the same taxable income as federal (an approximation — states have their own deductions). Does not include local taxes. Consult a CPA for personalized advice.
       </div>

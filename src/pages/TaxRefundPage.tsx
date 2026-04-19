@@ -29,8 +29,8 @@ const TAX_FAQ = [
     a: 'The state estimate applies state brackets to your federal taxable income (gross income minus federal standard deduction). Most states have their own deductions and credits, so the actual liability may differ — treat this as a planning estimate, not a filing number.',
   },
   {
-    q: "When will I get my refund?",
-    a: "The IRS issues most refunds within 21 days of e-filing. Paper returns take 4–8 weeks. You can check your status at IRS.gov using the \"Where's My Refund?\" tool.",
+    q: 'When will I get my refund?',
+    a: 'The IRS issues most refunds within 21 days of e-filing. Paper returns take 4–8 weeks. You can check your status at IRS.gov using the "Where\'s My Refund?" tool.',
   },
 ]
 
@@ -38,22 +38,70 @@ export default function TaxRefundPage() {
   return (
     <main className={styles.page}>
       <SEOMeta
-        title="Tax Refund Calculator 2025 — Federal + State Estimator | finance-fast.com"
-        description="Estimate your 2025 federal and state tax refund or amount owed. Select your state for a combined estimate. Free, no sign-up required."
+        title="Tax Refund Calculator 2025 — How Much Will I Get Back?"
+        description="Estimate your 2025 federal and state tax refund or amount owed. Enter your income, filing status, and withholding. Free, no sign-up required."
       />
       <FAQSchema items={TAX_FAQ} />
       <div className={styles.breadcrumb}>
         <Link to="/">Home</Link> › Tax Refund Calculator
       </div>
-      <h1 className={styles.title}>Tax Refund Calculator 2025</h1>
+      <h1 className={styles.title}>How Much of a Tax Refund Will I Get?</h1>
       <p className={styles.subtitle}>
-        Estimate your federal and state tax refund or amount owed based on your income, filing status, and withholding.
+        Enter your income, filing status, and how much tax was withheld from your paychecks — see your estimated federal refund or amount owed. Add your state for a combined estimate.
       </p>
       <AdSlot slot="header" />
       <div className={styles.panel}>
         <TaxRefundCalc />
       </div>
       <AdSlot slot="content" />
+
+      <section className={styles.contentSection}>
+        <h2 className={styles.sectionHeading}>How your tax refund is calculated</h2>
+        <p className={styles.sectionText}>
+          A refund means your employer withheld more tax than you owe. Your actual tax liability is calculated from your taxable income (gross income minus the standard deduction) using progressive federal brackets. If withholding exceeds that amount, the IRS returns the difference.
+        </p>
+        <p className={styles.sectionText}>
+          If you owe instead of receiving a refund, it means your withholding was too low — common when someone has multiple jobs, freelance income, or changed filing status during the year.
+        </p>
+      </section>
+
+      <section className={styles.contentSection}>
+        <h2 className={styles.sectionHeading}>Example refund estimates (single filer, 2025)</h2>
+        <p className={styles.sectionText}>Federal only. Actual results depend on your exact withholding and deductions.</p>
+        <div className={styles.exampleGrid}>
+          <div className={styles.exampleCard}>
+            <div className={styles.exampleLabel}>$45,000 income</div>
+            <div className={styles.exampleScenario}>Tax owed: ~$3,362 · Withheld: $5,000</div>
+            <div className={styles.exampleValue} style={{ color: 'var(--green, #16a34a)' }}>+$1,638</div>
+            <div className={styles.exampleSub}>estimated refund</div>
+          </div>
+          <div className={styles.exampleCard}>
+            <div className={styles.exampleLabel}>$60,000 income</div>
+            <div className={styles.exampleScenario}>Tax owed: ~$5,162 · Withheld: $8,000</div>
+            <div className={styles.exampleValue} style={{ color: 'var(--green, #16a34a)' }}>+$2,838</div>
+            <div className={styles.exampleSub}>estimated refund</div>
+          </div>
+          <div className={styles.exampleCard}>
+            <div className={styles.exampleLabel}>$80,000 income</div>
+            <div className={styles.exampleScenario}>Tax owed: ~$9,214 · Withheld: $11,000</div>
+            <div className={styles.exampleValue} style={{ color: 'var(--green, #16a34a)' }}>+$1,786</div>
+            <div className={styles.exampleSub}>estimated refund</div>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.contentSection}>
+        <h2 className={styles.sectionHeading}>Frequently asked questions</h2>
+        <div className={styles.faqList}>
+          {TAX_FAQ.map(({ q, a }) => (
+            <div key={q} className={styles.faqItem}>
+              <div className={styles.faqQ}>{q}</div>
+              <div className={styles.faqA}>{a}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <div className={styles.disclaimer}>
         <strong>Disclaimer:</strong> Estimates based on 2025 federal standard deductions and tax brackets. State tax applies state rates to federal taxable income — an approximation, as states have their own deductions and credits. Does not include local taxes, AMT, or itemized deductions. Consult a tax professional for accurate filing.
       </div>
