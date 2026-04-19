@@ -14,12 +14,12 @@ export default function AboutPage() {
       <h1 style={{ marginBottom: 16, color: '#1e3a5f' }}>About Finance Fast</h1>
 
       <p style={{ marginBottom: 16, color: '#374151', lineHeight: 1.7 }}>
-        Finance Fast is a free collection of financial calculators built to help everyday people make better money decisions — quickly, without sign-ups or paywalls. Whether you need to estimate your take-home pay, calculate mortgage payments, or figure out how long it takes to reach a savings goal, the answer is one click away.
+        Finance Fast is a free collection of financial calculators built to help everyday people understand their financial numbers — quickly, without sign-ups or paywalls. Whether you need to estimate your take-home pay, calculate mortgage payments, or figure out how long it takes to reach a savings goal, the answer is one click away.
       </p>
 
       <h2 style={{ marginTop: 32, marginBottom: 12, color: '#1e3a5f' }}>Why we built this</h2>
       <p style={{ marginBottom: 16, color: '#374151', lineHeight: 1.7 }}>
-        Too many financial tools are buried behind newsletter signups, cluttered with irrelevant content, or simply give wrong answers. We wanted a clean, fast alternative: accurate calculators, plain-English explanations, and no friction.
+        Too many financial tools are buried behind newsletter signups, cluttered with irrelevant content, or simply give wrong answers. We wanted a clean, fast alternative: carefully checked calculators, plain-English explanations, and no friction.
       </p>
 
       <h2 style={{ marginTop: 32, marginBottom: 12, color: '#1e3a5f' }}>Who we are</h2>

@@ -25,6 +25,9 @@ export default function ContactPage() {
         >
           contact@finance-fast.com
         </a>
+        <p style={{ fontSize: 13, color: '#6b7280', marginTop: 8 }}>
+          We use your email only to reply and don't store it beyond that conversation. See our <Link to="/privacy-policy" style={{ color: '#2563eb' }}>Privacy Policy</Link>.
+        </p>
       </div>
 
       <h2 style={{ marginBottom: 12, color: '#1e3a5f' }}>Common questions</h2>
