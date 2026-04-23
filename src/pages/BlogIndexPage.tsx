@@ -21,7 +21,7 @@ export default function BlogIndexPage() {
 
       <AdSlot slot="header" />
       <div className={styles.grid}>
-        {blogPosts.map(post => (
+        {[...blogPosts].sort((a, b) => b.date.localeCompare(a.date)).map(post => (
           <Link key={post.slug} to={`/blog/${post.slug}`} className={styles.card}>
             <p className={styles.cardDate}>{post.date}</p>
             <h2 className={styles.cardTitle}>{post.title}</h2>
