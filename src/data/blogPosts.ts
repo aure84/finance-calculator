@@ -1137,6 +1137,62 @@ export const blogPosts: BlogPost[] = [
       { label: 'Compound Interest Calculator', to: '/compound-interest-calculator' },
     ],
   },
+
+  {
+    slug: '2008-financial-crisis',
+    title: 'The 2008 Financial Crisis: What Happened and What It Cost',
+    date: '2026-04-24',
+    description: 'A plain-English explanation of the 2008 financial crisis — the mortgage bubble, the bank failures, the bailout, and what the numbers meant for ordinary households.',
+    intro: 'In September 2008, Lehman Brothers filed for the largest bankruptcy in US history. Within days, global credit markets froze, stock markets crashed, and governments around the world scrambled to prevent a complete financial collapse. The 2008 crisis was the worst since the Great Depression — and it started with home loans. Understanding what happened explains why mortgages are underwritten the way they are today, why banks hold more capital, and why the phrase "too big to fail" entered everyday language.',
+    sections: [
+      {
+        heading: 'The Setup: Easy Money and a Housing Bubble',
+        paragraphs: [
+          'After the dot-com crash of 2000 and the September 11 attacks, the Federal Reserve cut interest rates aggressively to stimulate the economy. By 2003, the federal funds rate was at 1% — the lowest in 45 years. Cheap money flowed into housing. Home prices rose 124% between 1997 and 2006.',
+          'Lenders responded to rising prices by loosening standards. Subprime mortgages — loans to borrowers with poor credit or no income verification — grew from 8% of all mortgages in 2003 to 20% by 2006. "NINJA loans" (No Income, No Job, No Assets) became common. Some borrowers took out adjustable-rate mortgages with low teaser rates, betting they could refinance before the rate reset higher.',
+          'The assumption underlying all of it: house prices would keep rising. If a borrower defaulted, the bank could sell the house for more than the loan value. It was not a crazy assumption — US home prices had never fallen nationally since the Great Depression. Until they did.',
+        ],
+      },
+      {
+        heading: 'Mortgage-Backed Securities: How Bad Loans Spread Everywhere',
+        paragraphs: [
+          'Banks did not hold the mortgages they wrote. They sold them to Wall Street, which bundled thousands of mortgages into securities called mortgage-backed securities (MBS) and collateralized debt obligations (CDOs). These were then sold to pension funds, insurance companies, and banks worldwide.',
+          'Rating agencies — Moody\'s, S&P, Fitch — gave many of these securities AAA ratings, the same as US Treasury bonds. The models they used assumed home prices would not fall nationally. They were wrong.',
+          'This distribution meant that when mortgages started going bad, the losses did not stay in one place. They spread through the entire global financial system. No one knew who held what, or how exposed they were. That uncertainty froze the credit markets.',
+        ],
+      },
+      {
+        heading: 'The Collapse: 2007–2008',
+        paragraphs: [
+          'US home prices peaked in early 2006 and began falling. By 2007, subprime mortgage defaults were rising sharply. In August 2007, BNP Paribas — a French bank — suspended three funds because it could not value their US mortgage holdings. Credit markets started seizing.',
+          'In March 2008, Bear Stearns, the fifth-largest US investment bank, collapsed over a weekend. The Federal Reserve arranged an emergency sale to JPMorgan Chase for $2 per share — down from $170 six months earlier.',
+          'Then came September 2008. Fannie Mae and Freddie Mac, which backed nearly half of all US mortgages, were placed into government conservatorship on September 7. Lehman Brothers filed for bankruptcy on September 15 with $613 billion in debt. The same day, Merrill Lynch sold itself to Bank of America to avoid the same fate. AIG, the world\'s largest insurer, required an $85 billion government bailout the following day.',
+        ],
+      },
+      {
+        heading: 'The Numbers: What the Crisis Actually Cost',
+        paragraphs: [
+          'The US government and Federal Reserve committed over $16 trillion in loans, guarantees, and asset purchases between 2007 and 2010, according to a 2011 GAO audit. The Troubled Asset Relief Program (TARP) alone authorized $700 billion in bank bailouts — most of which was eventually repaid.',
+          'US household net worth fell by $13 trillion between 2007 and 2009. The S&P 500 lost 57% of its value from peak to trough. Unemployment peaked at 10% in October 2009 and did not return to pre-crisis levels until 2017.',
+          'Approximately 3.8 million homes received foreclosure filings in 2010 alone. Between 2007 and 2016, an estimated 9.3 million US households lost their homes to foreclosure or distressed sales. Global GDP fell by $2 trillion in 2009 — the first decline since World War II.',
+        ],
+      },
+      {
+        heading: 'What Changed After 2008',
+        paragraphs: [
+          'The Dodd-Frank Wall Street Reform Act (2010) overhauled financial regulation. It created the Consumer Financial Protection Bureau, required lenders to verify a borrower\'s ability to repay, and forced large banks to hold more capital as a buffer against losses.',
+          'Mortgage underwriting became substantially stricter. The no-documentation and NINJA loans that fueled the bubble disappeared. Down payment requirements rose. The share of adjustable-rate mortgages fell sharply.',
+          'The Federal Reserve\'s role expanded permanently. "Quantitative easing" — buying bonds to inject money into the economy — became a standard policy tool. The Fed\'s balance sheet, which was under $1 trillion before the crisis, has never returned to pre-crisis levels.',
+        ],
+      },
+    ],
+    conclusion: 'The 2008 crisis showed what happens when debt grows faster than the underlying assets it finances, and when risk is obscured rather than priced. The direct cause was mortgages — which is why the mortgage terms you choose still matter. A higher down payment, a fixed rate, and a monthly payment you can afford even if your income drops are not just good habits. They are lessons the financial system learned the hard way.',
+    relatedLinks: [
+      { label: 'Mortgage Calculator', to: '/mortgage-calculator' },
+      { label: 'Debt Payoff Calculator', to: '/debt-payoff-calculator' },
+      { label: 'Loan Calculator', to: '/loan-calculator' },
+    ],
+  },
 ]
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
