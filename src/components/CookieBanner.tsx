@@ -13,6 +13,11 @@ export default function CookieBanner() {
     }
   }, [])
 
+  useEffect(() => {
+    document.body.style.paddingBottom = visible ? '64px' : ''
+    return () => { document.body.style.paddingBottom = '' }
+  }, [visible])
+
   function accept() {
     localStorage.setItem('cookieConsent', 'granted')
     gtag('consent', 'update', {
