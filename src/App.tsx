@@ -23,6 +23,7 @@ import TermsPage from './pages/legal/TermsPage'
 import CookiesPage from './pages/legal/CookiesPage'
 import AboutPage from './pages/AboutPage'
 import ContactPage from './pages/ContactPage'
+import CookieBanner from './components/CookieBanner'
 
 export default function App() {
   return (
@@ -54,6 +55,7 @@ export default function App() {
         <Route path="*" element={<main style={{ padding: '60px 24px', textAlign: 'center' }}><h1>404 — Page Not Found</h1></main>} />
       </Routes>
       <Footer />
+      <CookieBanner />
     </BrowserRouter>
   )
 }
