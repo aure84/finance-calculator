@@ -2,6 +2,21 @@ import { useState, useEffect, useRef } from 'react'
 import { NavLink } from 'react-router-dom'
 import styles from './Nav.module.css'
 
+function useTheme(): [string, () => void] {
+  const [theme, setTheme] = useState<string>(() => {
+    const saved = localStorage.getItem('theme')
+    if (saved) return saved
+    return 'light'
+  })
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme)
+    localStorage.setItem('theme', theme)
+  }, [theme])
+
+  return [theme, () => setTheme(t => (t === 'dark' ? 'light' : 'dark'))]
+}
+
 const links = [
   { to: '/salary-calculator', label: 'Salary' },
   { to: '/mortgage-calculator', label: 'Mortgage' },
@@ -21,6 +36,7 @@ const links = [
 
 export default function Nav() {
   const [open, setOpen] = useState(false)
+  const [theme, toggleTheme] = useTheme()
   const menuRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -39,17 +55,6 @@ export default function Nav() {
         finance-fast.com
       </NavLink>
 
-      <button
-        className={styles.hamburger}
-        onClick={() => setOpen(o => !o)}
-        aria-label={open ? 'Close menu' : 'Open menu'}
-        aria-expanded={open}
-      >
-        <span className={open ? styles.barTop + ' ' + styles.barTopOpen : styles.barTop} />
-        <span className={open ? styles.barMid + ' ' + styles.barMidOpen : styles.barMid} />
-        <span className={open ? styles.barBot + ' ' + styles.barBotOpen : styles.barBot} />
-      </button>
-
       <nav className={`${styles.nav} ${open ? styles.navOpen : ''}`}>
         {links.map(l => (
           <NavLink
@@ -64,6 +69,25 @@ export default function Nav() {
           </NavLink>
         ))}
       </nav>
+
+      <button
+        className={styles.themeToggle}
+        onClick={toggleTheme}
+        aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+      >
+        {theme === 'dark' ? '☀️' : '🌙'}
+      </button>
+
+      <button
+        className={styles.hamburger}
+        onClick={() => setOpen(o => !o)}
+        aria-label={open ? 'Close menu' : 'Open menu'}
+        aria-expanded={open}
+      >
+        <span className={open ? styles.barTop + ' ' + styles.barTopOpen : styles.barTop} />
+        <span className={open ? styles.barMid + ' ' + styles.barMidOpen : styles.barMid} />
+        <span className={open ? styles.barBot + ' ' + styles.barBotOpen : styles.barBot} />
+      </button>
     </header>
   )
 }

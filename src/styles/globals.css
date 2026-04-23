@@ -10,6 +10,24 @@
   --text: #0f172a;
   --text-muted: #64748b;
   --results-bg: #eef3f9;
+  --disclaimer-bg: #fef9c3;
+  --disclaimer-text: #713f12;
+}
+
+[data-theme="dark"] {
+  --navy: #3b82f6;
+  --navy-dark: #2563eb;
+  --navy-light: #60a5fa;
+  --green: #4ade80;
+  --green-dark: #22c55e;
+  --bg: #0f172a;
+  --surface: #1e293b;
+  --border: #334155;
+  --text: #f1f5f9;
+  --text-muted: #94a3b8;
+  --results-bg: #1e293b;
+  --disclaimer-bg: #422006;
+  --disclaimer-text: #fde68a;
 }
 
 *, *::before, *::after {

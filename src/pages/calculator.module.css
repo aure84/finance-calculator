@@ -43,10 +43,10 @@
 .disclaimer {
   margin-top: 32px;
   padding: 16px;
-  background: #fef9c3;
+  background: var(--disclaimer-bg);
   border-radius: 8px;
   font-size: 13px;
-  color: #713f12;
+  color: var(--disclaimer-text);
 }
 
 .contentSection {
