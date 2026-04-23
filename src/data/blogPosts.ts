@@ -1038,6 +1038,105 @@ export const blogPosts: BlogPost[] = [
       { label: 'Tax Refund Calculator', to: '/tax-refund-calculator' },
     ],
   },
+
+  {
+    slug: 'what-is-roth-ira',
+    title: 'What Is a Roth IRA and How Does It Work?',
+    date: '2026-04-23',
+    description: 'A Roth IRA lets your money grow tax-free. Learn 2025 contribution limits, income eligibility rules, the 5-year rule, and who benefits most from opening one.',
+    intro: 'A Roth IRA is one of the most powerful retirement accounts available to US workers. You contribute money you have already paid tax on, invest it, and pay no tax on the growth or qualified withdrawals in retirement. That tax-free compounding over decades can be worth tens of thousands of dollars compared to a taxable account. This guide explains how a Roth IRA works, who qualifies, what the rules are, and how it compares to a 401(k) and a Traditional IRA.',
+    sections: [
+      {
+        heading: 'How a Roth IRA Works',
+        paragraphs: [
+          'You open a Roth IRA at a brokerage (Fidelity, Vanguard, Schwab, and others all offer them). You fund it with after-tax dollars — money you have already paid income tax on. Inside the account, you invest in stocks, bonds, index funds, ETFs, or other securities.',
+          'As long as you follow the withdrawal rules, every dollar of growth comes out tax-free in retirement. You also owe no tax on the contributions themselves when you withdraw them, because you already paid tax upfront.',
+          'This is the opposite of a Traditional IRA or 401(k), where you get a tax deduction today but pay income tax on every dollar you withdraw in retirement.',
+        ],
+      },
+      {
+        heading: '2025 Contribution Limits',
+        paragraphs: [
+          'The IRS sets annual limits on how much you can contribute to a Roth IRA:',
+        ],
+        list: [
+          'Under age 50: up to $7,000 per year',
+          'Age 50 and older: up to $8,000 per year (includes a $1,000 catch-up contribution)',
+          'These limits are per person — a married couple can each contribute up to $7,000/$8,000 in their own separate Roth IRAs',
+          'You cannot contribute more than your earned income for the year (if you earned $4,000, your max contribution is $4,000)',
+        ],
+      },
+      {
+        heading: 'Income Limits: Who Can Contribute?',
+        paragraphs: [
+          'Roth IRA eligibility phases out at higher incomes. The IRS uses your Modified Adjusted Gross Income (MAGI) to determine how much you can contribute.',
+          'For 2025, the phase-out ranges are:',
+        ],
+        list: [
+          'Single filers: full contribution allowed below $150,000 MAGI; phases out between $150,000–$165,000; no direct contribution above $165,000',
+          'Married filing jointly: full contribution below $236,000 MAGI; phases out between $236,000–$246,000; no direct contribution above $246,000',
+          'Married filing separately (and you lived with your spouse): phase-out starts at $0 MAGI',
+        ],
+      },
+      {
+        heading: 'The Backdoor Roth IRA',
+        paragraphs: [
+          'If your income exceeds the limits, you can still fund a Roth IRA through a strategy called the backdoor Roth. You contribute to a non-deductible Traditional IRA (no income limit applies), then immediately convert it to a Roth IRA.',
+          'The conversion is a taxable event only on any gains, so doing it promptly — before the money grows — keeps the tax bill near zero. This is a legal and widely used strategy. Consult a tax advisor if you have existing pre-tax IRA balances, as the pro-rata rule may complicate the math.',
+        ],
+      },
+      {
+        heading: 'Key Rules: The 5-Year Rule and Penalty-Free Withdrawals',
+        paragraphs: [
+          'Roth IRAs have flexible withdrawal rules, but two conditions must be met to take qualified (completely tax-free and penalty-free) distributions:',
+        ],
+        list: [
+          'You must be age 59½ or older',
+          'The account must have been open for at least 5 years (the 5-year rule)',
+          'Contributions (not earnings) can be withdrawn at any time, at any age, with no tax or penalty — you already paid tax on them',
+          'Early withdrawal of earnings (before 59½ or before the 5-year rule is met) is subject to income tax plus a 10% penalty, with some exceptions',
+        ],
+      },
+      {
+        heading: 'Roth IRA vs 401(k) vs Traditional IRA: Key Differences',
+        paragraphs: [
+          'Understanding how these three accounts compare helps you decide where to put each dollar.',
+        ],
+        list: [
+          'Roth IRA — after-tax contributions, tax-free growth, tax-free withdrawals, $7,000 limit, income cap applies, no RMDs',
+          'Traditional IRA — pre-tax contributions (if deductible), tax-deferred growth, withdrawals taxed as income, $7,000 limit, deductibility phases out at higher incomes, RMDs at age 73',
+          '401(k) — pre-tax or Roth contributions, $23,500 limit (2025), often includes employer match, RMDs at 73 for traditional, no income cap',
+        ],
+      },
+      {
+        heading: 'Who Benefits Most from a Roth IRA?',
+        paragraphs: [
+          'The Roth IRA is most valuable when you expect to be in a higher tax bracket in retirement than you are today — because you pay tax now at a lower rate and withdraw tax-free later.',
+          'It is an especially strong choice for:',
+        ],
+        list: [
+          'Young workers early in their careers, currently in lower tax brackets',
+          'Anyone who wants tax diversification alongside a pre-tax 401(k)',
+          'High earners who can access it via the backdoor strategy',
+          'People who want flexibility — contributions can be withdrawn without penalty at any time',
+          'Anyone who expects 401(k) or Traditional IRA required minimum distributions to push them into a higher bracket in retirement',
+        ],
+      },
+      {
+        heading: 'How to Open a Roth IRA',
+        paragraphs: [
+          'Opening a Roth IRA takes about 15 minutes online. Choose a brokerage, complete the application, link your bank account, and fund it. For most investors, a low-cost index fund (like a total market or S&P 500 fund) is a straightforward starting point.',
+          'The deadline to contribute for a given tax year is the tax filing deadline — typically April 15 of the following year. You can contribute for 2025 until April 15, 2026.',
+        ],
+      },
+    ],
+    conclusion: 'A Roth IRA is one of the few places where your money genuinely grows tax-free. The $7,000 annual limit is modest, but consistent contributions compounded over 20–30 years build meaningful wealth — entirely sheltered from future taxes. If you qualify, fund it every year. Use our retirement calculator to see how Roth IRA contributions affect your long-term retirement picture.',
+    relatedLinks: [
+      { label: 'Retirement Calculator', to: '/retirement-calculator' },
+      { label: 'Savings Goal Calculator', to: '/savings-goal-calculator' },
+      { label: 'Compound Interest Calculator', to: '/compound-interest-calculator' },
+    ],
+  },
 ]
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
