@@ -501,25 +501,26 @@ export const blogPosts: BlogPost[] = [
       {
         heading: 'What Does "Eroding Savings" Mean?',
         paragraphs: [
-          'When inflation rises faster than your savings account interest rate, your money loses real value. A $10,000 balance that earns 1% interest while inflation runs at 3% loses purchasing power every year — even though the number on your statement grows.',
-          'The math is straightforward: at 3% annual inflation, $10,000 today buys only about $7,440 worth of goods in 10 years.',
+          'When inflation rises faster than your savings account interest rate, your money loses real value. A $10,000 balance that earns 1% interest while inflation runs at 3% loses purchasing power every year — even though the number on your statement grows. The real return is negative: −2% per year. After 10 years, you have more dollars but they buy less than your original $10,000 would have bought.',
+          'The math is straightforward: at 3% annual inflation, $10,000 today buys only about $7,440 worth of goods in 10 years. At the same rate over 25 years, $10,000 shrinks to the equivalent of roughly $4,776 in today\'s purchasing power — less than half.',
         ],
       },
       {
         heading: 'How Quickly Does It Add Up?',
         paragraphs: [
-          'The effect compounds over time. Small rate differences matter enormously over long periods.',
+          'The effect compounds over time. Small rate differences matter enormously over long periods. The formula for real value is: Real Value = Nominal Amount ÷ (1 + inflation rate)^years. A 1% difference in the inflation rate over 20 years changes the real value of $10,000 by over $2,000.',
         ],
         list: [
           '3% inflation, 10 years: $10,000 → ~$7,440 in real value',
           '3% inflation, 20 years: $10,000 → ~$5,537',
+          '3% inflation, 30 years: $10,000 → ~$4,120 in real value',
           '7% inflation, 10 years: $10,000 → ~$5,083',
         ],
       },
       {
         heading: 'Which Savings Are Most at Risk?',
         paragraphs: [
-          'Not all savings carry the same inflation risk. Cash and low-yield accounts offer no protection. Fixed instruments lock you into below-inflation returns for years.',
+          'Not all savings carry the same inflation risk. Cash and low-yield accounts offer no protection. Fixed instruments lock you into below-inflation returns for years. But the risk is not equal across all time horizons: cash is fine for your 3–6 month emergency fund. The danger is keeping long-term savings in cash-equivalent instruments for years or decades.',
         ],
         list: [
           'Cash: 100% exposed to inflation',
@@ -540,8 +541,34 @@ export const blogPosts: BlogPost[] = [
           'Review fixed expenses regularly — renegotiate contracts and subscriptions',
         ],
       },
+      {
+        heading: 'Equities as an Inflation Hedge',
+        paragraphs: [
+          'Stocks have historically been one of the best long-term inflation hedges. Companies can raise prices as their input costs rise, which preserves earnings in real terms. The S&P 500 has returned roughly 10% annually in nominal terms over the past century — approximately 7% in real terms after inflation, which is a meaningful real return that compounds significantly over decades.',
+          'However, equities are volatile in the short term. During inflationary spikes, stock prices often fall as central banks raise interest rates to cool the economy. The inflation hedge property of equities works over long periods — 10 years or more — not over months or a year or two. Investors who panic-sell during inflationary downturns lock in losses and miss the recovery.',
+          'Sectors that tend to perform well during high inflation include energy, materials, utilities, and consumer staples — companies that sell goods people need regardless of price. Growth stocks, which are valued on future earnings, tend to underperform during inflationary periods because rising rates reduce the present value of those future earnings.',
+          'Dividend-paying stocks offer partial inflation protection: if a company grows its dividend over time, the income stream retains more purchasing power than a fixed bond coupon. REITs, energy companies, and consumer staples historically have strong dividend growth records.',
+        ],
+      },
+      {
+        heading: 'Real Estate and Inflation',
+        paragraphs: [
+          'Real estate is a classic inflation hedge because property values and rents tend to rise with inflation. If you own a home with a fixed-rate mortgage, your payment stays flat while the property value and rental equivalent rise — increasing your equity in real terms.',
+          'Real Estate Investment Trusts (REITs) allow investors to gain exposure to real estate without buying property directly. REITs are required to distribute 90% of taxable income as dividends. During inflationary periods, REITs that own commercial or residential properties with short lease terms can raise rents quickly, passing inflation through to investors. Long-term fixed leases (common in some commercial real estate) reduce this flexibility.',
+          'The downside: real estate is illiquid and transaction costs are high. It is not suitable as a short-term inflation hedge, but over a 5–10 year horizon, property has historically preserved purchasing power in most markets. Leverage amplifies both gains and losses — a mortgage means you control a larger asset than your down payment alone, which magnifies real returns when values rise, but also magnifies losses if the market falls.',
+        ],
+      },
+      {
+        heading: 'The Hidden Cost of Inflation on Retirement',
+        paragraphs: [
+          'Inflation is especially dangerous for retirees living on fixed income. A pension of $3,000 per month today will have the purchasing power of only $2,220 in 10 years at 3% inflation — a 26% real reduction. Over 20 years, the same pension is worth only $1,650 in today\'s dollars — a 45% loss in real terms, even though the nominal payment never changed.',
+          'This is why financial planners build inflation assumptions into retirement projections. A retirement plan that looks solid today may fall short if inflation runs higher than expected for an extended period. Cost-of-living adjustments (COLAs) in Social Security — tied to CPI — partially protect against this, but most private pensions have no such adjustment.',
+          'Building an inflation buffer into your retirement savings target is prudent. Instead of planning for exactly your expected spending, add 10%–20% to your target to create a cushion. Retiring with somewhat more than you need is much better than discovering a real shortfall ten years into retirement when your options are limited.',
+          'The 4% safe withdrawal rule for retirement portfolios already accounts for inflation by design — it assumes annual withdrawals adjust upward with inflation each year. A portfolio invested in a diversified mix of equities and bonds should, historically, sustain this for 30+ years. Retirees who withdraw a fixed dollar amount without inflation adjustments will find their real income shrinking every year they live.',
+        ],
+      },
     ],
-    conclusion: "Inflation won't stop, but ignoring it is the costliest mistake. Use our Inflation Calculator to see exactly how inflation affects your money over time — then act on what you find.",
+    conclusion: "Inflation won't stop, but ignoring it is the costliest mistake. Keep only your short-term cash needs and emergency fund in savings accounts. Invest long-term savings in assets that historically outpace inflation — equities, real estate, inflation-linked bonds. Review your retirement plan using real (inflation-adjusted) return assumptions, not nominal ones. Use our Inflation Calculator to see exactly how inflation affects your money over time — then act on what you find.",
     relatedLinks: [
       { label: 'Inflation Calculator', to: '/inflation-calculator' },
       { label: 'Compound Interest Calculator', to: '/compound-interest-calculator' },
