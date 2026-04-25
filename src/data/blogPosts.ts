@@ -1053,8 +1053,17 @@ export const blogPosts: BlogPost[] = [
           'Never replenishing after a withdrawal: if you use $2,000 from your emergency fund, rebuild it immediately. Many people use it once and forget to replenish, then face the next emergency unprotected.',
         ],
       },
+      {
+        heading: 'When to Use Your Emergency Fund (and When Not To)',
+        paragraphs: [
+          'Knowing when to tap your emergency fund is as important as building it. A true emergency is unexpected, necessary, and urgent — all three at once. Job loss is the clearest case: your emergency fund replaces income while you search for new work. A medical bill you cannot defer, a major car repair that prevents you from getting to work, a burst pipe, or a broken furnace in winter all qualify. These events are unplanned, unavoidable, and cannot wait.',
+          'Non-emergencies are trickier to identify in the moment. A sale at a store is not an emergency. A vacation you did not budget for is not an emergency. A phone upgrade, new furniture, or a home improvement project you have been wanting — none of these are emergencies, even when they feel pressing. The urgency is psychological, not financial.',
+          'A useful test: ask whether waiting 30 days would cause the situation to get materially worse. A car that will not start and prevents you from working fails that test — fix it. A worn couch passes the test — save for it separately over time.',
+          'Car maintenance and home repairs blur the line most often. Tires that are dangerously worn qualify. A routine oil change does not — that is predictable maintenance you can anticipate. The cleaner approach is to maintain a separate sinking fund for large predictable expenses (car maintenance, home repairs, appliance replacement). When those costs hit the sinking fund, your true emergency reserve stays intact for genuine surprises.',
+        ],
+      },
     ],
-    conclusion: 'Your emergency fund is your financial shock absorber — the single most important financial buffer you can build. Fund it to $1,000 first, then to 3–6 months of essential expenses in a high-yield savings account. Automate contributions, keep it separate, and never invest it. Once it is in place, every other financial goal — debt payoff, investing, saving for a house — becomes significantly less fragile.',
+    conclusion: 'Your emergency fund is your financial shock absorber — the single most important financial buffer you can build. Fund it to $1,000 first, then to 3–6 months of essential expenses in a high-yield savings account. Automate contributions, keep it separate, and never invest it. Once it is in place, every other financial goal — debt payoff, investing, saving for a house — becomes significantly less fragile. Use a high-yield savings account to earn meaningful interest while the money waits, and treat the fund as insurance rather than savings: it exists so you never have to.',
     relatedLinks: [
       { label: 'Savings Goal Calculator', to: '/savings-goal-calculator' },
       { label: 'Compound Interest Calculator', to: '/compound-interest-calculator' },
