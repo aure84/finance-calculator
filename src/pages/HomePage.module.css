@@ -1,5 +1,5 @@
 .hero {
-  background: var(--navy);
+  background: var(--section-bg);
   padding: 80px 24px;
   text-align: center;
 }
