@@ -116,13 +116,14 @@ export const blogPosts: BlogPost[] = [
         paragraphs: [
           'A fixed-rate mortgage locks your interest rate for the entire loan term. Your payment never changes, which makes budgeting easy. Fixed rates are typically slightly higher than initial adjustable rates to compensate for this predictability.',
           'An adjustable-rate mortgage (ARM) starts with a fixed rate for an initial period (e.g., 5 years), then resets periodically based on a market index. ARMs can save money if rates fall, but your payment can increase significantly if rates rise.',
+          'A 5/1 ARM means the rate is fixed for 5 years, then adjusts once per year. Most ARMs have caps that limit how much the rate can rise per adjustment period and over the lifetime of the loan — for example, 2% per adjustment and 6% lifetime. Even with these caps, payments can rise substantially if benchmark rates increase during the adjustment period.',
         ],
       },
       {
         heading: 'Down Payment and PMI',
         paragraphs: [
-          'Most lenders require a down payment — typically 5% to 20% of the home price. A larger down payment means a smaller loan, lower monthly payments, and less total interest paid.',
-          'If your down payment is less than 20%, most lenders require Private Mortgage Insurance (PMI), which protects the lender if you default. PMI typically costs 0.5%–1.5% of the loan amount per year and is added to your monthly payment.',
+          'Most lenders require a down payment — typically 5% to 20% of the home price. A larger down payment means a smaller loan, lower monthly payments, and less total interest paid. It also gives you immediate equity and protection if property values fall.',
+          'If your down payment is less than 20%, most lenders require Private Mortgage Insurance (PMI), which protects the lender if you default. PMI typically costs 0.5%–1.5% of the loan amount per year and is added to your monthly payment. On a $300,000 loan, that is an extra $125–$375 per month. Once you reach 20% equity — through payments, appreciation, or both — you can request PMI cancellation.',
         ],
       },
       {
@@ -130,10 +131,44 @@ export const blogPosts: BlogPost[] = [
         paragraphs: [
           'Most mortgages include an escrow account where you prepay property taxes and homeowners insurance monthly. The lender holds these funds and pays the bills when they are due. This is not part of your principal and interest payment — it is on top of it.',
           'Your total monthly housing cost (principal + interest + taxes + insurance) is often abbreviated as PITI. This is the number to use when budgeting, not just the principal and interest.',
+          'Escrow payments can change year to year as property tax assessments and insurance premiums fluctuate. Your lender will review the escrow account annually and adjust your monthly payment accordingly. A large tax increase can raise your mortgage payment even if your interest rate is fixed.',
+        ],
+      },
+      {
+        heading: 'Types of Mortgages',
+        paragraphs: [
+          'Conventional mortgages are not backed by the government and typically require stronger credit and a larger down payment. They often offer competitive rates for borrowers with good credit.',
+          'FHA loans are insured by the Federal Housing Administration and allow down payments as low as 3.5% with a credit score of 580 or above. They require mortgage insurance for the life of the loan if you put less than 10% down, which makes them more expensive long-term than conventional loans for many borrowers.',
+          'VA loans are available to veterans, active-duty military, and eligible surviving spouses. They require no down payment and no PMI, and often carry competitive rates. They are one of the most favorable loan products available to qualifying borrowers.',
+          'USDA loans are for homes in eligible rural areas and offer no down payment. Income limits apply based on household size and county median income.',
+        ],
+      },
+      {
+        heading: 'How Lenders Determine What You Can Borrow',
+        paragraphs: [
+          'Lenders use debt-to-income ratio (DTI) as a primary affordability metric. Your front-end DTI is your total housing payment (PITI) divided by gross monthly income. Your back-end DTI includes all monthly debt payments (mortgage, car loans, student loans, minimum credit card payments) divided by gross income.',
+          'Most conventional lenders want a back-end DTI below 43%, though some allow up to 50% with compensating factors like strong reserves or excellent credit. FHA loans allow up to 57% in some cases.',
+          'Lenders also look at credit score, employment history (typically two years in the same field), and assets. A higher credit score unlocks better rates — the difference between a 680 and 760 score can easily be 0.5%–1% in rate, which translates to tens of thousands of dollars over a 30-year loan.',
+        ],
+      },
+      {
+        heading: 'The Mortgage Application Process',
+        paragraphs: [
+          'Getting a mortgage involves several steps: pre-approval (the lender reviews your income, credit, and assets and issues a conditional commitment), home search, offer acceptance, full underwriting, appraisal, and closing.',
+          'Pre-approval is not a guarantee. The lender will verify all information during underwriting, order an appraisal of the property, and review the title. Common reasons for denial after pre-approval include job changes, taking on new debt, or the property appraising below the purchase price.',
+          'Closing costs typically run 2%–5% of the loan amount and include origination fees, appraisal, title insurance, prepaid taxes and insurance, and attorney fees where required. These are paid at closing and are separate from your down payment. Some lenders offer no-closing-cost mortgages that roll these costs into the rate — convenient but more expensive over time.',
+        ],
+      },
+      {
+        heading: 'Should You Choose a 15-Year or 30-Year Mortgage?',
+        paragraphs: [
+          'A 30-year mortgage has lower monthly payments but costs significantly more in total interest. A 15-year mortgage pays off faster and builds equity quicker, but requires higher monthly payments.',
+          'On a $300,000 mortgage at 6.5%, a 30-year term costs about $382,000 in total interest over the life of the loan. A 15-year term at 6% (rates are usually lower for shorter terms) costs about $155,000 — less than half. The monthly payment is roughly $700 higher for the 15-year loan.',
+          'If you can comfortably afford the higher payment, the 15-year mortgage is almost always cheaper in total cost. If the higher payment would strain your budget, the 30-year with voluntary extra principal payments offers flexibility: you pay extra when you can, but are not locked into the higher obligation.',
         ],
       },
     ],
-    conclusion: 'A mortgage is a long-term commitment. The interest rate, loan term, down payment, and fees all determine your total cost. Use our mortgage calculator to model any scenario and see the full amortization schedule.',
+    conclusion: 'A mortgage is a long-term commitment. The interest rate, loan term, down payment, loan type, and fees all determine your total cost. Get pre-approved before house hunting so you know exactly what you can afford. Compare APRs — not just rates — across lenders, and calculate total interest paid over the life of the loan, not just the monthly payment. Use our mortgage calculator to model any scenario and see the full amortization schedule.',
     relatedLinks: [
       { label: 'Mortgage Calculator', to: '/mortgage-calculator' },
       { label: 'Loan Calculator', to: '/loan-calculator' },
