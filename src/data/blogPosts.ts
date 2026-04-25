@@ -1072,7 +1072,7 @@ export const blogPosts: BlogPost[] = [
         heading: 'How Withholding Works',
         paragraphs: [
           'Every paycheck, your employer withholds estimated federal (and state) income taxes based on your W-4. The W-4 tells your employer how much to withhold based on your filing status, number of dependents, and any additional withholding you request.',
-          'If too much is withheld throughout the year, you get a refund when you file. If too little is withheld, you owe the difference — and may face a penalty if the shortfall is large enough.',
+          'If too much is withheld throughout the year, you get a refund when you file. If too little is withheld, you owe the difference — and may face an underpayment penalty if the shortfall is large enough. The IRS waives the penalty if you paid at least 90% of the current year\'s liability or 100% of the prior year\'s liability through withholding.',
         ],
       },
       {
@@ -1081,6 +1081,7 @@ export const blogPosts: BlogPost[] = [
           'Refund = Total tax withheld − Actual tax liability.',
           'Your actual tax liability is calculated when you file your return. It depends on your total income, filing status, deductions (standard or itemized), credits (child tax credit, education credits, etc.), and other adjustments.',
           'Example: You earn $60,000, take the standard deduction ($14,600 for 2026), giving taxable income of $45,400. Federal tax on $45,400 ≈ $5,148. If $7,000 was withheld, your refund is $1,852.',
+          'If you also contributed $3,000 to a traditional IRA, your taxable income drops to $42,400, and your liability drops to roughly $4,488. Your refund increases to $2,512 — the additional $660 reflects the tax saved on the IRA deduction.',
         ],
       },
       {
@@ -1088,6 +1089,7 @@ export const blogPosts: BlogPost[] = [
         paragraphs: [
           'A large refund is not a financial win — it means you gave the government an interest-free loan all year. That money could have been in your paycheck, earning interest in a savings account, or paying off debt.',
           'The ideal outcome is a small refund or a small amount owed — meaning your withholding closely matched your actual liability. Adjust your W-4 if your refund is consistently large or if you consistently owe.',
+          'Some people deliberately over-withhold as a forced savings mechanism, knowing they will receive a refund in the spring. If this works for your psychology, it is not irrational — but you should understand that you are choosing convenience over the small amount of interest you could have earned on that money.',
         ],
       },
       {
@@ -1096,10 +1098,43 @@ export const blogPosts: BlogPost[] = [
           'Deductions: the standard deduction ($14,600 single / $29,200 married filing jointly for 2026) reduces your taxable income.',
           'Credits: directly reduce taxes owed. The Child Tax Credit (up to $2,000 per child) is one of the most impactful.',
           '401(k) contributions: pre-tax 401(k) contributions reduce taxable income dollar-for-dollar.',
+          'IRA contributions: traditional IRA contributions may be deductible depending on your income and whether you have a workplace retirement plan.',
+          'Student loan interest: up to $2,500 in student loan interest is deductible for qualifying borrowers below the income threshold.',
+          'HSA contributions: contributions to a Health Savings Account are fully deductible and reduce your taxable income.',
+        ],
+      },
+      {
+        heading: 'How to Adjust Your Withholding',
+        paragraphs: [
+          'If you consistently receive a large refund, update your W-4 to reduce withholding. Add dependents, claim deductions on the W-4, or reduce additional withholding you previously requested. Your employer will withhold less each paycheck — giving you the money now rather than as a refund in April.',
+          'If you consistently owe money at filing, increase withholding. Add an extra dollar amount to withhold on line 4(c) of your W-4. Target a small refund ($200–$500) or a small balance due — the goal is accuracy, not a large swing in either direction.',
+          'The IRS provides a Tax Withholding Estimator tool at irs.gov that helps you calculate the right withholding given your income, deductions, credits, and life situation. Using it once a year — or after any major life event — is the most reliable way to avoid surprises at filing time.',
+          'Life events that should trigger a W-4 review: marriage or divorce, birth or adoption of a child, spouse starting or stopping work, buying a home, taking on a second job, a large change in deductions.',
+        ],
+      },
+      {
+        heading: 'Tax Credits vs Tax Deductions',
+        paragraphs: [
+          'Deductions reduce your taxable income. A $1,000 deduction saves you $1,000 × your marginal tax rate. In the 22% bracket, a $1,000 deduction saves $220.',
+          'Credits reduce your taxes owed dollar for dollar. A $1,000 credit saves $1,000 regardless of your tax bracket. Credits are almost always more valuable than equivalent deductions.',
+          'Refundable credits can reduce your tax liability below zero — meaning you receive the remaining credit as a refund even if you owe no tax. The Earned Income Tax Credit (EITC) is the largest refundable credit, providing up to $7,430 for qualifying families with three or more children in 2026.',
+          'Non-refundable credits can only reduce your liability to zero. If your tax liability is $1,500 and you have a $2,000 non-refundable credit, you get $1,500 of benefit — the remaining $500 is lost. Understanding which credits are refundable and which are not affects planning.',
+          'The American Opportunity Tax Credit (AOTC) for college education expenses is partially refundable — up to $1,000 of the $2,500 credit is refundable even if you owe no tax. The Premium Tax Credit for health insurance purchased through the marketplace is also refundable.',
+        ],
+      },
+      {
+        heading: 'Common Reasons Refunds Change Year to Year',
+        paragraphs: [
+          'Income change: a raise, bonus, or second job increases withholding but may also push you into a higher bracket.',
+          'Filing status change: getting married or divorced, or your spouse starting or stopping work, changes your optimal withholding significantly.',
+          'Life events: having a child adds the Child Tax Credit and Dependent Care Credit, often increasing your refund substantially.',
+          'Loss of deductions: if you paid off your mortgage, you can no longer deduct mortgage interest — which may reduce deductions and increase your liability.',
+          'Retirement contributions: starting, stopping, or changing 401(k) contributions affects your taxable income and therefore your liability.',
+          'Side income: freelance, rental, gig economy, or investment income is often not subject to withholding, so the IRS receives nothing during the year. If your side income is significant, you may need to make estimated quarterly tax payments to avoid a large balance due in April and a potential underpayment penalty.',
         ],
       },
     ],
-    conclusion: 'Your refund is simply over-withheld tax returned to you. Optimize your W-4 to keep more money each paycheck. Use our tax refund calculator to estimate your liability and see how deductions and credits affect your outcome.',
+    conclusion: 'Your refund is simply over-withheld tax returned to you — it is not a bonus, and a large refund means you gave the government an interest-free loan. Optimize your W-4 to keep more money each paycheck throughout the year. Review your W-4 after any major life event, and understand which deductions and credits apply to your situation. Use our tax refund calculator to estimate your liability and see how changes to deductions, credits, and withholding affect your outcome.',
     relatedLinks: [
       { label: 'Tax Refund Calculator', to: '/tax-refund-calculator' },
       { label: 'Salary Calculator', to: '/salary-calculator' },
