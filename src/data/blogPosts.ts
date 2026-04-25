@@ -1076,42 +1076,73 @@ export const blogPosts: BlogPost[] = [
     title: 'How Long Will It Take to Reach Your Savings Goal?',
     date: '2026-04-19',
     description: 'Use the savings goal formula to calculate how long it will take to save a target amount. Includes examples for emergency funds, down payments, and vacations.',
-    intro: 'Whether you are saving for a down payment, an emergency fund, a vacation, or early retirement, the math works the same way. The time it takes to reach your goal depends on three things: your starting balance, how much you add each month, and the interest rate you earn. This guide shows you how to calculate it and how to shorten the timeline.',
+    intro: 'Whether you are saving for a down payment, an emergency fund, a vacation, or early retirement, the math works the same way. The time it takes to reach your goal depends on three variables: your starting balance, how much you add each month, and the interest rate you earn. Most people underestimate how much contribution size matters and overestimate how much interest rate matters for short-term goals. This guide shows you how to calculate your exact timeline and the most effective strategies to shorten it.',
     sections: [
       {
         heading: 'The Savings Goal Formula',
         paragraphs: [
-          'When interest is involved, the future value of a series of regular contributions is: FV = PMT × [(1+r)^n − 1] / r',
-          'Where: FV = future value (your goal), PMT = monthly payment/contribution, r = monthly interest rate, n = number of months.',
-          'To find n (how many months to reach the goal), rearrange the formula. Our savings goal calculator does this automatically.',
+          'When interest is involved, the future value of a series of regular contributions follows this formula: FV = PMT × [(1+r)^n − 1] / r',
+          'Where: FV = future value (your savings goal), PMT = monthly contribution, r = monthly interest rate (annual rate ÷ 12), n = number of months.',
+          'To find n (months to reach the goal), you need to rearrange the formula algebraically or solve it numerically — our savings goal calculator handles this automatically.',
+          'If you also have an existing starting balance (PV), the total future value including both contributions and initial balance is: FV = PV × (1+r)^n + PMT × [(1+r)^n − 1] / r. Increasing PV (starting balance) is particularly effective because it compounds for the entire savings period. A $5,000 lump sum added at the start of a 3-year savings plan at 4.5% APY grows to $5,714 on its own — before any monthly contributions.',
         ],
       },
       {
         heading: 'Examples for Common Goals',
         paragraphs: [
-          'Emergency fund ($15,000): starting from $0, saving $500/month in a 4.5% APY HYSA → reaches goal in approximately 28 months.',
-          'Down payment ($60,000): starting from $5,000, saving $1,500/month at 4.5% APY → reaches goal in approximately 33 months.',
+          'Emergency fund ($15,000): starting from $0, saving $500/month in a 4.5% APY high-yield savings account → reaches goal in approximately 28 months (2 years, 4 months).',
+          'Down payment ($60,000): starting from $5,000, saving $1,500/month at 4.5% APY → reaches goal in approximately 33 months (2 years, 9 months).',
           'Vacation ($5,000): starting from $0, saving $400/month at 4% APY → reaches goal in approximately 12 months.',
+          'Notice how little the interest rate changes these timelines for short-term goals. The emergency fund at 0% interest would take 30 months — only 2 months longer than at 4.5%. Contribution amount drives short-term savings timelines, not interest rate. This is why opening the highest-rate savings account is worthwhile but is not a substitute for saving more each month.',
         ],
       },
       {
         heading: 'How to Shorten the Timeline',
         paragraphs: [
-          'Increase your monthly contribution — this has by far the biggest effect, especially for short-term goals where interest is minimal.',
-          'Increase your starting balance — a lump sum upfront compounds for the full period.',
-          'Earn a higher interest rate — significant for long-term goals; high-yield savings accounts or money market funds outperform standard savings accounts.',
-          'Reduce the goal — sometimes the most practical approach is to scale back.',
+          'Increase your monthly contribution — this has by far the biggest effect for short-to-medium-term goals. Adding $100/month to a $500/month contribution reduces a 28-month timeline to about 24 months.',
+          'Increase your starting balance with a lump sum — any money added upfront compounds for the full savings period. A $2,000 starting balance on the emergency fund example above cuts the timeline by about 4 months.',
+          'Earn a higher interest rate — this matters more for longer timelines. On a 5-year goal, the difference between 2% and 5% APY can shorten the timeline by 3–6 months. On a 1-year goal, it barely matters.',
+          'Reduce the goal — sometimes the most practical approach is to scale back the target or break it into phases. Saving for a $40,000 down payment instead of $60,000 and accepting a smaller home is often faster than trying to save faster.',
         ],
       },
       {
-        heading: 'Short-Term vs Long-Term Goals',
+        heading: 'Short-Term vs Long-Term Goals: Different Vehicles',
         paragraphs: [
-          'For goals under 5 years: use a high-yield savings account or money market. Keep the money safe and liquid.',
-          'For goals over 5 years: consider investing in a balanced portfolio. The higher long-term return of stocks (historically 7%–10% annually) significantly compresses the timeline but adds volatility.',
+          'For goals under 3 years: keep the money in a high-yield savings account (HYSA) or money market account. Safety and liquidity matter most. Current HYSAs pay 4–5% APY, which is meaningful over 2–3 years but not worth taking investment risk for.',
+          'For goals 3–7 years out: consider a conservative allocation — perhaps 60% bonds and 40% stocks, or a target-date fund. There is some volatility risk, but the longer timeline allows recovery from market downturns.',
+          'For goals over 7–10 years: a diversified stock portfolio (index funds) is appropriate. Historically, US stocks have returned 7–10% annually after inflation over long periods. At 8% average return, $500/month grows to $88,000 in 10 years — compared to $73,000 at 4.5% in a savings account. The difference becomes enormous over longer periods.',
+        ],
+      },
+      {
+        heading: 'The Right Account for Each Goal',
+        paragraphs: [
+          'Emergency fund: high-yield savings account at an online bank. Keep it separate from your checking account to reduce temptation. Online banks like Ally, Marcus, and Discover typically offer the highest rates.',
+          'Down payment: HYSA for timelines under 3 years. For a 5+ year timeline, a taxable brokerage account invested conservatively may outperform.',
+          'Retirement savings: max tax-advantaged accounts first (401k, IRA, Roth IRA) before using taxable accounts. The tax benefits significantly compress the timeline to retirement.',
+          'Education savings: a 529 plan offers tax-free growth for education expenses and is the standard vehicle for college savings.',
+          'Wedding, car, vacation: HYSA. These are short-term goals where capital preservation matters more than growth.',
+        ],
+      },
+      {
+        heading: 'Automating Your Savings',
+        paragraphs: [
+          'The single most effective tactic for reaching savings goals is automation. Set up an automatic transfer on the same day as your paycheck — before you have a chance to spend the money. Most banks allow you to schedule recurring transfers to a savings account.',
+          'The psychological mechanism is simple: money you never see feels like it does not exist. Manual transfers require a decision every month, creating friction and excuses. Automated transfers require a decision once and then happen reliably regardless of your mood, busy schedule, or competing expenses.',
+          'If your employer offers direct deposit, you can often split your paycheck — sending a fixed amount directly to savings before the rest hits your checking account. This is the most frictionless version of automation.',
+        ],
+      },
+      {
+        heading: 'Prioritizing Multiple Savings Goals at Once',
+        paragraphs: [
+          'Most people have more than one savings goal simultaneously — an emergency fund, a vacation, and a down payment all competing for the same monthly surplus. The temptation is to divide contributions equally, but a priority order usually works better.',
+          'A recommended order: first, build a $1,000 starter emergency fund. Second, capture any employer 401(k) match (free money). Third, pay off high-interest debt above 7–8%. Fourth, build your full 3–6 month emergency fund. Fifth, save for other goals in priority order.',
+          'Trying to save for five goals simultaneously at $100 each often means none of them get reached quickly enough to feel like progress — which leads to abandoning the plan. Focusing on one goal at a time until it is complete, then moving to the next, produces faster visible results and maintains motivation.',
+          'The exception is goals with fixed deadlines: if a wedding is in 14 months, that savings goal cannot wait. Build it into the budget alongside higher-priority goals and adjust other areas accordingly.',
+          'Use separate savings accounts for each goal — most online banks allow multiple sub-accounts with custom names. Seeing "Down Payment: $18,400 of $60,000" is far more motivating than a single combined savings balance with no clear meaning.',
         ],
       },
     ],
-    conclusion: 'The time to reach any savings goal comes down to contribution amount and starting balance. Interest helps but is secondary for short-term goals. Use our savings goal calculator to find your exact timeline and experiment with contribution levels.',
+    conclusion: 'The time to reach any savings goal is primarily determined by contribution amount and starting balance — not by interest rate, except for very long timelines. Define your goal clearly with a specific dollar amount and deadline. Choose the right account type for your timeline: HYSA for under 3 years, conservative investments for 3–7 years, growth-oriented investments for 7+ years. Automate your contributions so saving happens before spending. Use separate accounts for separate goals so progress is visible. Then use our savings goal calculator to find your exact timeline and model different scenarios: what happens if you increase contributions by $100/month, start with a lump sum, or find a slightly higher interest rate? The numbers often reveal that goals which feel far away are much closer than they appear when contributions are optimized.',
     relatedLinks: [
       { label: 'Savings Goal Calculator', to: '/savings-goal-calculator' },
       { label: 'Compound Interest Calculator', to: '/compound-interest-calculator' },
