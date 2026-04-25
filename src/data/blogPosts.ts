@@ -764,7 +764,7 @@ export const blogPosts: BlogPost[] = [
     title: 'How Is a Monthly Loan Payment Calculated?',
     date: '2026-04-19',
     description: 'Learn the formula behind monthly loan payments, how interest rate and term affect your payment, and how to calculate it by hand or with a calculator.',
-    intro: 'Every fixed-rate loan — mortgage, car loan, personal loan — uses the same formula to calculate the monthly payment. Understanding this formula helps you compare loan offers, understand why a lower rate matters, and see how the loan term affects your total cost. This guide walks through the math step by step.',
+    intro: 'Every fixed-rate loan — mortgage, car loan, personal loan — uses the same mathematical formula to calculate the monthly payment. Understanding this formula helps you compare loan offers intelligently, see why a seemingly small difference in interest rate can cost thousands of dollars, and understand how the loan term shapes your monthly budget and total cost. This guide walks through the math, the trade-offs, and the strategies that save you the most money.',
     sections: [
       {
         heading: 'The Loan Payment Formula',
@@ -772,12 +772,22 @@ export const blogPosts: BlogPost[] = [
           'M = P × [r(1+r)^n] / [(1+r)^n − 1]',
           'Where: M = monthly payment, P = principal (loan amount), r = monthly interest rate (annual rate ÷ 12), n = total number of payments (years × 12).',
           'Example: $20,000 loan at 6% annual interest for 5 years. r = 0.06/12 = 0.005. n = 60. M = $20,000 × [0.005 × (1.005)^60] / [(1.005)^60 − 1] = $386.66/month.',
+          'This formula is called an amortization formula. "Amortization" means the loan is paid off gradually through equal payments, each of which covers both interest and a portion of the principal. Early in the loan, most of each payment goes toward interest. Later, the balance shifts toward principal. The total monthly payment never changes — only the split between interest and principal.',
+        ],
+      },
+      {
+        heading: 'What Each Part of the Formula Means',
+        paragraphs: [
+          'The principal (P) is the amount you borrow. On a $30,000 car loan, P = $30,000. On a mortgage, it is the purchase price minus your down payment.',
+          'The monthly interest rate (r) is the annual rate divided by 12. A 6% annual rate becomes 0.5% per month (0.06 ÷ 12 = 0.005). Note that the rate in the formula is expressed as a decimal, not a percentage.',
+          'The number of payments (n) is the loan term in years multiplied by 12. A 5-year loan has n = 60 payments; a 30-year mortgage has n = 360 payments.',
+          'The formula looks complex but follows a simple principle: the payment must be exactly high enough so that, after n equal payments, the balance reaches exactly zero — accounting for all interest that accumulates on the remaining balance each month.',
         ],
       },
       {
         heading: 'How Interest Rate Affects Payment',
         paragraphs: [
-          'Even small rate differences significantly affect total cost on large or long-term loans.',
+          'Even small rate differences significantly affect total cost on large or long-term loans. The longer the term, the bigger the impact of a rate change.',
         ],
         list: [
           '$200,000 mortgage at 5%: $1,073.64/month, total interest $186,511',
@@ -788,7 +798,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: 'How Loan Term Affects Payment',
         paragraphs: [
-          'A longer term means lower monthly payments but much more total interest paid.',
+          'A longer term means lower monthly payments but much more total interest paid. The trade-off is always the same: payment size vs. total cost.',
         ],
         list: [
           '$20,000 at 6% for 3 years: $608.44/month, total interest $1,904',
@@ -797,14 +807,47 @@ export const blogPosts: BlogPost[] = [
         ],
       },
       {
-        heading: 'Extra Payments',
+        heading: 'How an Amortization Schedule Works',
         paragraphs: [
-          'Adding extra money to the principal each month shortens the loan and reduces total interest. On a 5-year $20,000 loan at 6%, paying an extra $50/month cuts the term by nearly 5 months and saves $160 in interest.',
-          'On a 30-year mortgage, extra payments have a dramatically larger effect because the interest accumulates over a much longer period.',
+          'An amortization schedule is a table showing every payment over the life of the loan — how much goes to interest, how much goes to principal, and what the remaining balance is after each payment.',
+          'On a $20,000 loan at 6% for 5 years, the first payment of $386.66 splits as follows: $100 to interest ($20,000 × 0.5%) and $286.66 to principal. After that payment, the balance is $19,713.34. The next month, interest accrues on the lower balance — $98.57 — so more of the payment goes to principal.',
+          'This is why making extra payments early in a loan is so powerful: you reduce the principal on which future interest is calculated, compounding your savings over every remaining payment.',
+        ],
+      },
+      {
+        heading: 'Extra Payments: How Much Do They Save?',
+        paragraphs: [
+          'Adding extra money to the principal each month shortens the loan and reduces total interest. On a 5-year $20,000 loan at 6%, paying an extra $50/month cuts the term by nearly 5 months and saves about $160 in interest.',
+          'On a 30-year $300,000 mortgage at 6.5%, paying an extra $200/month saves over $75,000 in interest and cuts the loan term by more than 5 years. The earlier in the loan you start making extra payments, the greater the impact.',
+          'When making extra payments, always specify that the extra amount should be applied to principal, not to the next month\'s payment — some lenders apply it as a prepaid regular payment by default, which does not reduce your amortization schedule.',
+        ],
+      },
+      {
+        heading: 'Fixed vs. Variable Rate Loans',
+        paragraphs: [
+          'The formula above applies to fixed-rate loans, where the interest rate stays the same for the life of the loan. With a variable-rate loan (also called an adjustable-rate mortgage or ARM), the rate resets periodically — typically annually after an initial fixed period.',
+          'Variable rates often start lower than fixed rates, making the initial payment smaller. But if rates rise, your payment rises with them. For long-term loans like mortgages, fixed rates offer more predictability and protection against rate increases. For short-term loans you plan to pay off quickly, a variable rate can save money.',
+          'When comparing loan offers, always compare the APR (Annual Percentage Rate), not just the stated interest rate. APR includes fees and other costs, making it a more accurate measure of the true cost of borrowing.',
+        ],
+      },
+      {
+        heading: 'Comparing Loan Offers: What to Look For',
+        paragraphs: [
+          'When you receive multiple loan offers, compare them on total cost, not just monthly payment. A lender offering a lower monthly payment might be stretching the term longer, costing you significantly more in total interest.',
+          'Check the origination fee: some lenders charge 1–3% of the loan amount upfront. A loan with a slightly higher rate but no origination fee can be cheaper overall, especially if you plan to pay it off early.',
+          'Ask if there is a prepayment penalty — a fee for paying off the loan early or making extra payments. Loans with prepayment penalties eliminate the benefit of paying extra, effectively locking you into the full interest cost.',
+        ],
+      },
+      {
+        heading: 'How to Reduce Your Loan Payment',
+        paragraphs: [
+          'If the calculated payment is higher than your budget allows, you have three levers: borrow less, extend the term, or get a lower rate. Borrowing less is the most powerful — it reduces both the payment and the total interest. A 10% smaller loan produces a 10% smaller payment at the same rate and term.',
+          'Extending the term from 5 years to 7 years reduces the payment but increases total interest by roughly 43% on a $20,000 loan at 6%. Use a longer term as a last resort, not a first choice.',
+          'Improving your credit score before applying is the most impactful way to lower your rate. Moving from a 700 to a 750 credit score can reduce your rate by 0.5–1.5 percentage points on a car loan or personal loan. On a $25,000 car loan, that difference saves $500–$1,500 over the life of the loan. Even 60–90 days of paying down credit card balances before applying can meaningfully improve your score.',
         ],
       },
     ],
-    conclusion: 'Monthly payments are determined by principal, rate, and term. Lowering the rate or shortening the term reduces total cost; lengthening the term reduces monthly payments but increases total interest. Use our loan calculator to model any combination instantly.',
+    conclusion: 'Monthly loan payments are determined by three variables: principal, interest rate, and term. Lowering the rate or shortening the term reduces total cost; lengthening the term reduces monthly payments but increases total interest paid. Understanding how each variable interacts helps you negotiate better terms, choose the right loan structure, and use extra payments strategically to minimize what borrowing actually costs you. Before accepting any loan offer, run the numbers yourself — lenders present payments in ways that favor their product, not your wallet. Use our loan calculator to model any scenario instantly: compare rates, terms, and extra payment strategies side by side so you know exactly what you are agreeing to before you sign anything.',
     relatedLinks: [
       { label: 'Loan Calculator', to: '/loan-calculator' },
       { label: 'Mortgage Calculator', to: '/mortgage-calculator' },
