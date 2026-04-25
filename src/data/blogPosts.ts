@@ -448,32 +448,33 @@ export const blogPosts: BlogPost[] = [
     title: 'How Much Should You Save for Retirement?',
     date: '2026-04-19',
     description: 'Learn the most widely used retirement savings guidelines, how the 4% rule works, and how to calculate your personal retirement number using our free calculator.',
-    intro: 'How much money do you need to retire? The answer depends on your spending, health, retirement age, and investment returns — but there are widely used guidelines that give a solid starting point. This guide explains the most common rules of thumb, how to calculate your personal retirement number, and what to do if you are behind.',
+    intro: 'How much money do you need to retire? The answer depends on your expected spending in retirement, your planned retirement age, life expectancy, Social Security income, and investment returns — but there are widely used guidelines that give a solid starting point. Most people either underestimate what they need or feel so overwhelmed by the number that they delay starting. This guide explains the most common rules, how to calculate your personal retirement number, the power of tax-advantaged accounts, and what to do if you are behind.',
     sections: [
       {
-        heading: 'The 4% Rule',
+        heading: 'The 4% Rule: Your Retirement Number',
         paragraphs: [
-          'The 4% rule states that you can safely withdraw 4% of your retirement portfolio per year without running out of money over a 30-year retirement. It was developed from historical stock and bond return data.',
-          'To use it: multiply your expected annual retirement spending by 25. If you expect to spend $50,000 per year, you need $1.25 million. This is your retirement number.',
-          'The 4% rule is a guideline, not a guarantee. A longer retirement (retiring early), poor sequence of returns, or higher spending can require a lower withdrawal rate (3% to 3.5%).',
+          'The 4% rule states that you can safely withdraw 4% of your retirement portfolio in the first year of retirement, then adjust for inflation each year, without running out of money over a 30-year retirement. It was derived from the Trinity Study, which analyzed historical stock and bond returns across different retirement periods.',
+          'To find your retirement number: multiply your expected annual retirement spending by 25. If you expect to spend $50,000 per year in retirement, you need $1.25 million. If you expect to spend $80,000 per year, you need $2 million.',
+          'The 4% rule is a guideline, not a guarantee. A longer retirement (retiring at 50 instead of 65), poor investment returns early in retirement (sequence of returns risk), or higher spending can require a more conservative withdrawal rate of 3%–3.5%. A 3% withdrawal rate corresponds to a portfolio 33× your annual spending.',
+          'Social Security reduces the portfolio size you need. If Social Security will cover $20,000 of your $50,000 annual spending, you only need to fund $30,000 per year from your portfolio — requiring $750,000 instead of $1.25 million.',
         ],
       },
       {
         heading: 'Savings Rate Benchmarks',
         paragraphs: [
-          'Financial advisors commonly recommend saving 10%–15% of your gross income for retirement. Vanguard and Fidelity both use 15% (including employer match) as their benchmark.',
-          'If you start late or want to retire early, you may need to save 20%–30%. The math is unforgiving: every year of delay requires a larger savings rate to reach the same goal.',
+          'Financial advisors commonly recommend saving 10%–15% of your gross income for retirement. Vanguard and Fidelity both use 15% (including employer match) as their benchmark for a retirement at 65.',
+          'If you start late or want to retire early, you may need to save 20%–30%. The math is unforgiving: every year of delay requires a higher savings rate to reach the same goal.',
         ],
         list: [
           'Start at 25, save 15%: likely on track for retirement at 65',
           'Start at 35, save 15%: may need to work until 67–68',
-          'Start at 45, save 15%: significant shortfall likely — increase savings rate',
+          'Start at 45, save 15%: significant shortfall likely — increase to 25%+',
         ],
       },
       {
         heading: 'Age-Based Milestones',
         paragraphs: [
-          'Fidelity publishes widely used benchmarks for retirement savings by age:',
+          'Fidelity publishes widely used benchmarks for retirement savings by age, expressed as multiples of your current annual salary:',
         ],
         list: [
           'Age 30: have saved 1× your annual salary',
@@ -484,15 +485,48 @@ export const blogPosts: BlogPost[] = [
         ],
       },
       {
+        heading: 'The Power of Starting Early: Compound Growth',
+        paragraphs: [
+          'The most powerful variable in retirement savings is time, not income. A 25-year-old who saves $300/month at 7% average annual return will have $1.09 million by age 65. A 35-year-old saving the same $300/month will have only $567,000 — barely half — despite contributing for 10 fewer years.',
+          'To match the 25-year-old\'s outcome, the 35-year-old would need to save about $580/month — nearly double the contribution. This is why starting as early as possible, even with small amounts, is so critical.',
+          'The underlying mechanism is compound growth: each year, you earn returns not just on your contributions but on all the returns from previous years. Over 40 years, the investment returns themselves dwarf the original contributions.',
+        ],
+      },
+      {
+        heading: 'Tax-Advantaged Accounts: The Right Order',
+        paragraphs: [
+          'Where you save is nearly as important as how much you save. Tax-advantaged accounts dramatically improve outcomes by eliminating or deferring taxes on investment growth.',
+          'The recommended order: first, contribute to your 401(k) up to the full employer match — this is an immediate 50%–100% return on your money. Second, max out a Roth IRA ($7,000/year in 2025). Third, return to your 401(k) and contribute up to the annual limit ($23,500 in 2025). Fourth, use a taxable brokerage account for any additional savings.',
+          'The difference between a Roth IRA and a Traditional IRA is timing: Roth contributions are after-tax (pay taxes now, withdrawals tax-free); Traditional contributions are pre-tax (tax deduction now, pay taxes in retirement). Roth is generally better when you expect to be in a higher tax bracket in retirement than today.',
+        ],
+      },
+      {
         heading: 'What If You Are Behind?',
         paragraphs: [
-          'Increase your savings rate by 1%–2% per year until you reach 15%+. Even small increases compound significantly over time.',
-          'Maximize tax-advantaged accounts first: 401(k) up to employer match, then Roth IRA, then 401(k) to the limit. Catch-up contributions are available after age 50.',
-          'Consider delaying retirement by even 2–3 years — this dramatically reduces the required portfolio size and adds years of saving.',
+          'Increase your savings rate by 1%–2% per year until you reach 15%+. Even small automatic increases — triggered by each raise — compound significantly over time without requiring a dramatic lifestyle change.',
+          'Catch-up contributions are available after age 50: an additional $7,500/year to a 401(k) and an additional $1,000/year to an IRA (2025 limits). These are designed specifically for people who are behind.',
+          'Consider delaying retirement by 2–3 years. This strategy has a triple effect: more years of contributions, more years of investment growth, and fewer years you need the portfolio to support you. Delaying from 65 to 67 can close a surprisingly large gap.',
+          'Reduce your retirement spending target. If you currently spend $80,000/year but can live comfortably on $65,000 in retirement (no commuting costs, no work wardrobe, mortgage paid off), your retirement number drops from $2 million to $1.625 million.',
+        ],
+      },
+      {
+        heading: 'Social Security and Other Income Sources',
+        paragraphs: [
+          'Social Security replaces roughly 40% of pre-retirement income for average earners — less for high earners. You can estimate your future benefit at ssa.gov/estimator. Delaying Social Security from age 62 to 70 increases your monthly benefit by approximately 76%, making it one of the highest guaranteed-return financial decisions available.',
+          'Other income sources that reduce how much portfolio you need: pensions, rental income, part-time work in early retirement, annuities, and inheritance. Model these as offsets to your annual spending need before calculating your portfolio target.',
+          'Medicare eligibility begins at 65, but if you retire before then, you will need to cover your own health insurance costs — often $600–$1,200 per month for an individual. Factor healthcare costs explicitly into your retirement spending estimate; they are the most common underestimated expense and can add $300,000–$500,000 to the amount you need over a long retirement.',
+        ],
+      },
+      {
+        heading: 'Asset Allocation: How to Invest Your Retirement Savings',
+        paragraphs: [
+          'Asset allocation — the mix of stocks, bonds, and cash in your portfolio — determines both your expected return and your risk level. The traditional guideline was to subtract your age from 110 to get your stock allocation (age 40 → 70% stocks). A more aggressive modern version subtracts from 120, reflecting longer life expectancies.',
+          'Target-date funds automate this rebalancing by gradually shifting from stocks to bonds as you approach your retirement year. A 2050 target-date fund holds mostly stocks now and will hold mostly bonds by 2050. These are the simplest and often the best choice for most retirement investors, especially in 401(k) plans.',
+          'The biggest allocation mistake in retirement saving is being too conservative too early. In your 20s and 30s, staying 80–90% in equities is appropriate — market downturns are buying opportunities, not disasters, when you have decades before you need the money. Only as you approach retirement (within 10 years) should you start meaningfully shifting toward bonds and stable assets to reduce volatility and protect what you have built.',
         ],
       },
     ],
-    conclusion: 'The earlier you start and the more consistently you save, the easier retirement becomes. Use our retirement calculator to model your specific situation, see your projected gap, and understand what adjustments will close it.',
+    conclusion: 'The earlier you start and the more consistently you save, the easier retirement becomes. Your retirement number is 25× your expected annual spending minus any guaranteed income (Social Security, pension). Save at least 15% of gross income, prioritize tax-advantaged accounts in the right order, and use the Fidelity age milestones as checkpoints. If you are behind, delay retirement by a few years, increase contributions with each raise, and use catch-up contributions after 50. Do not forget to account for healthcare costs before Medicare eligibility — they are the expense most retirees underestimate. Use our retirement calculator to model your specific situation, see your projected gap, and understand exactly what adjustments will close it.',
     relatedLinks: [
       { label: 'Retirement Calculator', to: '/retirement-calculator' },
       { label: 'Compound Interest Calculator', to: '/compound-interest-calculator' },
