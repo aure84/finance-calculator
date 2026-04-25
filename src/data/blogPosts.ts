@@ -1153,6 +1153,7 @@ export const blogPosts: BlogPost[] = [
         paragraphs: [
           'An interest rate is the percentage of a principal amount charged (or earned) over a given period — typically expressed annually. A 5% annual interest rate means you pay (or earn) 5 cents for every dollar borrowed (or saved) per year.',
           'For borrowers, interest is the cost of credit. For savers and investors, it is the return on lending money to a bank or bond issuer.',
+          'Interest rates exist because of time preference: people generally prefer to have money now rather than later. Lenders give up current liquidity and must be compensated for it. Borrowers gain current access to funds they do not yet have, and they pay for that privilege. The interest rate is the price that clears this market.',
         ],
       },
       {
@@ -1173,6 +1174,7 @@ export const blogPosts: BlogPost[] = [
         paragraphs: [
           'The nominal interest rate is the stated rate. The real interest rate adjusts for inflation: Real rate = Nominal rate − Inflation rate.',
           'Example: A savings account pays 4% nominal. Inflation is 3%. Real return = 1%. Your purchasing power grows by only 1% per year, even though your balance grows by 4%.',
+          'When the real interest rate is negative — your savings earn less than inflation — your purchasing power shrinks even as your balance grows. This happened widely in 2020–2021 when savings rates were near zero while inflation rose toward 5%–9%. For long-term savers, keeping money in low-yield accounts during periods of high inflation is expensive in real terms.',
         ],
       },
       {
@@ -1180,10 +1182,37 @@ export const blogPosts: BlogPost[] = [
         paragraphs: [
           'The Federal Reserve sets the federal funds rate — the rate banks charge each other for overnight lending. This rate ripples through the economy: mortgage rates, credit card APRs, and savings account yields all move in response.',
           'When the Fed raises rates, borrowing becomes more expensive and saving becomes more rewarding. When it cuts rates, borrowing is cheaper and saving yields less.',
+          'The effect is not instantaneous or uniform. Mortgage rates typically follow the 10-year Treasury yield, which is influenced by Fed policy but also by inflation expectations and global demand for US bonds. Credit card rates follow the prime rate more directly and can reset within one or two billing cycles of a Fed change.',
+        ],
+      },
+      {
+        heading: 'Fixed vs Variable Interest Rates',
+        paragraphs: [
+          'A fixed interest rate stays constant for the life of the loan or deposit. Your payment (or earnings) never changes, regardless of what the Fed or market rates do. Fixed rates provide predictability and protect you from rising rates — but you also do not benefit if rates fall.',
+          'A variable rate adjusts periodically based on a benchmark (usually the prime rate or SOFR). Variable rates typically start lower than fixed rates to compensate for the uncertainty. If rates fall, your cost drops. If rates rise, your cost rises too.',
+          'For long-term borrowing like mortgages, fixed rates are usually safer for most borrowers. For short-term borrowing, or if you expect rates to fall, variable rates can save money. For savings, high-yield savings accounts and money market accounts typically use variable rates — when the Fed raises rates, these yields increase quickly.',
+          'Hybrid products exist between the two extremes. A 7/1 ARM mortgage is fixed for the first 7 years, then adjusts annually thereafter. This can be a good fit for borrowers who plan to sell or refinance within 7 years and want to benefit from the initially lower rate without taking on long-term rate risk.',
+        ],
+      },
+      {
+        heading: 'Interest Rates and Your Credit Score',
+        paragraphs: [
+          'Your credit score is one of the most powerful determinants of the interest rate you are offered. Lenders use it as a proxy for default risk: a higher score means a lower expected probability of default, which justifies a lower rate.',
+          'The difference between a 620 credit score and a 760 score on a $300,000 mortgage can be 1%–2% in rate. At 1% difference over 30 years, that is roughly $65,000 in additional total interest — more than 20% of the original loan amount. On a car loan, the same credit score gap can mean 3%–6% difference in rate, adding thousands to the total cost of a $30,000 vehicle.',
+          'Improving your credit score before taking a major loan — by paying down credit card balances, correcting errors on your report, and avoiding new credit inquiries — can save tens of thousands of dollars over the life of the loan.',
+          'Credit score improvement takes time. Paying down a revolving balance affects your utilization ratio quickly (within one or two billing cycles). Building a history of on-time payments takes months to years. Plan major borrowing 6–12 months in advance if you need to meaningfully improve your score first.',
+        ],
+      },
+      {
+        heading: 'Interest Rate vs APR: Which to Compare',
+        paragraphs: [
+          'The interest rate on a loan is the cost of borrowing the principal, excluding fees. The APR (Annual Percentage Rate) includes both the interest rate and mandatory fees — origination fees, mortgage points, and similar charges — expressed as an annual rate.',
+          'Always compare APRs when shopping for loans, not just interest rates. A loan advertised at 5.5% with a 1% origination fee has a higher APR than a loan at 5.75% with no fees, and may cost more in total depending on the loan term.',
+          'For savings products, the equivalent metric is APY (Annual Percentage Yield), which accounts for compounding. A savings account with a 4.9% nominal rate compounding daily has a slightly higher APY than one with a 5% nominal rate compounding annually. Always compare APY to APY for savings, and APR to APR for loans.',
         ],
       },
     ],
-    conclusion: 'Interest rates determine the cost of all borrowing and the return on all saving. Watch the Fed, understand your credit score, and compare APRs when evaluating any financial product.',
+    conclusion: 'Interest rates determine the cost of all borrowing and the return on all saving. The Fed sets the baseline, but your credit score, loan term, collateral, and the product type all determine the specific rate you receive. Always compare APRs — not just nominal rates — when evaluating loan offers. Understand the difference between fixed and variable rates, and choose based on your time horizon and risk tolerance. Use our loan and mortgage calculators to model how rate changes affect total cost and monthly payment.',
     relatedLinks: [
       { label: 'Loan Calculator', to: '/loan-calculator' },
       { label: 'Mortgage Calculator', to: '/mortgage-calculator' },
