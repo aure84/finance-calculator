@@ -355,7 +355,7 @@ export const blogPosts: BlogPost[] = [
         heading: 'Gross vs Net Salary',
         paragraphs: [
           'Gross salary is your total compensation before any deductions — the number in your employment contract. Net salary is what remains after federal income tax, state income tax (where applicable), Social Security, Medicare, and any voluntary deductions like health insurance or retirement contributions.',
-          'In the US, the typical difference between gross and net is 20%–35%, depending on your income level, state of residence, and benefit elections.',
+          'In the US, the typical difference between gross and net is 20%–35%, depending on your income level, state of residence, and benefit elections. Someone earning $40,000 in a no-income-tax state might keep 78% of their gross. Someone earning $150,000 in California might keep only 62% after all deductions.',
         ],
       },
       {
@@ -366,6 +366,7 @@ export const blogPosts: BlogPost[] = [
           'Social Security: 6.2% of gross wages up to the annual wage base ($176,100 in 2026).',
           'Medicare: 1.45% of all wages. An additional 0.9% applies to earnings above $200,000.',
           'Voluntary deductions: health insurance premiums, 401(k) contributions, HSA contributions, and others. These reduce your taxable income.',
+          'FICA taxes (Social Security + Medicare) are fixed-rate and mandatory for almost all employees. Self-employed individuals pay the full 15.3% themselves (both the employee and employer portions), though they can deduct the employer-equivalent half on their tax return.',
         ],
       },
       {
@@ -380,8 +381,36 @@ export const blogPosts: BlogPost[] = [
           'This is before any voluntary deductions. Health insurance or 401(k) contributions would reduce it further.',
         ],
       },
+      {
+        heading: 'How Federal Income Tax Withholding Works',
+        paragraphs: [
+          'Federal income tax is not a flat percentage — it is progressive. For 2026, the brackets are 10%, 12%, 22%, 24%, 32%, 35%, and 37%. Each rate applies only to the income in that bracket. A person earning $80,000 does not pay 22% on all $80,000 — they pay 10% on the first tier, 12% on the next, and 22% on the portion above the 12% bracket.',
+          'Your employer withholds federal tax based on your W-4 form. The W-4 asks about filing status, dependents, and any additional withholding. If you claim too many allowances or too few, you may owe taxes in April or receive a refund. A refund means you gave the government an interest-free loan; owing means you underpaid. Review your W-4 whenever you have a major life change — marriage, divorce, a new child, or a significant income change.',
+          'Pre-tax deductions — 401(k) contributions, health insurance premiums, FSA contributions — reduce your taxable income before withholding is calculated. A $500/month 401(k) contribution on a $5,000/month salary means you are only taxed on $4,500, reducing your federal and state tax burden. The actual take-home reduction is less than $500 because the contribution also reduces your tax bill.',
+          'Marginal vs effective tax rate: your marginal rate is the rate on your last dollar of income. Your effective rate is total tax paid divided by total income. If your effective federal rate is 14%, that means 14 cents of every dollar you earned went to federal tax — even though your marginal bracket might be 22%.',
+        ],
+      },
+      {
+        heading: 'Voluntary Deductions That Reduce Your Take-Home Pay',
+        paragraphs: [
+          'Health insurance premiums are typically deducted pre-tax through a Section 125 cafeteria plan. The amount varies widely — employees may pay $50–$500+ per month depending on the plan, employer contribution, and whether dependents are covered.',
+          '401(k) contributions are deducted pre-tax (traditional) or post-tax (Roth). Traditional contributions reduce your taxable income now; Roth contributions are taxed now but grow and withdraw tax-free. Both reduce your take-home pay by the contribution amount.',
+          'HSA (Health Savings Account) contributions are triple tax-advantaged: pre-tax going in, tax-free growth, and tax-free withdrawals for medical expenses. Contributing to an HSA reduces net pay but is one of the most tax-efficient ways to save. For 2026, individuals can contribute up to $4,300 and families up to $8,550.',
+          'Life insurance, dental, vision, disability insurance, and commuter benefits may also appear as payroll deductions depending on your employer benefits package. Commuter benefits (transit passes, parking) can be contributed pre-tax up to $315/month in 2026, reducing both taxable income and net pay.',
+          'Dependent care FSA contributions are also pre-tax, up to $5,000 per household per year. If you pay for childcare or after-school programs, this deduction can meaningfully reduce your tax burden while modestly reducing your take-home pay each paycheck.',
+        ],
+      },
+      {
+        heading: 'Net Salary in Other Countries',
+        paragraphs: [
+          'In the UK, gross-to-net involves income tax (20%–45% depending on earnings), National Insurance contributions (8% on earnings between the primary threshold and upper earnings limit), and student loan repayments if applicable. The UK does not have a state income tax equivalent.',
+          'In Germany, payroll deductions include income tax (14%–45%), solidarity surcharge, church tax (where applicable), health insurance, pension insurance, unemployment insurance, and long-term care insurance. Total deductions can reach 40%–45% of gross for middle-income earners. Germany also has a progressive tax system, so the effective rate is always lower than the marginal rate.',
+          'In Canada, federal income tax (15%–33%), provincial tax (which varies by province), Canada Pension Plan (CPP) contributions, and Employment Insurance (EI) premiums are the main deductions. Quebec has an additional provincial layer not found in other provinces, and overall Canadian take-home pay varies significantly by province.',
+          'Understanding the gross-to-net gap in your country is important for salary negotiation — a $90,000 gross offer in a high-tax state like California yields significantly less take-home than the same offer in a no-income-tax state like Texas. When comparing job offers, always convert both to after-tax income using the same assumptions.',
+        ],
+      },
     ],
-    conclusion: 'Net salary depends on your gross pay, filing status, state, and voluntary benefit elections. Use our salary calculator to get a detailed breakdown of your estimated take-home pay based on your specific situation.',
+    conclusion: 'Net salary depends on your gross pay, filing status, state, and voluntary benefit elections. Federal income tax is progressive — marginal rates apply only to income within each bracket, not to all income. Pre-tax deductions for retirement and health benefits reduce both your taxes and your take-home pay, making them more cost-effective than they first appear. Use our salary calculator to get a detailed breakdown of your estimated take-home pay based on your specific situation.',
     relatedLinks: [
       { label: 'Salary Calculator', to: '/salary-calculator' },
       { label: 'Tax Refund Calculator', to: '/tax-refund-calculator' },
