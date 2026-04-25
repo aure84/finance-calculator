@@ -52,10 +52,45 @@ export const blogPosts: BlogPost[] = [
         paragraphs: [
           'For credit cards, APR is applied to any balance you carry month to month. If you pay your full balance each month, you pay no interest and the APR is irrelevant. If you carry a balance, the APR determines your monthly interest charge.',
           'Credit card APRs typically range from 15% to 30%. The daily periodic rate is the APR divided by 365, applied each day to your outstanding balance.',
+          'Many cards offer a 0% introductory APR for 12–21 months on purchases or balance transfers. After the promotional period ends, the regular APR applies to any remaining balance — which can jump sharply. Always note the post-promotional rate before opening such a card.',
+        ],
+      },
+      {
+        heading: 'Fixed vs Variable APR',
+        paragraphs: [
+          'A fixed APR stays the same for the life of the loan. Your payment is predictable, and you are protected if interest rates rise. Most mortgages and personal loans offer fixed APR options.',
+          'A variable APR fluctuates with a benchmark rate such as the prime rate or SOFR. When benchmark rates fall, your cost drops; when they rise, so does your payment. Variable-rate loans often start with a lower APR than fixed options, but carry more risk over a long term.',
+          'For credit cards, almost all APRs are variable — tied to the prime rate plus a margin set by the card issuer. When the Federal Reserve raises rates, credit card APRs rise within one or two billing cycles.',
+        ],
+      },
+      {
+        heading: 'How APR Is Calculated',
+        paragraphs: [
+          'Lenders calculate APR using the total cost of credit — interest plus required fees — expressed as a yearly rate. For a mortgage, this typically includes the interest rate, origination fee, points, and certain closing costs, but excludes optional charges like title insurance.',
+          'The Truth in Lending Act (TILA) in the United States requires lenders to disclose APR before you sign a loan agreement. This gives you a standardized, comparable number across all lenders. Always request the APR disclosure before accepting any loan offer.',
+          'In Europe, the equivalent concept is called APRC (Annual Percentage Rate of Charge) and is governed by the Mortgage Credit Directive. The same principle applies: it includes interest and all mandatory costs so borrowers can compare products on equal terms. The standardization exists precisely because lenders historically used creative packaging to make expensive loans appear affordable.',
+        ],
+      },
+      {
+        heading: 'APR vs APY: What Is the Difference?',
+        paragraphs: [
+          'APR (Annual Percentage Rate) measures the cost of borrowing. APY (Annual Percentage Yield) measures the return on saving or investing. APY accounts for compounding within the year; APR does not.',
+          'A savings account might advertise a 5% APY. If interest compounds monthly, the monthly rate is about 0.417%, and the total return over 12 months slightly exceeds 5%. When you are borrowing, look at APR. When you are saving or investing, look at APY. Using the wrong metric leads to misleading comparisons.',
+          'For loans that compound monthly (most mortgages and personal loans), the actual cost to you is slightly higher than the nominal APR because of compounding. The APY equivalent would be higher. For most practical comparisons of loan offers, APR is the right metric.',
+        ],
+      },
+      {
+        heading: 'Common APR Mistakes to Avoid',
+        paragraphs: [
+          'Comparing interest rates instead of APRs is the most common mistake when shopping for loans. Two lenders may quote the same 6% interest rate, but if one charges a 1% origination fee and the other charges none, their APRs differ — and you would overpay by focusing only on the rate.',
+          'Ignoring teaser rates is another frequent error. A car dealership might offer 0% financing, but only for 24 months. After that, the rate resets to 7%–9%. The blended APR over the full loan term is much higher than 0% suggests.',
+          'For credit cards, carrying even a small balance month to month at 25% APR erases the value of almost any cashback or rewards program. A 2% cashback card earning $200 per year costs far more if you routinely carry a $2,000 balance and pay $500 in interest.',
+          'When refinancing, borrowers often focus on the lower APR without accounting for closing costs. If you plan to move or pay off the loan in two years, the break-even period on refinancing costs may never arrive — making the lower APR a false saving.',
+          'Student loans are another area where APR comparisons matter. Federal student loans have a fixed interest rate set by Congress each year, while private student loans can be fixed or variable. Because federal loans include income-driven repayment options and forgiveness programs, comparing APRs alone understates the value of federal over private loans for many borrowers.',
         ],
       },
     ],
-    conclusion: 'APR is the most reliable single number for comparing borrowing costs. Always look at the APR — not just the interest rate — when evaluating any loan or credit card offer. Use our loan calculator to model monthly payments and total cost for any rate.',
+    conclusion: 'APR is the most reliable single number for comparing borrowing costs. Always look at the APR — not just the interest rate — when evaluating any loan or credit card offer. For variable-rate products, understand both the starting APR and how it can change. For credit cards, a high APR only costs you money if you carry a balance — paying in full every month makes the rate irrelevant. Use our loan calculator to model monthly payments and total cost for any rate and term.',
     relatedLinks: [
       { label: 'Loan Calculator', to: '/loan-calculator' },
       { label: 'Mortgage Calculator', to: '/mortgage-calculator' },
