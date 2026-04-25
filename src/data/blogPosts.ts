@@ -792,7 +792,7 @@ export const blogPosts: BlogPost[] = [
         heading: 'Tax-Advantaged Accounts: The Right Order',
         paragraphs: [
           'Where you save is nearly as important as how much you save. Tax-advantaged accounts dramatically improve outcomes by eliminating or deferring taxes on investment growth.',
-          'The recommended order: first, contribute to your 401(k) up to the full employer match — this is an immediate 50%–100% return on your money. Second, max out a Roth IRA ($7,000/year in 2025). Third, return to your 401(k) and contribute up to the annual limit ($23,500 in 2025). Fourth, use a taxable brokerage account for any additional savings.',
+          'The recommended order: first, contribute to your 401(k) up to the full employer match — this is an immediate 50%–100% return on your money. Second, max out a Roth IRA ($7,000/year in 2026). Third, return to your 401(k) and contribute up to the annual limit ($23,500 in 2026). Fourth, use a taxable brokerage account for any additional savings.',
           'The difference between a Roth IRA and a Traditional IRA is timing: Roth contributions are after-tax (pay taxes now, withdrawals tax-free); Traditional contributions are pre-tax (tax deduction now, pay taxes in retirement). Roth is generally better when you expect to be in a higher tax bracket in retirement than today.',
         ],
       },
@@ -800,7 +800,7 @@ export const blogPosts: BlogPost[] = [
         heading: 'What If You Are Behind?',
         paragraphs: [
           'Increase your savings rate by 1%–2% per year until you reach 15%+. Even small automatic increases — triggered by each raise — compound significantly over time without requiring a dramatic lifestyle change.',
-          'Catch-up contributions are available after age 50: an additional $7,500/year to a 401(k) and an additional $1,000/year to an IRA (2025 limits). These are designed specifically for people who are behind.',
+          'Catch-up contributions are available after age 50: an additional $7,500/year to a 401(k) and an additional $1,000/year to an IRA (2026 limits). These are designed specifically for people who are behind.',
           'Consider delaying retirement by 2–3 years. This strategy has a triple effect: more years of contributions, more years of investment growth, and fewer years you need the portfolio to support you. Delaying from 65 to 67 can close a surprisingly large gap.',
           'Reduce your retirement spending target. If you currently spend $80,000/year but can live comfortably on $65,000 in retirement (no commuting costs, no work wardrobe, mortgage paid off), your retirement number drops from $2 million to $1.625 million.',
         ],
