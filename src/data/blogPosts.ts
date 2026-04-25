@@ -429,6 +429,7 @@ export const blogPosts: BlogPost[] = [
         paragraphs: [
           'In the United States, inflation is primarily measured by the Consumer Price Index (CPI), published monthly by the Bureau of Labor Statistics. The CPI tracks the price of a fixed basket of goods and services — food, housing, transportation, medical care, and more.',
           'The Federal Reserve targets 2% annual inflation as a healthy rate that supports economic growth without eroding purchasing power too quickly. Actual inflation has ranged from near zero to over 9% in recent decades.',
+          'The Personal Consumption Expenditures (PCE) index is the Fed\'s preferred inflation measure — it weights goods and services by how much consumers actually spend, and adjusts over time as spending patterns shift. The CPI, by contrast, uses a fixed basket. Both are widely reported, but the PCE tends to run slightly lower than the CPI.',
         ],
       },
       {
@@ -445,6 +446,7 @@ export const blogPosts: BlogPost[] = [
         paragraphs: [
           'If your savings account earns 1% interest and inflation runs at 3%, your real return is −2%. Your balance grows in nominal terms but shrinks in purchasing power.',
           'This is why keeping large amounts in low-yield accounts long-term is costly. Investments in stocks, real estate, or inflation-protected bonds (TIPS) historically outpace inflation over long periods.',
+          'The "real" interest rate is the nominal rate minus inflation. When the real rate is negative — your savings earn less than inflation — you are losing purchasing power even though your nominal balance grows. This situation is common during periods of high inflation or very low interest rates.',
         ],
       },
       {
@@ -452,10 +454,36 @@ export const blogPosts: BlogPost[] = [
         paragraphs: [
           'Inflation actually helps borrowers with fixed-rate debt. If you have a mortgage at 4% and inflation runs at 4%, your real interest rate is 0% — you are repaying cheaper dollars than you borrowed.',
           'This is one reason financial planners recommend locking in fixed rates when inflation is expected to rise.',
+          'Variable-rate debt works in reverse: when inflation is high, central banks typically raise interest rates, which increases the cost of variable-rate loans — mortgages, home equity lines, credit cards. Borrowers with variable-rate debt are exposed on both sides: their costs rise while their savings are eroded.',
+        ],
+      },
+      {
+        heading: 'How Inflation Is Controlled',
+        paragraphs: [
+          'Central banks — the Federal Reserve in the US, the European Central Bank in Europe — use monetary policy to control inflation. Their primary tool is the federal funds rate (or equivalent). When inflation is too high, they raise interest rates to cool borrowing and spending. When inflation is too low or the economy is contracting, they cut rates to stimulate activity.',
+          'The Fed targets 2% annual inflation as a healthy equilibrium. Below 2% risks deflation — a dangerous situation where falling prices cause consumers to delay purchases, which drives economic contraction. Above 3%–4% for sustained periods, inflation erodes purchasing power and creates uncertainty that damages investment and planning.',
+          'Governments also use fiscal policy — changing tax rates and spending — to influence inflation, though these tools act more slowly than interest rate changes. Reducing government spending during high inflation reduces demand; increasing it during low inflation or recession stimulates spending. The two tools — monetary and fiscal — work best when they move in the same direction.',
+          'Expectations play a major role in inflation dynamics. If businesses and consumers expect prices to rise 5% next year, they act accordingly: workers demand higher wages, businesses raise prices preemptively. This is why central banks communicate so carefully — managing inflation expectations is nearly as important as managing the actual rate.',
+        ],
+      },
+      {
+        heading: 'The Real Return on Investments',
+        paragraphs: [
+          'The real return on any investment is the nominal return minus inflation. If your savings account earns 5% and inflation is 3%, your real return is 2%. If your bond fund earns 3% and inflation is 3%, your real return is 0% — you kept up, but you did not grow.',
+          'This framework is essential when evaluating long-term investments. A stock market that returns an average of 10% nominally over 30 years delivers roughly 7% in real terms (assuming 3% inflation). Real returns are what matter for financial planning — they represent actual increases in purchasing power.',
+          'Inflation-protected securities like TIPS (Treasury Inflation-Protected Securities) adjust their principal in line with the CPI. If inflation is 4%, the principal of a TIPS bond rises by 4%, and the fixed coupon is paid on the new, higher principal. This guarantees a positive real return above inflation, making TIPS useful for capital preservation in inflationary environments. I-Bonds, issued directly by the US Treasury, work similarly and offer a guaranteed inflation-adjusted return for individual savers, with a purchase limit of $10,000 per person per year.',
+        ],
+      },
+      {
+        heading: 'Hyperinflation: When Inflation Breaks Down',
+        paragraphs: [
+          'Hyperinflation — typically defined as inflation exceeding 50% per month — destroys savings and the economy\'s ability to function. Historical examples include Germany in 1923, Zimbabwe in the 2000s, and Venezuela in the 2010s. In each case, the currency lost so much value so quickly that people abandoned it for barter, foreign currencies, or commodities.',
+          'While hyperinflation is rare in developed economies, it illustrates the extreme end of what inflation can do. Diversifying savings into assets with intrinsic value — real estate, equities, precious metals, foreign currency accounts — reduces exposure to severe currency debasement.',
+          'Even moderate inflation of 5%–8% sustained over several years can cut the real value of a fixed pension or bond by 30%–40%. The 2021–2023 inflation surge in the US and Europe was a reminder that inflation is not just a historical curiosity — it can return quickly and affect real financial plans.',
         ],
       },
     ],
-    conclusion: 'Inflation is a silent tax on savings and a tailwind for fixed-rate borrowers. Plan your financial decisions with inflation in mind: invest rather than hoard cash, and lock in fixed rates when they are favorable.',
+    conclusion: 'Inflation is a silent tax on savings and a tailwind for fixed-rate borrowers. Central banks target 2% annual inflation as a healthy rate — enough to discourage hoarding cash, not so much as to erode purchasing power quickly. Plan your financial decisions with inflation in mind: invest rather than hoard cash, lock in fixed rates when they are favorable, and always think in terms of real returns rather than nominal ones. Use our inflation calculator to see exactly what any amount of money will be worth in the future at different inflation rates.',
     relatedLinks: [
       { label: 'Inflation Calculator', to: '/inflation-calculator' },
       { label: 'Compound Interest Calculator', to: '/compound-interest-calculator' },
