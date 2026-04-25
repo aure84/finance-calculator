@@ -505,41 +505,78 @@ export const blogPosts: BlogPost[] = [
     title: 'What Is Amortization and How Does It Work?',
     date: '2026-04-19',
     description: 'Amortization is the process of paying off a loan through scheduled payments. Learn how amortization schedules work, how interest and principal split each payment, and what affects the schedule.',
-    intro: 'When you take out a mortgage or personal loan, each monthly payment covers both interest and a portion of the principal. In the early years, most of the payment goes toward interest. Over time, the balance shifts until most of each payment reduces the principal. This process is called amortization. Understanding it helps you make smarter decisions about extra payments, refinancing, and loan terms.',
+    intro: 'When you take out a mortgage or personal loan, each monthly payment covers both interest and a portion of the principal. In the early years, most of the payment goes toward interest. Over time, the balance shifts until most of each payment reduces the principal. This process is called amortization — from the Latin "amortir," meaning to kill or extinguish. Understanding how it works helps you make smarter decisions about extra payments, refinancing, loan terms, and when it makes financial sense to pay off debt early.',
     sections: [
       {
         heading: 'How Amortization Works',
         paragraphs: [
-          'Each payment in an amortized loan is identical in size, but the split between interest and principal changes every month. The interest portion is calculated as the current balance × monthly interest rate. The rest of the payment reduces the balance.',
-          'Because interest is calculated on the remaining balance, and the balance decreases with each payment, the interest portion shrinks every month — and the principal portion grows.',
+          'Each payment in an amortized loan is identical in size, but the split between interest and principal changes every month. The interest portion is calculated as the current outstanding balance × monthly interest rate. The remainder of the payment reduces the balance (principal repayment).',
+          'Because interest is calculated on the remaining balance, and the balance decreases with each payment, the interest portion shrinks every month — and the principal portion grows proportionally. This is why making extra principal payments early in a loan has such a large impact: you reduce the base on which all future interest is calculated.',
+          'The monthly payment amount itself is fixed by the amortization formula: M = P × [r(1+r)^n] / [(1+r)^n − 1]. Once set at loan origination, the payment stays the same for the life of a fixed-rate loan.',
         ],
       },
       {
         heading: 'An Example Amortization Schedule',
         paragraphs: [
-          'Loan: $200,000 at 6% for 30 years. Monthly payment: $1,199.10.',
+          'Loan: $200,000 at 6% annual interest for 30 years. Monthly payment: $1,199.10.',
           'Month 1: Interest = $200,000 × 0.5% = $1,000. Principal = $199.10. Remaining balance: $199,800.90.',
           'Month 12: Interest ≈ $989. Principal ≈ $210. Remaining balance: ≈$197,870.',
           'Month 180 (year 15): Interest ≈ $702. Principal ≈ $497. Balance ≈$139,900.',
-          'Month 360 (final): Interest ≈ $6. Principal ≈ $1,193. Balance: $0.',
+          'Month 360 (final payment): Interest ≈ $6. Principal ≈ $1,193. Balance: $0.',
+          'Notice that after 15 years of payments — half the loan term — the balance is still $139,900 out of $200,000 original principal. This is the amortization curve: it is front-loaded with interest, so equity builds slowly in the early years.',
+        ],
+      },
+      {
+        heading: 'The Amortization Curve: Why Early Payments Are Mostly Interest',
+        paragraphs: [
+          'On a $200,000 mortgage at 6% for 30 years, the first payment of $1,199.10 splits as $1,000 interest and only $199.10 principal. At this rate, the first year of payments ($14,389) reduces the principal by just $2,400 — while $11,989 goes to interest.',
+          'By year 25, the split has reversed: each payment now goes mostly to principal. But most homeowners refinance or sell before reaching this point — which means they often restart the amortization clock and return to paying mostly interest on a new loan.',
+          'This is one reason financial advisors caution against frequent refinancing or moving every few years: you keep resetting to the expensive, interest-heavy early portion of the amortization curve. Even if the new rate is lower, the interest savings may not outweigh restarting a full 30-year schedule.',
         ],
       },
       {
         heading: 'Extra Payments and Their Impact',
         paragraphs: [
           'Making extra principal payments dramatically shortens the loan and saves interest. An extra $100/month on a $200,000 30-year mortgage at 6% cuts roughly 4 years off the loan and saves over $26,000 in interest.',
-          'Even a single extra payment per year (12+1 payments instead of 12) can shorten a 30-year mortgage by 4–5 years.',
+          'An extra $200/month saves about $46,000 and shortens the term by over 7 years. A single lump-sum payment of $10,000 applied to principal early in the loan saves approximately $18,000 in interest over 30 years.',
+          'Even a single extra payment per year (13 payments instead of 12) can shorten a 30-year mortgage by 4–5 years and save $25,000–$30,000 in interest on a typical mortgage.',
+          'When making extra payments, always specify they should be applied to principal, not to the next scheduled payment. Some servicers apply extra payments as prepaid regular payments by default, which does not change the amortization schedule.',
         ],
       },
       {
         heading: 'Loan Term: 15-Year vs 30-Year',
         paragraphs: [
-          'A 15-year mortgage has higher monthly payments but builds equity much faster and costs far less in total interest. A 30-year mortgage has lower payments, giving you more monthly cash flow but significantly more total interest paid.',
-          '$200,000 at 6%: 30-year total interest = $231,676. 15-year total interest = $103,788. The 15-year saves $127,888 in interest — but the monthly payment is $478 higher.',
+          'A 15-year mortgage has a higher monthly payment but builds equity much faster and costs dramatically less in total interest. A 30-year mortgage offers lower monthly payments and more cash flow flexibility, but the total cost of borrowing is much higher.',
+          '$200,000 at 6%: 30-year monthly payment = $1,199.10, total interest = $231,676. 15-year monthly payment = $1,687.71, total interest = $103,788. The 15-year option saves $127,888 in interest — but requires $489 more per month.',
+          'The right choice depends on your cash flow needs. If the higher payment is comfortable, the 15-year is almost always the better financial choice. If cash flow is tight, the 30-year with voluntary extra payments is a middle path — lower obligated payment with the option to pay more when possible.',
+        ],
+      },
+      {
+        heading: 'Amortization vs Interest-Only Loans',
+        paragraphs: [
+          'In an interest-only loan, you pay only interest for a set period (typically 5–10 years) — the principal does not decrease at all. After the interest-only period ends, the loan recasts and you begin full amortization over the remaining term. This creates a payment shock.',
+          'Interest-only loans made sense for specific situations (property investors expecting quick appreciation, high earners with variable income) but contributed to the 2008 financial crisis when borrowers could not afford the higher recast payments.',
+          'For most homeowners today, a standard fully-amortizing fixed-rate loan is the safest and most predictable structure. Every payment builds equity, the total cost is transparent from day one, and there are no payment surprises.',
+        ],
+      },
+      {
+        heading: 'Refinancing and the Amortization Reset',
+        paragraphs: [
+          'When you refinance, you take out a new loan to pay off the existing one. If you refinance a 30-year mortgage 10 years in and take another 30-year loan, you reset the amortization clock — extending your payoff date by 10 years and returning to the interest-heavy early stage.',
+          'To avoid this, you can refinance into a shorter term (e.g., a 20-year loan) to maintain roughly the same payoff date while capturing the lower rate. Or you can refinance into a 30-year loan but make extra payments to compensate.',
+          'The break-even calculation for refinancing is: divide the total closing costs by the monthly payment savings. If closing costs are $4,000 and you save $120/month, the break-even is 33 months. If you plan to stay in the home longer than that, refinancing makes financial sense.',
+        ],
+      },
+      {
+        heading: 'Reading Your Mortgage Statement',
+        paragraphs: [
+          'Your monthly mortgage statement shows how the latest payment was applied: how much went to interest, how much to principal, any escrow contributions (for property taxes and insurance), and the remaining balance. Understanding this statement helps you verify your servicer is applying extra payments correctly.',
+          'If you make an extra payment, check the following statement to confirm the balance decreased by the full extra amount. If the servicer applied it as a "prepaid regular payment," contact them and request it be applied to principal instead. Get confirmation in writing.',
+          'Your statement also shows your amortization progress: the total interest paid to date and the remaining balance. These numbers make the cost of the loan concrete — and often motivate borrowers to accelerate payoff once they see how much of their early payments went to interest rather than equity.',
         ],
       },
     ],
-    conclusion: 'Amortization front-loads interest payments — which means the early years of a loan are the most expensive. Use our mortgage calculator to see your full amortization schedule and model the impact of extra payments.',
+    conclusion: 'Amortization front-loads interest payments — meaning the early years of a loan are the most expensive in terms of interest paid per dollar of balance reduced. This is why extra principal payments early in a loan have such a large cumulative effect, and why resetting the clock through frequent refinancing or moving every few years can quietly cost tens of thousands of dollars. Use our mortgage calculator to see a full amortization schedule, model the impact of extra payments, and compare 15-year versus 30-year structures before committing to a loan.',
     relatedLinks: [
       { label: 'Mortgage Calculator', to: '/mortgage-calculator' },
       { label: 'Loan Calculator', to: '/loan-calculator' },
