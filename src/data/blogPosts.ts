@@ -194,18 +194,20 @@ export const blogPosts: BlogPost[] = [
         heading: 'How Compound Interest Works',
         paragraphs: [
           'Compound interest is calculated on the principal plus all previously accumulated interest. It is interest on interest. The formula is: A = P × (1 + r/n)^(n×t), where P is principal, r is annual rate, n is compounding frequency per year, and t is years.',
-          'Example: $10,000 at 5% compounded annually for 3 years: A = $10,000 × (1.05)³ = $11,576.25. That is $76.25 more than simple interest — and the gap grows with every passing year.',
+          'Example: $10,000 at 5% compounded annually for 3 years: A = $10,000 × (1.05)³ = $11,576.25. That is $76.25 more than simple interest — and the gap grows with every passing year. Over 20 years, the same principal at 5% simple interest grows to $20,000. At 5% compound interest, it grows to $26,533 — a difference of $6,533 that comes entirely from compounding.',
         ],
       },
       {
         heading: 'The Compounding Frequency Effect',
         paragraphs: [
-          'Compounding frequency matters. The more frequently interest compounds, the faster it grows.',
+          'Compounding frequency matters. The more frequently interest compounds, the faster it grows. However, the difference between monthly and daily compounding is small — the biggest factor is always the annual rate and the length of time.',
         ],
         list: [
           '$10,000 at 5% for 10 years, compounded annually: $16,288.95',
           '$10,000 at 5% for 10 years, compounded monthly: $16,470.09',
           '$10,000 at 5% for 10 years, compounded daily: $16,486.65',
+          '$10,000 at 5% for 30 years, compounded annually: $43,219.42',
+          '$10,000 at 5% for 30 years, compounded monthly: $44,677.44',
         ],
       },
       {
@@ -213,10 +215,44 @@ export const blogPosts: BlogPost[] = [
         paragraphs: [
           'Compound interest works for you in savings and investments. A retirement account growing at 7% compounded annually doubles in roughly 10 years (the Rule of 72: 72 ÷ rate = doubling time).',
           'Compound interest works against you in debt. Credit card balances compound daily at rates of 20–30%. A $5,000 balance at 24% APR, with no payments, grows to over $6,200 in one year.',
+          'The asymmetry is important: when you invest, compounding builds wealth slowly at first, then explosively. When you carry high-interest debt, compounding destroys wealth the same way — slowly at first, then catastrophically. This is why financial advisors consistently say: eliminate high-interest debt before investing (outside of employer-matched 401(k) contributions).',
+        ],
+      },
+      {
+        heading: 'The Rule of 72',
+        paragraphs: [
+          'The Rule of 72 is a quick mental shortcut for estimating how long it takes money to double at a given interest rate. Divide 72 by the annual interest rate to get the approximate doubling time in years.',
+          'At 6% annual return, money doubles in roughly 12 years (72 ÷ 6). At 9%, it doubles in 8 years. At 1% (a low-yield savings account), it takes 72 years — meaning inflation will likely erode your purchasing power faster than your savings grow.',
+          'The rule also works in reverse for debt. A credit card charging 24% APR doubles your balance in 3 years if you make no payments. At 18% APR, the balance doubles in 4 years. These numbers make clear why carrying credit card debt long-term is financially damaging.',
+        ],
+      },
+      {
+        heading: 'Simple vs Compound Interest in Real Financial Products',
+        paragraphs: [
+          'Most savings accounts, money market accounts, CDs, and investment accounts use compound interest, credited daily or monthly. This works in your favor as a saver.',
+          'Most mortgages and installment loans use simple interest calculated on the remaining balance each period — meaning they are effectively amortized, not compound, loans. Because you pay down the balance monthly, interest does not compound on unpaid interest (as long as you make payments on time).',
+          'Payday loans and some types of revolving credit can effectively compound very quickly because of fees and short cycles. A payday loan charging $15 per $100 for a two-week period has an APR of 390%. If rolled over multiple times, the effective cost compounds dramatically.',
+          'TIPS (Treasury Inflation-Protected Securities) adjust the principal for inflation, then pay a fixed interest rate on that adjusted principal — a form of compounding tied to inflation rather than a fixed rate.',
+        ],
+      },
+      {
+        heading: 'Starting Early: The Most Powerful Variable',
+        paragraphs: [
+          'The most dramatic illustration of compound interest is the comparison between an early investor and a late investor. An investor who puts $5,000 per year into a retirement account at age 25 and stops at 35 — contributing for only 10 years — will outpace an investor who starts at 35 and contributes every year until retirement at 65.',
+          'The early investor contributed $50,000 total. The late investor contributed $150,000. Yet the early investor ends up with more because the first 10 years of compounding create a base that grows for 30 more years undisturbed. Time in the market, not the amount contributed, is the primary driver of compound growth.',
+          'This is why financial independence enthusiasts talk about reaching a "critical mass" — a portfolio large enough that compound returns alone cover living expenses. At 4% annual withdrawal, a $1 million portfolio generates $40,000 per year indefinitely. Getting there sooner, by starting early, is entirely a function of how long compounding has to work.',
+        ],
+      },
+      {
+        heading: 'Avoiding Compounding Traps',
+        paragraphs: [
+          'Revolving credit card debt is the most common compounding trap. Many people pay only the minimum — typically 1%–2% of the balance — which barely covers the interest. The balance stays nearly flat for years while interest compounds, turning a $3,000 vacation into a $7,000 long-term debt.',
+          'Buy Now Pay Later (BNPL) services often advertise 0% interest. However, missed payments trigger fees and deferred interest in some plans — all accrued interest from the original purchase date is added back at once. Read the fine print: "deferred interest" is not the same as 0% APR.',
+          'Home equity loans and HELOCs can also compound against you if you use them to consolidate credit card debt and then run the cards back up. The debt problem grows rather than shrinks. Consolidation only works if the underlying spending behavior changes at the same time.',
         ],
       },
     ],
-    conclusion: 'Simple interest is predictable and linear. Compound interest is exponential — it accelerates over time. Start investing early to benefit from compounding, and pay off high-interest debt quickly to avoid it working against you.',
+    conclusion: 'Simple interest is predictable and linear. Compound interest is exponential — it accelerates over time. In savings and investments, compounding is your most powerful ally; in high-interest debt, it is your most dangerous enemy. Start investing as early as possible to maximize compounding growth, and eliminate high-interest debt quickly to prevent compounding from working against you. Use our compound interest calculator to model the long-term impact of any rate and time horizon.',
     relatedLinks: [
       { label: 'Compound Interest Calculator', to: '/compound-interest-calculator' },
       { label: 'Savings Goal Calculator', to: '/savings-goal-calculator' },
