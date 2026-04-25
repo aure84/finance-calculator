@@ -271,7 +271,8 @@ export const blogPosts: BlogPost[] = [
         paragraphs: [
           'Debt-to-income ratio = total monthly debt payments ÷ gross monthly income × 100%.',
           'Example: Your gross monthly income is $5,000. You pay $400 for a car loan, $200 for student loans, and $1,000 for rent. Total debt = $1,600. DTI = $1,600 ÷ $5,000 = 32%.',
-          'Use your gross income (before taxes), not take-home pay. Count all recurring debt payments: mortgage/rent, car loans, student loans, credit card minimum payments, personal loans.',
+          'Use your gross income (before taxes), not take-home pay. Count all recurring debt payments: mortgage/rent, car loans, student loans, credit card minimum payments, personal loans. If a payment appears on your credit report, it counts.',
+          'Student loan payments in deferment or income-driven repayment are counted differently by different loan programs. Conventional loans typically count 1% of the outstanding balance as a monthly payment if the loan is deferred. FHA loans count either the actual payment or 1% of the balance — whichever is higher. If you have large student loans in deferment, this can significantly affect your calculated DTI even though you are not currently making payments.',
         ],
       },
       {
@@ -290,7 +291,7 @@ export const blogPosts: BlogPost[] = [
         heading: 'Front-End vs Back-End DTI',
         paragraphs: [
           'Mortgage lenders often look at two DTI numbers. Front-end DTI includes only your proposed housing costs (mortgage payment, taxes, insurance) as a percentage of income — ideally below 28%.',
-          'Back-end DTI includes all monthly debt payments including the proposed mortgage — ideally below 36% for conventional loans, up to 43% for FHA loans.',
+          'Back-end DTI includes all monthly debt payments including the proposed mortgage — ideally below 36% for conventional loans, up to 43% for FHA loans. Some lenders allow higher back-end DTI with compensating factors such as substantial cash reserves, a large down payment, or a very high credit score.',
         ],
       },
       {
@@ -298,10 +299,45 @@ export const blogPosts: BlogPost[] = [
         paragraphs: [
           'There are two ways to lower your DTI: reduce monthly debt payments or increase income.',
           'Pay off or pay down existing debts before applying for a new loan. Even eliminating a small monthly payment improves your ratio. Avoid taking on new debt (car, furniture, credit cards) in the months before applying for a mortgage.',
+          'If you carry credit card balances, paying them down has an outsized effect: you reduce both the monthly minimum payment and the outstanding balance, improving your DTI and your credit utilization ratio at the same time.',
+          'Increasing income — through a raise, second job, or freelance work — also improves DTI. If you can document the income consistently for two years, lenders will count it. Recent income increases count immediately if they are from the same employer.',
+        ],
+      },
+      {
+        heading: 'What Counts — and What Does Not Count — as Debt',
+        paragraphs: [
+          'Lenders include: mortgage or rent payments, minimum credit card payments, car loan payments, student loan payments, personal loan payments, child support or alimony, and any other installment debt.',
+          'Lenders do not include: utilities, phone bills, groceries, subscriptions, insurance premiums, or taxes. These are living expenses, not debt obligations. This is why two people with the same income can have very different DTIs depending on how much installment debt they carry.',
+          'For credit cards, lenders use the minimum monthly payment, not your typical payment. If your credit card has a $5,000 balance and a $100 minimum payment, $100 goes into the DTI calculation — even if you always pay more.',
+        ],
+      },
+      {
+        heading: 'DTI and Credit Score: Two Different Things',
+        paragraphs: [
+          'DTI and credit score both matter to lenders, but they measure different things. Your credit score reflects how reliably you have repaid past debts. Your DTI reflects how much of your current income is tied up in debt payments.',
+          'A high credit score with a high DTI can still lead to loan denial — lenders need to see that you have enough income headroom to handle the new payment. Conversely, a low DTI with a weak credit score may also result in denial or a higher rate. Both numbers need to be in acceptable ranges.',
+          'A common mistake is to assume that a great credit score compensates for a high DTI. Most automated underwriting systems have hard DTI limits that override credit score strength. Fannie Mae and Freddie Mac automated systems cap back-end DTI at 45%–50% regardless of how strong the credit profile is.',
+        ],
+      },
+      {
+        heading: 'DTI Beyond Mortgages',
+        paragraphs: [
+          'While DTI is most associated with mortgage lending, it affects other credit decisions too. Auto lenders, personal loan providers, and even some credit card issuers review DTI as part of their underwriting.',
+          'For auto loans, lenders typically want a back-end DTI below 45%–50%. For personal loans, requirements vary widely, but a DTI above 50% will trigger rejection from most prime lenders.',
+          'DTI is also a useful personal budgeting metric. Many financial planners recommend keeping housing costs below 28% of gross income and total debt payments below 36%. Staying within these ranges keeps you financially flexible — able to handle unexpected expenses, save for retirement, and qualify for future loans.',
+        ],
+      },
+      {
+        heading: 'How Lenders Verify Your Income for DTI',
+        paragraphs: [
+          'Lenders verify income using W-2s, tax returns, pay stubs, and bank statements. Salaried employees need two recent pay stubs and two years of W-2s. Self-employed borrowers need two years of tax returns because income can vary — lenders average the two-year figure and use that as the basis for DTI.',
+          'Bonus, commission, and overtime income can be counted, but only if it has been consistent for two years. A raise in the last year may be fully counted if the employer confirms it in writing. Rental income counts at 75% of the gross rent (lenders discount for vacancies and expenses).',
+          'Side income from freelancing or gig work requires a two-year documented history. If you started a side business six months ago, lenders will not count it — even if it is substantial. Plan ahead if you rely on non-traditional income sources to qualify for a mortgage.',
+          'Retirement income, Social Security, and pension payments are counted in full. Investment income from dividends and interest may be counted if it appears on tax returns consistently. Child support and alimony received can be counted as income if the arrangement has been in place for at least six months and has at least three years remaining.',
         ],
       },
     ],
-    conclusion: 'Your DTI is one of the most important numbers in your financial profile. Calculate it before you apply for any loan. If it is above 43%, focus on paying down debt before applying — it will improve both your approval odds and your interest rate.',
+    conclusion: 'Your DTI is one of the most important numbers in your financial profile. Calculate it before you apply for any loan. If it is above 43%, focus on paying down existing debt — particularly installment loans and credit card balances — before applying. Reducing DTI improves both your approval odds and your interest rate. Even a 5-percentage-point improvement can move you from a marginal to a strong borrower profile.',
     relatedLinks: [
       { label: 'Mortgage Calculator', to: '/mortgage-calculator' },
       { label: 'Debt Payoff Calculator', to: '/debt-payoff-calculator' },
