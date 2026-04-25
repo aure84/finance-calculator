@@ -4,6 +4,7 @@ export interface BlogPost {
   date: string
   description: string
   intro: string
+  tag?: 'How-To Guide' | 'Quick Reference' | 'Market History'
   image?: { url: string; alt: string }
   sections: {
     heading: string
@@ -19,6 +20,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'what-is-apr',
     title: 'What Is APR and How Does It Affect Your Loan?',
     date: '2026-04-19',
+    tag: 'Quick Reference',
     description: 'APR (Annual Percentage Rate) is the true annual cost of borrowing. Learn how APR differs from interest rate, how to compare loans, and why it matters.',
     intro: 'When you take out a loan or apply for a credit card, lenders quote two numbers: the interest rate and the APR. The interest rate gets the headlines, but the APR is the number that actually tells you what you will pay. This guide explains what APR means, how it is calculated, and how to use it to compare loan offers.',
     sections: [
@@ -102,6 +104,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'how-mortgage-works',
     title: 'How Does a Mortgage Work?',
     date: '2026-04-19',
+    tag: 'How-To Guide',
     description: 'A clear explanation of how mortgages work: principal, interest, amortization, escrow, and the difference between fixed and variable rates.',
     intro: 'A mortgage is a loan used to buy a home, secured by the property itself. If you stop making payments, the lender can take the home through foreclosure. It sounds simple, but mortgages involve several moving parts — amortization schedules, escrow accounts, fixed vs variable rates — that significantly affect how much you pay. This guide explains all of them.',
     sections: [
@@ -180,6 +183,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'compound-vs-simple-interest',
     title: 'Compound Interest vs Simple Interest: What Is the Difference?',
     date: '2026-04-19',
+    tag: 'Quick Reference',
     description: 'Simple interest is calculated only on the principal. Compound interest grows on both principal and accumulated interest. Learn when each applies and how to calculate them.',
     intro: 'Interest is the cost of borrowing money — or the reward for saving it. But not all interest works the same way. Simple interest applies only to the original amount. Compound interest applies to the original amount plus all previously earned interest. Over time, this difference becomes enormous. Understanding which type applies to your loan or savings account can save or cost you thousands.',
     sections: [
@@ -264,6 +268,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'debt-to-income-ratio',
     title: 'What Is Debt-to-Income Ratio and Why Does It Matter?',
     date: '2026-04-19',
+    tag: 'Quick Reference',
     description: 'Debt-to-income ratio (DTI) compares your monthly debt payments to your gross monthly income. Learn how to calculate it and what lenders consider acceptable.',
     intro: 'Before approving a mortgage, car loan, or personal loan, lenders calculate your debt-to-income ratio (DTI). This single number summarizes how much of your income is already committed to debt payments. A high DTI signals financial stress; a low DTI signals room to take on more debt. Understanding your DTI helps you know where you stand before applying for any loan.',
     sections: [
@@ -349,6 +354,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'how-net-salary-is-calculated',
     title: 'How Is Net Salary Calculated?',
     date: '2026-04-19',
+    tag: 'How-To Guide',
     description: 'Net salary is your take-home pay after all deductions. Learn which taxes and withholdings reduce your gross salary and how to estimate your actual paycheck.',
     intro: 'Your gross salary is what your employer agrees to pay you. Your net salary — take-home pay — is what actually lands in your bank account after taxes and other deductions. The gap between the two can be surprisingly large. Understanding what gets deducted and why helps you budget accurately and avoid surprises when your first paycheck arrives.',
     sections: [
@@ -422,6 +428,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'what-is-inflation',
     title: 'What Is Inflation and How Does It Affect Your Money?',
     date: '2026-04-19',
+    tag: 'Quick Reference',
     description: 'Inflation reduces the purchasing power of money over time. Learn how inflation is measured, what causes it, and how to protect your savings from its effects.',
     intro: 'Inflation is the rate at which the general level of prices rises over time — and the rate at which your money loses purchasing power. A dollar today buys less than a dollar did ten years ago, and it will buy even less ten years from now. Understanding inflation is essential for anyone saving for retirement, taking out a loan, or simply trying to make financial decisions that hold up over time.',
     sections: [
@@ -496,6 +503,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'how-inflation-erodes-savings',
     title: 'How Does Inflation Erode Your Savings?',
     date: '2026-04-19',
+    tag: 'How-To Guide',
     description: 'Learn how inflation quietly reduces your purchasing power over time — and what you can do to protect your savings.',
     intro: "Inflation is often described as a hidden tax. You don't see it on a bill, but every year it quietly chips away at the value of your money. Even a modest 3% annual inflation rate cuts your purchasing power nearly in half over 25 years. Understanding how inflation erodes savings is the first step toward protecting them.",
     sections: [
@@ -581,6 +589,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'snowball-vs-avalanche',
     title: 'Snowball vs Avalanche: Which Debt Payoff Method Is Better?',
     date: '2026-04-19',
+    tag: 'How-To Guide',
     description: 'The debt snowball targets your smallest balance first. The debt avalanche targets the highest interest rate. Learn which saves more money and which works better psychologically.',
     intro: 'If you have multiple debts — credit cards, student loans, a car payment — you need a strategy for paying them off. Two methods dominate personal finance: the debt snowball (smallest balance first) and the debt avalanche (highest interest rate first). Both work. They differ in how much interest you pay and how quickly you feel progress. This guide explains each and helps you choose.',
     sections: [
@@ -654,6 +663,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'what-is-compound-interest',
     title: 'What Is Compound Interest and How Does It Grow Your Money?',
     date: '2026-04-19',
+    tag: 'Quick Reference',
     description: 'Compound interest is interest earned on both principal and accumulated interest. Learn how it works, why starting early matters, and how to calculate your returns.',
     intro: 'Albert Einstein allegedly called compound interest the eighth wonder of the world. Whether he said it or not, the math is remarkable. Compound interest is interest earned not just on your original investment, but on all the interest that has accumulated before it. Over decades, this creates exponential growth. The earlier you start, the more dramatic the effect.',
     sections: [
@@ -732,6 +742,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'how-much-to-save-for-retirement',
     title: 'How Much Should You Save for Retirement?',
     date: '2026-04-19',
+    tag: 'How-To Guide',
     description: 'Learn the most widely used retirement savings guidelines, how the 4% rule works, and how to calculate your personal retirement number using our free calculator.',
     intro: 'How much money do you need to retire? The answer depends on your expected spending in retirement, your planned retirement age, life expectancy, Social Security income, and investment returns — but there are widely used guidelines that give a solid starting point. Most people either underestimate what they need or feel so overwhelmed by the number that they delay starting. This guide explains the most common rules, how to calculate your personal retirement number, the power of tax-advantaged accounts, and what to do if you are behind.',
     sections: [
@@ -823,6 +834,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'what-is-amortization',
     title: 'What Is Amortization and How Does It Work?',
     date: '2026-04-19',
+    tag: 'Quick Reference',
     description: 'Amortization is the process of paying off a loan through scheduled payments. Learn how amortization schedules work, how interest and principal split each payment, and what affects the schedule.',
     intro: 'When you take out a mortgage or personal loan, each monthly payment covers both interest and a portion of the principal. In the early years, most of the payment goes toward interest. Over time, the balance shifts until most of each payment reduces the principal. This process is called amortization — from the Latin "amortir," meaning to kill or extinguish. Understanding how it works helps you make smarter decisions about extra payments, refinancing, loan terms, and when it makes financial sense to pay off debt early.',
     sections: [
@@ -906,6 +918,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'how-much-house-can-i-afford',
     title: 'How Much House Can I Afford?',
     date: '2026-04-19',
+    tag: 'How-To Guide',
     description: 'Use the 28/36 rule and income-based guidelines to estimate how much house you can afford. Includes examples for common income levels.',
     intro: 'Buying a home is the largest financial decision most people make. Before you start browsing listings, you need to know your realistic price range. Skipping this step leads to either falling in love with homes above your budget or buying more house than you can comfortably afford — a mistake that strains finances for decades. The answer depends on your income, existing debt, down payment, credit score, local property taxes, and how much financial cushion you want to keep. This guide explains the rules lenders use and gives you a clear framework for finding your number.',
     sections: [
@@ -995,6 +1008,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'emergency-fund-guide',
     title: 'How Big Should Your Emergency Fund Be?',
     date: '2026-04-19',
+    tag: 'How-To Guide',
     description: 'An emergency fund covers unexpected expenses without going into debt. Learn how much to save, where to keep it, and how to build one from scratch.',
     intro: 'An emergency fund is money set aside specifically for unexpected financial shocks: a job loss, a medical bill, a car repair, a broken appliance. Without one, any of these events can send you into debt. Financial planners universally recommend building an emergency fund before investing or paying extra on debt. This guide explains how much you need, where to keep it, and how to build one even on a tight budget.',
     sections: [
@@ -1075,6 +1089,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'how-tax-refund-is-calculated',
     title: 'How Is a Tax Refund Calculated?',
     date: '2026-04-19',
+    tag: 'Quick Reference',
     description: 'A tax refund is the difference between taxes withheld and taxes actually owed. Learn how withholding works, what affects your refund, and whether a refund is actually good.',
     intro: 'Millions of people receive tax refunds each year and treat it like a bonus. In reality, a refund means you overpaid the government throughout the year — they are returning your own money, without interest. Understanding how refunds are calculated helps you optimize your withholding, avoid owing money at tax time, and make smarter decisions about your paycheck.',
     sections: [
@@ -1155,6 +1170,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'what-is-interest-rate',
     title: 'What Is an Interest Rate?',
     date: '2026-04-19',
+    tag: 'Quick Reference',
     description: 'An interest rate is the cost of borrowing money, expressed as a percentage. Learn how interest rates work for loans and savings, what determines them, and how the Fed influences them.',
     intro: 'Interest rates are everywhere — on mortgages, car loans, savings accounts, credit cards, and government bonds. They represent the price of money: the cost of borrowing, or the reward for lending. Understanding interest rates helps you make better decisions about when to borrow, when to pay off debt, and where to keep your savings.',
     sections: [
@@ -1234,6 +1250,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'how-loan-payment-is-calculated',
     title: 'How Is a Monthly Loan Payment Calculated?',
     date: '2026-04-19',
+    tag: 'How-To Guide',
     description: 'Learn the formula behind monthly loan payments, how interest rate and term affect your payment, and how to calculate it by hand or with a calculator.',
     intro: 'Every fixed-rate loan — mortgage, car loan, personal loan — uses the same mathematical formula to calculate the monthly payment. Understanding this formula helps you compare loan offers intelligently, see why a seemingly small difference in interest rate can cost thousands of dollars, and understand how the loan term shapes your monthly budget and total cost. This guide walks through the math, the trade-offs, and the strategies that save you the most money.',
     sections: [
@@ -1329,6 +1346,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'what-is-401k',
     title: 'What Is a 401(k) and How Does It Work?',
     date: '2026-04-19',
+    tag: 'Quick Reference',
     description: 'A 401(k) is a tax-advantaged retirement savings account offered by employers. Learn how contributions work, what the limits are, and the difference between traditional and Roth 401(k).',
     intro: 'A 401(k) is the most widely used retirement savings vehicle in the United States. Offered by employers, it allows employees to save and invest a portion of their paycheck before taxes are taken out — or after taxes in the case of a Roth 401(k). Understanding how it works, what the limits are, and how employer matching works can significantly improve your long-term financial outcome.',
     sections: [
@@ -1414,6 +1432,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'how-to-budget',
     title: 'How to Create a Monthly Budget That Actually Works',
     date: '2026-04-19',
+    tag: 'How-To Guide',
     description: 'A monthly budget helps you track income and expenses, eliminate waste, and build wealth. Learn the 50/30/20 rule and step-by-step budgeting methods.',
     intro: 'A budget is not a restriction — it is a plan for your money. Without one, spending happens by default, savings happens last (if at all), and financial goals stay permanently out of reach. Most people who feel like they cannot save do not have an income problem; they have a visibility problem. A budget solves that. A good one takes less than an hour to set up and gives you complete clarity about where your money goes every month. This guide covers the most practical methods, step-by-step setup, and the mistakes that cause most budgets to fail.',
     sections: [
@@ -1492,6 +1511,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'what-is-credit-score',
     title: 'What Is a Credit Score and How Is It Calculated?',
     date: '2026-04-19',
+    tag: 'Quick Reference',
     description: 'A credit score is a three-digit number that summarizes your creditworthiness. Learn how FICO scores are calculated, what affects them, and how to improve yours.',
     intro: 'Your credit score is one of the most powerful numbers in your financial life. It determines whether you get approved for loans, what interest rate you pay, and sometimes even whether you get a job or apartment. A good credit score can save you tens of thousands of dollars over your lifetime — primarily through lower mortgage and car loan rates. Understanding how it is calculated and what affects it puts you in control of your borrowing costs.',
     sections: [
@@ -1576,6 +1596,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'how-long-to-reach-savings-goal',
     title: 'How Long Will It Take to Reach Your Savings Goal?',
     date: '2026-04-19',
+    tag: 'How-To Guide',
     description: 'Use the savings goal formula to calculate how long it will take to save a target amount. Includes examples for emergency funds, down payments, and vacations.',
     intro: 'Whether you are saving for a down payment, an emergency fund, a vacation, or early retirement, the math works the same way. The time it takes to reach your goal depends on three variables: your starting balance, how much you add each month, and the interest rate you earn. Most people underestimate how much contribution size matters and overestimate how much interest rate matters for short-term goals. This guide shows you how to calculate your exact timeline and the most effective strategies to shorten it.',
     sections: [
@@ -1654,6 +1675,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'what-is-vat',
     title: 'What Is VAT and How Is It Calculated?',
     date: '2026-04-19',
+    tag: 'Quick Reference',
     description: 'VAT (Value Added Tax) is a consumption tax used in most countries. Learn how VAT works, how to calculate prices with and without VAT, and how it differs from US sales tax.',
     intro: 'VAT — Value Added Tax — is a consumption tax applied at each stage of production and distribution, ultimately borne by the end consumer. It is used in over 160 countries, including all EU member states, the UK, Canada, and Australia. In the US, sales tax plays a similar role but works differently. Understanding how VAT works helps you calculate prices accurately, manage business accounting correctly, and avoid costly errors when selling across borders.',
     sections: [
@@ -1737,6 +1759,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'what-is-roth-ira',
     title: 'What Is a Roth IRA and How Does It Work?',
     date: '2026-04-23',
+    tag: 'Quick Reference',
     description: 'A Roth IRA lets your money grow tax-free. Learn 2025 contribution limits, income eligibility rules, the 5-year rule, and who benefits most from opening one.',
     intro: 'A Roth IRA is one of the most powerful retirement accounts available to US workers. You contribute money you have already paid tax on, invest it, and pay no tax on the growth or qualified withdrawals in retirement. That tax-free compounding over decades can be worth tens of thousands of dollars compared to a taxable account. This guide explains how a Roth IRA works, who qualifies, what the rules are, and how it compares to a 401(k) and a Traditional IRA.',
     sections: [
@@ -1845,6 +1868,7 @@ export const blogPosts: BlogPost[] = [
     slug: '2008-financial-crisis',
     title: 'The 2008 Financial Crisis: What Happened and What It Cost',
     date: '2026-04-24',
+    tag: 'Market History',
     description: 'A plain-English explanation of the 2008 financial crisis — the mortgage bubble, the bank failures, the bailout, and what the numbers meant for ordinary households.',
     intro: 'In September 2008, Lehman Brothers filed for the largest bankruptcy in US history. Within days, global credit markets froze, stock markets crashed, and governments around the world scrambled to prevent a complete financial collapse. The 2008 crisis was the worst since the Great Depression — and it started with home loans. Understanding what happened explains why mortgages are underwritten the way they are today, why banks hold more capital, and why the phrase "too big to fail" entered everyday language.',
     sections: [
@@ -1911,6 +1935,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'dot-com-crash',
     title: 'The Dot-com Crash: What Happened When the Tech Bubble Burst',
     date: '2026-04-26',
+    tag: 'Market History',
     description: 'The dot-com bubble burst wiped out $5 trillion in market value between 2000 and 2002. Here is what caused it, what collapsed, and what investors learned.',
     image: {
       url: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=1200&auto=format&fit=crop',

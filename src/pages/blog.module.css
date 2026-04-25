@@ -83,6 +83,26 @@
   color: var(--navy-light);
 }
 
+/* Tags */
+.tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.tagHowTo       { background: #e0e7ff; color: #3730a3; }
+.tagQuickRef    { background: #dcfce7; color: #166534; }
+.tagMarketHist  { background: #fee2e2; color: #991b1b; }
+
+:global([data-theme="dark"]) .tagHowTo      { background: #1e1b4b; color: #a5b4fc; }
+:global([data-theme="dark"]) .tagQuickRef   { background: #052e16; color: #86efac; }
+:global([data-theme="dark"]) .tagMarketHist { background: #450a0a; color: #fca5a5; }
+
 /* Blog post */
 .article {
   max-width: 720px;

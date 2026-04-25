@@ -1,8 +1,19 @@
 import { Link, useParams } from 'react-router-dom'
 import SEOMeta from '../components/SEOMeta'
 import AdSlot from '../components/AdSlot'
-import { getPostBySlug } from '../data/blogPosts'
+import { getPostBySlug, type BlogPost } from '../data/blogPosts'
 import styles from './blog.module.css'
+
+const TAG_CLASS: Record<NonNullable<BlogPost['tag']>, string> = {
+  'How-To Guide':   styles.tagHowTo,
+  'Quick Reference': styles.tagQuickRef,
+  'Market History': styles.tagMarketHist,
+}
+
+function BlogTag({ tag }: { tag?: BlogPost['tag'] }) {
+  if (!tag) return null
+  return <span className={`${styles.tag} ${TAG_CLASS[tag]}`}>{tag}</span>
+}
 
 export default function BlogPostPage() {
   const { slug } = useParams<{ slug: string }>()
@@ -28,6 +39,7 @@ export default function BlogPostPage() {
       </div>
 
       <article className={styles.article}>
+        <BlogTag tag={post.tag} />
         <p className={styles.cardDate}>{post.date}</p>
         <h1 className={styles.articleTitle}>{post.title}</h1>
         {post.image && (

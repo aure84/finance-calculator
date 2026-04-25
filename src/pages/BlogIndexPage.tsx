@@ -1,8 +1,19 @@
 import { Link } from 'react-router-dom'
 import SEOMeta from '../components/SEOMeta'
 import AdSlot from '../components/AdSlot'
-import { blogPosts } from '../data/blogPosts'
+import { blogPosts, type BlogPost } from '../data/blogPosts'
 import styles from './blog.module.css'
+
+const TAG_CLASS: Record<NonNullable<BlogPost['tag']>, string> = {
+  'How-To Guide':   styles.tagHowTo,
+  'Quick Reference': styles.tagQuickRef,
+  'Market History': styles.tagMarketHist,
+}
+
+function BlogTag({ tag }: { tag?: BlogPost['tag'] }) {
+  if (!tag) return null
+  return <span className={`${styles.tag} ${TAG_CLASS[tag]}`}>{tag}</span>
+}
 
 export default function BlogIndexPage() {
   return (
@@ -23,6 +34,7 @@ export default function BlogIndexPage() {
       <div className={styles.grid}>
         {[...blogPosts].sort((a, b) => b.date.localeCompare(a.date)).map(post => (
           <Link key={post.slug} to={`/blog/${post.slug}`} className={styles.card}>
+            <BlogTag tag={post.tag} />
             <p className={styles.cardDate}>{post.date}</p>
             <h2 className={styles.cardTitle}>{post.title}</h2>
             <p className={styles.cardDesc}>{post.description}</p>
