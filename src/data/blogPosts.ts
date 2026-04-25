@@ -598,7 +598,7 @@ export const blogPosts: BlogPost[] = [
     title: 'How Big Should Your Emergency Fund Be?',
     date: '2026-04-19',
     description: 'An emergency fund covers unexpected expenses without going into debt. Learn how much to save, where to keep it, and how to build one from scratch.',
-    intro: 'An emergency fund is money set aside specifically for unexpected financial shocks: a job loss, a medical bill, a car repair, a broken appliance. Without one, any of these events can send you into debt. Financial planners universally recommend building an emergency fund before investing or paying extra on debt. This guide explains how much you need and how to build it.',
+    intro: 'An emergency fund is money set aside specifically for unexpected financial shocks: a job loss, a medical bill, a car repair, a broken appliance. Without one, any of these events can send you into debt. Financial planners universally recommend building an emergency fund before investing or paying extra on debt. This guide explains how much you need, where to keep it, and how to build one even on a tight budget.',
     sections: [
       {
         heading: 'How Much Do You Need?',
@@ -615,22 +615,49 @@ export const blogPosts: BlogPost[] = [
         ],
       },
       {
+        heading: 'Calculating Your Monthly Expenses',
+        paragraphs: [
+          'To find your target, you first need to know what one month of essential expenses actually costs. Add up only the non-negotiables: rent or mortgage payment, groceries, utilities (electricity, gas, water, internet), transportation (car payment, insurance, fuel, or transit pass), health insurance premiums, and minimum debt payments.',
+          'Leave out discretionary spending like restaurants, subscriptions, gym memberships, and entertainment. Those can be cut if you lose your income. If your essential monthly expenses total $3,000 and you are a freelancer, your target emergency fund is $18,000 (6 months). That number can feel daunting — which is why starting small is the key.',
+          'A useful shortcut: look at your last three months of bank statements and average the required outflows. This gives you a realistic baseline rather than an optimistic estimate.',
+        ],
+      },
+      {
         heading: 'Where to Keep Your Emergency Fund',
         paragraphs: [
           'Your emergency fund should be liquid (accessible within 1–2 days) and safe (no risk of loss). The right place is a high-yield savings account (HYSA) at an online bank.',
-          'HYSAs currently pay 4%–5% APY — significantly better than traditional savings accounts (often 0.01%–0.1%). Your money grows while it waits. Never invest your emergency fund in stocks or other volatile assets.',
+          'HYSAs currently pay 4%–5% APY — significantly better than traditional savings accounts (often 0.01%–0.1%). Your money grows while it waits. At 4.5% APY, a $15,000 emergency fund earns about $675 per year — not life-changing, but meaningful.',
+          'Never invest your emergency fund in stocks, index funds, or other volatile assets. A market correction could drop your balance 30–40% exactly when you need the money most. Money market accounts are acceptable; CDs are too illiquid unless you use a no-penalty CD. Keep it boring and accessible.',
         ],
       },
       {
         heading: 'How to Build One From Scratch',
         paragraphs: [
-          'Start with a $1,000 starter fund — enough to cover most common emergencies. Then build to your full target gradually.',
-          'Automate a fixed transfer to your HYSA on payday. Even $100/month builds $1,200 per year. When you get a raise, direct part of it to the emergency fund until it is fully funded.',
-          'Once funded, replenish it immediately after any withdrawal.',
+          'Start with a $1,000 starter fund — enough to cover most common emergencies like a car repair, a vet bill, or a broken appliance. Getting to $1,000 first gives you immediate protection while you build toward your full target.',
+          'Automate a fixed transfer to your HYSA on payday. Even $100/month builds $1,200 per year. Automation is critical: it removes willpower from the equation. You never see the money, so you never spend it.',
+          'When you get a raise, direct the entire increase to your emergency fund until it is fully funded. You were living on the lower salary before — you will not miss it. Windfalls like tax refunds, bonuses, or gift money are also ideal for fast-tracking your emergency fund.',
+          'Once fully funded, replenish it immediately after any withdrawal. Treat replenishment as a bill — non-negotiable, on a fixed schedule.',
+        ],
+      },
+      {
+        heading: 'Emergency Fund vs. Paying Off Debt',
+        paragraphs: [
+          'A common dilemma: should you build an emergency fund or pay off high-interest debt first? The answer is both, in the right order.',
+          'First, build a $1,000 starter emergency fund. Then aggressively pay down high-interest debt (credit cards, personal loans above 7–8%). Once the high-interest debt is gone, build your full 3–6 month fund. Then resume investing.',
+          'Without any emergency fund, a single unexpected expense lands on a credit card at 20–25% APR — undoing months of debt payoff progress. The $1,000 buffer breaks that cycle.',
+        ],
+      },
+      {
+        heading: 'Common Mistakes to Avoid',
+        paragraphs: [
+          'Using a checking account: it is too easy to spend and earns nothing. Keep your emergency fund in a separate account, ideally at a different bank, so it is slightly harder to access impulsively.',
+          'Investing it for higher returns: do not. The purpose of an emergency fund is certainty, not growth. You accept a lower return in exchange for guaranteed availability.',
+          'Treating it as a general savings account: your emergency fund is not for vacations, holiday gifts, or car upgrades. Those need separate savings buckets. When you blur the categories, the emergency fund gets depleted for non-emergencies and is not there when a real crisis hits.',
+          'Never replenishing after a withdrawal: if you use $2,000 from your emergency fund, rebuild it immediately. Many people use it once and forget to replenish, then face the next emergency unprotected.',
         ],
       },
     ],
-    conclusion: 'Your emergency fund is your financial shock absorber. Fund it before aggressively investing or paying extra on debt. Three to six months of expenses in a high-yield savings account is the goal — start with $1,000 and build from there.',
+    conclusion: 'Your emergency fund is your financial shock absorber — the single most important financial buffer you can build. Fund it to $1,000 first, then to 3–6 months of essential expenses in a high-yield savings account. Automate contributions, keep it separate, and never invest it. Once it is in place, every other financial goal — debt payoff, investing, saving for a house — becomes significantly less fragile.',
     relatedLinks: [
       { label: 'Savings Goal Calculator', to: '/savings-goal-calculator' },
       { label: 'Compound Interest Calculator', to: '/compound-interest-calculator' },
