@@ -1327,6 +1327,7 @@ export const blogPosts: BlogPost[] = [
         paragraphs: [
           'You elect to contribute a percentage of your paycheck to your 401(k). With a traditional 401(k), contributions are pre-tax: they reduce your taxable income today, and you pay taxes when you withdraw in retirement.',
           'With a Roth 401(k), contributions are after-tax: you get no tax break today, but qualified withdrawals in retirement are completely tax-free — including all the growth.',
+          'Your contributions are invested in the funds you select from your plan\'s menu. The account grows tax-deferred (traditional) or tax-free (Roth) until you withdraw. This tax shelter is the primary advantage of a 401(k) over a regular brokerage account: you avoid annual taxes on dividends and capital gains, letting more of your money compound each year.',
         ],
       },
       {
@@ -1345,6 +1346,7 @@ export const blogPosts: BlogPost[] = [
         paragraphs: [
           'Many employers match a portion of your contributions — for example, 100% of the first 3% of your salary. This is free money. Always contribute at least enough to capture the full employer match before doing anything else.',
           'Example: Salary $70,000, employer matches 100% up to 3%. Contribute $2,100 → employer adds $2,100 → $4,200 total invested per year, with half being free.',
+          'Common matching formulas: "100% of first 3%" means full match up to 3% of salary. "50% of first 6%" means the employer adds half of what you contribute up to 6% of salary — so contributing 6% gets you a 3% match. In both cases, not contributing enough to capture the full match is the equivalent of leaving part of your salary on the table.',
         ],
       },
       {
@@ -1353,6 +1355,7 @@ export const blogPosts: BlogPost[] = [
           'Traditional: better if you expect to be in a lower tax bracket in retirement than you are today.',
           'Roth: better if you expect to be in the same or higher tax bracket in retirement — tax-free growth and withdrawals are more valuable.',
           'Many experts recommend contributing to both for tax diversification: pay some tax now (Roth) and some later (traditional).',
+          'If you are early in your career and in a low tax bracket, Roth contributions are especially attractive. You lock in today\'s lower tax rate on the contribution, and all future growth — which may be substantial over 30–40 years — comes out tax-free. As income rises and you enter higher brackets, shifting toward traditional contributions may become more favorable.',
         ],
       },
       {
@@ -1360,10 +1363,37 @@ export const blogPosts: BlogPost[] = [
         paragraphs: [
           'You can begin withdrawing at age 59½ without penalty. Early withdrawals (before 59½) are subject to income tax plus a 10% penalty, with some exceptions (hardship, death, disability).',
           'Required Minimum Distributions (RMDs) begin at age 73 for traditional 401(k)s. Roth 401(k)s are also subject to RMDs unless rolled into a Roth IRA.',
+          'If you leave an employer, you can roll your 401(k) into an IRA or a new employer\'s 401(k) without tax consequences. This is a tax-free transfer, not a withdrawal. Rolling into a Roth IRA from a traditional 401(k) triggers taxes on the converted amount — it is treated as income in the year of the conversion.',
+        ],
+      },
+      {
+        heading: 'What Happens to a 401(k) When You Change Jobs',
+        paragraphs: [
+          'When you leave a job, you have four options for your 401(k): leave it with your old employer (if allowed), roll it into your new employer\'s 401(k), roll it into an IRA, or cash it out.',
+          'Cashing out is almost always the worst option. You will owe income tax on the full balance plus a 10% early withdrawal penalty if you are under 59½. A $40,000 401(k) balance cashed out at age 35 in the 22% bracket costs roughly $12,800 in taxes and penalties — and you lose all future compound growth on those funds.',
+          'Rolling into an IRA is usually the best choice for flexibility and investment options. IRAs offer a broader range of investments than most employer plans. Rolling into a new employer\'s 401(k) makes sense if you want to simplify and the new plan has good low-cost fund options.',
+        ],
+      },
+      {
+        heading: '401(k) Investment Options',
+        paragraphs: [
+          'Most 401(k) plans offer a menu of mutual funds — typically including index funds, target-date funds, and actively managed funds. The quality and cost of these options varies significantly by employer.',
+          'Expense ratios — the annual percentage fee charged by the fund — matter enormously over time. A fund with a 1% expense ratio vs. a 0.05% index fund takes 0.95% of your balance every year. On a $200,000 balance, that is $1,900 per year in fees, compounding alongside your balance. Over 20 years, the difference in fees can exceed the size of the original balance.',
+          'Choose low-cost index funds whenever possible. If your plan only offers high-cost options, still contribute enough to capture the employer match — the match value exceeds most fee drag. But advocate for better fund options; many employers have improved their menus after employees raised the issue.',
+          'Target-date funds (e.g., "2055 Fund") are a good default if you do not want to manage allocation yourself. They automatically shift from stocks to bonds as the target retirement year approaches. Most major plan providers — Vanguard, Fidelity, T. Rowe Price — offer low-cost target-date funds.',
+        ],
+      },
+      {
+        heading: 'Vesting Schedules for Employer Contributions',
+        paragraphs: [
+          'Your own contributions are always 100% yours immediately. Employer matching contributions may be subject to a vesting schedule — a waiting period before you fully own them.',
+          'Cliff vesting: you own 0% until a specific date, then 100%. A three-year cliff means if you leave after two years, you keep none of the employer match.',
+          'Graded vesting: you earn ownership gradually over several years — for example, 20% per year over five years.',
+          'If you are considering leaving a job, check your vesting schedule first. Waiting a few more months to cross a vesting milestone can be worth thousands of dollars in matched contributions that would otherwise be forfeited.',
         ],
       },
     ],
-    conclusion: 'Contribute at least enough to capture your employer match — that is a guaranteed 50%–100% return on your money. Then maximize your contributions as much as your budget allows. Use our retirement calculator to see how 401(k) growth affects your retirement readiness.',
+    conclusion: 'Contribute at least enough to capture your employer match — that is a guaranteed 50%–100% return on your money before any investment growth. Choose between traditional and Roth based on your expected tax bracket in retirement, or split contributions for tax diversification. Minimize fees by selecting low-cost index funds. Never cash out a 401(k) when changing jobs — roll it over instead. Use our retirement calculator to see how 401(k) growth affects your retirement readiness.',
     relatedLinks: [
       { label: 'Retirement Calculator', to: '/retirement-calculator' },
       { label: 'Compound Interest Calculator', to: '/compound-interest-calculator' },
