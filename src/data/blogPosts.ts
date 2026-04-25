@@ -1880,6 +1880,16 @@ export const blogPosts: BlogPost[] = [
         ],
       },
       {
+        heading: 'The Recovery: A Slow Climb Back',
+        paragraphs: [
+          'The US officially exited recession in June 2009, just 18 months after it began. But the recovery was the weakest on record since World War II. Real GDP did not return to its pre-crisis level until the third quarter of 2011. Job creation remained sluggish for years, and the unemployment rate did not return to pre-crisis levels until 2017 — eight years after the recession technically ended.',
+          'The Federal Reserve held its benchmark interest rate near zero from December 2008 to December 2015 — seven full years. In addition, it bought trillions of dollars of Treasury bonds and mortgage-backed securities through multiple rounds of quantitative easing. These tools, unprecedented in scale, kept borrowing costs low to sustain the recovery and support housing markets.',
+          'Housing prices peaked nationally in early 2006, fell roughly 30% by 2012, and did not return to pre-crisis levels in most markets until 2016. Homeowners who bought near the peak and needed to sell during the downturn faced negative equity — owing more on their mortgage than the home was worth. Many had no choice but to walk away.',
+          'Stock market investors who stayed the course saw the S&P 500 recover fully by March 2013, about 4.5 years from the October 2007 peak. Investors who sold near the bottom and re-entered late turned temporary paper losses into permanent ones — one of the most expensive mistakes the crisis produced.',
+          'The crisis left a lasting wage scar on a generation. Americans who entered the workforce between 2008 and 2012 earned 10–15% less in their early careers than comparable workers from earlier cohorts. Research shows this wage penalty persisted for a decade or more. Workers over 50 who lost jobs during the recession often never returned to equivalent wages or positions.',
+        ],
+      },
+      {
         heading: 'What Changed After 2008',
         paragraphs: [
           'The Dodd-Frank Wall Street Reform Act (2010) overhauled financial regulation. It created the Consumer Financial Protection Bureau, required lenders to verify a borrower\'s ability to repay, and forced large banks to hold more capital as a buffer against losses.',
