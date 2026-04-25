@@ -964,45 +964,79 @@ export const blogPosts: BlogPost[] = [
     title: 'What Is a Credit Score and How Is It Calculated?',
     date: '2026-04-19',
     description: 'A credit score is a three-digit number that summarizes your creditworthiness. Learn how FICO scores are calculated, what affects them, and how to improve yours.',
-    intro: 'Your credit score is one of the most powerful numbers in your financial life. It determines whether you get approved for loans, what interest rate you pay, and sometimes even whether you get a job or apartment. A good credit score can save you tens of thousands of dollars over your lifetime. Understanding how it is calculated and what affects it puts you in control.',
+    intro: 'Your credit score is one of the most powerful numbers in your financial life. It determines whether you get approved for loans, what interest rate you pay, and sometimes even whether you get a job or apartment. A good credit score can save you tens of thousands of dollars over your lifetime — primarily through lower mortgage and car loan rates. Understanding how it is calculated and what affects it puts you in control of your borrowing costs.',
     sections: [
       {
         heading: 'FICO Score Ranges',
         paragraphs: [
-          'The most widely used credit score is the FICO score, ranging from 300 to 850. Higher is better.',
+          'The most widely used credit score is the FICO score, ranging from 300 to 850. Higher is better. Most lenders use FICO scores when evaluating applications for mortgages, car loans, personal loans, and credit cards.',
         ],
         list: [
-          '800–850: Exceptional — best rates available',
-          '740–799: Very Good — nearly best rates',
+          '800–850: Exceptional — best rates available, easiest approvals',
+          '740–799: Very Good — nearly best rates on most loans',
           '670–739: Good — most loans approved at competitive rates',
-          '580–669: Fair — limited options, higher rates',
-          'Below 580: Poor — most credit denied or very high rates',
+          '580–669: Fair — limited options, significantly higher rates',
+          'Below 580: Poor — most credit denied or available only at very high rates',
         ],
       },
       {
         heading: 'What Makes Up Your Credit Score',
         paragraphs: [
-          'FICO scores are calculated from five factors:',
+          'FICO scores are calculated from five factors, each weighted differently:',
         ],
         list: [
-          'Payment history (35%): the most important factor — paying on time builds score, late payments damage it',
+          'Payment history (35%): the most important factor — paying on time builds score, late payments damage it significantly',
           'Amounts owed / credit utilization (30%): keep credit card balances below 30% of the limit; below 10% is ideal',
-          'Length of credit history (15%): older accounts help; avoid closing old cards',
-          'Credit mix (10%): having both revolving (credit cards) and installment (loans) credit helps',
-          'New credit (10%): each hard inquiry temporarily lowers your score; avoid applying for many cards at once',
+          'Length of credit history (15%): older accounts help; the age of your oldest account, newest account, and average age all matter',
+          'Credit mix (10%): having both revolving (credit cards) and installment (loans) credit demonstrates you can manage different types',
+          'New credit (10%): each hard inquiry temporarily lowers your score by a few points; avoid applying for many accounts at once',
+        ],
+      },
+      {
+        heading: 'The Real Cost of a Low Credit Score',
+        paragraphs: [
+          'The difference between a good and excellent credit score is measured in real dollars. On a $300,000 30-year mortgage, the difference between a 620 and a 760 credit score can be 1.5–2 percentage points in interest rate.',
+          'At 6.5% (good score), the monthly payment is $1,896 and total interest over 30 years is $382,633. At 8% (poor score), the payment rises to $2,201 and total interest reaches $492,340 — a difference of nearly $110,000 over the life of the loan.',
+          'On a $30,000 car loan over 5 years, the same score difference can mean paying $3,000–$5,000 more in interest. Credit scores affect insurance premiums in most states, security deposits for apartments, and even hiring decisions in some industries.',
         ],
       },
       {
         heading: 'How to Improve Your Credit Score',
         paragraphs: [
-          'Pay every bill on time — set up autopay for at least the minimum payment on all accounts.',
-          'Pay down credit card balances — getting below 30% utilization can raise your score significantly within 1–2 billing cycles.',
-          'Do not close old accounts — length of history matters.',
-          'Dispute errors on your credit report — check all three bureaus (Experian, Equifax, TransUnion) annually at AnnualCreditReport.com.',
+          'Pay every bill on time — payment history is 35% of your score, making this the single most impactful action. Set up autopay for at least the minimum payment on all accounts so you never miss a due date by accident.',
+          'Pay down credit card balances — credit utilization is 30% of your score. Getting below 30% utilization can raise your score significantly within 1–2 billing cycles. Getting below 10% is even better. If you have a $5,000 credit limit, keep your balance under $500 for maximum score benefit.',
+          'Do not close old credit card accounts — even if you do not use them. Closing an old account reduces your total available credit (raising utilization) and can shorten your average credit history length. Both hurt your score.',
+          'Dispute errors on your credit report — studies suggest roughly 1 in 5 reports contain errors. Check all three bureaus (Experian, Equifax, TransUnion) annually at AnnualCreditReport.com. Dispute anything inaccurate in writing — bureaus are required to investigate within 30 days.',
+        ],
+      },
+      {
+        heading: 'How Long Does It Take to Rebuild a Credit Score?',
+        paragraphs: [
+          'The timeline depends on what damaged the score. A single late payment takes 12–24 months to stop dragging your score down. A collection account stays on your report for 7 years but has less impact over time. A bankruptcy stays for 7–10 years.',
+          'The fastest improvements come from reducing credit card utilization — this can show up within one billing cycle. Adding a secured credit card (where you deposit money as collateral) can start building positive history within 3–6 months.',
+          'Going from 580 (fair) to 670 (good) typically takes 12–18 months of consistent on-time payments and reduced balances. Going from 670 to 750 usually takes 2–4 years of maintaining good habits. There are no shortcuts — the factors that build a strong score all require time.',
+        ],
+      },
+      {
+        heading: 'Credit Score vs. Credit Report',
+        paragraphs: [
+          'Your credit report is the raw data: a full history of every account, payment, inquiry, and public record (like bankruptcies). Your credit score is a number calculated from that data. The three major bureaus — Experian, Equifax, and TransUnion — each maintain separate reports, which is why your score can differ slightly between them.',
+          'Checking your own credit score or report is a "soft inquiry" and does not affect your score. Only "hard inquiries" — when a lender checks your credit as part of an application — temporarily lower it, typically by 5–10 points for up to 12 months.',
+          'Rate shopping for a mortgage or car loan within a 14–45 day window counts as a single inquiry, allowing you to compare multiple lenders without multiplying the score impact. This protection exists specifically so borrowers are not penalized for being financially responsible and shopping for the best terms. Use it — comparing at least three lenders on a mortgage can save thousands of dollars over the life of the loan.',
+        ],
+      },
+      {
+        heading: 'Common Credit Score Myths',
+        paragraphs: [
+          'Myth: checking your own credit score hurts it. False — self-checks are soft inquiries and have zero effect on your score. You can check it as often as you want.',
+          'Myth: you need to carry a credit card balance to build credit. False — and this is an expensive misconception. You build credit history by using a card and paying the full balance each month. Carrying a balance costs you interest with no scoring benefit.',
+          'Myth: closing a credit card you do not use will improve your score. Usually false — closing a card reduces your available credit and can shorten your credit history, both of which can lower your score. Keep old cards open with a small recurring charge (like a streaming subscription) to keep them active.',
+          'Myth: your income affects your credit score. False — income is not reported to credit bureaus and is not part of the FICO formula. High earners with poor payment history have low scores; modest earners who pay on time and maintain low balances can have excellent scores.',
+          'Myth: there is one credit score. False — you have multiple scores. FICO alone has dozens of versions, and VantageScore is a separate scoring model used by many lenders. Different lenders use different score versions, which is why your score may appear slightly different depending on where you check it. The underlying data is the same; the calculation method differs.',
         ],
       },
     ],
-    conclusion: 'Your credit score is a snapshot of your borrowing history. The two most impactful actions are paying on time (always) and keeping credit card balances low. A good score saves significant money on every loan you take — including your mortgage.',
+    conclusion: 'Your credit score is a snapshot of your borrowing history translated into a single number. The two most impactful habits are paying every bill on time and keeping credit card balances well below their limits. A move from fair to good credit can save $50,000–$100,000 over a lifetime of borrowing — primarily through lower mortgage and car loan rates. Unlike investing, where returns depend on market conditions, credit improvement is entirely within your control. Start by checking your report for errors, setting up autopay, and paying down your highest-utilization card. Improvement is slower than damage, but it is predictable: consistent good habits reliably raise scores over 12–24 months.',
     relatedLinks: [
       { label: 'Mortgage Calculator', to: '/mortgage-calculator' },
       { label: 'Loan Calculator', to: '/loan-calculator' },
