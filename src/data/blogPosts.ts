@@ -588,6 +588,7 @@ export const blogPosts: BlogPost[] = [
         paragraphs: [
           'List your debts from smallest to largest balance, regardless of interest rate. Pay the minimum on all debts, then direct any extra money toward the smallest balance. When that debt is paid off, roll its payment into the next smallest — building momentum like a snowball.',
           'The psychological advantage is powerful: you eliminate debts quickly, which provides motivation to keep going. Research by Harvard Business School found that people who focus on small wins are more likely to stay out of debt long-term.',
+          'The snowball is especially effective when you have several small debts — store cards, medical bills, small personal loans — that can each be cleared within a few months. Each eliminated account reduces cognitive load and simplifies your financial picture. Fewer bills, fewer due dates, fewer minimum payments to track.',
         ],
       },
       {
@@ -595,13 +596,15 @@ export const blogPosts: BlogPost[] = [
         paragraphs: [
           'List your debts from highest to lowest interest rate. Pay minimums on all, then direct extra money toward the highest-rate debt. When it is paid, move to the next highest rate.',
           'The avalanche method minimizes total interest paid — it is mathematically optimal. However, if your highest-rate debt has a large balance, you may not see a debt eliminated for a long time, which can feel discouraging.',
+          'Behaviorally, the avalanche requires more sustained focus than the snowball. You are directing extra money toward the debt that costs you the most, but you may go months before seeing a balance hit zero. For people who track numbers closely and understand the math, this trade-off is worth it.',
         ],
       },
       {
         heading: 'Which Saves More Money?',
         paragraphs: [
           'The avalanche always saves more in total interest. The difference can be hundreds or thousands of dollars, depending on your balances and rates.',
-          'Example: Credit card A — $2,000 at 24%. Credit card B — $8,000 at 16%. With $500/month extra: snowball pays off A first (faster win); avalanche pays off A first too (same result here). In cases where the high-rate debt is also the smaller balance, they are identical.',
+          'Example: Credit card A — $2,000 at 24%. Credit card B — $8,000 at 16%. With $500/month extra: snowball pays off A first (faster win); avalanche pays off A first too (same result here, because A is also the highest-rate debt). In cases where the high-rate debt is also the smaller balance, the methods are identical.',
+          'The methods diverge when the highest-rate debt also has the largest balance. In that case, the snowball clears the smallest debt first for a quick win, while the avalanche directs all extra money to the large, high-rate balance — which takes longer to eliminate but ultimately costs less.',
         ],
       },
       {
@@ -612,8 +615,34 @@ export const blogPosts: BlogPost[] = [
           'A hybrid approach: use snowball to eliminate 1–2 small debts for momentum, then switch to avalanche for the remaining larger ones.',
         ],
       },
+      {
+        heading: 'How Much Extra Payment Do You Need?',
+        paragraphs: [
+          'Both methods require more than the minimum payment to work efficiently. Paying only minimums on credit card debt can stretch repayment over 10–20 years and cost more in interest than the original purchase.',
+          'The size of the extra payment matters more than which method you use. An extra $100/month can shave years off a debt payoff timeline. An extra $300/month is transformative. If cash is tight, find areas to cut — subscriptions, dining, discretionary spending — and redirect that money to debt. Even an extra $50/month is not trivial: at 20% APR on a $5,000 balance, it reduces payoff time by over a year.',
+          'Use windfalls strategically: tax refunds, bonuses, gifts, and side income should go directly to the target debt in whichever method you are using. A $1,500 tax refund applied as a lump-sum payment can eliminate a credit card balance entirely, giving you a snowball win or significantly accelerating the avalanche. Committing windfalls before they arrive — deciding in advance where a bonus will go — prevents lifestyle inflation from absorbing them.',
+        ],
+      },
+      {
+        heading: 'The Role of Balance Transfers and Refinancing',
+        paragraphs: [
+          'Before choosing snowball or avalanche, consider whether you can reduce the interest rates on your debts. A balance transfer to a 0% APR card (common with 12–21 month introductory offers) eliminates interest on that balance for the promotional period. Every dollar you pay goes entirely to principal.',
+          'Personal loan consolidation can reduce multiple high-rate debts into one lower-rate payment. If you have $15,000 in credit card debt at 22% and can consolidate to a personal loan at 10%, the interest savings are significant — and the fixed term creates a clear payoff date.',
+          'Be aware of the risks: balance transfer fees (typically 3%–5% of the transferred amount), what happens when the promotional period ends, and whether consolidating tempts you to run up the credit cards again. Refinancing only works if you stop accumulating new debt at the same time. Cut up or freeze the cards after a balance transfer to remove the temptation.',
+        ],
+      },
+      {
+        heading: 'Staying Motivated Through the Process',
+        paragraphs: [
+          'Debt payoff is a long-term project. For most people with significant debt, it takes 2–5 years of disciplined effort. Motivation is not a fixed resource — it fluctuates. Build systems that keep you on track even when motivation is low.',
+          'Track your progress visually. Some people use a debt thermometer — a chart where they color in progress as the balance falls. Others use apps like YNAB or Mint to see balances drop in real time. The feedback loop of seeing progress reinforces the behavior.',
+          'Celebrate milestones without spending money: when a debt is paid off, take note of the freed-up cash flow and redirect it immediately to the next target. The momentum of a cleared balance can be the most motivating event in the whole process.',
+          'Automate the extra payment so it happens the day after payday. If the money never hits your checking account as spendable, you will not spend it. Automation removes willpower from the equation.',
+          'Do not pause the plan during tough months. If a surprise expense forces you to skip one extra payment, resume immediately the next month. A one-month pause costs you some interest but does not derail the plan. What derails the plan is treating a one-month pause as permission to stop altogether.',
+        ],
+      },
     ],
-    conclusion: 'Both methods work. The best method is the one you will actually stick with. Use our debt payoff calculator to model both approaches and see exactly how long each will take and how much interest you will save.',
+    conclusion: 'Both methods work. The best method is the one you will actually stick with — and the one that gets you to attack the debt aggressively rather than deferring it. Use balance transfers and consolidation to reduce interest rates before choosing a method. Then automate extra payments, track progress visually, and celebrate cleared balances. Use our debt payoff calculator to model both approaches and see exactly how long each will take and how much interest you will save.',
     relatedLinks: [
       { label: 'Debt Payoff Calculator', to: '/debt-payoff-calculator' },
       { label: 'Loan Calculator', to: '/loan-calculator' },
