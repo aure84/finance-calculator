@@ -662,6 +662,7 @@ export const blogPosts: BlogPost[] = [
           'A = P × (1 + r/n)^(n×t)',
           'Where: A = final amount, P = principal, r = annual interest rate (decimal), n = number of times interest compounds per year, t = number of years.',
           'Example: $5,000 invested at 7% compounded annually for 30 years: A = $5,000 × (1.07)^30 = $38,061. Your $5,000 grew to over $38,000 with no additional contributions.',
+          'At 10% (the long-run historical average of the US stock market), the same $5,000 grows to $87,247 over 30 years. Over 40 years, it grows to $226,296 — a 45× return on the original investment, driven almost entirely by compound growth in the final decades.',
         ],
       },
       {
@@ -670,6 +671,7 @@ export const blogPosts: BlogPost[] = [
           'Investor A starts at age 25 and invests $5,000/year for 10 years (total: $50,000), then stops and lets it grow at 7% until age 65.',
           'Investor B starts at age 35 and invests $5,000/year for 30 years (total: $150,000), also at 7%, until age 65.',
           'At 65: Investor A has approximately $602,000. Investor B has approximately $472,000. Investor A invested less money but started earlier — and ends up with more.',
+          'The gap widens with higher rates and longer time horizons. The lesson is not that lump sums beat regular contributions — it is that the years of compounding matter more than the size of contributions. Ten extra years of growth at 7% roughly doubles the final value, regardless of how much is contributed.',
         ],
       },
       {
@@ -680,6 +682,7 @@ export const blogPosts: BlogPost[] = [
           'At 9%: 72 ÷ 9 = 8 years to double.',
           'At 12%: 72 ÷ 12 = 6 years to double.',
           'This rule works for interest rates between 6% and 10% and gives a good mental benchmark for evaluating investments.',
+          'The Rule of 72 also works in reverse for inflation and debt. At 3% inflation, your purchasing power halves in 24 years. At 24% credit card APR, an unpaid balance doubles in 3 years. Both are uses of the same compounding math — just working against you.',
         ],
       },
       {
@@ -687,10 +690,36 @@ export const blogPosts: BlogPost[] = [
         paragraphs: [
           'The more frequently interest compounds, the faster money grows. Most savings accounts compound daily or monthly; most investment accounts and retirement funds compound annually or with each return.',
           'Daily compounding at 5% yields slightly more than annual compounding at 5% — but the difference is small. What matters far more is the rate and the time horizon.',
+          'For a practical example: $10,000 at 5% compounded annually for 20 years grows to $26,533. The same amount at 5% compounded monthly grows to $27,126. The monthly compounding advantage is $593 over 20 years — real, but dwarfed by the effect of the rate itself. Raising the rate from 5% to 6% (annually compounded) would grow the same $10,000 to $32,071 — $5,538 more than monthly compounding at 5%.',
+        ],
+      },
+      {
+        heading: 'Compound Interest in Debt',
+        paragraphs: [
+          'Compound interest works against you when you are in debt. Credit card balances compound daily at annual rates of 15%–30%. A $5,000 balance at 20% APR that you pay only the minimum on will take over 25 years to pay off and cost more than $7,000 in interest — more than the original balance.',
+          'The key difference from investing is the direction: when investing, you want time and compounding to work for you as long as possible. With debt, every month you delay repayment adds to the compounding burden. This asymmetry is why financial planners consistently recommend eliminating high-interest debt before investing (aside from employer-matched retirement contributions, which deliver an immediate 50%–100% return via the match).',
+        ],
+      },
+      {
+        heading: 'Regular Contributions Amplify Compounding',
+        paragraphs: [
+          'The examples above assume a single lump sum invested at the start. Regular contributions amplify the effect further. Contributing $300/month at 7% annual return for 30 years produces approximately $340,000 — from only $108,000 in total contributions. The remaining $232,000 comes from compound growth.',
+          'This is the mathematical basis for dollar-cost averaging: investing a fixed amount at regular intervals, regardless of market conditions. In down markets, your fixed contribution buys more shares. In up markets, it buys fewer. Over time, this smooths your average purchase price and keeps you invested consistently — which is what compound growth requires.',
+          'Increasing contributions over time amplifies the effect further. If you raise your monthly contribution by just $25 each year — keeping pace with income growth — the final portfolio value over 30 years can be 30%–50% larger than flat contributions.',
+          'Automating contributions removes friction and ensures consistency. A $300/month automatic transfer set up once will keep compounding working even during months when you do not think about it. The best investment behavior is usually boring: contribute consistently, reinvest dividends, do not panic-sell during downturns.',
+        ],
+      },
+      {
+        heading: 'Where Compound Interest Works Hardest',
+        paragraphs: [
+          'Tax-advantaged accounts maximize compound growth by eliminating drag from annual taxes. In a taxable brokerage account, dividends and capital gains may be taxed each year, reducing the amount that compounds. In a Roth IRA, all growth is tax-free — every dollar of return compounds without any tax leakage.',
+          'The difference is significant over long periods. At 7% annual return, $10,000 growing tax-free for 30 years becomes $76,123. The same $10,000 subject to a 25% annual tax on gains effectively grows at about 5.25% and becomes only $46,000. Tax-advantaged accounts do not just defer tax — they fundamentally increase the base on which compounding operates.',
+          'This is why maxing out a Roth IRA or 401(k) before investing in taxable accounts is standard financial advice. The compound growth inside a tax-advantaged wrapper is worth far more than the same nominal return in a taxable account.',
+          'Dividend reinvestment is another compounding amplifier. When dividends are automatically reinvested to buy more shares, those shares also generate dividends — compounding the income stream as well as the capital gains. Over 30 years, dividend reinvestment can account for 40%–50% of total equity returns.',
         ],
       },
     ],
-    conclusion: 'Compound interest rewards patience and consistency. Start investing as early as possible, even small amounts, and let time do the heavy lifting. Use our compound interest calculator to model any scenario.',
+    conclusion: 'Compound interest rewards patience and consistency. Start investing as early as possible — even small amounts — and let time do the heavy lifting. Maximize tax-advantaged accounts to protect your compounding base from annual taxes. Reinvest all dividends to compound income alongside capital gains. Avoid high-interest debt, which turns compounding against you. Use our compound interest calculator to model any scenario and see the long-term impact of different rates, time horizons, and contribution amounts.',
     relatedLinks: [
       { label: 'Compound Interest Calculator', to: '/compound-interest-calculator' },
       { label: 'Retirement Calculator', to: '/retirement-calculator' },
