@@ -588,42 +588,84 @@ export const blogPosts: BlogPost[] = [
     title: 'How Much House Can I Afford?',
     date: '2026-04-19',
     description: 'Use the 28/36 rule and income-based guidelines to estimate how much house you can afford. Includes examples for common income levels.',
-    intro: 'Buying a home is the largest financial decision most people make. Before you start browsing listings, you need to know your realistic price range. The answer depends on your income, existing debt, down payment, credit score, and local property taxes. This guide explains the rules lenders use and gives you a framework for finding your number.',
+    intro: 'Buying a home is the largest financial decision most people make. Before you start browsing listings, you need to know your realistic price range. Skipping this step leads to either falling in love with homes above your budget or buying more house than you can comfortably afford — a mistake that strains finances for decades. The answer depends on your income, existing debt, down payment, credit score, local property taxes, and how much financial cushion you want to keep. This guide explains the rules lenders use and gives you a clear framework for finding your number.',
     sections: [
       {
         heading: 'The 28/36 Rule',
         paragraphs: [
-          'The most widely used affordability guideline is the 28/36 rule. No more than 28% of your gross monthly income should go toward housing costs (principal, interest, taxes, insurance — PITI). No more than 36% of your gross income should cover all debt payments combined.',
-          'Example: Gross income $8,000/month. Maximum PITI: $2,240. Maximum total debt: $2,880. If you already pay $400/month in student loans and $300/month for a car, your maximum mortgage payment is $2,880 − $700 = $2,180.',
+          'The most widely used affordability guideline is the 28/36 rule. No more than 28% of your gross monthly income should go toward housing costs (principal, interest, taxes, insurance — PITI). No more than 36% of your gross monthly income should cover all debt payments combined.',
+          'Example: Gross income $8,000/month. Maximum PITI: $2,240 (28%). Maximum total debt: $2,880 (36%). If you already pay $400/month in student loans and $300/month for a car loan, your maximum mortgage payment drops to $2,880 − $700 = $2,180.',
+          'The 28% front-end ratio is a ceiling, not a target. Many financial advisors recommend keeping housing costs at or below 25% of take-home (after-tax) income — a more conservative guideline that leaves more room for saving and investing.',
         ],
       },
       {
         heading: 'Income-Based Estimates',
         paragraphs: [
-          'A common shortcut: you can typically afford a home worth 3×–5× your annual gross income, depending on debt levels, down payment, and interest rates.',
+          'A common shortcut: you can typically afford a home worth 3×–5× your annual gross income, depending on debt levels, down payment, and the current interest rate environment.',
         ],
         list: [
           '$50,000/year income → roughly $150,000–$250,000 home',
           '$80,000/year income → roughly $240,000–$400,000 home',
           '$120,000/year income → roughly $360,000–$600,000 home',
+          '$200,000/year income → roughly $600,000–$1,000,000 home',
+        ],
+      },
+      {
+        heading: 'How Down Payment Size Affects Affordability',
+        paragraphs: [
+          'A larger down payment reduces your loan amount, monthly payment, and total interest paid. It also eliminates private mortgage insurance (PMI) once you reach 20% down — PMI typically costs 0.5%–1.5% of the loan amount per year ($100–$250/month on a $200,000 loan).',
+          'With a 5% down payment on a $400,000 home: loan = $380,000. At 7% interest for 30 years, monthly payment = $2,529 + PMI ≈ $150 = $2,679/month.',
+          'With a 20% down payment: loan = $320,000. Monthly payment = $2,129, no PMI.',
+          'The 20% down payment saves $550/month and eliminates PMI — but requires $80,000 vs. $20,000 upfront. In high-cost markets where saving 20% takes years, buyers often accept PMI to enter the market sooner, especially in rising-price environments where waiting costs more than PMI.',
         ],
       },
       {
         heading: 'What the Lender Sees',
         paragraphs: [
-          'Lenders approve loans based on your DTI ratio, credit score, and employment history. A 740+ credit score typically gets the best rates. A lower score means higher rates — or denial.',
-          'The mortgage amount you qualify for and the amount you should borrow are not the same thing. Getting approved for more than you are comfortable paying is common. Stick to what fits your actual budget, not the maximum the lender will approve.',
+          'Lenders approve loans based on your debt-to-income (DTI) ratio, credit score, employment history, and assets. Most conventional loans require a DTI below 43%; lenders prefer below 36%. A 740+ credit score typically qualifies for the best available rates. A 620–699 score may still qualify but at significantly higher rates.',
+          'Pre-approval tells you what the lender will lend. Pre-approval is not the same as what you should borrow. Lenders maximize their loan, not your financial wellbeing. A lender approving you for a $600,000 mortgage does not mean a $600,000 mortgage fits your life.',
+          'Getting pre-approved before shopping puts you in a stronger negotiating position with sellers — in competitive markets, sellers often prefer buyers with pre-approval letters over those with only pre-qualification. Pre-approval also keeps you from wasting time on homes outside your range and helps you move quickly when you find the right property. Most pre-approvals are valid for 60–90 days; if your home search takes longer, you will need to renew it.',
         ],
       },
       {
         heading: 'Hidden Costs of Homeownership',
         paragraphs: [
-          'Your monthly cost is more than the mortgage payment. Budget for: property taxes (0.5%–2.5% of home value per year, depending on location), homeowners insurance ($100–$200/month), maintenance (1%–2% of value per year), HOA fees if applicable, and utilities.',
-          'A $300,000 home with a $1,500 mortgage payment may cost $2,200/month all-in once taxes, insurance, and maintenance are included.',
+          'The mortgage payment is only part of the monthly cost. Budget for all of the following before deciding what you can afford:',
+          'Property taxes: 0.5%–2.5% of home value per year depending on location. On a $350,000 home in a 1.5% tax area, that is $437/month.',
+          'Homeowners insurance: typically $100–$200/month depending on location, home value, and coverage.',
+          'PMI: $100–$250/month if your down payment is below 20%.',
+          'Maintenance and repairs: budget 1%–2% of home value per year. A $300,000 home costs $3,000–$6,000 per year on average for maintenance — more for older homes.',
+          'HOA fees: $200–$600/month in many communities with shared amenities.',
+          'A $300,000 home with a $1,500 principal + interest payment commonly costs $2,200–$2,500/month all-in. Running these numbers before house hunting prevents the common trap of buying based on the mortgage payment alone.',
+        ],
+      },
+      {
+        heading: 'The Rent vs. Buy Decision',
+        paragraphs: [
+          'Buying is not always better than renting. The break-even point — where buying becomes cheaper than renting the equivalent home — typically takes 3–7 years in most US markets, accounting for closing costs, transaction costs when selling, opportunity cost of the down payment, and the cost of maintenance.',
+          'If you plan to stay in the home for fewer than 5 years, renting is often the financially better choice. If you plan to stay 7+ years, buying generally wins — especially with a fixed-rate mortgage that locks in your housing cost while rents rise.',
+          'Homeownership builds equity and provides stability, but it also concentrates your net worth in a single, illiquid, geographically specific asset. Renting preserves flexibility and keeps your down payment available for other investments. Neither is universally better.',
+        ],
+      },
+      {
+        heading: 'First-Time Buyer Programs',
+        paragraphs: [
+          'Many states and municipalities offer first-time homebuyer programs with down payment assistance, reduced-rate loans, or closing cost grants. The FHA loan program allows down payments as low as 3.5% with a 580+ credit score. VA loans (for veterans and active military) require no down payment and no PMI.',
+          'USDA loans offer no-down-payment mortgages for homes in eligible rural areas. Fannie Mae\'s HomeReady and Freddie Mac\'s Home Possible programs allow 3% down payments with income below area median income thresholds.',
+          'These programs can significantly reduce the upfront cash required to buy a home. Check your state housing finance agency website for programs available in your area.',
+        ],
+      },
+      {
+        heading: 'How Interest Rates Change What You Can Afford',
+        paragraphs: [
+          'Interest rates have a dramatic effect on purchasing power. At 3.5% (the rates seen in 2020–2021), a $2,000/month budget supports a $445,000 loan. At 7% (2023–2024 rates), the same $2,000/month budget supports only a $300,000 loan — 33% less purchasing power.',
+          'Rising rates do not just make mortgages more expensive; they effectively shrink the price range buyers can access at a given monthly budget. This is why many buyers who "locked in" low rates in 2020–2021 are reluctant to sell — they would lose their rate and face much higher payments on a new purchase.',
+          'When evaluating affordability, use the current market rate, not the rates from a year or two ago. Our mortgage calculator lets you model payments at any rate so you can see exactly how a 0.5% rate change affects your monthly payment and total cost.',
+          'If rates are high when you buy, consider that refinancing is possible if rates drop — but do not buy at the top of your budget counting on a future refinance. Buy at a payment you can afford at today\'s rate.',
         ],
       },
     ],
-    conclusion: 'Use the 28/36 rule as your starting point, then model the actual payment with our mortgage calculator. Buy what fits your budget — not the maximum the lender will approve.',
+    conclusion: 'Use the 28/36 rule as your starting point, then model the real monthly cost — including taxes, insurance, maintenance, and PMI — with our mortgage calculator. The question is not what the bank will lend you, but what payment lets you still save for retirement, maintain an emergency fund, handle unexpected repairs, and live comfortably without financial stress. The most common homebuyer regret is buying too much house, not too little. Buy what fits your full financial picture and gives you room to breathe — not the maximum the lender will approve.',
     relatedLinks: [
       { label: 'Mortgage Calculator', to: '/mortgage-calculator' },
       { label: 'Salary Calculator', to: '/salary-calculator' },
