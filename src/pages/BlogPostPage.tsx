@@ -30,6 +30,14 @@ export default function BlogPostPage() {
       <article className={styles.article}>
         <p className={styles.cardDate}>{post.date}</p>
         <h1 className={styles.articleTitle}>{post.title}</h1>
+        {post.image && (
+          <img
+            src={post.image.url}
+            alt={post.image.alt}
+            className={styles.heroImage}
+            loading="lazy"
+          />
+        )}
         <p className={styles.intro}>{post.intro}</p>
 
         <AdSlot slot="header" />

@@ -4,6 +4,7 @@ export interface BlogPost {
   date: string
   description: string
   intro: string
+  image?: { url: string; alt: string }
   sections: {
     heading: string
     paragraphs: string[]
@@ -1903,6 +1904,90 @@ export const blogPosts: BlogPost[] = [
       { label: 'Mortgage Calculator', to: '/mortgage-calculator' },
       { label: 'Debt Payoff Calculator', to: '/debt-payoff-calculator' },
       { label: 'Loan Calculator', to: '/loan-calculator' },
+    ],
+  },
+
+  {
+    slug: 'dot-com-crash',
+    title: 'The Dot-com Crash: What Happened When the Tech Bubble Burst',
+    date: '2026-04-26',
+    description: 'The dot-com bubble burst wiped out $5 trillion in market value between 2000 and 2002. Here is what caused it, what collapsed, and what investors learned.',
+    image: {
+      url: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=1200&auto=format&fit=crop',
+      alt: 'Stock market chart showing dramatic price decline during a market crash',
+    },
+    intro: 'Between 1995 and 2000, the NASDAQ Composite index rose 400%. Venture capital flooded into internet companies with no revenue, no profits, and sometimes no clear business model. The logic was simple: get big fast, worry about making money later. In March 2000, the bubble peaked. By October 2002, the NASDAQ had fallen 78% from its high. The dot-com crash wiped out roughly $5 trillion in market value and ended the careers of thousands of executives, analysts, and day traders who had believed the rules of investing no longer applied.',
+    sections: [
+      {
+        heading: 'The Setup: Cheap Money, New Technology, and Irrational Exuberance',
+        paragraphs: [
+          'The Federal Reserve cut interest rates aggressively after the 1997 Asian financial crisis and the 1998 Russian debt default. Cheap money flowed into a new category of investment: internet companies. The World Wide Web had gone mainstream only a few years earlier, and investors convinced themselves that every traditional business would be disrupted or replaced.',
+          'Alan Greenspan had warned of "irrational exuberance" in the stock market as early as December 1996 — but the market continued rising for three more years after his warning. By 1999, CNBC was running stock tickers across the bottom of the screen all day. Day trading became a full-time job for hundreds of thousands of Americans. Taxi drivers gave stock tips.',
+          'The accepted metric for valuing internet companies was not earnings, revenue, or even gross profit. It was "eyeballs" — the number of users visiting a site. If your company was growing its user base, investors paid up. Whether you would ever make money was secondary.',
+        ],
+      },
+      {
+        heading: 'What Was the Dot-com Bubble?',
+        paragraphs: [
+          'A bubble forms when asset prices rise far above any rational estimate of underlying value, driven by speculation that prices will keep rising. In the dot-com case, investors bought shares of companies based on the belief that the internet would transform every industry — and that whoever captured market share first would dominate permanently.',
+          'This produced absurd valuations. Pets.com, which delivered pet food and supplies, had an IPO in February 2000 at a valuation of $300 million despite spending $2 in marketing for every $1 it earned in revenue. Webvan, an online grocery delivery company, raised $375 million in its IPO while operating in a single city. Kozmo.com promised one-hour delivery of DVDs, snacks, and books in major cities — and spent years losing money on every order.',
+          'The companies that raised the most money were often the ones spending it fastest. This was known as "burn rate" — how quickly a startup consumed its venture capital before running out. Investors rewarded high burn rates because they signaled aggressive growth. The assumption was that another funding round was always available.',
+        ],
+      },
+      {
+        heading: 'The Companies That Crashed — and the Few That Survived',
+        paragraphs: [
+          'The casualties were spectacular. Webvan burned through $1.2 billion and filed for bankruptcy in 2001 after expanding too fast into too many cities. Pets.com shut down in November 2000, nine months after its IPO, having spent $11.8 million on a Super Bowl ad. Boo.com, a UK-based fashion retailer, spent $188 million in six months before collapsing in May 2000.',
+          'Even established companies collapsed. Worldcom, which had grown into the second-largest US long-distance carrier through acquisitions, filed for the largest bankruptcy in US history in 2002 — later surpassed only by Lehman Brothers in 2008. Its CEO, Bernie Ebbers, was later convicted of fraud. Enron, though not strictly a dot-com company, was a product of the same era of financial engineering and collapsed spectacularly in late 2001.',
+          'A handful of companies survived and eventually justified their valuations. Amazon lost 93% of its value from peak to trough — from $106 per share in December 1999 to $5.97 in September 2001 — but never stopped building. Google launched in 1998 and was profitable by 2001. eBay survived. Priceline fell 99% from its peak but eventually recovered. The survivors shared one trait: they had real business models or managed to build one before running out of cash.',
+        ],
+      },
+      {
+        heading: 'The Collapse: How Fast It Fell',
+        paragraphs: [
+          'The NASDAQ peaked at 5,048.62 on March 10, 2000. The immediate trigger for the sell-off was a combination of factors: a Barron\'s cover story in March 2000 calculated how quickly dot-com companies were burning through cash ("Burning Up: Warning: Internet companies are running out of money — fast"), rising interest rates, and Microsoft\'s antitrust ruling.',
+          'Once the selling began, it accelerated. Venture capital dried up overnight. Companies that had assumed their next funding round was guaranteed suddenly found investors refusing to participate. Without new capital, burn rates became death sentences.',
+          'The sell-off was not uniform. Blue-chip tech companies like Cisco, Intel, and Microsoft fell 80%+ but survived. Pure-play internet companies with no path to profitability simply ceased to exist. The NASDAQ did not recover its March 2000 peak until 2015 — fifteen years later.',
+        ],
+      },
+      {
+        heading: 'The Numbers: What the Crash Actually Cost',
+        paragraphs: [
+          'The NASDAQ Composite fell 78% from its March 2000 peak to its October 2002 trough. The S&P 500 fell 49% over the same period. Roughly $5 trillion in market capitalization was destroyed — equivalent to nearly half of US GDP at the time.',
+          'Approximately 200 publicly traded dot-com companies went bankrupt between 2000 and 2002. Hundreds more were acquired for pennies on the dollar or quietly shut down. The IPO market, which had produced 457 new listings in 1999 alone, nearly froze: only 88 companies went public in 2001.',
+          'The broader economy contracted, but not catastrophically. The US recession of 2001 lasted only eight months — mild by historical standards. Unlike 2008, the dot-com crash did not take the banking system with it. Most losses were absorbed by equity investors, not lenders, which contained the contagion.',
+        ],
+      },
+      {
+        heading: 'Who Got Burned Most',
+        paragraphs: [
+          'Retail investors who bought NASDAQ-heavy portfolios near the peak suffered the most. Many had shifted 401(k) contributions heavily toward technology funds after years of extraordinary returns. Workers at dot-com companies who had accepted stock options instead of cash compensation saw those options expire worthless.',
+          'Day traders — a phenomenon that the bull market had created — were largely wiped out. The strategies that had worked during the bubble (buy on any dip, sell after a quick gain) stopped working the moment the trend reversed. Many had borrowed money to amplify their positions and faced margin calls as prices fell.',
+          'Institutional investors fared better but not well. Many pension funds and university endowments had allocated heavily to venture capital and technology stocks during the late 1990s. Some, like the Harvard endowment, had model allocations to "alternative investments" that included significant private equity and venture capital exposure to the tech sector.',
+        ],
+      },
+      {
+        heading: 'What Changed After the Crash',
+        paragraphs: [
+          'The Sarbanes-Oxley Act of 2002 overhauled corporate governance and financial reporting. It required CEOs and CFOs to personally certify the accuracy of financial statements, increased penalties for securities fraud, and created the Public Company Accounting Oversight Board. The law was a direct response to accounting scandals at Enron, WorldCom, and others.',
+          'Venture capital contracted sharply and did not recover to 1999 levels for over a decade. The criteria for funding changed: investors demanded a path to profitability, not just user growth. "Burn rate" became a term of derision rather than a badge of ambition.',
+          'Analyst conflicts of interest came under scrutiny. During the bubble, investment bank analysts had issued "buy" ratings on companies their firms were taking public — creating an obvious conflict of interest. The Global Analyst Research Settlement of 2003 required banks to separate their research and investment banking functions.',
+        ],
+      },
+      {
+        heading: 'Lessons for Investors Today',
+        paragraphs: [
+          'The dot-com crash offered enduring lessons about market bubbles that apply to every subsequent cycle — including cryptocurrency in 2021–2022 and AI stocks today.',
+          'Valuation still matters. During the bubble, investors dismissed traditional metrics as irrelevant to the "new economy." They were not irrelevant — they were delayed. Companies with no earnings eventually ran out of time.',
+          'Narrative is not a business model. The story of how the internet would change everything was largely correct. But being right about a technology does not guarantee returns on investment. The railroad boom of the 1800s transformed transportation — and wiped out most railroad investors. Being early to a genuine trend and making money from it are two different things.',
+          'Diversification protects against catastrophic loss. Investors concentrated in NASDAQ-heavy tech funds lost 78%. Diversified investors lost less than half that. The boring advice — spread your risk, hold through cycles, don\'t chase last year\'s winner — has survived every bubble intact.',
+        ],
+      },
+    ],
+    conclusion: 'The dot-com crash was not a failure of technology — it was a failure of valuation discipline. The companies that survived and eventually thrived were those that built real businesses behind the hype. For investors, the lesson is unchanged: an asset\'s price eventually reverts toward the present value of its future cash flows. No narrative, however compelling, changes that math permanently. The companies that seemed overvalued in 2000 mostly were. The ones that seemed cheap — Amazon at $6 — turned out to be extraordinary. The difference was not the story. It was the business underneath it.',
+    relatedLinks: [
+      { label: 'Investment Return Calculator', to: '/compound-interest-calculator' },
+      { label: 'Savings Goal Calculator', to: '/savings-goal-calculator' },
     ],
   },
 ]
