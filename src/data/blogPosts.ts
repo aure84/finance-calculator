@@ -1822,8 +1822,17 @@ export const blogPosts: BlogPost[] = [
           'The deadline to contribute for a given tax year is the tax filing deadline — typically April 15 of the following year. You can contribute for 2025 until April 15, 2026.',
         ],
       },
+      {
+        heading: 'Common Roth IRA Mistakes to Avoid',
+        paragraphs: [
+          'Not opening one because the limit seems small is a costly mistake. The $7,000 annual limit is per year, but over 30 years at 7% average annual return, consistent contributions grow to over $660,000 — entirely tax-free. The limit is the floor, not the ceiling of what the account can become.',
+          'Leaving contributions in cash is surprisingly common. Opening a Roth IRA and depositing money does not automatically invest it. The money sits in a cash settlement account earning almost nothing until you manually purchase investments. Always select a fund immediately after contributing.',
+          'Withdrawing earnings early is an expensive error. Contributions can come out any time with no penalty — you already paid tax on them. But earnings are different: withdrawing them before age 59½ and before the 5-year rule is met triggers income tax on the amount plus a 10% early withdrawal penalty. Know which dollars are contributions and which are earnings before touching the account.',
+          'Missing the annual deadline forfeits a year you can never recover. Each tax year closes at April 15 of the following year. If you miss it, you cannot double up the next year — that contribution slot is gone permanently.',
+        ],
+      },
     ],
-    conclusion: 'A Roth IRA is one of the few places where your money genuinely grows tax-free. The $7,000 annual limit is modest, but consistent contributions compounded over 20–30 years build meaningful wealth — entirely sheltered from future taxes. If you qualify, fund it every year. Use our retirement calculator to see how Roth IRA contributions affect your long-term retirement picture.',
+    conclusion: 'A Roth IRA is one of the few places where your money genuinely grows tax-free. The $7,000 annual limit is modest, but consistent contributions compounded over 20–30 years build meaningful, lasting wealth — entirely sheltered from future taxes. If you qualify, fund it every year and invest contributions immediately. Use our retirement calculator to see how Roth IRA contributions affect your long-term retirement picture.',
     relatedLinks: [
       { label: 'Retirement Calculator', to: '/retirement-calculator' },
       { label: 'Savings Goal Calculator', to: '/savings-goal-calculator' },
