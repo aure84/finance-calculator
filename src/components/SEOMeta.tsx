@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { createContext, useContext, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 
 interface SEOMetaProps {
@@ -6,7 +6,19 @@ interface SEOMetaProps {
   description: string
 }
 
+export interface CollectedMeta {
+  title: string
+  description: string
+}
+
+export const SSRMetaContext = createContext<((meta: CollectedMeta) => void) | null>(null)
+
 export default function SEOMeta({ title, description }: SEOMetaProps) {
+  const collect = useContext(SSRMetaContext)
+
+  // SSR: collect meta via context (useEffect doesn't run in renderToString)
+  if (collect) collect({ title, description })
+
   const { pathname } = useLocation()
 
   useEffect(() => {

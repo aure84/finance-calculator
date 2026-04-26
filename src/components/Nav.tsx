@@ -4,7 +4,7 @@ import styles from './Nav.module.css'
 
 function useTheme(): [string, () => void] {
   const [theme, setTheme] = useState<string>(() => {
-    const saved = localStorage.getItem('theme')
+    const saved = typeof window !== 'undefined' ? localStorage.getItem('theme') : null
     if (saved) return saved
     return 'light'
   })
