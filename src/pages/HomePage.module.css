@@ -1,18 +1,18 @@
 .hero {
   background: var(--section-bg);
-  padding: 80px 24px;
+  padding: 36px 24px;
   text-align: center;
 }
 
 .heroTitle {
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 700;
   color: #ffffff;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .heroSubtitle {
-  font-size: 18px;
+  font-size: 16px;
   color: rgba(255, 255, 255, 0.85);
   max-width: 480px;
   margin: 0 auto;
