@@ -1,3 +1,8 @@
+export interface ChartDataPoint {
+  date: string
+  value: number
+}
+
 export interface BlogPost {
   slug: string
   title: string
@@ -6,6 +11,12 @@ export interface BlogPost {
   intro: string
   tag?: 'How-To Guide' | 'Quick Reference' | 'Market History'
   image?: { url: string; alt: string }
+  chart?: {
+    title: string
+    index: string
+    unit: string
+    data: ChartDataPoint[]
+  }
   sections: {
     heading: string
     paragraphs: string[]
@@ -1958,6 +1969,24 @@ export const blogPosts: BlogPost[] = [
       url: 'https://images.unsplash.com/photo-1586815634274-bf5eb51055c9?w=1200&auto=format&fit=crop&q=80',
       alt: 'Stock market crash and financial crisis concept',
     },
+    chart: {
+      title: 'S&P 500 During the 2008 Financial Crisis',
+      index: 'S&P 500',
+      unit: 'points',
+      data: [
+        { date: 'Oct 2007', value: 1576 },
+        { date: 'Jan 2008', value: 1378 },
+        { date: 'Apr 2008', value: 1385 },
+        { date: 'Jul 2008', value: 1267 },
+        { date: 'Sep 2008', value: 1166 },
+        { date: 'Oct 2008', value: 968 },
+        { date: 'Nov 2008', value: 896 },
+        { date: 'Mar 2009', value: 683 },
+        { date: 'Jun 2009', value: 919 },
+        { date: 'Sep 2009', value: 1057 },
+        { date: 'Dec 2009', value: 1115 },
+      ],
+    },
     title: 'The 2008 Financial Crisis: What Happened and What It Cost',
     date: '2026-04-24',
     tag: 'Market History',
@@ -2025,6 +2054,26 @@ export const blogPosts: BlogPost[] = [
 
   {
     slug: 'dot-com-crash',
+    chart: {
+      title: 'NASDAQ During the Dot-com Crash',
+      index: 'NASDAQ',
+      unit: 'points',
+      data: [
+        { date: 'Mar 2000', value: 5049 },
+        { date: 'Jun 2000', value: 3966 },
+        { date: 'Sep 2000', value: 3672 },
+        { date: 'Dec 2000', value: 2471 },
+        { date: 'Mar 2001', value: 1840 },
+        { date: 'Jun 2001', value: 2161 },
+        { date: 'Sep 2001', value: 1498 },
+        { date: 'Dec 2001', value: 1950 },
+        { date: 'Mar 2002', value: 1845 },
+        { date: 'Jun 2002', value: 1464 },
+        { date: 'Sep 2002', value: 1172 },
+        { date: 'Oct 2002', value: 1114 },
+        { date: 'Dec 2002', value: 1336 },
+      ],
+    },
     title: 'The Dot-com Crash: What Happened When the Tech Bubble Burst',
     date: '2026-04-26',
     tag: 'Market History',

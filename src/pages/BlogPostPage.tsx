@@ -1,6 +1,7 @@
 import { Link, useParams } from 'react-router-dom'
 import SEOMeta from '../components/SEOMeta'
 import AdSlot from '../components/AdSlot'
+import MarketCrashChart from '../components/MarketCrashChart'
 import { getPostBySlug, type BlogPost } from '../data/blogPosts'
 import styles from './blog.module.css'
 
@@ -51,6 +52,15 @@ export default function BlogPostPage() {
           />
         )}
         <p className={styles.intro}>{post.intro}</p>
+
+        {post.chart && (
+          <MarketCrashChart
+            title={post.chart.title}
+            index={post.chart.index}
+            unit={post.chart.unit}
+            data={post.chart.data}
+          />
+        )}
 
         <AdSlot slot="header" />
 
