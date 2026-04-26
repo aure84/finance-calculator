@@ -18,6 +18,10 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     slug: 'what-is-apr',
+    image: {
+      url: 'https://images.unsplash.com/photo-1618044733300-9472054094ee?w=1200&auto=format&fit=crop&q=80',
+      alt: 'Loan documents and interest rate paperwork on a desk',
+    },
     title: 'What Is APR and How Does It Affect Your Loan?',
     date: '2026-04-19',
     tag: 'Quick Reference',
@@ -102,6 +106,10 @@ export const blogPosts: BlogPost[] = [
 
   {
     slug: 'how-mortgage-works',
+    image: {
+      url: 'https://images.unsplash.com/photo-1562770584-eaf50b017307?w=1200&auto=format&fit=crop&q=80',
+      alt: 'House keys on a real estate contract',
+    },
     title: 'How Does a Mortgage Work?',
     date: '2026-04-19',
     tag: 'How-To Guide',
@@ -181,6 +189,10 @@ export const blogPosts: BlogPost[] = [
 
   {
     slug: 'compound-vs-simple-interest',
+    image: {
+      url: 'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=1200&auto=format&fit=crop&q=80',
+      alt: 'Investment growth chart with coins and financial documents',
+    },
     title: 'Compound Interest vs Simple Interest: What Is the Difference?',
     date: '2026-04-19',
     tag: 'Quick Reference',
@@ -266,6 +278,10 @@ export const blogPosts: BlogPost[] = [
 
   {
     slug: 'debt-to-income-ratio',
+    image: {
+      url: 'https://images.unsplash.com/photo-1635859890085-ec8cb5466806?w=1200&auto=format&fit=crop&q=80',
+      alt: 'Financial calculator and debt paperwork on a desk',
+    },
     title: 'What Is Debt-to-Income Ratio and Why Does It Matter?',
     date: '2026-04-19',
     tag: 'Quick Reference',
@@ -352,6 +368,10 @@ export const blogPosts: BlogPost[] = [
 
   {
     slug: 'how-net-salary-is-calculated',
+    image: {
+      url: 'https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=1200&auto=format&fit=crop&q=80',
+      alt: 'Paycheck and salary documents on an office desk',
+    },
     title: 'How Is Net Salary Calculated?',
     date: '2026-04-19',
     tag: 'How-To Guide',
@@ -426,6 +446,10 @@ export const blogPosts: BlogPost[] = [
 
   {
     slug: 'what-is-inflation',
+    image: {
+      url: 'https://images.unsplash.com/photo-1521566652839-697aa473761a?w=1200&auto=format&fit=crop&q=80',
+      alt: 'Grocery store shelves with price tags',
+    },
     title: 'What Is Inflation and How Does It Affect Your Money?',
     date: '2026-04-19',
     tag: 'Quick Reference',
@@ -501,6 +525,10 @@ export const blogPosts: BlogPost[] = [
 
   {
     slug: 'how-inflation-erodes-savings',
+    image: {
+      url: 'https://images.unsplash.com/photo-1622219999459-ab5b14e5f45a?w=1200&auto=format&fit=crop&q=80',
+      alt: 'Piggy bank with coins representing eroding savings',
+    },
     title: 'How Does Inflation Erode Your Savings?',
     date: '2026-04-19',
     tag: 'How-To Guide',
@@ -587,6 +615,10 @@ export const blogPosts: BlogPost[] = [
 
   {
     slug: 'snowball-vs-avalanche',
+    image: {
+      url: 'https://images.unsplash.com/photo-1634128222187-18eababc763d?w=1200&auto=format&fit=crop&q=80',
+      alt: 'Notebook with debt payoff strategy and financial planning',
+    },
     title: 'Snowball vs Avalanche: Which Debt Payoff Method Is Better?',
     date: '2026-04-19',
     tag: 'How-To Guide',
@@ -661,6 +693,10 @@ export const blogPosts: BlogPost[] = [
 
   {
     slug: 'what-is-compound-interest',
+    image: {
+      url: 'https://images.unsplash.com/photo-1634542984003-e0fb8e200e91?w=1200&auto=format&fit=crop&q=80',
+      alt: 'Investment growth chart showing compound interest over time',
+    },
     title: 'What Is Compound Interest and How Does It Grow Your Money?',
     date: '2026-04-19',
     tag: 'Quick Reference',
@@ -740,6 +776,10 @@ export const blogPosts: BlogPost[] = [
 
   {
     slug: 'how-much-to-save-for-retirement',
+    image: {
+      url: 'https://images.unsplash.com/photo-1533444273691-ebf51af8fd9c?w=1200&auto=format&fit=crop&q=80',
+      alt: 'Elderly couple planning retirement finances together',
+    },
     title: 'How Much Should You Save for Retirement?',
     date: '2026-04-19',
     tag: 'How-To Guide',
@@ -832,6 +872,10 @@ export const blogPosts: BlogPost[] = [
 
   {
     slug: 'what-is-amortization',
+    image: {
+      url: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&auto=format&fit=crop&q=80',
+      alt: 'Mortgage loan document and amortization schedule',
+    },
     title: 'What Is Amortization and How Does It Work?',
     date: '2026-04-19',
     tag: 'Quick Reference',
@@ -916,6 +960,10 @@ export const blogPosts: BlogPost[] = [
 
   {
     slug: 'how-much-house-can-i-afford',
+    image: {
+      url: 'https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1200&auto=format&fit=crop&q=80',
+      alt: 'House for sale in a residential neighborhood',
+    },
     title: 'How Much House Can I Afford?',
     date: '2026-04-19',
     tag: 'How-To Guide',
@@ -1006,6 +1054,10 @@ export const blogPosts: BlogPost[] = [
 
   {
     slug: 'emergency-fund-guide',
+    image: {
+      url: 'https://images.unsplash.com/photo-1634474588707-de99f09285c0?w=1200&auto=format&fit=crop&q=80',
+      alt: 'Emergency fund savings jar with cash',
+    },
     title: 'How Big Should Your Emergency Fund Be?',
     date: '2026-04-19',
     tag: 'How-To Guide',
@@ -1087,6 +1139,10 @@ export const blogPosts: BlogPost[] = [
 
   {
     slug: 'how-tax-refund-is-calculated',
+    image: {
+      url: 'https://images.unsplash.com/photo-1598432439250-0330f9130e14?w=1200&auto=format&fit=crop&q=80',
+      alt: 'Tax return documents and filing paperwork',
+    },
     title: 'How Is a Tax Refund Calculated?',
     date: '2026-04-19',
     tag: 'Quick Reference',
@@ -1168,6 +1224,10 @@ export const blogPosts: BlogPost[] = [
 
   {
     slug: 'what-is-interest-rate',
+    image: {
+      url: 'https://images.unsplash.com/photo-1622186477895-f2af6a0f5a97?w=1200&auto=format&fit=crop&q=80',
+      alt: 'Bank interest rate concept with financial data',
+    },
     title: 'What Is an Interest Rate?',
     date: '2026-04-19',
     tag: 'Quick Reference',
@@ -1248,6 +1308,10 @@ export const blogPosts: BlogPost[] = [
 
   {
     slug: 'how-loan-payment-is-calculated',
+    image: {
+      url: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&auto=format&fit=crop&q=80',
+      alt: 'Loan payment documents and calculator on a desk',
+    },
     title: 'How Is a Monthly Loan Payment Calculated?',
     date: '2026-04-19',
     tag: 'How-To Guide',
@@ -1344,6 +1408,10 @@ export const blogPosts: BlogPost[] = [
 
   {
     slug: 'what-is-401k',
+    image: {
+      url: 'https://images.unsplash.com/photo-1560264280-88b68371db39?w=1200&auto=format&fit=crop&q=80',
+      alt: 'Workplace retirement plan and office financial planning',
+    },
     title: 'What Is a 401(k) and How Does It Work?',
     date: '2026-04-19',
     tag: 'Quick Reference',
@@ -1430,6 +1498,10 @@ export const blogPosts: BlogPost[] = [
 
   {
     slug: 'how-to-budget',
+    image: {
+      url: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=1200&auto=format&fit=crop&q=80',
+      alt: 'Person working on budget with notebook and laptop',
+    },
     title: 'How to Create a Monthly Budget That Actually Works',
     date: '2026-04-19',
     tag: 'How-To Guide',
@@ -1509,6 +1581,10 @@ export const blogPosts: BlogPost[] = [
 
   {
     slug: 'what-is-credit-score',
+    image: {
+      url: 'https://images.unsplash.com/photo-1651129518942-21b21bd497e9?w=1200&auto=format&fit=crop&q=80',
+      alt: 'Credit score report and financial rating card',
+    },
     title: 'What Is a Credit Score and How Is It Calculated?',
     date: '2026-04-19',
     tag: 'Quick Reference',
@@ -1594,6 +1670,10 @@ export const blogPosts: BlogPost[] = [
 
   {
     slug: 'how-long-to-reach-savings-goal',
+    image: {
+      url: 'https://images.unsplash.com/photo-1633158829585-23ba8f7c8caf?w=1200&auto=format&fit=crop&q=80',
+      alt: 'Savings goal jar with coins and target',
+    },
     title: 'How Long Will It Take to Reach Your Savings Goal?',
     date: '2026-04-19',
     tag: 'How-To Guide',
@@ -1673,6 +1753,10 @@ export const blogPosts: BlogPost[] = [
 
   {
     slug: 'what-is-vat',
+    image: {
+      url: 'https://images.unsplash.com/photo-1653330963134-329a61aedc68?w=1200&auto=format&fit=crop&q=80',
+      alt: 'Tax invoice and VAT receipt at a store',
+    },
     title: 'What Is VAT and How Is It Calculated?',
     date: '2026-04-19',
     tag: 'Quick Reference',
@@ -1757,6 +1841,10 @@ export const blogPosts: BlogPost[] = [
 
   {
     slug: 'what-is-roth-ira',
+    image: {
+      url: 'https://images.unsplash.com/photo-1546188994-07c34f6e5e1b?w=1200&auto=format&fit=crop&q=80',
+      alt: 'Retirement account investment planning for the future',
+    },
     title: 'What Is a Roth IRA and How Does It Work?',
     date: '2026-04-23',
     tag: 'Quick Reference',
@@ -1866,6 +1954,10 @@ export const blogPosts: BlogPost[] = [
 
   {
     slug: '2008-financial-crisis',
+    image: {
+      url: 'https://images.unsplash.com/photo-1586815634274-bf5eb51055c9?w=1200&auto=format&fit=crop&q=80',
+      alt: 'Stock market crash and financial crisis concept',
+    },
     title: 'The 2008 Financial Crisis: What Happened and What It Cost',
     date: '2026-04-24',
     tag: 'Market History',
