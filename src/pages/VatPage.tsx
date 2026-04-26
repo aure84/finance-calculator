@@ -38,7 +38,7 @@ export default function VatPage() {
   return (
     <main className={styles.page}>
       <SEOMeta
-        title="VAT Calculator — Add or Remove VAT Instantly | finance-fast.com"
+        title="VAT Calculator — Add or Remove VAT | finance-fast.com"
         description="Add VAT to a net price or remove VAT from a gross price. Supports all standard VAT rates: 5%, 10%, 19%, 20%, 21%, 25%, 27%. Free and instant."
       />
       <FAQSchema items={VAT_FAQ} />

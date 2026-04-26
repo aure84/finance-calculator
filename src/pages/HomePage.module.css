@@ -75,3 +75,62 @@
   font-size: 14px;
   color: var(--text-muted);
 }
+
+.blogSection {
+  background: var(--section-bg);
+  padding: 48px 24px;
+}
+
+.blogInner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.blogTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 20px;
+}
+
+.blogGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.blogCard {
+  display: block;
+  padding: 16px 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--navy);
+  text-decoration: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.blogCard:hover {
+  border-color: var(--navy);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.blogAll {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--navy);
+  text-decoration: none;
+}
+
+.blogAll:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .blogGrid {
+    grid-template-columns: 1fr;
+  }
+}

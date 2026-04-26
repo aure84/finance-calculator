@@ -3,6 +3,13 @@ import { Wallet, Home, TrendingUp, Car, CreditCard, PiggyBank, Receipt, Target, 
 import SEOMeta from '../components/SEOMeta'
 import styles from './HomePage.module.css'
 
+const featuredGuides = [
+  { slug: 'what-is-apr', title: 'What Is APR and How Does It Affect Your Loan?' },
+  { slug: 'how-mortgage-works', title: 'How Does a Mortgage Work?' },
+  { slug: 'compound-vs-simple-interest', title: 'Compound Interest vs Simple Interest' },
+  { slug: 'snowball-vs-avalanche', title: 'Snowball vs Avalanche: Which Debt Payoff Method Is Better?' },
+]
+
 const calculators = [
   { to: '/salary-calculator', icon: Wallet, title: 'Salary Calculator', desc: 'Calculate take-home pay after federal taxes' },
   { to: '/mortgage-calculator', icon: Home, title: 'Mortgage Calculator', desc: 'Monthly payments and amortization schedule' },
@@ -43,6 +50,19 @@ export default function HomePage() {
               <div className={styles.cardDesc}>{desc}</div>
             </Link>
           ))}
+        </div>
+      </div>
+      <div className={styles.blogSection}>
+        <div className={styles.blogInner}>
+          <h2 className={styles.blogTitle}>Financial Guides</h2>
+          <div className={styles.blogGrid}>
+            {featuredGuides.map(({ slug, title }) => (
+              <Link key={slug} to={`/blog/${slug}`} className={styles.blogCard}>
+                {title}
+              </Link>
+            ))}
+          </div>
+          <Link to="/blog" className={styles.blogAll}>View all guides →</Link>
         </div>
       </div>
     </>
