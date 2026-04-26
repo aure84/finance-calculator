@@ -101,7 +101,9 @@
 }
 
 .blogCard {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   padding: 16px 20px;
   background: var(--surface);
   border: 1px solid var(--border);
@@ -111,6 +113,14 @@
   color: var(--navy);
   text-decoration: none;
   transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.blogTag {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
 }
 
 .blogCard:hover {

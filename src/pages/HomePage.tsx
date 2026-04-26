@@ -1,14 +1,17 @@
 import { Link } from 'react-router-dom'
 import { Wallet, Home, TrendingUp, Car, CreditCard, PiggyBank, Receipt, Target, Percent, BarChart2, Calculator, BadgePercent, UtensilsCrossed } from 'lucide-react'
 import SEOMeta from '../components/SEOMeta'
+import { blogPosts } from '../data/blogPosts'
 import styles from './HomePage.module.css'
 
-const featuredGuides = [
-  { slug: 'what-is-apr', title: 'What Is APR and How Does It Affect Your Loan?' },
-  { slug: 'how-mortgage-works', title: 'How Does a Mortgage Work?' },
-  { slug: 'compound-vs-simple-interest', title: 'Compound Interest vs Simple Interest' },
-  { slug: 'snowball-vs-avalanche', title: 'Snowball vs Avalanche: Which Debt Payoff Method Is Better?' },
-]
+const TAGS = ['How-To Guide', 'Quick Reference', 'Market History'] as const
+
+function getFeaturedGuides() {
+  const sorted = [...blogPosts].sort((a, b) => b.date.localeCompare(a.date))
+  return TAGS.flatMap(tag =>
+    sorted.filter(p => p.tag === tag).slice(0, 2)
+  )
+}
 
 const calculators = [
   { to: '/salary-calculator', icon: Wallet, title: 'Salary Calculator', desc: 'Calculate take-home pay after federal taxes' },
@@ -27,6 +30,8 @@ const calculators = [
 ]
 
 export default function HomePage() {
+  const featuredGuides = getFeaturedGuides()
+
   return (
     <>
       <SEOMeta
@@ -56,8 +61,9 @@ export default function HomePage() {
         <div className={styles.blogInner}>
           <h2 className={styles.blogTitle}>Financial Guides</h2>
           <div className={styles.blogGrid}>
-            {featuredGuides.map(({ slug, title }) => (
+            {featuredGuides.map(({ slug, title, tag }) => (
               <Link key={slug} to={`/blog/${slug}`} className={styles.blogCard}>
+                {tag && <span className={styles.blogTag}>{tag}</span>}
                 {title}
               </Link>
             ))}
