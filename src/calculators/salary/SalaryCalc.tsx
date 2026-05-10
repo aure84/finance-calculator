@@ -16,7 +16,7 @@ export default function SalaryCalc() {
   const selectedState = stateId ? STATES.find(s => s.id === stateId) : null
   const stateHasNoTax = selectedState && selectedState.brackets.length === 0
 
-  const inputStyle = { padding: '10px 12px', border: '1px solid #d1d5db', borderRadius: 6, fontSize: 16, height: 42 }
+  const inputStyle = { padding: '10px 12px', border: '1px solid var(--border)', borderRadius: 6, fontSize: 16, height: 42 }
 
   return (
     <div>
@@ -59,7 +59,7 @@ export default function SalaryCalc() {
       </div>
 
       {stateHasNoTax && (
-        <div style={{ background: '#f0fdf4', border: '1px solid #86efac', borderRadius: 8, padding: 12, marginBottom: 16, fontSize: 14, color: '#166534' }}>
+        <div style={{ background: 'var(--success-bg)', border: '1px solid var(--success-border)', borderRadius: 8, padding: 12, marginBottom: 16, fontSize: 14, color: 'var(--success-text)' }}>
           {selectedState!.name} has no state income tax.
         </div>
       )}
@@ -78,14 +78,14 @@ export default function SalaryCalc() {
                 ['Medicare (1.45%)', formatCurrency(result.medicare)],
                 ['Total FICA', formatCurrency(result.fica)],
               ].map(([label, val]) => (
-                <tr key={label} style={{ borderBottom: '1px solid #f3f4f6' }}>
-                  <td style={{ padding: '10px 0', color: '#6b7280' }}>{label}</td>
+                <tr key={label} style={{ borderBottom: '1px solid var(--border)' }}>
+                  <td style={{ padding: '10px 0', color: 'var(--text-muted)' }}>{label}</td>
                   <td style={{ padding: '10px 0', textAlign: 'right' }}>{val}</td>
                 </tr>
               ))}
               <tr style={{ fontWeight: 700, fontSize: 16 }}>
                 <td style={{ padding: '12px 0' }}>Net Take-Home (Annual)</td>
-                <td style={{ padding: '12px 0', textAlign: 'right', color: '#16a34a' }}>{formatCurrency(result.netAnnual)}</td>
+                <td style={{ padding: '12px 0', textAlign: 'right', color: 'var(--green)' }}>{formatCurrency(result.netAnnual)}</td>
               </tr>
             </tbody>
           </table>
@@ -96,13 +96,13 @@ export default function SalaryCalc() {
               ['Weekly', result.netWeekly],
               ['Hourly', result.netHourly],
             ].map(([label, val]) => (
-              <div key={label as string} style={{ background: '#f9fafb', padding: 16, borderRadius: 8, minWidth: 120 }}>
-                <div style={{ fontSize: 12, color: '#6b7280' }}>{label}</div>
+              <div key={label as string} style={{ background: 'var(--results-bg)', padding: 16, borderRadius: 8, minWidth: 120 }}>
+                <div style={{ fontSize: 12, color: 'var(--text-muted)' }}>{label}</div>
                 <div style={{ fontSize: 18, fontWeight: 600 }}>{formatCurrency(val as number)}</div>
               </div>
             ))}
           </div>
-          <p style={{ marginTop: 16, fontSize: 12, color: '#9ca3af' }}>
+          <p style={{ marginTop: 16, fontSize: 12, color: 'var(--text-muted)' }}>
             Effective tax rate: {formatPercent(result.effectiveRate)} · Based on 2026 federal brackets
             {result.stateTax == null ? ' · Select a state to include state income tax' : ''}
           </p>

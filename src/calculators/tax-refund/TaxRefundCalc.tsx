@@ -17,7 +17,7 @@ export default function TaxRefundCalc() {
     ? calcTaxRefund({ filingStatus, grossIncome: gi, federalWithheld: fw, stateId: stateId || undefined, stateWithheld: sw })
     : null
 
-  const inputStyle = { padding: '10px 12px', border: '1px solid #d1d5db', borderRadius: 6, fontSize: 16, height: 43, boxSizing: 'border-box' as const }
+  const inputStyle = { padding: '10px 12px', border: '1px solid var(--border)', borderRadius: 6, fontSize: 16, height: 43, boxSizing: 'border-box' as const }
 
   const selectedState = stateId ? STATES.find(s => s.id === stateId) : null
   const stateHasNoTax = selectedState && selectedState.brackets.length === 0
@@ -68,7 +68,7 @@ export default function TaxRefundCalc() {
       </div>
 
       {stateHasNoTax && (
-        <div style={{ background: '#f0fdf4', border: '1px solid #86efac', borderRadius: 8, padding: 12, marginBottom: 16, fontSize: 14, color: '#166534' }}>
+        <div style={{ background: 'var(--success-bg)', border: '1px solid var(--success-border)', borderRadius: 8, padding: 12, marginBottom: 16, fontSize: 14, color: 'var(--success-text)' }}>
           {selectedState!.name} has no state income tax.
         </div>
       )}
@@ -76,32 +76,32 @@ export default function TaxRefundCalc() {
       {result && (
         <div>
           <div style={{
-            background: result.isRefund ? '#f0fdf4' : '#fef2f2',
-            border: `1px solid ${result.isRefund ? '#86efac' : '#fca5a5'}`,
+            background: result.isRefund ? 'var(--success-bg)' : 'var(--error-bg)',
+            border: `1px solid ${result.isRefund ? 'var(--success-border)' : 'var(--error-border)'}`,
             borderRadius: 8,
             padding: 20,
             marginBottom: 16,
           }}>
-            <div style={{ fontSize: 13, color: result.isRefund ? '#166534' : '#991b1b', marginBottom: 4 }}>
+            <div style={{ fontSize: 13, color: result.isRefund ? 'var(--success-text)' : 'var(--error-text)', marginBottom: 4 }}>
               {result.isRefund ? 'Estimated Federal Refund' : 'Estimated Federal Amount Owed'}
             </div>
-            <div style={{ fontSize: 28, fontWeight: 700, color: result.isRefund ? '#16a34a' : '#dc2626' }}>
+            <div style={{ fontSize: 28, fontWeight: 700, color: result.isRefund ? 'var(--green)' : 'var(--error)' }}>
               {formatCurrency(result.refundOrOwed)}
             </div>
           </div>
 
           {result.stateRefundOrOwed != null && result.stateIsRefund != null && (
             <div style={{
-              background: result.stateIsRefund ? '#f0fdf4' : '#fef2f2',
-              border: `1px solid ${result.stateIsRefund ? '#86efac' : '#fca5a5'}`,
+              background: result.stateIsRefund ? 'var(--success-bg)' : 'var(--error-bg)',
+              border: `1px solid ${result.stateIsRefund ? 'var(--success-border)' : 'var(--error-border)'}`,
               borderRadius: 8,
               padding: 20,
               marginBottom: 16,
             }}>
-              <div style={{ fontSize: 13, color: result.stateIsRefund ? '#166534' : '#991b1b', marginBottom: 4 }}>
+              <div style={{ fontSize: 13, color: result.stateIsRefund ? 'var(--success-text)' : 'var(--error-text)', marginBottom: 4 }}>
                 {result.stateIsRefund ? 'Estimated State Refund' : 'Estimated State Amount Owed'}
               </div>
-              <div style={{ fontSize: 28, fontWeight: 700, color: result.stateIsRefund ? '#16a34a' : '#dc2626' }}>
+              <div style={{ fontSize: 28, fontWeight: 700, color: result.stateIsRefund ? 'var(--green)' : 'var(--error)' }}>
                 {formatCurrency(result.stateRefundOrOwed)}
               </div>
             </div>
@@ -116,13 +116,13 @@ export default function TaxRefundCalc() {
                 ['Total Tax', formatCurrency(result.totalTax)],
               ] : []),
             ].map(([label, val]) => (
-              <div key={label} style={{ background: '#f9fafb', padding: 16, borderRadius: 8, minWidth: 150 }}>
-                <div style={{ fontSize: 12, color: '#6b7280' }}>{label}</div>
+              <div key={label} style={{ background: 'var(--results-bg)', padding: 16, borderRadius: 8, minWidth: 150 }}>
+                <div style={{ fontSize: 12, color: 'var(--text-muted)' }}>{label}</div>
                 <div style={{ fontSize: 18, fontWeight: 700 }}>{val}</div>
               </div>
             ))}
           </div>
-          <p style={{ fontSize: 12, color: '#9ca3af' }}>
+          <p style={{ fontSize: 12, color: 'var(--text-muted)' }}>
             Based on 2025 federal brackets and standard deduction. State tax uses the same taxable income as federal (an approximation — states have their own deductions). Does not include AMT, tax credits, or local taxes.
           </p>
         </div>

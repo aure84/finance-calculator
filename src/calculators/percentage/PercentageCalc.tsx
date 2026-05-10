@@ -42,9 +42,9 @@ export default function PercentageCalc() {
               padding: '8px 20px',
               borderRadius: 6,
               border: '1px solid',
-              borderColor: mode === m.value ? '#1e3a5f' : '#d1d5db',
-              background: mode === m.value ? '#1e3a5f' : '#fff',
-              color: mode === m.value ? '#fff' : '#374151',
+              borderColor: mode === m.value ? 'var(--navy)' : 'var(--border)',
+              background: mode === m.value ? 'var(--navy)' : 'var(--surface)',
+              color: mode === m.value ? 'var(--surface)' : 'var(--text)',
               fontWeight: 600,
               fontSize: 14,
               cursor: 'pointer',
@@ -55,7 +55,7 @@ export default function PercentageCalc() {
         ))}
       </div>
 
-      <p style={{ fontSize: 14, color: '#64748b', marginBottom: 20, fontStyle: 'italic' }}>{question}</p>
+      <p style={{ fontSize: 14, color: 'var(--text-muted)', marginBottom: 20, fontStyle: 'italic' }}>{question}</p>
 
       <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap', marginBottom: 24 }}>
         <div>
@@ -65,7 +65,7 @@ export default function PercentageCalc() {
             value={a}
             onChange={e => setA(e.target.value)}
             placeholder="0"
-            style={{ padding: '10px 12px', border: '1px solid #d1d5db', borderRadius: 6, fontSize: 16, width: 160 }}
+            style={{ padding: '10px 12px', border: '1px solid var(--border)', borderRadius: 6, fontSize: 16, width: 160 }}
           />
         </div>
         <div>
@@ -75,15 +75,15 @@ export default function PercentageCalc() {
             value={b}
             onChange={e => setB(e.target.value)}
             placeholder="0"
-            style={{ padding: '10px 12px', border: '1px solid #d1d5db', borderRadius: 6, fontSize: 16, width: 160 }}
+            style={{ padding: '10px 12px', border: '1px solid var(--border)', borderRadius: 6, fontSize: 16, width: 160 }}
           />
         </div>
       </div>
 
       {result && (
-        <div style={{ background: '#eef3f9', padding: '16px 20px', borderRadius: 8, display: 'inline-block', minWidth: 180 }}>
-          <div style={{ fontSize: 12, color: '#64748b', marginBottom: 4 }}>{result.label}</div>
-          <div style={{ fontSize: 28, fontWeight: 700, color: '#1e3a5f' }}>
+        <div style={{ background: 'var(--results-bg)', padding: '16px 20px', borderRadius: 8, display: 'inline-block', minWidth: 180 }}>
+          <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 4 }}>{result.label}</div>
+          <div style={{ fontSize: 28, fontWeight: 700, color: 'var(--navy)' }}>
             {sign}{fmt(result.result)}{mode === 'is' || mode === 'change' ? '%' : ''}
           </div>
         </div>

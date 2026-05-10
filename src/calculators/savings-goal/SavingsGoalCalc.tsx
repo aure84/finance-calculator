@@ -17,7 +17,7 @@ export default function SavingsGoalCalc() {
     ? calcSavingsGoal({ goalAmount: ga, currentSavings: cs, monthlyContribution: mc, annualReturn: ar })
     : null
 
-  const inputStyle = { padding: '10px 12px', border: '1px solid #d1d5db', borderRadius: 6, fontSize: 16, height: 43, boxSizing: 'border-box' as const }
+  const inputStyle = { padding: '10px 12px', border: '1px solid var(--border)', borderRadius: 6, fontSize: 16, height: 43, boxSizing: 'border-box' as const }
 
   return (
     <div>
@@ -41,12 +41,12 @@ export default function SavingsGoalCalc() {
       </div>
 
       {allFilled && result === null && (
-        <p style={{ color: '#dc2626', fontSize: 14 }}>Goal is unreachable with $0 monthly contribution and 0% return.</p>
+        <p style={{ color: 'var(--error)', fontSize: 14 }}>Goal is unreachable with $0 monthly contribution and 0% return.</p>
       )}
 
       {result !== null && result.months === 0 && (
-        <div style={{ background: '#f0fdf4', border: '1px solid #86efac', borderRadius: 8, padding: 20, marginBottom: 16 }}>
-          <div style={{ fontSize: 14, color: '#166534' }}>You have already reached your goal!</div>
+        <div style={{ background: 'var(--success-bg)', border: '1px solid var(--success-border)', borderRadius: 8, padding: 20, marginBottom: 16 }}>
+          <div style={{ fontSize: 14, color: 'var(--success-text)' }}>You have already reached your goal!</div>
         </div>
       )}
 
@@ -59,13 +59,13 @@ export default function SavingsGoalCalc() {
               ['Total Contributions', formatCurrency(result.totalContributions)],
               ['Total Interest Earned', formatCurrency(result.totalInterest)],
             ].map(([label, val]) => (
-              <div key={label} style={{ background: '#f9fafb', padding: 16, borderRadius: 8, minWidth: 160 }}>
-                <div style={{ fontSize: 12, color: '#6b7280' }}>{label}</div>
+              <div key={label} style={{ background: 'var(--results-bg)', padding: 16, borderRadius: 8, minWidth: 160 }}>
+                <div style={{ fontSize: 12, color: 'var(--text-muted)' }}>{label}</div>
                 <div style={{ fontSize: 20, fontWeight: 700 }}>{val}</div>
               </div>
             ))}
           </div>
-          <p style={{ fontSize: 12, color: '#9ca3af' }}>
+          <p style={{ fontSize: 12, color: 'var(--text-muted)' }}>
             For illustrative purposes only. Assumes fixed monthly contribution and constant annual return. Does not account for taxes on investment gains.
           </p>
         </div>

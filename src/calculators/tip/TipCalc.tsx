@@ -19,7 +19,7 @@ export default function TipCalc() {
     ? calcTip({ bill: b, tipPercent: t, people: p })
     : null
 
-  const inputStyle = { padding: '10px 12px', border: '1px solid #d1d5db', borderRadius: 6, fontSize: 16 }
+  const inputStyle = { padding: '10px 12px', border: '1px solid var(--border)', borderRadius: 6, fontSize: 16 }
 
   return (
     <div>
@@ -47,9 +47,9 @@ export default function TipCalc() {
                 padding: '8px 16px',
                 borderRadius: 6,
                 border: '1px solid',
-                borderColor: tip === String(pct) ? '#1e3a5f' : '#d1d5db',
-                background: tip === String(pct) ? '#1e3a5f' : '#fff',
-                color: tip === String(pct) ? '#fff' : '#374151',
+                borderColor: tip === String(pct) ? 'var(--navy)' : 'var(--border)',
+                background: tip === String(pct) ? 'var(--navy)' : 'var(--surface)',
+                color: tip === String(pct) ? 'var(--surface)' : 'var(--text)',
                 fontWeight: 600,
                 fontSize: 14,
                 cursor: 'pointer',
@@ -79,9 +79,9 @@ export default function TipCalc() {
               ['Per Person (tip)', `$${fmt(result.tipPerPerson)}`],
             ] : []),
           ].map(([label, val]) => (
-            <div key={label} style={{ background: '#eef3f9', padding: '16px 20px', borderRadius: 8, minWidth: 150 }}>
-              <div style={{ fontSize: 12, color: '#64748b', marginBottom: 4 }}>{label}</div>
-              <div style={{ fontSize: 22, fontWeight: 700, color: '#1e3a5f' }}>{val}</div>
+            <div key={label} style={{ background: 'var(--results-bg)', padding: '16px 20px', borderRadius: 8, minWidth: 150 }}>
+              <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 4 }}>{label}</div>
+              <div style={{ fontSize: 22, fontWeight: 700, color: 'var(--navy)' }}>{val}</div>
             </div>
           ))}
         </div>

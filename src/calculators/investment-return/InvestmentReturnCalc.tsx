@@ -41,23 +41,23 @@ export default function InvestmentReturnCalc() {
 
   const inputStyle: React.CSSProperties = {
     padding: '10px 12px',
-    border: '1px solid #d1d5db',
+    border: '1px solid var(--border)',
     borderRadius: 6,
     fontSize: 16,
     width: 160,
   }
   const cardStyle: React.CSSProperties = {
-    background: '#f9fafb',
+    background: 'var(--results-bg)',
     padding: 16,
     borderRadius: 8,
     minWidth: 160,
   }
   const btnStyle = (active: boolean): React.CSSProperties => ({
     padding: '8px 20px',
-    border: '1px solid #d1d5db',
+    border: '1px solid var(--border)',
     borderRadius: 6,
-    background: active ? '#2563eb' : '#fff',
-    color: active ? '#fff' : '#374151',
+    background: active ? 'var(--navy)' : 'var(--surface)',
+    color: active ? 'var(--surface)' : 'var(--text)',
     cursor: 'pointer',
     fontWeight: 600,
     fontSize: 14,
@@ -118,7 +118,7 @@ export default function InvestmentReturnCalc() {
                 ] as [string, string][]
               ).map(([label, val]) => (
                 <div key={label} style={cardStyle}>
-                  <div style={{ fontSize: 12, color: '#6b7280' }}>{label}</div>
+                  <div style={{ fontSize: 12, color: 'var(--text-muted)' }}>{label}</div>
                   <div style={{ fontSize: 20, fontWeight: 700 }}>{val}</div>
                 </div>
               ))}
@@ -172,31 +172,31 @@ export default function InvestmentReturnCalc() {
                   ] as [string, string][]
                 ).map(([label, val]) => (
                   <div key={label} style={cardStyle}>
-                    <div style={{ fontSize: 12, color: '#6b7280' }}>{label}</div>
+                    <div style={{ fontSize: 12, color: 'var(--text-muted)' }}>{label}</div>
                     <div style={{ fontSize: 20, fontWeight: 700 }}>{val}</div>
                   </div>
                 ))}
               </div>
               {parseFloat(fvYears) > 50 && (
-                <p style={{ fontSize: 12, color: '#6b7280', marginBottom: 8 }}>
+                <p style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 8 }}>
                   Table capped at 50 years.
                 </p>
               )}
               <div style={{ overflowX: 'auto' }}>
                 <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 14 }}>
                   <thead>
-                    <tr style={{ background: '#f3f4f6' }}>
-                      <th style={{ padding: '8px 12px', textAlign: 'left', borderBottom: '1px solid #e5e7eb' }}>Year</th>
-                      <th style={{ padding: '8px 12px', textAlign: 'right', borderBottom: '1px solid #e5e7eb' }}>Value</th>
-                      <th style={{ padding: '8px 12px', textAlign: 'right', borderBottom: '1px solid #e5e7eb' }}>Gain</th>
+                    <tr style={{ background: 'var(--results-bg)' }}>
+                      <th style={{ padding: '8px 12px', textAlign: 'left', borderBottom: '1px solid var(--border)' }}>Year</th>
+                      <th style={{ padding: '8px 12px', textAlign: 'right', borderBottom: '1px solid var(--border)' }}>Value</th>
+                      <th style={{ padding: '8px 12px', textAlign: 'right', borderBottom: '1px solid var(--border)' }}>Gain</th>
                     </tr>
                   </thead>
                   <tbody>
                     {fvResult.table.map(({ year, value, gain }) => (
-                      <tr key={year} style={{ borderBottom: '1px solid #f3f4f6' }}>
+                      <tr key={year} style={{ borderBottom: '1px solid var(--border)' }}>
                         <td style={{ padding: '6px 12px' }}>{year}</td>
                         <td style={{ padding: '6px 12px', textAlign: 'right' }}>{formatCurrency(value)}</td>
-                        <td style={{ padding: '6px 12px', textAlign: 'right', color: gain >= 0 ? '#16a34a' : '#dc2626' }}>
+                        <td style={{ padding: '6px 12px', textAlign: 'right', color: gain >= 0 ? 'var(--green)' : 'var(--error)' }}>
                           {gain >= 0 ? '+' : ''}{formatCurrency(gain)}
                         </td>
                       </tr>

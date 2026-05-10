@@ -20,17 +20,17 @@ export default function LoanCalc() {
         <div>
           <label style={{ display: 'block', fontSize: 14, marginBottom: 6 }}>Loan Amount ($)</label>
           <input type="number" value={amount} onChange={e => setAmount(e.target.value)} placeholder="25000"
-            style={{ padding: '10px 12px', border: '1px solid #d1d5db', borderRadius: 6, fontSize: 16, width: 180 }} />
+            style={{ padding: '10px 12px', border: '1px solid var(--border)', borderRadius: 6, fontSize: 16, width: 180 }} />
         </div>
         <div>
           <label style={{ display: 'block', fontSize: 14, marginBottom: 6 }}>Annual Interest Rate (%)</label>
           <input type="number" value={rate} onChange={e => setRate(e.target.value)} placeholder="6"
-            style={{ padding: '10px 12px', border: '1px solid #d1d5db', borderRadius: 6, fontSize: 16, width: 180 }} />
+            style={{ padding: '10px 12px', border: '1px solid var(--border)', borderRadius: 6, fontSize: 16, width: 180 }} />
         </div>
         <div>
           <label style={{ display: 'block', fontSize: 14, marginBottom: 6 }}>Loan Term (Months)</label>
           <input type="number" value={months} onChange={e => setMonths(e.target.value)} placeholder="60"
-            style={{ padding: '10px 12px', border: '1px solid #d1d5db', borderRadius: 6, fontSize: 16, width: 140 }} />
+            style={{ padding: '10px 12px', border: '1px solid var(--border)', borderRadius: 6, fontSize: 16, width: 140 }} />
         </div>
       </div>
 
@@ -42,13 +42,13 @@ export default function LoanCalc() {
               ['Total Interest', formatCurrency(result.totalInterest)],
               ['Total Cost', formatCurrency(result.totalCost)],
             ].map(([label, val]) => (
-              <div key={label} style={{ background: '#f9fafb', padding: 16, borderRadius: 8, minWidth: 160 }}>
-                <div style={{ fontSize: 12, color: '#6b7280' }}>{label}</div>
+              <div key={label} style={{ background: 'var(--results-bg)', padding: 16, borderRadius: 8, minWidth: 160 }}>
+                <div style={{ fontSize: 12, color: 'var(--text-muted)' }}>{label}</div>
                 <div style={{ fontSize: 20, fontWeight: 700 }}>{val}</div>
               </div>
             ))}
           </div>
-          <p style={{ fontSize: 12, color: '#9ca3af' }}>
+          <p style={{ fontSize: 12, color: 'var(--text-muted)' }}>
             Does not include origination fees or prepayment penalties. Advertised rates may differ from rates you qualify for.
           </p>
         </div>

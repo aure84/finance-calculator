@@ -29,13 +29,13 @@ export default function CreditCardCalc() {
 
   const inputStyle: React.CSSProperties = {
     padding: '10px 12px',
-    border: '1px solid #d1d5db',
+    border: '1px solid var(--border)',
     borderRadius: 6,
     fontSize: 16,
     width: 160,
   }
   const cardStyle: React.CSSProperties = {
-    background: '#f9fafb',
+    background: 'var(--results-bg)',
     padding: 16,
     borderRadius: 8,
     minWidth: 160,
@@ -77,7 +77,7 @@ export default function CreditCardCalc() {
       </div>
 
       {isError && (
-        <p style={{ color: '#dc2626', fontWeight: 600, marginBottom: 16 }}>
+        <p style={{ color: 'var(--error)', fontWeight: 600, marginBottom: 16 }}>
           Monthly payment is too low to cover interest. Increase your payment.
         </p>
       )}
@@ -93,7 +93,7 @@ export default function CreditCardCalc() {
               ] as [string, string][]
             ).map(([label, val]) => (
               <div key={label} style={cardStyle}>
-                <div style={{ fontSize: 12, color: '#6b7280' }}>{label}</div>
+                <div style={{ fontSize: 12, color: 'var(--text-muted)' }}>{label}</div>
                 <div style={{ fontSize: 20, fontWeight: 700 }}>{val}</div>
               </div>
             ))}
@@ -102,8 +102,8 @@ export default function CreditCardCalc() {
           {data.minResult && data.result.months < data.minResult.months && (
             <div
               style={{
-                background: '#fef2f2',
-                border: '1px solid #fecaca',
+                background: 'var(--error-bg)',
+                border: '1px solid var(--error-border)',
                 borderRadius: 8,
                 padding: 16,
                 marginBottom: 16,
@@ -112,14 +112,14 @@ export default function CreditCardCalc() {
               <div style={{ fontWeight: 600, marginBottom: 8 }}>
                 Minimum payment ({formatCurrency(data.minPayment)}/mo) comparison:
               </div>
-              <div style={{ fontSize: 14, color: '#374151' }}>
+              <div style={{ fontSize: 14, color: 'var(--text)' }}>
                 Payoff time: {formatMonths(data.minResult.months)} &nbsp;·&nbsp; Extra interest:{' '}
                 {formatCurrency(data.minResult.totalInterest - data.result.totalInterest)}
               </div>
             </div>
           )}
 
-          <p style={{ fontSize: 12, color: '#9ca3af' }}>
+          <p style={{ fontSize: 12, color: 'var(--text-muted)' }}>
             Assumes fixed APR and fixed monthly payment. Minimum payment approximation: max($25, 2%
             of balance).
           </p>

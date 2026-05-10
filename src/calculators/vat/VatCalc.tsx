@@ -32,9 +32,9 @@ export default function VatCalc() {
               padding: '8px 20px',
               borderRadius: 6,
               border: '1px solid',
-              borderColor: mode === val ? '#1e3a5f' : '#d1d5db',
-              background: mode === val ? '#1e3a5f' : '#fff',
-              color: mode === val ? '#fff' : '#374151',
+              borderColor: mode === val ? 'var(--navy)' : 'var(--border)',
+              background: mode === val ? 'var(--navy)' : 'var(--surface)',
+              color: mode === val ? 'var(--surface)' : 'var(--text)',
               fontWeight: 600,
               fontSize: 14,
               cursor: 'pointer',
@@ -54,7 +54,7 @@ export default function VatCalc() {
             value={amount}
             onChange={e => setAmount(e.target.value)}
             placeholder="100.00"
-            style={{ padding: '10px 12px', border: '1px solid #d1d5db', borderRadius: 6, fontSize: 16, width: 180 }}
+            style={{ padding: '10px 12px', border: '1px solid var(--border)', borderRadius: 6, fontSize: 16, width: 180 }}
           />
         </div>
         <div>
@@ -62,7 +62,7 @@ export default function VatCalc() {
           <select
             value={rate}
             onChange={e => setRate(e.target.value)}
-            style={{ padding: '10px 12px', border: '1px solid #d1d5db', borderRadius: 6, fontSize: 16, width: 140, background: '#fff' }}
+            style={{ padding: '10px 12px', border: '1px solid var(--border)', borderRadius: 6, fontSize: 16, width: 140, background: 'var(--surface)' }}
           >
             {VAT_RATES.map(r => (
               <option key={r} value={r}>{r}%</option>
@@ -79,9 +79,9 @@ export default function VatCalc() {
             ['VAT Amount', fmt(result.vatAmount)],
             ['Gross Price', fmt(result.grossPrice)],
           ].map(([label, val]) => (
-            <div key={label} style={{ background: '#eef3f9', padding: '16px 20px', borderRadius: 8, minWidth: 160 }}>
-              <div style={{ fontSize: 12, color: '#64748b', marginBottom: 4 }}>{label}</div>
-              <div style={{ fontSize: 22, fontWeight: 700, color: '#1e3a5f' }}>{val}</div>
+            <div key={label} style={{ background: 'var(--results-bg)', padding: '16px 20px', borderRadius: 8, minWidth: 160 }}>
+              <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 4 }}>{label}</div>
+              <div style={{ fontSize: 22, fontWeight: 700, color: 'var(--navy)' }}>{val}</div>
             </div>
           ))}
         </div>

@@ -21,7 +21,7 @@ export default function RetirementCalc() {
   const selectedState = stateId ? STATES.find(s => s.id === stateId) : null
   const stateHasNoTax = selectedState && selectedState.brackets.length === 0
 
-  const inputStyle = { padding: '10px 12px', border: '1px solid #d1d5db', borderRadius: 6, fontSize: 16, height: 43, boxSizing: 'border-box' as const }
+  const inputStyle = { padding: '10px 12px', border: '1px solid var(--border)', borderRadius: 6, fontSize: 16, height: 43, boxSizing: 'border-box' as const }
 
   return (
     <div>
@@ -58,7 +58,7 @@ export default function RetirementCalc() {
       </div>
 
       {stateHasNoTax && (
-        <div style={{ background: '#f0fdf4', border: '1px solid #86efac', borderRadius: 8, padding: 12, marginBottom: 16, fontSize: 14, color: '#166534' }}>
+        <div style={{ background: 'var(--success-bg)', border: '1px solid var(--success-border)', borderRadius: 8, padding: 12, marginBottom: 16, fontSize: 14, color: 'var(--success-text)' }}>
           {selectedState!.name} has no state income tax.
         </div>
       )}
@@ -77,13 +77,13 @@ export default function RetirementCalc() {
                   ]
                 : []),
             ].map(([label, val]) => (
-              <div key={label} style={{ background: '#f9fafb', padding: 16, borderRadius: 8, minWidth: 160 }}>
-                <div style={{ fontSize: 12, color: '#6b7280' }}>{label}</div>
+              <div key={label} style={{ background: 'var(--results-bg)', padding: 16, borderRadius: 8, minWidth: 160 }}>
+                <div style={{ fontSize: 12, color: 'var(--text-muted)' }}>{label}</div>
                 <div style={{ fontSize: 20, fontWeight: 700 }}>{val}</div>
               </div>
             ))}
           </div>
-          <p style={{ fontSize: 12, color: '#9ca3af' }}>
+          <p style={{ fontSize: 12, color: 'var(--text-muted)' }}>
             For illustrative purposes only. Does not account for inflation, federal income tax, Social Security, or investment fees.
             {result.estimatedStateTax == null
               ? ' Select a state to estimate state tax on withdrawal.'

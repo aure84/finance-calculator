@@ -27,7 +27,7 @@ export default function DebtPayoffCalc() {
       <h3 style={{ marginBottom: 12 }}>Your Debts</h3>
       <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 14, marginBottom: 16 }}>
         <thead>
-          <tr style={{ background: '#f3f4f6' }}>
+          <tr style={{ background: 'var(--results-bg)' }}>
             {['Name', 'Balance ($)', 'APR (%)', 'Min Payment ($)'].map(h => (
               <th key={h} style={{ padding: '8px', textAlign: 'left' }}>{h}</th>
             ))}
@@ -35,14 +35,14 @@ export default function DebtPayoffCalc() {
         </thead>
         <tbody>
           {debts.map(d => (
-            <tr key={d.id} style={{ borderBottom: '1px solid #f3f4f6' }}>
+            <tr key={d.id} style={{ borderBottom: '1px solid var(--border)' }}>
               {(['name', 'balance', 'apr', 'minPayment'] as (keyof Debt)[]).map(field => (
                 <td key={field} style={{ padding: '6px 8px' }}>
                   <input
                     type={field === 'name' ? 'text' : 'number'}
                     value={d[field]}
                     onChange={e => updateDebt(d.id, field, e.target.value)}
-                    style={{ padding: '6px 8px', border: '1px solid #d1d5db', borderRadius: 4, width: '100%' }}
+                    style={{ padding: '6px 8px', border: '1px solid var(--border)', borderRadius: 4, width: '100%' }}
                   />
                 </td>
               ))}
@@ -54,7 +54,7 @@ export default function DebtPayoffCalc() {
       <div style={{ marginBottom: 24 }}>
         <label style={{ display: 'block', fontSize: 14, marginBottom: 6 }}>Extra Monthly Payment ($)</label>
         <input type="number" value={extra} onChange={e => setExtra(e.target.value)} placeholder="100"
-          style={{ padding: '10px 12px', border: '1px solid #d1d5db', borderRadius: 6, fontSize: 16, width: 160 }} />
+          style={{ padding: '10px 12px', border: '1px solid var(--border)', borderRadius: 6, fontSize: 16, width: 160 }} />
       </div>
 
       <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap' }}>
@@ -62,17 +62,17 @@ export default function DebtPayoffCalc() {
           { label: '❄️ Snowball', result: snowball },
           { label: '🌊 Avalanche', result: avalanche },
         ].map(({ label, result }) => (
-          <div key={label} style={{ background: '#f9fafb', padding: 20, borderRadius: 8, minWidth: 200, flex: 1 }}>
+          <div key={label} style={{ background: 'var(--results-bg)', padding: 20, borderRadius: 8, minWidth: 200, flex: 1 }}>
             <h4 style={{ marginBottom: 12 }}>{label}</h4>
-            <div style={{ fontSize: 13, color: '#6b7280', marginBottom: 4 }}>Months to payoff</div>
+            <div style={{ fontSize: 13, color: 'var(--text-muted)', marginBottom: 4 }}>Months to payoff</div>
             <div style={{ fontSize: 20, fontWeight: 700, marginBottom: 12 }}>{result.monthsToPayoff} months</div>
-            <div style={{ fontSize: 13, color: '#6b7280', marginBottom: 4 }}>Total interest paid</div>
-            <div style={{ fontSize: 18, fontWeight: 600, color: '#dc2626' }}>{formatCurrency(result.totalInterest)}</div>
+            <div style={{ fontSize: 13, color: 'var(--text-muted)', marginBottom: 4 }}>Total interest paid</div>
+            <div style={{ fontSize: 18, fontWeight: 600, color: 'var(--error)' }}>{formatCurrency(result.totalInterest)}</div>
           </div>
         ))}
       </div>
 
-      <p style={{ marginTop: 16, fontSize: 12, color: '#9ca3af' }}>
+      <p style={{ marginTop: 16, fontSize: 12, color: 'var(--text-muted)' }}>
         Assumes no new charges. Minimum payment assumptions may differ from your lender's terms.
       </p>
     </div>

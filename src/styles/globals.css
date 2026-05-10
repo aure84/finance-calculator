@@ -13,6 +13,13 @@
   --results-bg: #eef3f9;
   --disclaimer-bg: #fef9c3;
   --disclaimer-text: #713f12;
+  --error: #dc2626;
+  --error-bg: #fef2f2;
+  --error-border: #fecaca;
+  --error-text: #991b1b;
+  --success-bg: #f0fdf4;
+  --success-border: #86efac;
+  --success-text: #166534;
 }
 
 [data-theme="dark"] {
@@ -30,6 +37,13 @@
   --results-bg: #1e293b;
   --disclaimer-bg: #422006;
   --disclaimer-text: #fde68a;
+  --error: #f87171;
+  --error-bg: #450a0a;
+  --error-border: #7f1d1d;
+  --error-text: #fca5a5;
+  --success-bg: #052e16;
+  --success-border: #166534;
+  --success-text: #4ade80;
 }
 
 *, *::before, *::after {

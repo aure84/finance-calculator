@@ -20,7 +20,7 @@ export default function AprCalc() {
     ? calcApr({ loanAmount: a, nominalRate: r, termMonths: t, fees: f })
     : null
 
-  const inputStyle = { padding: '10px 12px', border: '1px solid #d1d5db', borderRadius: 6, fontSize: 16, width: 160 }
+  const inputStyle = { padding: '10px 12px', border: '1px solid var(--border)', borderRadius: 6, fontSize: 16, width: 160 }
   const labelStyle = { display: 'block', fontSize: 14, marginBottom: 6 } as const
 
   return (
@@ -52,9 +52,9 @@ export default function AprCalc() {
             ['Total Interest', `$${fmt(result.totalInterest)}`],
             ['Total Cost (int. + fees)', `$${fmt(result.totalCost)}`],
           ].map(([label, val]) => (
-            <div key={label} style={{ background: '#eef3f9', padding: '16px 20px', borderRadius: 8, minWidth: 160 }}>
-              <div style={{ fontSize: 12, color: '#64748b', marginBottom: 4 }}>{label}</div>
-              <div style={{ fontSize: 20, fontWeight: 700, color: '#1e3a5f' }}>{val}</div>
+            <div key={label} style={{ background: 'var(--results-bg)', padding: '16px 20px', borderRadius: 8, minWidth: 160 }}>
+              <div style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 4 }}>{label}</div>
+              <div style={{ fontSize: 20, fontWeight: 700, color: 'var(--navy)' }}>{val}</div>
             </div>
           ))}
         </div>
