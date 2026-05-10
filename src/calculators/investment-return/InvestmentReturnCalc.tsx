@@ -114,7 +114,7 @@ export default function InvestmentReturnCalc() {
                 [
                   ['CAGR', formatPercent(cagrResult.cagr)],
                   ['Total Return', formatPercent(cagrResult.totalReturn)],
-                  ['Total Profit', formatCurrency(cagrResult.totalProfit)],
+                  [cagrResult.totalProfit >= 0 ? 'Total Profit' : 'Total Loss', formatCurrency(Math.abs(cagrResult.totalProfit))],
                 ] as [string, string][]
               ).map(([label, val]) => (
                 <div key={label} style={cardStyle}>
@@ -167,7 +167,7 @@ export default function InvestmentReturnCalc() {
                 {(
                   [
                     ['Final Value', formatCurrency(fvResult.finalValue)],
-                    ['Total Profit', formatCurrency(fvResult.totalProfit)],
+                    [fvResult.totalProfit >= 0 ? 'Total Profit' : 'Total Loss', formatCurrency(Math.abs(fvResult.totalProfit))],
                     ['Total Return', formatPercent(fvResult.totalReturn)],
                   ] as [string, string][]
                 ).map(([label, val]) => (

@@ -45,7 +45,6 @@ export default function CookieBanner() {
       <div className={styles.actions}>
         <button className={styles.reject} onClick={reject}>Reject</button>
         <button className={styles.accept} onClick={accept}>Accept</button>
-        <button className={styles.close} onClick={() => setVisible(false)} aria-label="Close">✕</button>
       </div>
     </div>
   )

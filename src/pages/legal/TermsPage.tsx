@@ -5,7 +5,21 @@ export default function TermsPage() {
   return (
     <main style={{ maxWidth: 760, margin: '0 auto', padding: '40px 24px' }}>
       <h1 style={{ marginBottom: 8 }}>Terms of Use</h1>
-      <p style={{ marginBottom: 24, color: 'var(--text-muted)', fontSize: 14 }}>Last updated: April 24, 2026</p>
+      <p style={{ marginBottom: 24, color: 'var(--text-muted)', fontSize: 14 }}>Last updated: May 10, 2026</p>
+
+      <h2 style={h2}>Financial Disclaimer</h2>
+      <p style={s}>
+        The calculators and content on finance-fast.com are provided for <strong>informational and
+        educational purposes only</strong>. Results are estimates based on the inputs you provide
+        and simplified mathematical models. They do not constitute financial, tax, investment,
+        mortgage, or legal advice.
+      </p>
+      <p style={s}>
+        You should not rely on any calculation result to make financial decisions. Always consult a
+        qualified financial advisor, accountant, mortgage broker, or other licensed professional
+        before making significant financial commitments. Finance-fast.com assumes no liability for
+        decisions made based on calculator results.
+      </p>
 
       <h2 style={h2}>Permitted Use</h2>
       <p style={s}>

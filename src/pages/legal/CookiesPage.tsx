@@ -6,7 +6,7 @@ export default function CookiesPage() {
   return (
     <main style={{ maxWidth: 760, margin: '0 auto', padding: '40px 24px' }}>
       <h1 style={{ marginBottom: 8 }}>Cookie Policy</h1>
-      <p style={{ marginBottom: 24, color: 'var(--text-muted)', fontSize: 14 }}>Last updated: April 24, 2026</p>
+      <p style={{ marginBottom: 24, color: 'var(--text-muted)', fontSize: 14 }}>Last updated: May 10, 2026</p>
 
       <h2 style={h2}>Cookies We Use</h2>
       <table style={{ width: '100%', borderCollapse: 'collapse', marginBottom: 24, fontSize: 14 }}>
@@ -22,8 +22,10 @@ export default function CookiesPage() {
             ['_ga', 'Google Analytics', 'Distinguishes users', '2 years'],
             ['_ga_NZLGYL6DBG', 'Google Analytics', 'Stores session state', '2 years'],
             ['_gid', 'Google Analytics', 'Distinguishes users', '24 hours'],
-            ['IDE', 'Google AdSense', 'Ad targeting and measurement', '1 year'],
+            ['IDE', 'Google AdSense/DoubleClick', 'Ad targeting and measurement', '1 year'],
             ['test_cookie', 'Google', 'Checks browser cookie support', 'Session'],
+            ['DSID', 'Google AdSense', 'Identifies signed-in users for ad personalisation on non-Google sites', '2 weeks'],
+            ['NID', 'Google', 'Stores user preferences and information for Google services', '6 months'],
           ].map(([name, provider, purpose, duration]) => (
             <tr key={name} style={{ borderBottom: '1px solid var(--border)' }}>
               <td style={{ padding: '8px', fontFamily: 'monospace', color: 'var(--text)' }}>{name}</td>
@@ -63,9 +65,14 @@ export default function CookiesPage() {
       </p>
       <ul style={{ ...s, paddingLeft: 24, marginBottom: 16 }}>
         <li style={{ marginBottom: 8 }}>
-          <strong>Cookie banner:</strong> Clear the <code>cookieConsent</code> key from your
-          browser's localStorage (DevTools → Application → Local Storage), then reload the page
-          to see the consent prompt again.
+          <strong>Reset your choice:</strong>{' '}
+          <button
+            style={{ background: 'none', border: 'none', color: 'var(--navy)', cursor: 'pointer', padding: 0, font: 'inherit', textDecoration: 'underline' }}
+            onClick={() => { localStorage.removeItem('cookieConsent'); window.location.reload() }}
+          >
+            Click here to reset your cookie preferences
+          </button>{' '}
+          — this clears your saved choice and shows the consent banner again.
         </li>
         <li style={{ marginBottom: 8 }}>
           <strong>Google Analytics opt-out:</strong> Install the{' '}
