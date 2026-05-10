@@ -782,6 +782,7 @@ export const blogPosts: BlogPost[] = [
       { label: 'Compound Interest Calculator', to: '/compound-interest-calculator' },
       { label: 'Retirement Calculator', to: '/retirement-calculator' },
       { label: 'Savings Goal Calculator', to: '/savings-goal-calculator' },
+      { label: 'What Is Net Worth?', to: '/blog/what-is-net-worth' },
     ],
   },
 
@@ -878,6 +879,7 @@ export const blogPosts: BlogPost[] = [
       { label: 'Retirement Calculator', to: '/retirement-calculator' },
       { label: 'Compound Interest Calculator', to: '/compound-interest-calculator' },
       { label: 'Savings Goal Calculator', to: '/savings-goal-calculator' },
+      { label: 'What Is Net Worth?', to: '/blog/what-is-net-worth' },
     ],
   },
 
@@ -1587,6 +1589,7 @@ export const blogPosts: BlogPost[] = [
     relatedLinks: [
       { label: 'Salary Calculator', to: '/salary-calculator' },
       { label: 'Savings Goal Calculator', to: '/savings-goal-calculator' },
+      { label: 'What Is Net Worth?', to: '/blog/what-is-net-worth' },
     ],
   },
 
@@ -2049,6 +2052,7 @@ export const blogPosts: BlogPost[] = [
       { label: 'Mortgage Calculator', to: '/mortgage-calculator' },
       { label: 'Debt Payoff Calculator', to: '/debt-payoff-calculator' },
       { label: 'Loan Calculator', to: '/loan-calculator' },
+      { label: 'The Tulip Mania: History\'s First Bubble', to: '/blog/tulip-mania' },
     ],
   },
 
@@ -2154,6 +2158,7 @@ export const blogPosts: BlogPost[] = [
     relatedLinks: [
       { label: 'Investment Return Calculator', to: '/compound-interest-calculator' },
       { label: 'Savings Goal Calculator', to: '/savings-goal-calculator' },
+      { label: 'The Tulip Mania: History\'s First Bubble', to: '/blog/tulip-mania' },
     ],
   },
 
