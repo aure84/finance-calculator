@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Wallet, Home, TrendingUp, Car, CreditCard, PiggyBank, Receipt, Target, Percent, BarChart2, Calculator, BadgePercent, UtensilsCrossed } from 'lucide-react'
+import { Wallet, Home, TrendingUp, Car, CreditCard, PiggyBank, Receipt, Target, Percent, BarChart2, Calculator, BadgePercent, UtensilsCrossed, Landmark, LineChart } from 'lucide-react'
 import SEOMeta from '../components/SEOMeta'
 import { blogPosts } from '../data/blogPosts'
 import styles from './HomePage.module.css'
@@ -26,6 +26,8 @@ const calculators = [
   { to: '/inflation-calculator', icon: BarChart2, title: 'Inflation Calculator', desc: 'See how inflation erodes purchasing power over time' },
   { to: '/percentage-calculator', icon: Calculator, title: 'Percentage Calculator', desc: 'Calculate percentages, ratios, and percentage change' },
   { to: '/apr-calculator', icon: BadgePercent, title: 'APR Calculator', desc: 'Find the true annual cost of any loan including fees' },
+  { to: '/credit-card-payoff-calculator', icon: Landmark, title: 'Credit Card Payoff', desc: 'See how long to pay off your card and how much interest you\'ll pay' },
+  { to: '/investment-return-calculator', icon: LineChart, title: 'Investment Return', desc: 'Calculate CAGR or project future investment value' },
   { to: '/tip-calculator', icon: UtensilsCrossed, title: 'Tip Calculator', desc: 'Calculate tip and split the bill between any number of people' },
 ]
 
