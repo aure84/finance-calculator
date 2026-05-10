@@ -15,6 +15,8 @@ import InflationPage from './pages/InflationPage'
 import PercentagePage from './pages/PercentagePage'
 import AprPage from './pages/AprPage'
 import TipPage from './pages/TipPage'
+import CreditCardPage from './pages/CreditCardPage'
+import InvestmentReturnPage from './pages/InvestmentReturnPage'
 import BlogIndexPage from './pages/BlogIndexPage'
 import BlogPostPage from './pages/BlogPostPage'
 import DisclaimerPage from './pages/legal/DisclaimerPage'
@@ -44,6 +46,8 @@ export default function AppContent() {
         <Route path="/percentage-calculator" element={<PercentagePage />} />
         <Route path="/apr-calculator" element={<AprPage />} />
         <Route path="/tip-calculator" element={<TipPage />} />
+        <Route path="/credit-card-payoff-calculator" element={<CreditCardPage />} />
+        <Route path="/investment-return-calculator" element={<InvestmentReturnPage />} />
         <Route path="/blog" element={<BlogIndexPage />} />
         <Route path="/blog/:slug" element={<BlogPostPage />} />
         <Route path="/about" element={<AboutPage />} />
