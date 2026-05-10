@@ -374,6 +374,7 @@ export const blogPosts: BlogPost[] = [
     relatedLinks: [
       { label: 'Mortgage Calculator', to: '/mortgage-calculator' },
       { label: 'Debt Payoff Calculator', to: '/debt-payoff-calculator' },
+      { label: 'Credit Card Payoff Calculator', to: '/credit-card-payoff-calculator' },
     ],
   },
 
@@ -699,6 +700,7 @@ export const blogPosts: BlogPost[] = [
     relatedLinks: [
       { label: 'Debt Payoff Calculator', to: '/debt-payoff-calculator' },
       { label: 'Loan Calculator', to: '/loan-calculator' },
+      { label: 'Credit Card Payoff Calculator', to: '/credit-card-payoff-calculator' },
     ],
   },
 
@@ -783,6 +785,7 @@ export const blogPosts: BlogPost[] = [
       { label: 'Retirement Calculator', to: '/retirement-calculator' },
       { label: 'Savings Goal Calculator', to: '/savings-goal-calculator' },
       { label: 'What Is Net Worth?', to: '/blog/what-is-net-worth' },
+      { label: 'Investment Return Calculator', to: '/investment-return-calculator' },
     ],
   },
 
@@ -880,6 +883,7 @@ export const blogPosts: BlogPost[] = [
       { label: 'Compound Interest Calculator', to: '/compound-interest-calculator' },
       { label: 'Savings Goal Calculator', to: '/savings-goal-calculator' },
       { label: 'What Is Net Worth?', to: '/blog/what-is-net-worth' },
+      { label: 'Investment Return Calculator', to: '/investment-return-calculator' },
     ],
   },
 
@@ -2269,6 +2273,7 @@ export const blogPosts: BlogPost[] = [
       { label: 'Savings Goal Calculator', to: '/savings-goal-calculator' },
       { label: 'Debt Payoff Calculator', to: '/debt-payoff-calculator' },
       { label: 'Retirement Savings Calculator', to: '/retirement-savings-calculator' },
+      { label: 'Investment Return Calculator', to: '/investment-return-calculator' },
     ],
   },
 
