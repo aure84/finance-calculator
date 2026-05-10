@@ -26,7 +26,7 @@ function simulate(balance: number, apr: number, payment: number): PayoffResult |
   let months = 0
   let totalInterest = 0
   while (remaining > 0.01 && months < 1200) {
-    const interest = remaining * monthlyRate
+    const interest = Math.round(remaining * monthlyRate * 100) / 100
     if (payment <= interest) return null
     totalInterest += interest
     remaining = remaining + interest - payment
