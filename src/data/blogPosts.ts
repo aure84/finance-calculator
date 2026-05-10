@@ -2156,6 +2156,194 @@ export const blogPosts: BlogPost[] = [
       { label: 'Savings Goal Calculator', to: '/savings-goal-calculator' },
     ],
   },
+
+  {
+    slug: 'what-is-net-worth',
+    image: {
+      url: 'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=1200&auto=format&fit=crop&q=80',
+      alt: 'Person reviewing financial documents and calculating net worth',
+    },
+    title: 'What Is Net Worth and How Do You Calculate It?',
+    date: '2026-05-10',
+    tag: 'Quick Reference',
+    description: 'Net worth is your assets minus your liabilities. Learn how to calculate yours, what the numbers mean by age, and the most effective ways to grow it.',
+    intro: 'Income tells you what you earn. Net worth tells you what you have built. Two people earning $100,000 a year can have wildly different financial situations — one might have $300,000 in savings and a nearly paid-off mortgage, while the other carries $50,000 in credit card debt and no savings at all. Net worth is the number that cuts through the noise. It is a single-figure snapshot of your financial health, and tracking it over time is one of the most honest ways to measure whether your finances are actually improving.',
+    sections: [
+      {
+        heading: 'What Is Net Worth?',
+        paragraphs: [
+          'Net worth is the difference between what you own and what you owe. The formula is: Net worth = Total assets − Total liabilities. If your assets exceed your liabilities, your net worth is positive. If your debts exceed your assets, it is negative — sometimes called being "underwater" at the personal level.',
+          'Net worth is not an income measure or a cash flow measure. You can earn a high income and have a low net worth if you spend aggressively and carry significant debt. You can earn a modest income and build a substantial net worth by spending less than you earn and consistently investing the difference. The number reflects accumulated behavior over time, not a single year\'s earnings.',
+        ],
+      },
+      {
+        heading: 'How to Calculate Your Net Worth',
+        paragraphs: [
+          'Add up all your assets: cash, checking accounts, savings accounts, brokerage accounts, retirement accounts (401k, IRA, Roth IRA), the current market value of any real estate you own, the current value of your vehicles, and other significant valuables. Then add up all your liabilities: mortgage balance, car loans, student loans, credit card balances, personal loans, and any other outstanding debt.',
+          'Subtract your total liabilities from your total assets. The result is your net worth.',
+          'Example: Assets of $25,000 in savings + $80,000 in retirement accounts + $320,000 home value + $15,000 car = $440,000. Liabilities of $210,000 mortgage + $8,000 car loan + $5,000 student loans = $223,000. Net worth: $440,000 − $223,000 = $217,000.',
+          'Use current market values for assets, not what you paid. A house purchased for $280,000 that is now worth $320,000 contributes $320,000 to your asset total — but remember to subtract the outstanding mortgage, which may be $210,000, leaving $110,000 in actual equity.',
+        ],
+      },
+      {
+        heading: 'What Counts as an Asset?',
+        paragraphs: [
+          'Assets are anything you own that has monetary value and could theoretically be converted to cash.',
+        ],
+        list: [
+          'Cash and bank balances (checking, savings, money market accounts)',
+          'Investment accounts (brokerage, retirement accounts such as 401k and IRA, HSA)',
+          'Real estate at current market value — not the original purchase price',
+          'Vehicles at current resale value',
+          'Business ownership (the fair market value of your ownership stake)',
+          'Life insurance cash value (the surrender value, not the death benefit)',
+          'Personal property of significant value (jewelry, art, collectibles)',
+        ],
+      },
+      {
+        heading: 'What Counts as a Liability?',
+        paragraphs: [
+          'Liabilities are any amounts you legally owe to another party.',
+        ],
+        list: [
+          'Mortgage principal balance (the current payoff amount, not the original loan)',
+          'Home equity loans and HELOCs',
+          'Car loans',
+          'Student loans (federal and private)',
+          'Credit card balances',
+          'Personal loans',
+          'Medical debt',
+          'Any other outstanding legal obligation to repay money',
+        ],
+      },
+      {
+        heading: 'Median Net Worth by Age in the United States',
+        paragraphs: [
+          'Net worth naturally grows with age as people pay down debt, accumulate savings, and build home equity. According to the Federal Reserve\'s Survey of Consumer Finances (2022), median net worth by age group breaks down as follows:',
+        ],
+        list: [
+          'Under 35: median $39,000',
+          '35–44: median $135,000',
+          '45–54: median $247,000',
+          '55–64: median $364,000',
+          '65–74: median $410,000',
+          '75 and older: median $334,000',
+        ],
+      },
+      {
+        heading: 'Why Net Worth Matters More Than Income',
+        paragraphs: [
+          'Income is a flow — money moving through your life. Net worth is a stock — the accumulation that remains after everything flows through. A doctor earning $350,000 who spends $340,000 and carries $500,000 in student loans may have a lower net worth than a teacher earning $55,000 who has invested consistently and carried no debt for 25 years.',
+          'Net worth is also the number that determines financial independence. If your investments generate enough passive income to cover your living expenses, you are financially independent regardless of your current salary. Most frameworks for retirement readiness — including the FIRE (Financial Independence, Retire Early) movement — center on net worth targets, not income targets.',
+          'The conventional retirement benchmark from *The Millionaire Next Door* and most financial planners is that by your age times your annual pre-tax income, divided by ten, you should have accumulated at least that amount as net worth to be considered on track. At 40 earning $80,000, the benchmark is $320,000. At 50, it would be $400,000. This is a rough guideline, not a law — but it anchors the relationship between age, income, and accumulated wealth.',
+        ],
+      },
+      {
+        heading: 'How to Increase Your Net Worth',
+        paragraphs: [
+          'Every dollar added to net worth comes from either growing an asset or reducing a liability. There are four basic levers.',
+          'Spend less than you earn. This is the single most powerful lever. The difference between your income and expenses is what funds savings and debt repayment, both of which grow net worth. Even a modest savings rate of 10–15% of income, sustained over decades, produces substantial wealth through compounding.',
+          'Invest consistently. Money sitting in a savings account at 4–5% grows slowly. Money invested in diversified assets — index funds, real estate — grows at historical rates of 7–10% annually over long periods. The difference between 4% and 8% annual growth over 30 years is enormous: $10,000 growing at 4% becomes $32,000; at 8%, it becomes $100,000.',
+          'Pay down high-interest debt first. Credit card interest at 20–25% is a guaranteed negative return on your net worth. Eliminating a 24% APR credit card balance is the equivalent of earning 24% risk-free — no investment reliably beats that. Once high-interest debt is cleared, redirect those payments into savings.',
+          'Increase income. Raises, promotions, additional skills, or side income all increase the amount available to save and invest. The combination of lower spending and higher income — growing the gap between the two — is the most direct route to accelerating net worth growth.',
+        ],
+      },
+      {
+        heading: 'Common Mistakes That Suppress Net Worth',
+        paragraphs: [
+          'Counting home value without subtracting the mortgage. Some people list their home\'s market value as an asset but forget to list the mortgage as a liability. This inflates net worth significantly. Only home equity — value minus mortgage balance — is your actual net worth contribution from real estate.',
+          'Ignoring retirement accounts. Many people mentally exclude their 401k because they cannot access it without penalty before age 59½. But it is real wealth that compounds every year. Include it in your net worth calculation — it is money that belongs to you.',
+          'Confusing gross income with actual savings capacity. A $100,000 salary might net $70,000 after taxes. After housing, food, transportation, and other fixed expenses, only a fraction is available to build net worth. Understanding your actual savings rate — not your gross income — is where the real financial picture lives.',
+          'Not tracking it consistently. Net worth is a trailing indicator. You will not see major changes month to month. But reviewing it annually reveals the direction of your financial trajectory. A consistently rising number — even from a low starting point — is one of the clearest signals that your decisions are compounding in your favor.',
+        ],
+      },
+    ],
+    conclusion: 'Net worth is the most honest single-number summary of your financial life. It does not care what you earn, what neighborhood you live in, or what car you drive. It measures what is actually left after everything is accounted for. Calculate yours honestly — including every liability — and revisit it once a year. The direction of the trend matters more than the absolute number, especially early on. A net worth growing by $10,000 a year at age 28 is a far better financial story than a high income with no savings at 38.',
+    relatedLinks: [
+      { label: 'Compound Interest Calculator', to: '/compound-interest-calculator' },
+      { label: 'Savings Goal Calculator', to: '/savings-goal-calculator' },
+      { label: 'Debt Payoff Calculator', to: '/debt-payoff-calculator' },
+      { label: 'Retirement Savings Calculator', to: '/retirement-savings-calculator' },
+    ],
+  },
+
+  {
+    slug: 'tulip-mania',
+    image: {
+      url: 'https://images.unsplash.com/photo-1508193638397-1c4234db14d8?w=1200&auto=format&fit=crop&q=80',
+      alt: 'Vibrant tulip flowers in a field, representing the historic tulip mania bubble',
+    },
+    title: 'The Tulip Mania: History\'s First Financial Bubble',
+    date: '2026-05-10',
+    tag: 'Market History',
+    description: 'In 1637, a single tulip bulb sold for more than a craftsman earned in four years. The story of tulip mania — history\'s first speculative bubble — still shapes how we think about markets.',
+    intro: 'In the winter of 1636–1637, the Dutch Republic was gripped by a mania. Not a war or a plague — though they had experienced both in recent decades. This was a financial mania, and its object was flowers. Tulip bulbs, specifically. At the peak of the bubble, a single rare tulip bulb sold for 5,000 guilders — roughly what a skilled craftsman earned in four years of work. Traders bought and sold bulbs they had never seen, using contracts for future delivery. Then, in February 1637, prices collapsed within days. Tulip mania became history\'s most famous speculative bubble, and nearly four centuries later it still shapes how economists think about financial markets.',
+    sections: [
+      {
+        heading: 'The Dutch Golden Age: The World\'s First Financial Superpower',
+        paragraphs: [
+          'The backdrop matters. Seventeenth-century Netherlands was the richest country in the world. Amsterdam had the world\'s first stock exchange (founded 1602), the world\'s first central bank, and a merchant class that had accumulated extraordinary wealth through global trade. The Dutch East India Company (VOC) was the world\'s largest corporation by any measure, with a market capitalization that exceeds even today\'s largest companies in real terms.',
+          'This wealth created a new phenomenon: a large class of people with disposable capital looking for returns. Dutch merchants were sophisticated investors, but they were operating in a world with limited investment vehicles. Government bonds, real estate, and shares in trading companies existed — but tulips, it turned out, offered something rare: rapid, visible price appreciation in an asset with genuine scarcity.',
+        ],
+      },
+      {
+        heading: 'How Tulips Became a Luxury Good',
+        paragraphs: [
+          'Tulips were introduced to Western Europe from the Ottoman Empire in the mid-sixteenth century. They were exotic, brilliantly colored, and unlike any flower Europeans had previously seen. For the wealthy, tulip ownership became a status symbol — a way to display cultivation, taste, and financial success simultaneously.',
+          'What made certain tulips especially prized was a phenomenon called "breaking." Bulbs infected with a mosaic virus produced flowers with striking multicolored flame patterns on their petals. These "broken" tulips — varieties with names like Semper Augustus, Admiral van der Eijck, and Viceroy — were extraordinarily beautiful and could not be reliably reproduced from seed. Ownership of a prized specimen became comparable to ownership of a Dutch master painting.',
+          'The scarcity was real. Rare broken tulips could only be propagated from offsets — small bulbs that grow around the parent bulb — and each parent produced only a handful of offsets per year. Supply could not keep up with demand, even before speculation entered the picture.',
+        ],
+      },
+      {
+        heading: 'The Rise of Speculation',
+        paragraphs: [
+          'Tulip mania had two distinct phases. In the first phase, from roughly 1634 to 1636, wealthy collectors drove up prices for rare bulbs. This was speculative, but grounded in genuine scarcity and genuine demand from genuine buyers who intended to plant the flowers.',
+          'The second phase was different. In the winter of 1636–1637, tulip trading moved into the taverns of cities across the Dutch Republic. Ordinary citizens — weavers, farmers, carpenters, chimney sweeps — began trading tulip contracts. Crucially, most of these were futures contracts: agreements to purchase specific bulbs after the growing season ended in June, at prices agreed upon in advance.',
+          'The buyers often had no intention of planting tulips. They expected to sell the contracts before delivery, pocketing the difference between what they agreed to pay and the higher price the market would offer by then. This created a purely speculative market. Bulbs changed hands dozens of times before they were ever dug up. Prices were driven entirely by expectations about future prices — which is to say, by sentiment and momentum.',
+        ],
+      },
+      {
+        heading: 'The Peak: Prices That Defy Logic',
+        paragraphs: [
+          'The prices at the peak of the mania are genuinely difficult to comprehend. The Semper Augustus — considered the most beautiful tulip of the era, with crimson and white flame patterns on an impossibly elegant flower — sold for 10,000 guilders per bulb in early 1637. A skilled Dutch craftsman earned approximately 250 guilders per year. The Semper Augustus cost 40 years of wages.',
+          'A Viceroy bulb was traded for a package of goods worth 2,500 guilders, documented in a contemporary account. The package included 4 tons of wheat, 8 tons of rye, 4 fat oxen, 8 fat pigs, 12 fat sheep, 2 hogsheads of wine, 4 barrels of beer, 2 barrels of butter, 1,000 pounds of cheese, a complete bed, a suit of clothes, and a silver cup.',
+          'More common bulbs — not the famed rarities — also experienced dramatic price increases. A bulb of Switsers that sold for 40 guilders in 1633 reached 350 guilders in late 1636. From 40 to 350 in three years, for a flower that had existed in Europe for decades.',
+        ],
+      },
+      {
+        heading: 'The Crash: February 1637',
+        paragraphs: [
+          'The collapse came without warning and without a single triggering event. On February 3, 1637, a routine bulb auction in Haarlem failed to attract buyers at expected prices. The seller tried again. No buyers came forward. Word spread to other trading rooms.',
+          'Within days, tulip prices collapsed across the country. Buyers who had signed futures contracts agreeing to purchase bulbs at peak prices simply refused to honor them, arguing the contracts had been made under extraordinary circumstances. The Dutch courts ultimately agreed: many futures contracts were classified as gambling debts, which were not legally collectible. Sellers who expected to retire on their tulip profits were left with bulbs they could not sell and contracts they could not enforce.',
+          'The collapse from peak to trough took less than a month.',
+        ],
+      },
+      {
+        heading: 'The Aftermath and Historical Debate',
+        paragraphs: [
+          'The economic damage from tulip mania has been debated by historians for centuries. The traditional account — that the crash caused widespread economic depression in the Dutch Republic — has been revised by more recent scholarship. Historian Anne Goldgar, in her 2007 book Tulipmania: Money, Honor, and Knowledge in the Dutch Golden Age, argued that the number of actual participants was smaller than the popular legend suggests, and that the overall economic damage was less catastrophic than the story implies.',
+          'What is not disputed: the people directly caught in the crash suffered real losses. Fortunes built in months evaporated in days. The social humiliation of having been caught up in the mania was, for many participants, as painful as the financial loss. The Dutch proverb that emerged — "tulips bloom in spring and wilt" — became shorthand for any investment disconnected from underlying value.',
+          'The Dutch Republic itself did not collapse. Its economy remained the strongest in the world for another century. But tulip mania entered cultural memory as the defining example of collective financial delusion.',
+        ],
+      },
+      {
+        heading: 'What Tulip Mania Teaches Us About Markets Today',
+        paragraphs: [
+          'Every generation rediscovers the lessons of speculative bubbles and then forgets them again. Tulip mania has structural parallels with the South Sea Bubble (1720), Mississippi Company Bubble (1720), railroad mania of the 1840s, dot-com crash (2000), US housing bubble (2008), and cryptocurrency cycles of the 2010s and 2020s.',
+          'The pattern is consistent across all of them: a genuine asset or innovation attracts legitimate investor interest. Prices rise. Rising prices attract more buyers motivated not by the asset\'s intrinsic value but by the expectation that someone else will pay more. A market for futures or derivatives develops that allows leveraged speculation. Ordinary people enter, fearing they will miss out. Prices reach levels that require continuously accelerating demand to sustain. At some point, demand fails to accelerate. Prices fall. The fall becomes a rout.',
+          'What makes tulip mania particularly instructive is that the tulips themselves were real, beautiful, and genuinely scarce. It was not a fraud. The speculative dynamic — where price becomes untethered from any realistic assessment of intrinsic value, and where the primary thesis for ownership is that someone else will pay more — is the pathology, not the asset. That dynamic has appeared in every major speculative episode since, and will appear in the next one.',
+          'The most important fact about tulip mania is not that it happened in a naive, pre-modern market. It happened in the world\'s most financially sophisticated country, among people who had invented the stock exchange, the futures market, and the joint-stock company. Speculative bubbles do not require naivety. They require only optimism and the absence of any obvious limit to price appreciation.',
+        ],
+      },
+    ],
+    conclusion: 'Tulip mania endures as a story because it strips every speculative episode down to its essential logic: an asset, a rising price, buyers who buy because the price is rising, and a crash when the buyers run out. The specific asset changes with each generation. The structure does not. The next time you encounter an asset whose price is justified primarily by the argument that it will be worth more next year, the Dutch flower traders of 1636 are worth remembering — not because they were foolish, but because they were not.',
+    relatedLinks: [
+      { label: 'Investment Return Calculator', to: '/compound-interest-calculator' },
+      { label: 'Savings Goal Calculator', to: '/savings-goal-calculator' },
+      { label: 'The 2008 Financial Crisis', to: '/blog/2008-financial-crisis' },
+      { label: 'The Dot-com Crash', to: '/blog/dot-com-crash' },
+    ],
+  },
 ]
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
