@@ -9,6 +9,7 @@ import styles from './calculator.module.css'
 const LOAN_RELATED = [
   { label: 'Mortgage Calculator', to: '/mortgage-calculator', description: 'Calculate your monthly mortgage payment and amortization schedule.' },
   { label: 'Debt Payoff Calculator', to: '/debt-payoff-calculator', description: 'Compare snowball vs avalanche debt payoff strategies.' },
+  { label: 'Credit Card Payoff Calculator', to: '/credit-card-payoff-calculator', description: "See how long it takes to pay off revolving debt and how much interest you'll pay." },
 ]
 
 const LOAN_FAQ = [

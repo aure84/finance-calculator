@@ -9,6 +9,7 @@ import styles from './calculator.module.css'
 const RETIREMENT_RELATED = [
   { label: 'Compound Interest Calculator', to: '/compound-interest-calculator', description: 'See how your savings grow over time with compound interest.' },
   { label: 'Salary Calculator', to: '/salary-calculator', description: 'Calculate your net take-home pay after federal income tax and FICA.' },
+  { label: 'Investment Return Calculator', to: '/investment-return-calculator', description: 'Calculate CAGR or project how any investment grows at a given annual return.' },
 ]
 
 const RETIREMENT_FAQ = [

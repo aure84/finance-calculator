@@ -9,6 +9,7 @@ import styles from './calculator.module.css'
 const SAVINGS_RELATED = [
   { label: 'Compound Interest Calculator', to: '/compound-interest-calculator', description: 'See how your savings grow over time with compound interest.' },
   { label: 'Retirement Calculator', to: '/retirement-calculator', description: 'Project your savings balance at retirement.' },
+  { label: 'Investment Return Calculator', to: '/investment-return-calculator', description: 'Project future investment value or calculate the CAGR of any investment.' },
 ]
 
 const SAVINGS_FAQ = [

@@ -10,6 +10,7 @@ const RELATED = [
   { label: 'Loan Calculator', to: '/loan-calculator', description: 'Calculate monthly payments for any loan type.' },
   { label: 'Mortgage Calculator', to: '/mortgage-calculator', description: 'Monthly payments and amortization schedule.' },
   { label: 'Debt Payoff Calculator', to: '/debt-payoff-calculator', description: 'Snowball vs avalanche comparison.' },
+  { label: 'Credit Card Payoff Calculator', to: '/credit-card-payoff-calculator', description: 'Once you know your APR, see how long payoff takes at any monthly payment.' },
 ]
 
 const FAQ = [

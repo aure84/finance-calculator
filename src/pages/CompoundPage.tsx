@@ -9,6 +9,7 @@ import styles from './calculator.module.css'
 const COMPOUND_RELATED = [
   { label: 'Salary Calculator', to: '/salary-calculator', description: 'Calculate your net take-home pay after federal income tax and FICA.' },
   { label: 'Retirement Calculator', to: '/retirement-calculator', description: 'Project your savings balance at retirement.' },
+  { label: 'Investment Return Calculator', to: '/investment-return-calculator', description: 'Calculate CAGR from real start/end values or project future investment growth.' },
 ]
 
 const COMPOUND_FAQ = [

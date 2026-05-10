@@ -9,6 +9,7 @@ import styles from './calculator.module.css'
 const DEBT_RELATED = [
   { label: 'Loan Calculator', to: '/loan-calculator', description: 'Calculate monthly payments for any personal, auto, or student loan.' },
   { label: 'Mortgage Calculator', to: '/mortgage-calculator', description: 'Calculate your monthly mortgage payment and amortization schedule.' },
+  { label: 'Credit Card Payoff Calculator', to: '/credit-card-payoff-calculator', description: 'See exactly how long it takes to pay off your credit card at any payment level.' },
 ]
 
 const DEBT_FAQ = [
