@@ -57,7 +57,7 @@ export default function TaxRefundPage() {
       <p className={styles.subtitle}>
         Enter your income, filing status, and how much tax was withheld from your paychecks — see your estimated 2026 federal refund or amount owed. Add your state for a combined estimate.
       </p>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', margin: '1.5rem 0' }}>
+      <div className={styles.exampleGrid} style={{ margin: '1.5rem 0' }}>
         {KEY_FACTS.map(({ value, label, sub }) => (
           <div key={label} style={{ background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: 8, padding: '1rem', textAlign: 'center' }}>
             <div style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--navy)' }}>{value}</div>
