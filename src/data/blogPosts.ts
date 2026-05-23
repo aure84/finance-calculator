@@ -1232,10 +1232,12 @@ export const blogPosts: BlogPost[] = [
         ],
       },
     ],
-    conclusion: 'Your refund is simply over-withheld tax returned to you — it is not a bonus, and a large refund means you gave the government an interest-free loan. Optimize your W-4 to keep more money each paycheck throughout the year. Review your W-4 after any major life event, and understand which deductions and credits apply to your situation. Use our tax refund calculator to estimate your liability and see how changes to deductions, credits, and withholding affect your outcome.',
+    conclusion: 'Your refund is simply over-withheld tax returned to you — it is not a bonus, and a large refund means you gave the government an interest-free loan. Optimize your W-4 to keep more money each paycheck throughout the year. Review your W-4 after any major life event, and understand which deductions and credits apply to your situation. Use the formula — Refund = Tax withheld − Tax owed — as your starting point, then plug your numbers into our tax refund calculator for a quick federal estimate.',
     relatedLinks: [
       { label: 'Tax Refund Calculator', to: '/tax-refund-calculator' },
       { label: 'Salary Calculator', to: '/salary-calculator' },
+      { label: 'How Is Net Salary Calculated?', to: '/blog/how-net-salary-is-calculated' },
+      { label: 'What Is a 401(k)?', to: '/blog/what-is-401k' },
     ],
   },
 
