@@ -15,8 +15,10 @@ export interface BudgetResult {
   totalPct: number
 }
 
-export function calcBudget(input: BudgetInput): BudgetResult {
+export function calcBudget(input: BudgetInput): BudgetResult | null {
   const { monthlyIncome, needsPct, wantsPct, savingsPct } = input
+  if (monthlyIncome < 0 || needsPct < 0 || wantsPct < 0 || savingsPct < 0) return null
+
   const needs = monthlyIncome * needsPct / 100
   const wants = monthlyIncome * wantsPct / 100
   const savings = monthlyIncome * savingsPct / 100
