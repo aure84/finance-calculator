@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import AdSlot from '../components/AdSlot'
 import SEOMeta from '../components/SEOMeta'
 import FAQSchema from '../components/FAQSchema'
+import FormulaBox from '../components/FormulaBox'
 import TaxRefundCalc from '../calculators/tax-refund/TaxRefundCalc'
 import RelatedCalculators from '../components/RelatedCalculators'
 import styles from './calculator.module.css'
@@ -34,6 +35,13 @@ const TAX_FAQ = [
   },
 ]
 
+// TODO: update for next tax year
+const KEY_FACTS = [
+  { value: '~$3,100', label: 'avg. federal refund', sub: 'IRS, tax year 2024' },
+  { value: 'Apr 15, 2026', label: 'federal filing deadline', sub: 'extensions may apply — verify at IRS.gov' },
+  { value: '~21 days', label: 'e-file turnaround', sub: 'no flags or holds on return' },
+]
+
 export default function TaxRefundPage() {
   return (
     <main className={styles.page}>
@@ -49,11 +57,24 @@ export default function TaxRefundPage() {
       <p className={styles.subtitle}>
         Enter your income, filing status, and how much tax was withheld from your paychecks — see your estimated 2026 federal refund or amount owed. Add your state for a combined estimate.
       </p>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', margin: '1.5rem 0' }}>
+        {KEY_FACTS.map(({ value, label, sub }) => (
+          <div key={label} style={{ background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: 8, padding: '1rem', textAlign: 'center' }}>
+            <div style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--navy)' }}>{value}</div>
+            <div style={{ fontSize: '0.875rem', color: 'var(--text)', marginTop: 4 }}>{label}</div>
+            <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: 2 }}>{sub}</div>
+          </div>
+        ))}
+      </div>
       <AdSlot slot="header" />
       <div className={styles.panel}>
         <TaxRefundCalc />
       </div>
       <AdSlot slot="content" />
+      <FormulaBox
+        formula="Refund = Tax withheld − Tax owed"
+        note="If the result is negative, you owe the difference to the IRS. You may also owe an underpayment penalty — the IRS generally waives this if you owe less than $1,000, but rules vary based on your income and prior-year tax. See IRS Form 2210 or consult a tax professional."
+      />
 
       <section className={styles.contentSection}>
         <h2 className={styles.sectionHeading}>How your tax refund is calculated</h2>
@@ -66,25 +87,25 @@ export default function TaxRefundPage() {
       </section>
 
       <section className={styles.contentSection}>
-        <h2 className={styles.sectionHeading}>Example refund estimates (single filer, 2025)</h2>
+        <h2 className={styles.sectionHeading}>Example refund estimates (single filer, 2026)</h2>
         <p className={styles.sectionText}>Federal only. Actual results depend on your exact withholding and deductions.</p>
         <div className={styles.exampleGrid}>
           <div className={styles.exampleCard}>
             <div className={styles.exampleLabel}>$45,000 income</div>
             <div className={styles.exampleScenario}>Tax owed: ~$3,362 · Withheld: $5,000</div>
-            <div className={styles.exampleValue} style={{ color: 'var(--green, #16a34a)' }}>+$1,638</div>
+            <div className={styles.exampleValue} style={{ color: 'var(--green)', fontSize: '1.75rem', fontWeight: 700 }}>+$1,638</div>
             <div className={styles.exampleSub}>estimated refund</div>
           </div>
           <div className={styles.exampleCard}>
             <div className={styles.exampleLabel}>$60,000 income</div>
             <div className={styles.exampleScenario}>Tax owed: ~$5,162 · Withheld: $8,000</div>
-            <div className={styles.exampleValue} style={{ color: 'var(--green, #16a34a)' }}>+$2,838</div>
+            <div className={styles.exampleValue} style={{ color: 'var(--green)', fontSize: '1.75rem', fontWeight: 700 }}>+$2,838</div>
             <div className={styles.exampleSub}>estimated refund</div>
           </div>
           <div className={styles.exampleCard}>
             <div className={styles.exampleLabel}>$80,000 income</div>
             <div className={styles.exampleScenario}>Tax owed: ~$9,214 · Withheld: $11,000</div>
-            <div className={styles.exampleValue} style={{ color: 'var(--green, #16a34a)' }}>+$1,786</div>
+            <div className={styles.exampleValue} style={{ color: 'var(--green)', fontSize: '1.75rem', fontWeight: 700 }}>+$1,786</div>
             <div className={styles.exampleSub}>estimated refund</div>
           </div>
         </div>
