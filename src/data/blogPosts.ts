@@ -1178,7 +1178,7 @@ export const blogPosts: BlogPost[] = [
         paragraphs: [
           'Refund = Total tax withheld − Actual tax liability.',
           'Your actual tax liability is calculated when you file your return. It depends on your total income, filing status, deductions (standard or itemized), credits (child tax credit, education credits, etc.), and other adjustments.',
-          'Example: You earn $60,000, take the standard deduction ($14,600 for 2026), giving taxable income of $45,400. Federal tax on $45,400 ≈ $5,148. If $7,000 was withheld, your refund is $1,852.',
+          'Example: You earn $60,000, take the standard deduction ($15,000 for 2026), giving taxable income of $45,000. Federal tax on $45,000 ≈ $5,073. If $7,000 was withheld, your refund is $1,927.',
           'If you also contributed $3,000 to a traditional IRA, your taxable income drops to $42,400, and your liability drops to roughly $4,488. Your refund increases to $2,512 — the additional $660 reflects the tax saved on the IRA deduction.',
         ],
       },
@@ -1193,7 +1193,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: 'What Reduces Your Tax Liability',
         paragraphs: [
-          'Deductions: the standard deduction ($14,600 single / $29,200 married filing jointly for 2026) reduces your taxable income.',
+          'Deductions: the standard deduction ($15,000 single / $30,000 married filing jointly for 2026) reduces your taxable income.',
           'Credits: directly reduce taxes owed. The Child Tax Credit (up to $2,000 per child) is one of the most impactful.',
           '401(k) contributions: pre-tax 401(k) contributions reduce taxable income dollar-for-dollar.',
           'IRA contributions: traditional IRA contributions may be deductible depending on your income and whether you have a workplace retirement plan.',
