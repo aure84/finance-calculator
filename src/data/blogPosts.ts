@@ -21,6 +21,7 @@ export interface BlogPost {
     heading: string
     paragraphs: string[]
     list?: string[]
+    formulaCallout?: boolean
   }[]
   conclusion: string
   relatedLinks: { label: string; to: string }[]
@@ -1175,6 +1176,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         heading: 'The Refund Formula',
+        formulaCallout: true,
         paragraphs: [
           'Refund = Total tax withheld − Actual tax liability.',
           'Your actual tax liability is calculated when you file your return. It depends on your total income, filing status, deductions (standard or itemized), credits (child tax credit, education credits, etc.), and other adjustments.',
@@ -1529,6 +1531,7 @@ export const blogPosts: BlogPost[] = [
     sections: [
       {
         heading: 'The 50/30/20 Rule',
+        formulaCallout: true,
         paragraphs: [
           'The simplest budgeting framework: allocate 50% of after-tax income to needs, 30% to wants, and 20% to savings and debt repayment. Senator Elizabeth Warren popularized this framework in her book "All Your Worth," and it remains the most widely recommended starting point for first-time budgeters.',
           'Needs: rent/mortgage, groceries, utilities, insurance, transportation, minimum debt payments. These are the expenses you must pay to maintain your baseline standard of living.',
@@ -1591,8 +1594,9 @@ export const blogPosts: BlogPost[] = [
         ],
       },
     ],
-    conclusion: 'A budget is a living document that improves every month you use it. Start with the 50/30/20 rule and real bank statement data, not optimistic estimates. Automate your savings so they happen before spending decisions are made. Include irregular expenses as a monthly line item so nothing feels like a surprise. Review spending against the budget at the end of each month — the first budget is rarely accurate, but each revision makes the next month more predictable. Most people who start budgeting are surprised to find they have more money available than they thought; the problem was never income, it was invisible spending. The goal is not perfection; it is awareness and intentionality. Once you know exactly where your money goes, every financial goal becomes a matter of math rather than willpower.',
+    conclusion: 'A budget is a living document that improves every month you use it. Start with the 50/30/20 rule and real bank statement data, not optimistic estimates. Automate your savings so they happen before spending decisions are made. Include irregular expenses as a monthly line item so nothing feels like a surprise. Review spending against the budget at the end of each month — the first budget is rarely accurate, but each revision makes the next month more predictable. Most people who start budgeting are surprised to find they have more money available than they thought; the problem was never income, it was invisible spending. The goal is not perfection; it is awareness and intentionality. Once you know exactly where your money goes, every financial goal becomes a matter of math rather than willpower. Try our budget calculator to enter your income and see your 50/30/20 breakdown instantly.',
     relatedLinks: [
+      { label: 'Budget Calculator', to: '/budget-calculator' },
       { label: 'Salary Calculator', to: '/salary-calculator' },
       { label: 'Savings Goal Calculator', to: '/savings-goal-calculator' },
       { label: 'What Is Net Worth?', to: '/blog/what-is-net-worth' },

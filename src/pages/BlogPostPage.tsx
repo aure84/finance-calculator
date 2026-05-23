@@ -71,7 +71,7 @@ export default function BlogPostPage() {
               <p
                 key={i}
                 className={
-                  section.heading === 'The Refund Formula' && i === 0
+                  section.formulaCallout === true && i === 0
                     ? styles.formulaCallout
                     : styles.sectionText
                 }

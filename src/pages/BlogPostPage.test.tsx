@@ -68,7 +68,7 @@ describe('BlogPostPage', () => {
     })
   })
 
-  it('applies formulaCallout class to first paragraph of "The Refund Formula" section', () => {
+  it('applies formulaCallout class to first paragraph when section has formulaCallout: true', () => {
     renderPost('how-tax-refund-is-calculated')
     const callout = document.querySelector('[class*="formulaCallout"]')
     expect(callout).not.toBeNull()
