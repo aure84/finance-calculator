@@ -33,6 +33,26 @@ const TAX_FAQ = [
     q: 'When will I get my refund?',
     a: 'The IRS issues most refunds within 21 days of e-filing. Paper returns take 4–8 weeks. You can check your status at IRS.gov using the "Where\'s My Refund?" tool.',
   },
+  {
+    q: 'How do I calculate my tax refund amount?',
+    a: 'Use the formula: Refund = Total tax withheld − Tax owed. Your tax owed is calculated by applying progressive federal brackets to your taxable income (gross income minus the standard deduction), then subtracting any credits. Note that refundable credits (such as the Earned Income Tax Credit) can increase your refund beyond your withholding amount, while non-refundable credits can only reduce your tax owed to zero.',
+  },
+  {
+    q: 'How does the IRS calculate whether you get a refund or owe money?',
+    a: 'Total tax payments = everything withheld from your paychecks plus any estimated payments you made. Total tax = your actual liability after brackets, deductions, and credits. The difference is your refund or balance due.',
+  },
+  {
+    q: 'Why is my refund different from last year?',
+    a: 'Common reasons: income change, filing status change (marriage, divorce), a new dependent (Child Tax Credit), losing a deduction (paid-off mortgage), or a change in withholding via your W-4.',
+  },
+  {
+    q: 'What is the average federal tax refund?',
+    a: 'The IRS reported an average refund of approximately $3,100 for tax year 2024. Refunds vary widely by income, filing status, and credits claimed.',
+  },
+  {
+    q: 'How long does it take to receive a tax refund after e-filing?',
+    a: "E-filed returns with direct deposit: typically within 21 days. Paper returns: 4–8 weeks. Returns claiming the Earned Income Tax Credit or Additional Child Tax Credit may be held until mid-February by law, regardless of when you file. Check your status at IRS.gov using \"Where's My Refund?\"",
+  },
 ]
 
 // TODO: update for next tax year
