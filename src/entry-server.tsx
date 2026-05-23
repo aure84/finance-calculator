@@ -39,6 +39,7 @@ export function getAllRoutes(): string[] {
     '/tip-calculator',
     '/credit-card-payoff-calculator',
     '/investment-return-calculator',
+    '/budget-calculator',
     '/blog',
     '/about',
     '/contact',

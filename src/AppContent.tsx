@@ -17,6 +17,7 @@ import AprPage from './pages/AprPage'
 import TipPage from './pages/TipPage'
 import CreditCardPage from './pages/CreditCardPage'
 import InvestmentReturnPage from './pages/InvestmentReturnPage'
+import BudgetPage from './pages/BudgetPage'
 import BlogIndexPage from './pages/BlogIndexPage'
 import BlogPostPage from './pages/BlogPostPage'
 import DisclaimerPage from './pages/legal/DisclaimerPage'
@@ -48,6 +49,7 @@ export default function AppContent() {
         <Route path="/tip-calculator" element={<TipPage />} />
         <Route path="/credit-card-payoff-calculator" element={<CreditCardPage />} />
         <Route path="/investment-return-calculator" element={<InvestmentReturnPage />} />
+        <Route path="/budget-calculator" element={<BudgetPage />} />
         <Route path="/blog" element={<BlogIndexPage />} />
         <Route path="/blog/:slug" element={<BlogPostPage />} />
         <Route path="/about" element={<AboutPage />} />
