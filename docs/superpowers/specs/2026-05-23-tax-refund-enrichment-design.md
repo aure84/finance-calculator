@@ -81,12 +81,14 @@ interface FormulaBoxProps {
 Placed between the subtitle paragraph and the AdSlot. Three stat cards in a horizontal grid (stacks on mobile).
 
 ```
-┌──────────────┐  ┌──────────────┐  ┌──────────────┐
-│  ~$3,100     │  │  Apr 15      │  │  ~21 days    │
-│  avg. refund │  │  2026 filing │  │  e-file      │
-│  (IRS 2025)  │  │  deadline    │  │  turnaround  │
-└──────────────┘  └──────────────┘  └──────────────┘
+┌──────────────────────┐  ┌────────────────────────────────┐  ┌──────────────────────┐
+│  ~$3,100             │  │  Apr 15, 2026                  │  │  ~21 days            │
+│  avg. refund         │  │  federal deadline              │  │  e-file turnaround   │
+│  (IRS, tax yr 2024)  │  │  extensions may apply →IRS.gov │  │  (no flags/holds)    │
+└──────────────────────┘  └────────────────────────────────┘  └──────────────────────┘
 ```
+
+> **Note for implementation:** The deadline card must be reviewed and updated at the start of each tax season. Add a `// TODO: update for next tax year` comment in the component.
 
 Styles: `--surface` background, `--border` border, `--navy` for the large number, `--text-muted` for label. Max height ~80px per card. Inline styles using CSS tokens (consistent with existing page patterns).
 
@@ -97,7 +99,7 @@ Placed after the calculator panel (`<div className={styles.panel}>`), before the
 ```tsx
 <FormulaBox
   formula="Refund = Tax withheld − Tax owed"
-  note="If the result is negative, you owe the difference — and may face an underpayment penalty if the shortfall is significant."
+  note="If the result is negative, you owe the difference to the IRS. You may also owe an underpayment penalty — the IRS generally waives this if you owe less than $1,000, but rules vary based on your income and prior-year tax. See IRS Form 2210 or consult a tax professional."
 />
 ```
 
@@ -114,9 +116,9 @@ The refund value display (`+$1,638` etc.) gets `fontSize: '1.75rem'` and `fontWe
 Five new questions added, directly targeting GSC queries:
 
 1. *How do I calculate my tax refund amount?*  
-   A: Use the formula: Refund = Total tax withheld − Tax owed. Your tax owed is calculated by applying progressive federal brackets to your taxable income (gross income minus the standard deduction), then subtracting any credits.
+   A: Use the formula: Refund = Total tax withheld − Tax owed. Your tax owed is calculated by applying progressive federal brackets to your taxable income (gross income minus the standard deduction), then subtracting any credits. Note that refundable credits (such as the Earned Income Tax Credit) can increase your refund beyond your withholding amount, while non-refundable credits can only reduce your tax owed to zero.
 
-2. *What does the IRS mean by "total tax payments minus total tax"?*  
+2. *How does the IRS calculate whether you get a refund or owe money?*  
    A: Total tax payments = everything withheld from your paychecks plus any estimated payments you made. Total tax = your actual liability after brackets, deductions, and credits. The difference is your refund or balance due.
 
 3. *How is my refund different from last year?*  
@@ -126,7 +128,7 @@ Five new questions added, directly targeting GSC queries:
    A: The IRS reported an average refund of approximately $3,100 for tax year 2024. Refunds vary widely by income, filing status, and credits claimed.
 
 5. *How long does it take to receive a tax refund?*  
-   A: E-filed returns with direct deposit: typically within 21 days. Paper returns: 4–8 weeks. You can check your status at IRS.gov using "Where's My Refund?"
+   A: E-filed returns with direct deposit: typically within 21 days. Paper returns: 4–8 weeks. Returns claiming the Earned Income Tax Credit or Additional Child Tax Credit may be held until mid-February by law, regardless of when you file. Check your status at IRS.gov using "Where's My Refund?"
 
 ### 2f. Updated page order
 
@@ -184,7 +186,7 @@ Add two links to the tax refund blog post's `relatedLinks` array:
 
 Append one sentence to the existing conclusion:
 
-> Use the formula — Refund = Tax withheld − Tax owed — as your starting point, then plug your numbers into our tax refund calculator for a personalized estimate.
+> Use the formula — Refund = Tax withheld − Tax owed — as your starting point, then plug your numbers into our tax refund calculator for a quick federal estimate.
 
 ---
 
