@@ -68,7 +68,16 @@ export default function BlogPostPage() {
           <section key={section.heading} className={styles.section}>
             <h2 className={styles.sectionHeading}>{section.heading}</h2>
             {section.paragraphs.map((p, i) => (
-              <p key={i} className={styles.sectionText}>{p}</p>
+              <p
+                key={i}
+                className={
+                  section.heading === 'The Refund Formula' && i === 0
+                    ? styles.formulaCallout
+                    : styles.sectionText
+                }
+              >
+                {p}
+              </p>
             ))}
             {section.list && (
               <ul className={styles.list}>

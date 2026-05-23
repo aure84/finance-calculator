@@ -213,6 +213,18 @@
   border-color: var(--navy-light);
 }
 
+.formulaCallout {
+  background: var(--results-bg);
+  border-left: 4px solid var(--navy);
+  padding: 1rem 1.25rem;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 1rem 0;
+}
+
 @media (max-width: 600px) {
   .grid {
     grid-template-columns: 1fr;

@@ -67,4 +67,11 @@ describe('BlogPostPage', () => {
       unmount()
     })
   })
+
+  it('applies formulaCallout class to first paragraph of "The Refund Formula" section', () => {
+    renderPost('how-tax-refund-is-calculated')
+    const callout = document.querySelector('[class*="formulaCallout"]')
+    expect(callout).not.toBeNull()
+    expect(callout?.textContent).toContain('Refund = Total tax withheld')
+  })
 })
