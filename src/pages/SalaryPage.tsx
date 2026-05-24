@@ -2,12 +2,15 @@ import { Link } from 'react-router-dom'
 import AdSlot from '../components/AdSlot'
 import SEOMeta from '../components/SEOMeta'
 import FAQSchema from '../components/FAQSchema'
+import WebApplicationSchema from '../components/WebApplicationSchema'
 import SalaryCalc from '../calculators/salary/SalaryCalc'
 import RelatedCalculators from '../components/RelatedCalculators'
 import styles from './calculator.module.css'
 
 const SALARY_RELATED = [
   { label: 'Compound Interest Calculator', to: '/compound-interest-calculator', description: 'See how your savings grow over time with compound interest.' },
+  { label: 'Tax Refund Calculator', to: '/tax-refund-calculator', description: 'Estimate your federal tax refund or amount owed.' },
+  { label: 'Budget Calculator', to: '/budget-calculator', description: 'Split your income with the 50/30/20 rule.' },
 ]
 
 const SALARY_FAQ = [
@@ -37,10 +40,15 @@ export default function SalaryPage() {
         description="Calculate your net take-home pay after federal income tax, FICA, and optional state tax. Based on 2026 US tax brackets. Free, no sign-up required."
       />
       <FAQSchema items={SALARY_FAQ} />
+      <WebApplicationSchema
+        name="Free Salary Calculator"
+        description="Calculate your net take-home pay after federal income tax, FICA, and optional state tax. Based on 2026 US tax brackets."
+        url="https://finance-fast.com/salary-calculator"
+      />
       <div className={styles.breadcrumb}>
         <Link to="/">Home</Link> › Salary Calculator
       </div>
-      <h1 className={styles.title}>How Much Is My Take-Home Pay After Tax?</h1>
+      <h1 className={styles.title}>Free Salary Calculator — Take-Home Pay After Tax</h1>
       <p className={styles.subtitle}>
         Enter your annual salary to see your exact net pay after federal income tax, Social Security, and Medicare. Add your state for a combined estimate.
       </p>

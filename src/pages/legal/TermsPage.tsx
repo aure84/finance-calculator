@@ -5,9 +5,18 @@ export default function TermsPage() {
   return (
     <main style={{ maxWidth: 760, margin: '0 auto', padding: '40px 24px' }}>
       <h1 style={{ marginBottom: 8 }}>Terms of Use</h1>
-      <p style={{ marginBottom: 24, color: 'var(--text-muted)', fontSize: 14 }}>Last updated: May 10, 2026</p>
+      <p style={{ marginBottom: 24, color: 'var(--text-muted)', fontSize: 14 }}>Last updated: 2026-05-24</p>
 
-      <h2 style={h2}>Financial Disclaimer</h2>
+      <h2 style={h2}>1. About This Service</h2>
+      <p style={s}>
+        finance-fast.com provides free, browser-based financial calculators covering topics such
+        as salary and take-home pay, mortgage payments, loan amortization, retirement savings,
+        tax refund estimates, and budgeting. The service is provided at no charge, requires no
+        account or sign-up, and processes all calculations locally in your browser. No financial
+        data you enter is transmitted to our servers.
+      </p>
+
+      <h2 style={h2}>2. Financial Disclaimer</h2>
       <p style={s}>
         The calculators and content on finance-fast.com are provided for <strong>informational and
         educational purposes only</strong>. Results are estimates based on the inputs you provide
@@ -17,31 +26,31 @@ export default function TermsPage() {
       <p style={s}>
         You should not rely on any calculation result to make financial decisions. Always consult a
         qualified financial advisor, accountant, mortgage broker, or other licensed professional
-        before making significant financial commitments. Finance-fast.com assumes no liability for
+        before making significant financial commitments. finance-fast.com assumes no liability for
         decisions made based on calculator results.
       </p>
 
-      <h2 style={h2}>Permitted Use</h2>
+      <h2 style={h2}>3. Permitted Use</h2>
       <p style={s}>
         finance-fast.com is provided for personal, non-commercial use only. You may not resell,
         scrape, or embed our calculators on other websites without written permission.
       </p>
 
-      <h2 style={h2}>No Warranty</h2>
+      <h2 style={h2}>4. No Warranty</h2>
       <p style={s}>
         This site is provided "as is" without warranty of any kind. We do not warrant the accuracy,
         completeness, or fitness for any particular purpose of any calculation result. Results are
         estimates only and do not constitute financial, tax, investment, or legal advice.
       </p>
 
-      <h2 style={h2}>Limitation of Liability</h2>
+      <h2 style={h2}>5. Limitation of Liability</h2>
       <p style={s}>
         To the maximum extent permitted by applicable law, finance-fast.com and its operators shall
         not be liable for any direct, indirect, incidental, or consequential damages arising from
         your use of this site or reliance on any calculation results.
       </p>
 
-      <h2 style={h2}>Governing Law</h2>
+      <h2 style={h2}>6. Governing Law</h2>
       <p style={s}>
         These Terms are governed by the laws of Hungary. Disputes shall be subject to the
         jurisdiction of the courts of Hungary, without prejudice to your statutory rights as a
@@ -51,21 +60,21 @@ export default function TermsPage() {
         cannot be waived under applicable consumer law.
       </p>
 
-      <h2 style={h2}>Indemnification</h2>
+      <h2 style={h2}>7. Indemnification</h2>
       <p style={s}>
         You agree to indemnify and hold harmless finance-fast.com from any claims, losses, or
         damages arising from your use of the site or violation of these Terms, to the extent
         permitted by applicable law.
       </p>
 
-      <h2 style={h2}>Changes to These Terms</h2>
+      <h2 style={h2}>8. Changes to These Terms</h2>
       <p style={s}>
         We reserve the right to modify these Terms at any time. The "last updated" date at the
         top of this page will reflect any changes. Continued use of the site after changes are
         posted constitutes acceptance of the revised Terms.
       </p>
 
-      <h2 style={h2}>Contact</h2>
+      <h2 style={h2}>9. Contact</h2>
       <p style={s}>
         Questions about these Terms? Email us at{' '}
         <a href="mailto:contact@finance-fast.com" style={{ color: 'var(--navy)' }}>contact@finance-fast.com</a>.

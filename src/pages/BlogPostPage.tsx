@@ -16,6 +16,50 @@ function BlogTag({ tag }: { tag?: BlogPost['tag'] }) {
   return <span className={`${styles.tag} ${TAG_CLASS[tag]}`}>{tag}</span>
 }
 
+function ArticleSchema({ post }: { post: BlogPost }) {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    description: post.description,
+    datePublished: post.date,
+    dateModified: post.date,
+    url: `https://finance-fast.com/blog/${post.slug}`,
+    ...(post.image && {
+      image: {
+        '@type': 'ImageObject',
+        url: post.image.url,
+        description: post.image.alt,
+      },
+    }),
+    author: {
+      '@type': 'Organization',
+      name: 'Finance Fast',
+      url: 'https://finance-fast.com',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Finance Fast',
+      url: 'https://finance-fast.com',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://finance-fast.com/favicon.svg',
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://finance-fast.com/blog/${post.slug}`,
+    },
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
+}
+
 export default function BlogPostPage() {
   const { slug } = useParams<{ slug: string }>()
   const post = slug ? getPostBySlug(slug) : undefined
@@ -35,6 +79,7 @@ export default function BlogPostPage() {
         title={`${post.title} | Finance Fast`}
         description={post.description}
       />
+      <ArticleSchema post={post} />
       <div className={styles.breadcrumb}>
         <Link to="/">Home</Link> › <Link to="/blog">Blog</Link> › {post.title}
       </div>
