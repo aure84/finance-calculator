@@ -131,3 +131,21 @@
   color: var(--text-muted);
   line-height: 1.6;
 }
+
+@media (max-width: 480px) {
+  .page {
+    padding: 20px 16px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .panel {
+    padding: 16px;
+  }
+
+  .exampleValue {
+    font-size: 22px;
+  }
+}
