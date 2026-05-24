@@ -2278,7 +2278,7 @@ export const blogPosts: BlogPost[] = [
       { label: 'Compound Interest Calculator', to: '/compound-interest-calculator' },
       { label: 'Savings Goal Calculator', to: '/savings-goal-calculator' },
       { label: 'Debt Payoff Calculator', to: '/debt-payoff-calculator' },
-      { label: 'Retirement Savings Calculator', to: '/retirement-savings-calculator' },
+      { label: 'Retirement Calculator', to: '/retirement-calculator' },
       { label: 'Investment Return Calculator', to: '/investment-return-calculator' },
     ],
   },
