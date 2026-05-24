@@ -32,6 +32,7 @@ const links = [
   { to: '/apr-calculator', label: 'APR' },
   { to: '/credit-card-payoff-calculator', label: 'Credit Card' },
   { to: '/investment-return-calculator', label: 'Invest. Return' },
+  { to: '/budget-calculator', label: 'Budget' },
   { to: '/tip-calculator', label: 'Tip' },
   { to: '/blog', label: 'Blog' },
 ]
