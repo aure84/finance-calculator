@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import AdSlot from '../components/AdSlot'
 import SEOMeta from '../components/SEOMeta'
 import FAQSchema from '../components/FAQSchema'
+import WebApplicationSchema from '../components/WebApplicationSchema'
 import RetirementCalc from '../calculators/retirement/RetirementCalc'
 import RelatedCalculators from '../components/RelatedCalculators'
 import styles from './calculator.module.css'
@@ -39,6 +40,11 @@ export default function RetirementPage() {
         description="Project your retirement balance based on current savings, monthly contributions, and expected return rate. Free retirement savings calculator with state tax estimate."
       />
       <FAQSchema items={RETIREMENT_FAQ} />
+      <WebApplicationSchema
+        name="Free Retirement Calculator"
+        description="Calculate how much you need to retire and whether you are on track. Free retirement savings calculator."
+        url="https://finance-fast.com/retirement-calculator"
+      />
       <div className={styles.breadcrumb}>
         <Link to="/">Home</Link> › Retirement Calculator
       </div>

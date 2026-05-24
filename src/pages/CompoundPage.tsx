@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import AdSlot from '../components/AdSlot'
 import SEOMeta from '../components/SEOMeta'
 import FAQSchema from '../components/FAQSchema'
+import WebApplicationSchema from '../components/WebApplicationSchema'
 import CompoundCalc from '../calculators/compound/CompoundCalc'
 import RelatedCalculators from '../components/RelatedCalculators'
 import styles from './calculator.module.css'
@@ -39,6 +40,11 @@ export default function CompoundPage() {
         description="See how your investment grows over time with compound interest. Compare annual, quarterly, monthly, and daily compounding. Free calculator with year-by-year breakdown."
       />
       <FAQSchema items={COMPOUND_FAQ} />
+      <WebApplicationSchema
+        name="Free Compound Interest Calculator"
+        description="Calculate compound interest growth over time. See how your investments grow with daily, monthly, or annual compounding."
+        url="https://finance-fast.com/compound-interest-calculator"
+      />
       <div className={styles.breadcrumb}>
         <Link to="/">Home</Link> › Compound Interest Calculator
       </div>

@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import AdSlot from '../components/AdSlot'
 import SEOMeta from '../components/SEOMeta'
 import FAQSchema from '../components/FAQSchema'
+import WebApplicationSchema from '../components/WebApplicationSchema'
 import DebtPayoffCalc from '../calculators/debt-payoff/DebtPayoffCalc'
 import RelatedCalculators from '../components/RelatedCalculators'
 import styles from './calculator.module.css'
@@ -39,6 +40,11 @@ export default function DebtPayoffPage() {
         description="Compare snowball vs avalanche debt payoff strategies. See which method pays off your debt faster and saves you the most interest. Free debt payoff calculator."
       />
       <FAQSchema items={DEBT_FAQ} />
+      <WebApplicationSchema
+        name="Free Debt Payoff Calculator"
+        description="Calculate how long it will take to pay off your debt and compare avalanche vs snowball payoff strategies."
+        url="https://finance-fast.com/debt-payoff-calculator"
+      />
       <div className={styles.breadcrumb}>
         <Link to="/">Home</Link> › Debt Payoff Calculator
       </div>

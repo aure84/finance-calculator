@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import AdSlot from '../components/AdSlot'
 import SEOMeta from '../components/SEOMeta'
 import FAQSchema from '../components/FAQSchema'
+import WebApplicationSchema from '../components/WebApplicationSchema'
 import FormulaBox from '../components/FormulaBox'
 import BudgetCalc from '../calculators/budget/BudgetCalc'
 import RelatedCalculators from '../components/RelatedCalculators'
@@ -68,6 +69,11 @@ export default function BudgetPage() {
         description="Enter your monthly take-home income and see your 50/30/20 budget breakdown — how much to spend on needs, wants, and savings. Free, instant, no sign-up."
       />
       <FAQSchema items={BUDGET_FAQ} />
+      <WebApplicationSchema
+        name="Free Budget Calculator"
+        description="Calculate your monthly budget using the 50/30/20 rule. Split income into needs, wants, and savings."
+        url="https://finance-fast.com/budget-calculator"
+      />
       <div className={styles.breadcrumb}>
         <Link to="/">Home</Link> › Budget Calculator
       </div>

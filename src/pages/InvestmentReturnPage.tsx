@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import AdSlot from '../components/AdSlot'
 import SEOMeta from '../components/SEOMeta'
 import FAQSchema from '../components/FAQSchema'
+import WebApplicationSchema from '../components/WebApplicationSchema'
 import InvestmentReturnCalc from '../calculators/investment-return/InvestmentReturnCalc'
 import RelatedCalculators from '../components/RelatedCalculators'
 import styles from './calculator.module.css'
@@ -47,6 +48,11 @@ export default function InvestmentReturnPage() {
         description="Calculate CAGR from start and end values, or project future investment value with compound annual growth rate."
       />
       <FAQSchema items={INV_FAQ} />
+      <WebApplicationSchema
+        name="Free Investment Return Calculator"
+        description="Calculate return on investment (ROI), CAGR, and total portfolio growth over time."
+        url="https://finance-fast.com/investment-return-calculator"
+      />
       <div className={styles.breadcrumb}>
         <Link to="/">Home</Link> › Investment Return Calculator
       </div>

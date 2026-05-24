@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import AdSlot from '../components/AdSlot'
 import SEOMeta from '../components/SEOMeta'
 import FAQSchema from '../components/FAQSchema'
+import WebApplicationSchema from '../components/WebApplicationSchema'
 import TipCalc from '../calculators/tip/TipCalc'
 import RelatedCalculators from '../components/RelatedCalculators'
 import styles from './calculator.module.css'
@@ -43,6 +44,11 @@ export default function TipPage() {
         description="Calculate tip and split the bill instantly. Enter the bill amount, tip percentage, and number of people to get the tip per person and total per person."
       />
       <FAQSchema items={FAQ} />
+      <WebApplicationSchema
+        name="Free Tip Calculator"
+        description="Calculate tip amount and split the bill between any number of people. Free online tip calculator."
+        url="https://finance-fast.com/tip-calculator"
+      />
       <div className={styles.breadcrumb}>
         <Link to="/">Home</Link> › Tip Calculator
       </div>

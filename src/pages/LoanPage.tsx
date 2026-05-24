@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import AdSlot from '../components/AdSlot'
 import SEOMeta from '../components/SEOMeta'
 import FAQSchema from '../components/FAQSchema'
+import WebApplicationSchema from '../components/WebApplicationSchema'
 import LoanCalc from '../calculators/loan/LoanCalc'
 import RelatedCalculators from '../components/RelatedCalculators'
 import styles from './calculator.module.css'
@@ -39,6 +40,11 @@ export default function LoanPage() {
         description="Calculate monthly loan payments and total interest for any personal, auto, or student loan. Free loan calculator with instant results."
       />
       <FAQSchema items={LOAN_FAQ} />
+      <WebApplicationSchema
+        name="Free Loan Calculator"
+        description="Calculate monthly loan payments, total interest, and payoff schedule. Free online loan payment calculator."
+        url="https://finance-fast.com/loan-calculator"
+      />
       <div className={styles.breadcrumb}>
         <Link to="/">Home</Link> › Loan Calculator
       </div>

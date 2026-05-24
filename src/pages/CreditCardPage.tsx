@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import AdSlot from '../components/AdSlot'
 import SEOMeta from '../components/SEOMeta'
 import FAQSchema from '../components/FAQSchema'
+import WebApplicationSchema from '../components/WebApplicationSchema'
 import CreditCardCalc from '../calculators/credit-card/CreditCardCalc'
 import RelatedCalculators from '../components/RelatedCalculators'
 import styles from './calculator.module.css'
@@ -47,6 +48,11 @@ export default function CreditCardPage() {
         description="See how long it takes to pay off your credit card and how much interest you'll pay. Enter balance, APR, and monthly payment."
       />
       <FAQSchema items={CC_FAQ} />
+      <WebApplicationSchema
+        name="Free Credit Card Payoff Calculator"
+        description="Calculate how long it will take to pay off your credit card debt and how much interest you will pay."
+        url="https://finance-fast.com/credit-card-payoff-calculator"
+      />
       <div className={styles.breadcrumb}>
         <Link to="/">Home</Link> › Credit Card Payoff Calculator
       </div>

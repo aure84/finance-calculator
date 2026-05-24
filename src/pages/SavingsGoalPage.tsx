@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import AdSlot from '../components/AdSlot'
 import SEOMeta from '../components/SEOMeta'
 import FAQSchema from '../components/FAQSchema'
+import WebApplicationSchema from '../components/WebApplicationSchema'
 import SavingsGoalCalc from '../calculators/savings-goal/SavingsGoalCalc'
 import RelatedCalculators from '../components/RelatedCalculators'
 import styles from './calculator.module.css'
@@ -35,6 +36,11 @@ export default function SavingsGoalPage() {
         description="Find out how many months it will take to reach your savings goal. Enter your target, current savings, monthly contribution, and return rate. Free calculator."
       />
       <FAQSchema items={SAVINGS_FAQ} />
+      <WebApplicationSchema
+        name="Free Savings Goal Calculator"
+        description="Calculate how long it will take to reach your savings goal or how much to save each month."
+        url="https://finance-fast.com/savings-goal-calculator"
+      />
       <div className={styles.breadcrumb}>
         <Link to="/">Home</Link> › Savings Goal Calculator
       </div>

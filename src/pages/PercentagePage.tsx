@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import AdSlot from '../components/AdSlot'
 import SEOMeta from '../components/SEOMeta'
 import FAQSchema from '../components/FAQSchema'
+import WebApplicationSchema from '../components/WebApplicationSchema'
 import PercentageCalc from '../calculators/percentage/PercentageCalc'
 import RelatedCalculators from '../components/RelatedCalculators'
 import styles from './calculator.module.css'
@@ -43,6 +44,11 @@ export default function PercentagePage() {
         description="Calculate percentages instantly. Find X% of a number, what percentage one number is of another, or the percentage change between two values."
       />
       <FAQSchema items={FAQ} />
+      <WebApplicationSchema
+        name="Free Percentage Calculator"
+        description="Calculate percentages, percentage change, and percentage difference. Free online percentage calculator."
+        url="https://finance-fast.com/percentage-calculator"
+      />
       <div className={styles.breadcrumb}>
         <Link to="/">Home</Link> › Percentage Calculator
       </div>

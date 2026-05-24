@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import AdSlot from '../components/AdSlot'
 import SEOMeta from '../components/SEOMeta'
 import FAQSchema from '../components/FAQSchema'
+import WebApplicationSchema from '../components/WebApplicationSchema'
 import MortgageCalc from '../calculators/mortgage/MortgageCalc'
 import RelatedCalculators from '../components/RelatedCalculators'
 import styles from './calculator.module.css'
@@ -38,6 +39,11 @@ export default function MortgagePage() {
         description="Calculate your monthly mortgage payment, total interest paid, and full amortization schedule. Free mortgage calculator — enter any home price and interest rate."
       />
       <FAQSchema items={MORTGAGE_FAQ} />
+      <WebApplicationSchema
+        name="Free Mortgage Calculator"
+        description="Calculate your monthly mortgage payment, total interest, and amortization schedule. Free online mortgage calculator."
+        url="https://finance-fast.com/mortgage-calculator"
+      />
       <div className={styles.breadcrumb}>
         <Link to="/">Home</Link> › Mortgage Calculator
       </div>

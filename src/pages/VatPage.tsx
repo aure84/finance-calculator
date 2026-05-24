@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import AdSlot from '../components/AdSlot'
 import SEOMeta from '../components/SEOMeta'
 import FAQSchema from '../components/FAQSchema'
+import WebApplicationSchema from '../components/WebApplicationSchema'
 import VatCalc from '../calculators/vat/VatCalc'
 import RelatedCalculators from '../components/RelatedCalculators'
 import styles from './calculator.module.css'
@@ -42,6 +43,11 @@ export default function VatPage() {
         description="Add VAT to a net price or remove VAT from a gross price. Supports all standard VAT rates: 5%, 10%, 19%, 20%, 21%, 25%, 27%. Free and instant."
       />
       <FAQSchema items={VAT_FAQ} />
+      <WebApplicationSchema
+        name="Free VAT Calculator"
+        description="Add or remove VAT from any price. Supports all VAT rates. Free online VAT calculator."
+        url="https://finance-fast.com/vat-calculator"
+      />
       <div className={styles.breadcrumb}>
         <Link to="/">Home</Link> › VAT Calculator
       </div>

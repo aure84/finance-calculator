@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import AdSlot from '../components/AdSlot'
 import SEOMeta from '../components/SEOMeta'
 import FAQSchema from '../components/FAQSchema'
+import WebApplicationSchema from '../components/WebApplicationSchema'
 import FormulaBox from '../components/FormulaBox'
 import TaxRefundCalc from '../calculators/tax-refund/TaxRefundCalc'
 import RelatedCalculators from '../components/RelatedCalculators'
@@ -70,6 +71,11 @@ export default function TaxRefundPage() {
         description="Estimate your 2026 federal and state tax refund or amount owed. Enter your income, filing status, and withholding. Free, no sign-up required."
       />
       <FAQSchema items={TAX_FAQ} />
+      <WebApplicationSchema
+        name="Free Tax Refund Calculator"
+        description="Estimate your federal tax refund or amount owed. Free online tax refund calculator for US taxpayers."
+        url="https://finance-fast.com/tax-refund-calculator"
+      />
       <div className={styles.breadcrumb}>
         <Link to="/">Home</Link> › Tax Refund Calculator
       </div>

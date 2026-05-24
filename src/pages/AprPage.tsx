@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import AdSlot from '../components/AdSlot'
 import SEOMeta from '../components/SEOMeta'
 import FAQSchema from '../components/FAQSchema'
+import WebApplicationSchema from '../components/WebApplicationSchema'
 import AprCalc from '../calculators/apr/AprCalc'
 import RelatedCalculators from '../components/RelatedCalculators'
 import styles from './calculator.module.css'
@@ -44,6 +45,11 @@ export default function AprPage() {
         description="Calculate the true APR of any loan. Enter the loan amount, interest rate, term, and fees to find the Annual Percentage Rate and compare loan offers accurately."
       />
       <FAQSchema items={FAQ} />
+      <WebApplicationSchema
+        name="Free APR Calculator"
+        description="Calculate the Annual Percentage Rate (APR) for any loan. Compare loan offers with the true cost of borrowing."
+        url="https://finance-fast.com/apr-calculator"
+      />
       <div className={styles.breadcrumb}>
         <Link to="/">Home</Link> › APR Calculator
       </div>

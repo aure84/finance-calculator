@@ -8,10 +8,11 @@ export function render(url: string): { appHtml: string; meta: CollectedMeta } {
   const meta: CollectedMeta = {
     title: 'Free Financial Calculators — finance-fast.com',
     description: 'Free financial calculators for salary, mortgage, loans, and more.',
+    canonical: `https://finance-fast.com${url}`,
   }
 
   const appHtml = renderToString(
-    <SSRMetaContext.Provider value={(m) => { meta.title = m.title; meta.description = m.description }}>
+    <SSRMetaContext.Provider value={(m) => { meta.title = m.title; meta.description = m.description; meta.canonical = m.canonical }}>
       <MemoryRouter initialEntries={[url]}>
         <AppContent />
       </MemoryRouter>

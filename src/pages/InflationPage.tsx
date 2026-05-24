@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import AdSlot from '../components/AdSlot'
 import SEOMeta from '../components/SEOMeta'
 import FAQSchema from '../components/FAQSchema'
+import WebApplicationSchema from '../components/WebApplicationSchema'
 import InflationCalc from '../calculators/inflation/InflationCalc'
 import RelatedCalculators from '../components/RelatedCalculators'
 import styles from './calculator.module.css'
@@ -43,6 +44,11 @@ export default function InflationPage() {
         description="Find out what your money is worth after inflation. Calculate future purchasing power or the historical equivalent of any amount. Free and instant."
       />
       <FAQSchema items={INFLATION_FAQ} />
+      <WebApplicationSchema
+        name="Free Inflation Calculator"
+        description="Calculate the real value of money over time. See how inflation affects purchasing power using historical CPI data."
+        url="https://finance-fast.com/inflation-calculator"
+      />
       <div className={styles.breadcrumb}>
         <Link to="/">Home</Link> › Inflation Calculator
       </div>
