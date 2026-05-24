@@ -28,7 +28,8 @@ describe('BlogIndexPage', () => {
     const blogLinks = screen.getAllByRole('link').filter(l =>
       l.getAttribute('href')?.startsWith('/blog/')
     )
-    blogPosts.forEach((post, i) => {
+    const sortedPosts = [...blogPosts].sort((a, b) => b.date.localeCompare(a.date))
+    sortedPosts.forEach((post, i) => {
       expect(blogLinks[i].getAttribute('href')).toBe(`/blog/${post.slug}`)
     })
   })
